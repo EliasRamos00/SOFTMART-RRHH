@@ -1,0 +1,97 @@
+-----------Exception Details on  09/04/2024 11:03:39 a. m.-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 09/04/2024 11:03:39 a. m.
+
+Error Line No : tarios)
+
+Error Message: MySqlException
+
+Exception Type: MySqlConnector.MySqlException
+
+Error Location : Column 'Nombre' cannot be null
+
+ Error Page Url: 
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  09/04/2024 11:03:44 a. m.-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 09/04/2024 11:03:44 a. m.
+
+Error Line No : tarios)
+
+Error Message: MySqlException
+
+Exception Type: MySqlConnector.MySqlException
+
+Error Location : Column 'Nombre' cannot be null
+
+ Error Page Url: 
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+----------Detalles del error en:  09/04/2024 11:15:35 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:15:35 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Nombre' cannot be null
+
+-----------------------------------------------
+----------Detalles del error en:  09/04/2024 11:26:01 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:26:01 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Nombre' cannot be null
+
+-----------------------------------------------
+----------Detalles del error en:  09/04/2024 11:26:51 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:26:51 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Nombre' cannot be null
+
+-----------------------------------------------
+----------Detalles del error en:  09/04/2024 11:26:56 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:26:56 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'ApellPaterno' cannot be null
+
+-----------------------------------------------
+----------Detalles del error en:  09/04/2024 11:56:19 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:56:19 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'ApellPaterno' cannot be null
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  09/04/2024 11:56:22 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:56:22 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'RFC' cannot be null
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  09/04/2024 11:56:31 a. m.----------
+-----------------------------------------------
+Fecha: 09/04/2024 11:56:31 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'CURP' cannot be null
+Usuario: ELIAS RAMOS
+-----------------------------------------------

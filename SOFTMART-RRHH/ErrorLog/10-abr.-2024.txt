@@ -1,0 +1,154 @@
+----------Detalles del error en:  10/04/2024 11:19:42 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:19:42 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'RFC' cannot be null
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:19:42 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:19:42 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'RFC' cannot be null
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:19:48 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:19:48 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.JSON_OBJECT_KEYS does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:19:48 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:19:48 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.JSON_OBJECT_KEYS does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:24:36 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:24:36 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Out of range value for column 'NumContrato' at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:24:36 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:24:36 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Out of range value for column 'NumContrato' at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:40:12 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:40:12 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'CCCD8' for key 'UK_CURP'
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:40:12 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:40:12 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'CCCD8' for key 'UK_CURP'
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:55:33 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:55:33 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:55:33 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:55:33 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:56:48 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:56:48 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 11:56:48 a. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 11:56:48 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 12:01:57 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 12:01:57 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 12:01:57 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 12:01:57 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 12:12:47 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 12:12:47 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 12:12:47 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 12:12:47 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column count doesn't match value count at row 1
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 01:09:20 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 01:09:20 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'CCCD9' for key 'UK_CURP'
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 01:09:21 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 01:09:21 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'CCCD9' for key 'UK_CURP'
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 01:17:06 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 01:17:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.TRIGGER_NESTLEVEL does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 01:17:06 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 01:17:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.TRIGGER_NESTLEVEL does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 01:23:04 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 01:23:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.TRIGGER_NESTLEVEL does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  10/04/2024 01:23:04 p. m.----------
+-----------------------------------------------
+Fecha: 10/04/2024 01:23:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.TRIGGER_NESTLEVEL does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------
