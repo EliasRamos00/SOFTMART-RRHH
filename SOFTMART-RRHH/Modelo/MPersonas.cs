@@ -74,7 +74,7 @@ namespace SOFTMART_RRHH.Controlador
 
                 return Convert.ToInt16(temp.Rows[0][0].ToString());
             }
-            catch { return 0; }
+            catch (Exception ex) { LibAux.ErrorLog(ex); return 0; }
         }
         internal static DataTable ObtenerPersonaInformacionByCURP(string CURP)
         {

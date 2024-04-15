@@ -20,6 +20,17 @@ namespace SOFTMART_RRHH.Modelo
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Usuario", @params);
         }
 
+        internal static void AgregarUsuario(object usuario, object password, object rol, object idPersona)
+        {
+            List<Param> @params = new List<Param> {
+            new Param("vUsuario",usuario),
+            new Param("vPassword",password),
+            new Param("vRol",rol),
+            new Param("vIdPersona",idPersona)            
+            };
+            LibAux.EjecutarProcedimiento("SP_INSERTAR_Usuario", @params);
+        }
+
         internal static void EliminarUsuario(int idUsuario)
         {
             List<Param> @params = new List<Param> {

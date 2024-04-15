@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Xml;
 using NPOI.XWPF.UserModel;
+using System.Text.RegularExpressions;
 //using ScintillaNET;
 
 namespace SOFTMART_RRHH.Vista
@@ -38,8 +39,6 @@ namespace SOFTMART_RRHH.Vista
         private void vHistorialCambios_Load(object sender, EventArgs e)
         {
             CargarCambios();
-            //SetUpScintillas(txtAntes);
-            //SetUpScintillas(txtDespues);
         }
 
         private void dgvHistorial_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -62,37 +61,7 @@ namespace SOFTMART_RRHH.Vista
 
         private void dgvHistorial_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //txtAntes.Text = "";
-            //txtDespues.Text = "";
-            //try
-            //{
-            //    DataTable dtTemp = MHistorial.ConsultarXML(dgvHistorial.CurrentRow.Cells["dgvHistorial_idHistorial"].Value);
-            //    if (dtTemp.Rows.Count >= 1)
-            //    {
-            //        string xmlAntes = dtTemp.Rows[0]["XMLAntes"].ToString();
-            //        string xmlDespues = dtTemp.Rows[0]["XMLDespues"].ToString();
 
-            //        if (xmlAntes != "" && xmlDespues != "")
-            //        {
-            //            XDocument xDocumentAntes = XDocument.Parse(xmlAntes);
-            //            XDocument xDocumentDespues = XDocument.Parse(xmlDespues);
-            //            RemoverNodosDuplicados(xDocumentAntes.Root, xDocumentDespues.Root);
-            //            txtAntes.Text = xDocumentAntes.ToString();//ToString will format xml string with indent
-            //            txtDespues.Text = xDocumentDespues.ToString();//ToString will format xml string with indent
-            //        }
-            //        else if (xmlAntes == "" && xmlDespues != "")
-            //        {
-            //            XDocument xDocument = XDocument.Parse(xmlDespues);
-            //            txtAntes.Text = xDocument.ToString();//ToString will format xml string with indent
-            //        }
-            //    }
-
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    LibAux.PopUp("atención", ex.Message, LibAux.TipoNotif.Error);
-            //}
         }
 
         static void RemoverNodosDuplicados(XElement node1, XElement node2)
@@ -122,23 +91,8 @@ namespace SOFTMART_RRHH.Vista
                     }
                 }
             }
+
         }
-
-        //private void SetUpScintillas(ScintillaNET.Scintilla scintilla1)
-        //{
-        //    // Set up Scintilla control
-        //    scintilla1.LexerName = "xml";
-
-        //    // Set XML styles
-        //    scintilla1.Styles[Style.Xml.Default].ForeColor = Color.FromArgb(34, 34, 34); // Default text color (gris oscuro)
-        //    scintilla1.Styles[Style.Xml.Tag].ForeColor = Color.FromArgb(0, 102, 204);    // XML tag (azul)
-        //    scintilla1.Styles[Style.Xml.TagEnd].ForeColor = Color.FromArgb(0, 102, 204); // XML closing tag (azul)
-        //    scintilla1.Styles[Style.Xml.Attribute].ForeColor = Color.FromArgb(163, 21, 21); // XML attribute name (rojo oscuro)            
-        //    scintilla1.Styles[Style.Xml.Default].Bold = true;
-
-
-        //}
-
 
         private void btnRecarga_Click(object sender, EventArgs e)
         {
@@ -158,6 +112,86 @@ namespace SOFTMART_RRHH.Vista
         private void txtAntes_Click(object sender, EventArgs e)
         {
 
+        }
+        private void HighlightSyntax(System.Windows.Forms.RichTextBox richTextBox1)
+        {
+            // Guardar la posición actual del cursor
+            int selectionStart = richTextBox1.SelectionStart;
+            int selectionLength = richTextBox1.SelectionLength;
+
+            // Guardar la configuración actual de selección
+            Color defaultColor = Color.Black;
+            richTextBox1.SelectionColor = defaultColor;
+
+            // Expresiones regulares para detectar etiquetas, atributos y comentarios XML
+            string patternTags = @"<([^!>][^>]*)>";
+            string patternAttributes = @"\s(.*?)\=";
+
+            // Resaltar etiquetas
+            Regex regexTags = new Regex(patternTags);
+            MatchCollection matchesTags = regexTags.Matches(richTextBox1.Text);
+            foreach (Match match in matchesTags)
+            {
+                richTextBox1.Select(match.Index, match.Length);
+                richTextBox1.SelectionColor = Color.Blue;
+            }
+
+            // Resaltar atributos
+            Regex regexAttributes = new Regex(patternAttributes);
+            MatchCollection matchesAttributes = regexAttributes.Matches(richTextBox1.Text);
+            foreach (Match match in matchesAttributes)
+            {
+                richTextBox1.Select(match.Index, match.Length);
+                richTextBox1.SelectionColor = Color.Red;
+            }
+
+            // Restaurar la posición y longitud de la selección original
+            richTextBox1.Select(selectionStart, selectionLength);
+            richTextBox1.SelectionColor = defaultColor;
+
+            // Devolver el enfoque al control RichTextBox
+            richTextBox1.Focus();
+        }
+
+        private void dgvHistorial_SelectionChanged(object sender, EventArgs e)
+        {
+            txtAntes.Text = "";
+            txtDespues.Text = "";
+            try
+            {
+                DataTable dtTemp = MHistorial.ConsultarXML(dgvHistorial.CurrentRow.Cells["dgvHistorial_idHistorial"].Value);
+                if (dtTemp.Rows.Count >= 1)
+                {
+                    string xmlAntes = dtTemp.Rows[0]["XMLAntes"].ToString();
+                    string xmlDespues = dtTemp.Rows[0]["XMLDespues"].ToString();
+
+                    if (xmlAntes != "" && xmlDespues != "")
+                    {
+                        XDocument xDocumentAntes = XDocument.Parse(xmlAntes);
+                        XDocument xDocumentDespues = XDocument.Parse(xmlDespues);
+                        RemoverNodosDuplicados(xDocumentAntes.Root, xDocumentDespues.Root);
+                        txtAntes.Text = xDocumentAntes.ToString();//ToString will format xml string with indent
+                        txtDespues.Text = xDocumentDespues.ToString();//ToString will format xml string with indent
+                        HighlightSyntax(txtAntes);
+                        HighlightSyntax(txtDespues);
+                    }
+                    else if (xmlAntes == "" && xmlDespues != "")
+                    {
+                        XDocument xDocument = XDocument.Parse(xmlDespues);
+                        txtDespues.Text = xDocument.ToString();//ToString will format xml string with indent
+                        HighlightSyntax(txtDespues);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                LibAux.PopUp("atención", ex.Message, LibAux.TipoNotif.Error);
+                LibAux.ErrorLog(ex);
+            }
+
+            dgvHistorial.Focus();
         }
     }
 }

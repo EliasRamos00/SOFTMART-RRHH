@@ -19,6 +19,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Security.Policy;
 using System.Windows.Shapes;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 
 
 namespace SOFTMART_RRHH.Modelo
@@ -304,9 +305,18 @@ namespace SOFTMART_RRHH.Modelo
                 ErrorLog(e);
             }
         }
-        public static string GenerateMD5(string yourString)
+        public static string GenerateMD5(string cadena)
         {
-            return string.Join("", MD5.Create().ComputeHash(Encoding.ASCII.GetBytes(yourString)).Select(s => s.ToString("x2")));
+            return string.Join("", MD5.Create().ComputeHash(Encoding.ASCII.GetBytes(cadena)).Select(s => s.ToString("x2")));
+        }
+        public static bool IsMD5(string input)
+        {
+            if (String.IsNullOrEmpty(input))
+            {
+                return false;
+            }
+
+            return Regex.IsMatch(input, "^[0-9a-fA-F]{32}$", RegexOptions.Compiled);
         }
 
     }

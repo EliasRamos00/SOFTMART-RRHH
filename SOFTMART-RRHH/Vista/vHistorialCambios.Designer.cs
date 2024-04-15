@@ -45,6 +45,8 @@
             this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.lblColumn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtAntes = new System.Windows.Forms.RichTextBox();
+            this.txtDespues = new System.Windows.Forms.RichTextBox();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
@@ -68,6 +70,8 @@
             this.tlpPrincipal.Controls.Add(this.btnRecarga, 3, 2);
             this.tlpPrincipal.Controls.Add(this.lblColumn, 2, 3);
             this.tlpPrincipal.Controls.Add(this.label1, 3, 3);
+            this.tlpPrincipal.Controls.Add(this.txtAntes, 2, 4);
+            this.tlpPrincipal.Controls.Add(this.txtDespues, 3, 4);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
@@ -95,7 +99,7 @@
             // 
             // tbFiltro
             // 
-            this.tbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltro.Location = new System.Drawing.Point(45, 113);
@@ -121,8 +125,8 @@
             this.dgvHistorial.AllowUserToDeleteRows = false;
             this.dgvHistorial.AllowUserToOrderColumns = true;
             this.dgvHistorial.AllowUserToResizeRows = false;
-            this.dgvHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -158,6 +162,7 @@
             this.dgvHistorial.TabIndex = 6;
             this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
             this.dgvHistorial.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellEnter);
+            this.dgvHistorial.SelectionChanged += new System.EventHandler(this.dgvHistorial_SelectionChanged);
             // 
             // dgvHistorial_idHistorial
             // 
@@ -203,7 +208,7 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
             this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -223,7 +228,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
@@ -241,7 +246,7 @@
             // 
             // btnRecarga
             // 
-            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -284,6 +289,27 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Despues";
             // 
+            // txtAntes
+            // 
+            this.txtAntes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAntes.Location = new System.Drawing.Point(437, 149);
+            this.txtAntes.Name = "txtAntes";
+            this.txtAntes.ReadOnly = true;
+            this.txtAntes.Size = new System.Drawing.Size(288, 502);
+            this.txtAntes.TabIndex = 32;
+            this.txtAntes.Text = "";
+            // 
+            // txtDespues
+            // 
+            this.tlpPrincipal.SetColumnSpan(this.txtDespues, 2);
+            this.txtDespues.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDespues.Location = new System.Drawing.Point(731, 149);
+            this.txtDespues.Name = "txtDespues";
+            this.txtDespues.ReadOnly = true;
+            this.txtDespues.Size = new System.Drawing.Size(288, 502);
+            this.txtDespues.TabIndex = 33;
+            this.txtDespues.Text = "";
+            // 
             // vHistorialCambios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -321,6 +347,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvHistorial_Movimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvHistorial_Usuario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox txtAntes;
+        private System.Windows.Forms.RichTextBox txtDespues;
         //private ScintillaNET.Scintilla txtAntes;
         //private ScintillaNET.Scintilla txtDespues;
     }

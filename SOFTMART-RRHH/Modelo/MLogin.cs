@@ -45,7 +45,7 @@ namespace SOFTMART_RRHH.Modelo
                     return true;
                 }
             }
-            catch { }
+            catch(Exception ex) { LibAux.ErrorLog(ex); }
             return false;
         }
     }

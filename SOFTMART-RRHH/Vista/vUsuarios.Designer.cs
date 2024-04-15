@@ -36,17 +36,18 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.dgvUsuarios_idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsuarios_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsuarios_Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsuarios_idPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsuarios_RolCB = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgvUsuarios_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsuarios_password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUsuarios_hasChanged = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.dgvUsuarios_idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUsuarios_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUsuarios_idPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUsuarios_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUsuarios_password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUsuarios_hasChanged = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUsuarios_RolCB = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgvUsuarios_Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -125,6 +126,7 @@
             this.btnRecarga.Size = new System.Drawing.Size(108, 36);
             this.btnRecarga.TabIndex = 27;
             this.btnRecarga.UseVisualStyleBackColor = false;
+            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
             // 
             // dgvUsuarios
             // 
@@ -147,12 +149,12 @@
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvUsuarios_idUsuario,
             this.dgvUsuarios_Nombre,
-            this.dgvUsuarios_Rol,
             this.dgvUsuarios_idPersona,
-            this.dgvUsuarios_RolCB,
             this.dgvUsuarios_Usuario,
             this.dgvUsuarios_password,
-            this.dgvUsuarios_hasChanged});
+            this.dgvUsuarios_hasChanged,
+            this.dgvUsuarios_RolCB,
+            this.dgvUsuarios_Rol});
             this.tlpPrincipal.SetColumnSpan(this.dgvUsuarios, 2);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaShell;
@@ -180,75 +182,16 @@
             this.dgvUsuarios.TabIndex = 6;
             this.dgvUsuarios.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvUsuarios_CellBeginEdit);
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
+            this.dgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellDoubleClick);
             this.dgvUsuarios.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellEndEdit);
             this.dgvUsuarios.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvUsuarios_DataError);
-            // 
-            // dgvUsuarios_idUsuario
-            // 
-            this.dgvUsuarios_idUsuario.DataPropertyName = "idUsuario";
-            this.dgvUsuarios_idUsuario.HeaderText = "idUsuario";
-            this.dgvUsuarios_idUsuario.Name = "dgvUsuarios_idUsuario";
-            this.dgvUsuarios_idUsuario.Visible = false;
-            // 
-            // dgvUsuarios_Nombre
-            // 
-            this.dgvUsuarios_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvUsuarios_Nombre.DataPropertyName = "Nombre";
-            this.dgvUsuarios_Nombre.HeaderText = "Nombre";
-            this.dgvUsuarios_Nombre.Name = "dgvUsuarios_Nombre";
-            // 
-            // dgvUsuarios_Rol
-            // 
-            this.dgvUsuarios_Rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvUsuarios_Rol.DataPropertyName = "Rol";
-            this.dgvUsuarios_Rol.HeaderText = "Rol";
-            this.dgvUsuarios_Rol.Name = "dgvUsuarios_Rol";
-            this.dgvUsuarios_Rol.Visible = false;
-            // 
-            // dgvUsuarios_idPersona
-            // 
-            this.dgvUsuarios_idPersona.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvUsuarios_idPersona.DataPropertyName = "idPersona";
-            this.dgvUsuarios_idPersona.HeaderText = "idPersona";
-            this.dgvUsuarios_idPersona.Name = "dgvUsuarios_idPersona";
-            this.dgvUsuarios_idPersona.Visible = false;
-            // 
-            // dgvUsuarios_RolCB
-            // 
-            this.dgvUsuarios_RolCB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvUsuarios_RolCB.DataPropertyName = "Rol";
-            this.dgvUsuarios_RolCB.HeaderText = "Rol";
-            this.dgvUsuarios_RolCB.Name = "dgvUsuarios_RolCB";
-            this.dgvUsuarios_RolCB.Width = 29;
-            // 
-            // dgvUsuarios_Usuario
-            // 
-            this.dgvUsuarios_Usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvUsuarios_Usuario.DataPropertyName = "Usuario";
-            this.dgvUsuarios_Usuario.HeaderText = "Usuario";
-            this.dgvUsuarios_Usuario.Name = "dgvUsuarios_Usuario";
-            this.dgvUsuarios_Usuario.Width = 68;
-            // 
-            // dgvUsuarios_password
-            // 
-            this.dgvUsuarios_password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvUsuarios_password.DataPropertyName = "password";
-            this.dgvUsuarios_password.HeaderText = "Contraseña";
-            this.dgvUsuarios_password.Name = "dgvUsuarios_password";
-            this.dgvUsuarios_password.Width = 84;
-            // 
-            // dgvUsuarios_hasChanged
-            // 
-            this.dgvUsuarios_hasChanged.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvUsuarios_hasChanged.DataPropertyName = "hasChanged";
-            this.dgvUsuarios_hasChanged.HeaderText = "hasChanged";
-            this.dgvUsuarios_hasChanged.Name = "dgvUsuarios_hasChanged";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAgregar, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnGuardar, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnEliminar, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnRecarga, 0, 0);
@@ -302,6 +245,88 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.btnAgregar.IconColor = System.Drawing.Color.White;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 35;
+            this.btnAgregar.Location = new System.Drawing.Point(0, 125);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(108, 36);
+            this.btnAgregar.TabIndex = 32;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // dgvUsuarios_idUsuario
+            // 
+            this.dgvUsuarios_idUsuario.DataPropertyName = "idUsuario";
+            this.dgvUsuarios_idUsuario.HeaderText = "idUsuario";
+            this.dgvUsuarios_idUsuario.Name = "dgvUsuarios_idUsuario";
+            this.dgvUsuarios_idUsuario.Visible = false;
+            // 
+            // dgvUsuarios_Nombre
+            // 
+            this.dgvUsuarios_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvUsuarios_Nombre.DataPropertyName = "Nombre";
+            this.dgvUsuarios_Nombre.HeaderText = "Nombre";
+            this.dgvUsuarios_Nombre.Name = "dgvUsuarios_Nombre";
+            // 
+            // dgvUsuarios_idPersona
+            // 
+            this.dgvUsuarios_idPersona.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvUsuarios_idPersona.DataPropertyName = "idPersona";
+            this.dgvUsuarios_idPersona.HeaderText = "idPersona";
+            this.dgvUsuarios_idPersona.Name = "dgvUsuarios_idPersona";
+            this.dgvUsuarios_idPersona.Visible = false;
+            // 
+            // dgvUsuarios_Usuario
+            // 
+            this.dgvUsuarios_Usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvUsuarios_Usuario.DataPropertyName = "Usuario";
+            this.dgvUsuarios_Usuario.HeaderText = "Usuario";
+            this.dgvUsuarios_Usuario.Name = "dgvUsuarios_Usuario";
+            this.dgvUsuarios_Usuario.Width = 68;
+            // 
+            // dgvUsuarios_password
+            // 
+            this.dgvUsuarios_password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvUsuarios_password.DataPropertyName = "password";
+            this.dgvUsuarios_password.HeaderText = "Contraseña";
+            this.dgvUsuarios_password.Name = "dgvUsuarios_password";
+            this.dgvUsuarios_password.Width = 84;
+            // 
+            // dgvUsuarios_hasChanged
+            // 
+            this.dgvUsuarios_hasChanged.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvUsuarios_hasChanged.DataPropertyName = "hasChanged";
+            this.dgvUsuarios_hasChanged.HeaderText = "hasChanged";
+            this.dgvUsuarios_hasChanged.Name = "dgvUsuarios_hasChanged";
+            this.dgvUsuarios_hasChanged.Visible = false;
+            // 
+            // dgvUsuarios_RolCB
+            // 
+            this.dgvUsuarios_RolCB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvUsuarios_RolCB.DataPropertyName = "Rol";
+            this.dgvUsuarios_RolCB.HeaderText = "Rol";
+            this.dgvUsuarios_RolCB.Name = "dgvUsuarios_RolCB";
+            this.dgvUsuarios_RolCB.Width = 29;
+            // 
+            // dgvUsuarios_Rol
+            // 
+            this.dgvUsuarios_Rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvUsuarios_Rol.DataPropertyName = "Rol";
+            this.dgvUsuarios_Rol.HeaderText = "Rol";
+            this.dgvUsuarios_Rol.Name = "dgvUsuarios_Rol";
+            this.dgvUsuarios_Rol.Visible = false;
+            // 
             // vUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,16 +353,17 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnRecarga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_idUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_idPersona;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgvUsuarios_RolCB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_hasChanged;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private FontAwesome.Sharp.IconButton btnEliminar;
+        private FontAwesome.Sharp.IconButton btnAgregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_idUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_idPersona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_hasChanged;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgvUsuarios_RolCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuarios_Rol;
     }
 }

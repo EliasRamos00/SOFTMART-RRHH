@@ -28,6 +28,7 @@ namespace SOFTMART_RRHH
         vTodos vTodos = new vTodos();
         vHistorialCambios vCambios = new vHistorialCambios();
         vUsuarios vUsuarios = new vUsuarios();
+        vErrorLog vErrorLog = new vErrorLog();
 
 
         #endregion
@@ -43,6 +44,8 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vConsulta);
             AdjuntarUC_frmPrincipal(vTodos);
             AdjuntarUC_frmPrincipal(vUsuarios);
+            AdjuntarUC_frmPrincipal(vErrorLog);
+
 
             //Eventos de los U.C.
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
@@ -201,6 +204,17 @@ namespace SOFTMART_RRHH
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             MostrarUC(vUsuarios);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+            Environment.Exit(0);
+        }
+
+        private void btnErrorLog_Click(object sender, EventArgs e)
+        {
+            MostrarUC(vErrorLog);
         }
     }
 }

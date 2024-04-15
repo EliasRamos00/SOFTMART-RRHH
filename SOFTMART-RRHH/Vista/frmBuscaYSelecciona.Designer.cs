@@ -34,10 +34,14 @@
             // 
             // dgvBuscar
             // 
+            this.dgvBuscar.AllowUserToAddRows = false;
+            this.dgvBuscar.AllowUserToDeleteRows = false;
             this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBuscar.Location = new System.Drawing.Point(0, 0);
             this.dgvBuscar.Name = "dgvBuscar";
+            this.dgvBuscar.ReadOnly = true;
+            this.dgvBuscar.RowHeadersVisible = false;
             this.dgvBuscar.Size = new System.Drawing.Size(389, 231);
             this.dgvBuscar.TabIndex = 0;
             this.dgvBuscar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscar_CellClick);
@@ -49,6 +53,7 @@
             this.ClientSize = new System.Drawing.Size(389, 231);
             this.Controls.Add(this.dgvBuscar);
             this.Name = "frmBuscaYSelecciona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscaYSelecciona";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
             this.ResumeLayout(false);

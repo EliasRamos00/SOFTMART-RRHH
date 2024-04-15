@@ -155,7 +155,7 @@ namespace SOFTMART_RRHH.Vista
                     ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format("AntiguedadDias >= " + diasInicio + " AND AntiguedadDias <= " + diasFinal + "AND antiguedad NOT LIKE 'N/A'");
                 }
             }
-            catch { ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
+            catch (Exception ex){ LibAux.ErrorLog(ex); ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
         }
 
         private int TomarDiasComboBox(ComboBox ComboBox)

@@ -165,6 +165,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Vista\vErrorLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\vErrorLog.Designer.cs">
+      <DependentUpon>vErrorLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmBuscaYSelecciona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     <Compile Include="Vista\vUsuarios.Designer.cs">
       <DependentUpon>vUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\vErrorLog.resx">
+      <DependentUpon>vErrorLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmBuscaYSelecciona.resx">
       <DependentUpon>frmBuscaYSelecciona.cs</DependentUpon>
     </EmbeddedResource>
