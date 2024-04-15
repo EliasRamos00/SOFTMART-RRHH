@@ -16,7 +16,8 @@ namespace SOFTMART_RRHH.Modelo
             new Param("vUltimoPatron",patron),
             new Param("vFiniquito",finiquito),
             new Param("vComentarios",comentario),
-            new Param("vIdEmpleado",idEmpleado)
+            new Param("vIdEmpleado",idEmpleado),
+            new Param("vidCurrentUser",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_INSERTA_Baja", @params);
         }

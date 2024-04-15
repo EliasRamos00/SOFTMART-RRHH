@@ -19,7 +19,8 @@ namespace SOFTMART_RRHH.Controlador
                 new Param("vCiudad",ciudad),
                 new Param("vColonia",colonia),
                 new Param("vCP",cP),
-                new Param("vCalleNum",calleNum)
+                new Param("vCalleNum",calleNum),
+                new Param("vidCurrentUserDomi",Properties.Settings.Default.idUsuario)
 
             };
             LibAux.EjecutarProcedimiento("SP_INSERTA_Domicilio", cmd, parametros);
@@ -33,7 +34,8 @@ namespace SOFTMART_RRHH.Controlador
                 new Param("vCiudad",ciudad),
                 new Param("vColonia",colonia),
                 new Param("vCodigoPostal",cP),
-                new Param("vCalleNum",calleNum)
+                new Param("vCalleNum",calleNum),
+                new Param("vidCurrentUserDomi",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Domicilio", cmd, parametros);
         }

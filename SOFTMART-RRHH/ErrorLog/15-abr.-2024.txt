@@ -1,0 +1,231 @@
+----------Detalles del error en:  15/04/2024 12:11:09 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:11:09 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Nombre' cannot be null
+Usuario: ESTELA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:48:22 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:48:22 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:52:42 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:52:42 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:53:18 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:53:18 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:54:01 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:54:01 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:57:33 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:57:33 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'vCurrentUser' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:58:22 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:58:22 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot add or update a child row: a foreign key constraint fails (`rrhh`.`historial`, CONSTRAINT `fk_usuarios` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`))
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 12:59:39 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 12:59:39 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Rol' cannot be null
+Usuario: ELIAS JR RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:00:12 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:00:12 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '91' for key 'UQ_Persona'
+Usuario: ELIAS JR RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:04:25 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:04:25 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Rol' cannot be null
+Usuario: ELIAS JR RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:05:32 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:05:32 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot add or update a child row: a foreign key constraint fails (`rrhh`.`historial`, CONSTRAINT `fk_usuarios` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`))
+Usuario: ELIAS JR RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:55:07 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:55:07 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vidCurrentUser' not found in the collection.
+Usuario: ESTELA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:57:13 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:57:13 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Parameter 'vidCurrentUser' has already been defined.
+Usuario: ESTELA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:57:48 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:57:48 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Parameter 'vidCurrentUser' has already been defined.
+Usuario: ESTELA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:58:50 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:58:50 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Parameter 'vidCurrentUser' has already been defined.
+Usuario: ESTELA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 01:59:30 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 01:59:30 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Parameter 'vidCurrentUser' has already been defined.
+Usuario: ESTELA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 02:07:26 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 02:07:26 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vidCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 02:07:58 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 02:07:58 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vidCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 02:15:35 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 02:15:35 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vidCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 02:15:58 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 02:15:58 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vidCurrentUser' not found in the collection.
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 02:19:08 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 02:19:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'NEW.Colonia' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:25:17 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:25:17 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'Nombres' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:26:06 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:26:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldNombre' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:26:30 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:26:30 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldApellPaterno' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:26:50 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:26:50 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldNumSeguroSocial' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:27:16 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:27:16 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldInfoEmer' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:28:16 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:28:16 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldidDomicilio' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:28:43 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:28:43 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'vNumSeguroSocial' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:29:08 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:29:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'vInfoEmer' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:29:39 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:29:39 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'Comentario' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:30:39 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:30:39 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldidPersona' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 04:30:58 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 04:30:58 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unknown column 'oldComentarios' in 'field list'
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  15/04/2024 05:07:29 p. m.----------
+-----------------------------------------------
+Fecha: 15/04/2024 05:07:29 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : FUNCTION rrhh.FN_IdPersonabyContacto does not exist
+Usuario: ELIAS RAMOS
+-----------------------------------------------

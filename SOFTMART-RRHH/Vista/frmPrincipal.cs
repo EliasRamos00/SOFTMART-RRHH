@@ -45,11 +45,25 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vTodos);
             AdjuntarUC_frmPrincipal(vUsuarios);
             AdjuntarUC_frmPrincipal(vErrorLog);
-
+            if (Properties.Settings.Default.Rol.Contains("ADM"))
+            {
+                EsAdmin(true);
+            }
+            else
+            {
+                EsAdmin(false);
+            }
 
             //Eventos de los U.C.
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
             vTodos.DobleClickEmpleado += MostrarEmpleado;
+        }
+
+        private void EsAdmin(bool @bool)
+        {
+            btnUsuarios.Visible = @bool;
+            btnHistorial.Visible = @bool;
+            btnErrorLog.Visible = @bool;            
         }
 
         private void SetToolTips()
@@ -58,6 +72,17 @@ namespace SOFTMART_RRHH
             new System.Windows.Forms.ToolTip().SetToolTip(this.btnClose, "Cerrar");
             new System.Windows.Forms.ToolTip().SetToolTip(this.btnMax, "Maximizar");
             new System.Windows.Forms.ToolTip().SetToolTip(this.btnMin, "Minimizar");
+
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnAltasEmpleados, "Alta");
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnConsulta, "Activos");
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnBajas, "Bajas");
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnTodos, "Todos");
+
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnUsuarios, "Usuarios");
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnErrorLog, "ErrorLog");
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnHistorial, "Historial");
+            new System.Windows.Forms.ToolTip().SetToolTip(this.btnReset, "Cerrar sesión");
+
         }
 
         private void AdjuntarUC_frmPrincipal(System.Windows.Forms.UserControl UserControl)

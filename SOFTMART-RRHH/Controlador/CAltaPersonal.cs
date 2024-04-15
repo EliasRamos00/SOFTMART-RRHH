@@ -85,7 +85,7 @@ namespace SOFTMART_RRHH.Controlador
                 };
 
                 foreach (var errorMessage in errorMessages)
-                {
+                {                    
                     if (ex.Message.Contains(errorMessage.Key) && ex.Message.Contains("null"))
                     {
                         ShowNotification(errorMessage.Value, TipoNotif.Info);
@@ -108,9 +108,7 @@ namespace SOFTMART_RRHH.Controlador
                     }
                 }
                 if (!err)
-                    ShowNotification("Error desconocido - " + ex.Message, TipoNotif.Error);
-
-                ErrorLog(ex);
+                    ShowNotification("Error desconocido - " + ex.Message, TipoNotif.Error);                
             }
         }
 
@@ -198,9 +196,7 @@ namespace SOFTMART_RRHH.Controlador
                     }
                 }
                 if (!err)
-                    ShowNotification("Error desconocido - " + ex.Message, TipoNotif.Error);
-
-                ErrorLog(ex);
+                    ShowNotification("Error desconocido - " + ex.Message, TipoNotif.Error);                
                 return false;
             }
         }

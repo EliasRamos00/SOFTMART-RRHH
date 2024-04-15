@@ -68,5 +68,17 @@ namespace SOFTMART_RRHH.Properties {
                 this["Rol"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string idUsuario {
+            get {
+                return ((string)(this["idUsuario"]));
+            }
+            set {
+                this["idUsuario"] = value;
+            }
+        }
     }
 }

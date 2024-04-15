@@ -31,7 +31,8 @@ namespace SOFTMART_RRHH.Controlador
                 new Param("vEdoCivil",edoCivil),
                 new Param("vNSS",nSS),
                 new Param("vInfoEmerg",infoEmer),
-                new Param("vINE",iNESourcePath)
+                new Param("vINE",iNESourcePath),
+                new Param("vidCurrentUserPerso",Properties.Settings.Default.idUsuario)
             };
             return LibAux.EjecutarProcedimiento("SP_INSERTA_Persona", cmd, parametros);
         }
@@ -54,7 +55,8 @@ namespace SOFTMART_RRHH.Controlador
                 new Param("vEdoCivil",edoCivil),
                 new Param("vNSS",nSS),
                 new Param("vInfoEmerg",infoEmer),
-                new Param("vINE",iNESourcePath)
+                new Param("vINE",iNESourcePath),
+                new Param("vidCurrentUserPerso",Properties.Settings.Default.idUsuario)
 
 
             };

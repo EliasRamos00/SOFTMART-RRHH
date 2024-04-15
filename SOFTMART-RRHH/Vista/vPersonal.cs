@@ -348,7 +348,7 @@ namespace SOFTMART_RRHH.Vista
             try { idSucursal = cbTienda.SelectedValue.ToString(); } catch { idSucursal = ""; }
             try { idPuesto = cbPuesto.SelectedValue.ToString(); } catch { idPuesto = ""; }
             esTemporal = cBEmpleadoTemporada.Checked;
-            sueldo = cbSueldo.Text;
+            sueldo = Convert.ToDecimal(cbSueldo.Text);
             comentarios = tbComentarios.Text;
 
             if (estaModificando) //Si no es una modificación... es una inserción.

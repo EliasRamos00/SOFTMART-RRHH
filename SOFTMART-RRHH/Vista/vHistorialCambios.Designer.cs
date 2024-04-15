@@ -40,7 +40,6 @@
             this.dgvHistorial_FechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHistorial_Movimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHistorial_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcel = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.lblColumn = new System.Windows.Forms.Label();
@@ -65,13 +64,12 @@
             this.tlpPrincipal.Controls.Add(this.tbFiltro, 1, 3);
             this.tlpPrincipal.Controls.Add(this.lblBuscar, 1, 2);
             this.tlpPrincipal.Controls.Add(this.dgvHistorial, 1, 4);
-            this.tlpPrincipal.Controls.Add(this.btnExcel, 4, 2);
             this.tlpPrincipal.Controls.Add(this.lblTitulo, 1, 0);
-            this.tlpPrincipal.Controls.Add(this.btnRecarga, 3, 2);
             this.tlpPrincipal.Controls.Add(this.lblColumn, 2, 3);
             this.tlpPrincipal.Controls.Add(this.label1, 3, 3);
             this.tlpPrincipal.Controls.Add(this.txtAntes, 2, 4);
             this.tlpPrincipal.Controls.Add(this.txtDespues, 3, 4);
+            this.tlpPrincipal.Controls.Add(this.btnRecarga, 4, 2);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
@@ -206,26 +204,6 @@
             this.dgvHistorial_Usuario.Name = "dgvHistorial_Usuario";
             this.dgvHistorial_Usuario.ReadOnly = true;
             // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.White;
-            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcel.IconSize = 28;
-            this.btnExcel.Location = new System.Drawing.Point(905, 74);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(117, 36);
-            this.btnExcel.TabIndex = 28;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            // 
             // lblTitulo
             // 
             this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -257,7 +235,7 @@
             this.btnRecarga.IconColor = System.Drawing.Color.White;
             this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRecarga.IconSize = 34;
-            this.btnRecarga.Location = new System.Drawing.Point(758, 74);
+            this.btnRecarga.Location = new System.Drawing.Point(905, 74);
             this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
             this.btnRecarga.Name = "btnRecarga";
             this.btnRecarga.Size = new System.Drawing.Size(117, 36);
@@ -338,7 +316,6 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Label lblColumn;
         private System.Windows.Forms.DataGridView dgvHistorial;
-        private FontAwesome.Sharp.IconButton btnExcel;
         private FontAwesome.Sharp.IconButton btnRecarga;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvHistorial_idHistorial;

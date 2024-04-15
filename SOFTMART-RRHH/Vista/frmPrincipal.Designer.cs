@@ -31,6 +31,7 @@ namespace SOFTMART_RRHH
         /// </summary>
         private void InitializeComponent()
         {
+
             this.pTitleBar = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
             this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
@@ -43,12 +44,12 @@ namespace SOFTMART_RRHH
             this.btnMax = new FontAwesome.Sharp.IconButton();
             this.btnErrorLog = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
-            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnHistorial = new FontAwesome.Sharp.IconButton();
             this.btnTodos = new FontAwesome.Sharp.IconButton();
             this.btnBajas = new FontAwesome.Sharp.IconButton();
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -69,7 +70,7 @@ namespace SOFTMART_RRHH
             // 
             // lblInfo
             // 
-            this.lblInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,7 +120,7 @@ namespace SOFTMART_RRHH
             // 
             // lblInfo2
             // 
-            this.lblInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInfo2.AutoSize = true;
             this.lblInfo2.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,7 +225,7 @@ namespace SOFTMART_RRHH
             this.btnErrorLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnErrorLog.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnErrorLog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnErrorLog.IconChar = FontAwesome.Sharp.IconChar.ClockRotateLeft;
+            this.btnErrorLog.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.btnErrorLog.IconColor = System.Drawing.Color.White;
             this.btnErrorLog.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnErrorLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,19 +257,20 @@ namespace SOFTMART_RRHH
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // btnUsuarios
+            // this.btnUsuarios
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.ShieldAlt;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Unlock;
             this.btnUsuarios.IconColor = System.Drawing.Color.White;
             this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 40;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 488);
-            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Name = "this.btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(235, 39);
             this.btnUsuarios.TabIndex = 7;
             this.btnUsuarios.Text = "Usuarios";

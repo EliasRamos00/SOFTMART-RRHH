@@ -91,7 +91,7 @@ namespace SOFTMART_RRHH.Vista
                 }
                 catch (Exception ex)
                 {
-                    LibAux.PopUp("Error", "Hubo un error al intentar actualizar al usuario: " + row.Cells["dgvUsuarios_Usuario"].Value.ToString() + ex.Message, LibAux.TipoNotif.Error);
+                    LibAux.PopUp("Error", "Hubo un error al intentar actualizar/agregar al usuario: " + row.Cells["dgvUsuarios_Usuario"].Value.ToString() + ex.Message, LibAux.TipoNotif.Error);
                     LibAux.ErrorLog(ex); 
                 }
             }

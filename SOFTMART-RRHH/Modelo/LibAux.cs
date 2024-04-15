@@ -92,6 +92,13 @@ namespace SOFTMART_RRHH.Modelo
             conn.Close();
             return dtTemp;
         }
+        /// <summary>
+        /// Se hizo esta sobrecarga para poder hacer manejo de transacciones mandando por parametro el mysqlCommand.
+        /// </summary>
+        /// <param name="nombreProcedimiento"></param>
+        /// <param name="cmd"></param>
+        /// <param name="Parametros"></param>
+        /// <returns></returns>
         public static DataTable EjecutarProcedimiento(string nombreProcedimiento, MySqlCommand cmd, List<Param> Parametros = null)
         {
 
@@ -267,9 +274,7 @@ namespace SOFTMART_RRHH.Modelo
         public static void ErrorLog(Exception ex)
         {
             var line = Environment.NewLine;
-            string ErrorlineNo, Errormsg, extype, ErrorMessage;
-            ErrorlineNo = ex.StackTrace.Substring(ex.StackTrace.Length - 7, 7);
-            Errormsg = ex.GetType().Name.ToString();
+            string extype, ErrorMessage;
             extype = ex.GetType().ToString();
             ErrorMessage = ex.Message.ToString();
 
@@ -301,8 +306,7 @@ namespace SOFTMART_RRHH.Modelo
             }
             catch (Exception e)
             {
-                e.ToString();
-                ErrorLog(e);
+                
             }
         }
         public static string GenerateMD5(string cadena)

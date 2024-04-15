@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.dgvErrorLog = new System.Windows.Forms.DataGridView();
-            this.dgvErrorLog_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvError_Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblErrorLog = new System.Windows.Forms.Label();
             this.btnFolder = new FontAwesome.Sharp.IconButton();
             this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.txt = new System.Windows.Forms.RichTextBox();
+            this.dgvErrorLog_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvError_Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErrorLog)).BeginInit();
@@ -95,47 +95,33 @@
             this.dgvErrorLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvErrorLog_Nombre,
             this.dgvError_Path});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvErrorLog.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvErrorLog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvErrorLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvErrorLog.GridColor = System.Drawing.Color.Black;
             this.dgvErrorLog.Location = new System.Drawing.Point(45, 149);
             this.dgvErrorLog.MultiSelect = false;
             this.dgvErrorLog.Name = "dgvErrorLog";
             this.dgvErrorLog.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvErrorLog.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvErrorLog.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvErrorLog.RowHeadersVisible = false;
             this.dgvErrorLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvErrorLog.Size = new System.Drawing.Size(386, 502);
             this.dgvErrorLog.TabIndex = 6;
             this.dgvErrorLog.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvErrorLog_CellEnter);
-            // 
-            // dgvErrorLog_Nombre
-            // 
-            this.dgvErrorLog_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvErrorLog_Nombre.DataPropertyName = "Nombre";
-            this.dgvErrorLog_Nombre.HeaderText = "Nombre";
-            this.dgvErrorLog_Nombre.Name = "dgvErrorLog_Nombre";
-            this.dgvErrorLog_Nombre.ReadOnly = true;
-            // 
-            // dgvError_Path
-            // 
-            this.dgvError_Path.HeaderText = "Path";
-            this.dgvError_Path.Name = "dgvError_Path";
-            this.dgvError_Path.ReadOnly = true;
             // 
             // lblErrorLog
             // 
@@ -208,6 +194,21 @@
             this.txt.Size = new System.Drawing.Size(582, 502);
             this.txt.TabIndex = 29;
             this.txt.Text = "";
+            // 
+            // dgvErrorLog_Nombre
+            // 
+            this.dgvErrorLog_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvErrorLog_Nombre.DataPropertyName = "Nombre";
+            this.dgvErrorLog_Nombre.HeaderText = "Nombre";
+            this.dgvErrorLog_Nombre.Name = "dgvErrorLog_Nombre";
+            this.dgvErrorLog_Nombre.ReadOnly = true;
+            // 
+            // dgvError_Path
+            // 
+            this.dgvError_Path.HeaderText = "Path";
+            this.dgvError_Path.Name = "dgvError_Path";
+            this.dgvError_Path.ReadOnly = true;
+            this.dgvError_Path.Visible = false;
             // 
             // vErrorLog
             // 

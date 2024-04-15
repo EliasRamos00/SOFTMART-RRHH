@@ -23,7 +23,8 @@ namespace SOFTMART_RRHH.Controlador
                 new Param("vSueldo",sueldo),
                 new Param("vEsTemp",esTemp),
                 new Param("vidPersona",idPersona),
-                new Param("vComentarios",comentarios)
+                new Param("vComentarios",comentarios),
+                new Param("vidCurrentUserEmple",Properties.Settings.Default.idUsuario)
 
             };
             LibAux.EjecutarProcedimiento("SP_INSERTA_Empleado", cmd, parametros);
@@ -60,7 +61,8 @@ namespace SOFTMART_RRHH.Controlador
                 new Param("vidPuesto",idPuesto),
                 new Param("vSueldo",sueldo),
                 new Param("vEsTemp",esTemp),
-                new Param("vComentarios",comentarios)
+                new Param("vComentarios",comentarios),
+                new Param("vidCurrentUserEmple",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Empleado", cmd, parametros);
         }

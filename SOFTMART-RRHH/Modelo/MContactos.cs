@@ -16,7 +16,8 @@ namespace SOFTMART_RRHH.Controlador
             List<Param> parametros = new List<Param>
             {
                 new Param("vMedio",medio),
-                new Param("vValor",valor)
+                new Param("vValor",valor),
+                new Param("vidCurrentUserContact",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_INSERTA_Contacto", cmd, parametros);
         }
@@ -26,7 +27,8 @@ namespace SOFTMART_RRHH.Controlador
             {
                 new Param("vidContacto",idContacto),
                 new Param("vMedio",medio),
-                new Param("vValor",valor)
+                new Param("vValor",valor),
+                new Param("vidCurrentUserContact",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Contacto", cmd, parametros);
         }

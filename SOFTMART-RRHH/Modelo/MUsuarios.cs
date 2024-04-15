@@ -16,6 +16,7 @@ namespace SOFTMART_RRHH.Modelo
             new Param("vRol",rol),
             new Param("vIdPersona",idPersona),
             new Param("vIdUsuario",idUsuario),
+            new Param("vidCurrentUser",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Usuario", @params);
         }
@@ -26,7 +27,8 @@ namespace SOFTMART_RRHH.Modelo
             new Param("vUsuario",usuario),
             new Param("vPassword",password),
             new Param("vRol",rol),
-            new Param("vIdPersona",idPersona)            
+            new Param("vIdPersona",idPersona),
+            new Param("vidCurrentUser",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_INSERTAR_Usuario", @params);
         }
