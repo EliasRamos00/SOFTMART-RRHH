@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.lblGeneral = new System.Windows.Forms.Label();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.dgvHistorial_idHistorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHistorial_Tabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHistorial_FechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHistorial_Movimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHistorial_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblColumn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAntes = new System.Windows.Forms.RichTextBox();
             this.txtDespues = new System.Windows.Forms.RichTextBox();
             this.btnRecarga = new FontAwesome.Sharp.IconButton();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblGeneral = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
@@ -78,7 +78,7 @@
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.900565F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.29831F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(1045, 675);
+            this.tlpPrincipal.Size = new System.Drawing.Size(1045, 676);
             this.tlpPrincipal.TabIndex = 1;
             this.tlpPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpPrincipal_Paint);
             // 
@@ -92,21 +92,6 @@
             this.btnClose.TabIndex = 26;
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblGeneral
-            // 
-            this.lblGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGeneral.AutoSize = true;
-            this.tlpPrincipal.SetColumnSpan(this.lblGeneral, 3);
-            this.lblGeneral.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblGeneral.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGeneral.ForeColor = System.Drawing.Color.Black;
-            this.lblGeneral.Location = new System.Drawing.Point(45, 78);
-            this.lblGeneral.Name = "lblGeneral";
-            this.lblGeneral.Size = new System.Drawing.Size(827, 28);
-            this.lblGeneral.TabIndex = 1;
-            this.lblGeneral.Text = "GENERAL";
-            this.lblGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvHistorial
             // 
@@ -124,31 +109,31 @@
             this.dgvHistorial_FechaHora,
             this.dgvHistorial_Movimiento,
             this.dgvHistorial_Usuario});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHistorial.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHistorial.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvHistorial.GridColor = System.Drawing.Color.Black;
             this.dgvHistorial.Location = new System.Drawing.Point(45, 149);
             this.dgvHistorial.MultiSelect = false;
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorial.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorial.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvHistorial.RowHeadersVisible = false;
             this.dgvHistorial.RowHeadersWidth = 51;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorial.Size = new System.Drawing.Size(386, 501);
+            this.dgvHistorial.Size = new System.Drawing.Size(386, 502);
             this.dgvHistorial.TabIndex = 6;
             this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
             this.dgvHistorial.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellEnter);
@@ -203,33 +188,15 @@
             this.dgvHistorial_Usuario.ReadOnly = true;
             this.dgvHistorial_Usuario.Width = 125;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
-            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 3);
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(47, 14);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
-            this.lblTitulo.Size = new System.Drawing.Size(825, 60);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "HISTORIAL CAMBIOS";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // lblColumn
             // 
             this.lblColumn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblColumn.AutoSize = true;
-            this.lblColumn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumn.ForeColor = System.Drawing.Color.Black;
-            this.lblColumn.Location = new System.Drawing.Point(437, 122);
+            this.lblColumn.Location = new System.Drawing.Point(437, 126);
             this.lblColumn.Name = "lblColumn";
-            this.lblColumn.Size = new System.Drawing.Size(54, 24);
+            this.lblColumn.Size = new System.Drawing.Size(56, 20);
             this.lblColumn.TabIndex = 3;
             this.lblColumn.Text = "Antes";
             // 
@@ -237,34 +204,38 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(731, 122);
+            this.label1.Location = new System.Drawing.Point(731, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 24);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 31;
             this.label1.Text = "Despues";
             // 
             // txtAntes
             // 
             this.txtAntes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAntes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAntes.Location = new System.Drawing.Point(437, 149);
             this.txtAntes.Name = "txtAntes";
             this.txtAntes.ReadOnly = true;
-            this.txtAntes.Size = new System.Drawing.Size(288, 501);
+            this.txtAntes.Size = new System.Drawing.Size(288, 502);
             this.txtAntes.TabIndex = 32;
             this.txtAntes.Text = "";
+            this.txtAntes.WordWrap = false;
             // 
             // txtDespues
             // 
             this.tlpPrincipal.SetColumnSpan(this.txtDespues, 2);
             this.txtDespues.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDespues.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDespues.Location = new System.Drawing.Point(731, 149);
             this.txtDespues.Name = "txtDespues";
             this.txtDespues.ReadOnly = true;
-            this.txtDespues.Size = new System.Drawing.Size(288, 501);
+            this.txtDespues.Size = new System.Drawing.Size(288, 502);
             this.txtDespues.TabIndex = 33;
             this.txtDespues.Text = "";
+            this.txtDespues.WordWrap = false;
             // 
             // btnRecarga
             // 
@@ -273,7 +244,7 @@
             this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecarga.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
             this.btnRecarga.IconColor = System.Drawing.Color.White;
@@ -287,9 +258,42 @@
             this.btnRecarga.UseVisualStyleBackColor = false;
             this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
+            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 3);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo.Location = new System.Drawing.Point(47, 27);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
+            this.lblTitulo.Size = new System.Drawing.Size(825, 47);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "HISTORIAL CAMBIOS";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // lblGeneral
+            // 
+            this.lblGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGeneral.AutoSize = true;
+            this.tlpPrincipal.SetColumnSpan(this.lblGeneral, 3);
+            this.lblGeneral.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblGeneral.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneral.ForeColor = System.Drawing.Color.Black;
+            this.lblGeneral.Location = new System.Drawing.Point(45, 81);
+            this.lblGeneral.Name = "lblGeneral";
+            this.lblGeneral.Size = new System.Drawing.Size(827, 21);
+            this.lblGeneral.TabIndex = 1;
+            this.lblGeneral.Text = "GENERAL";
+            this.lblGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // vHistorialCambios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.Controls.Add(this.tlpPrincipal);
@@ -297,7 +301,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "vHistorialCambios";
-            this.Size = new System.Drawing.Size(836, 540);
+            this.Size = new System.Drawing.Size(1045, 676);
             this.Load += new System.EventHandler(this.vHistorialCambios_Load);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpPrincipal.PerformLayout();

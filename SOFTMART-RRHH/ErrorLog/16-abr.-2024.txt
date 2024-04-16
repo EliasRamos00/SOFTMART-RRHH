@@ -5,3 +5,227 @@ Exception Type: MySqlConnector.MySqlException
 Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh`.`historial`, CONSTRAINT `fk_usuarios` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`))
 Usuario: SOFIA RAMIREZ
 -----------------------------------------------
+----------Detalles del error en:  16/04/2024 11:58:01 a. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 11:58:01 a. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:13:42 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:13:42 p. m.
+Exception Type: System.InvalidOperationException
+Mensaje de Error : No se puede iniciar el proceso porque no se proporcionó ningún nombre de archivo.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:12 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:12 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:14 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:14 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:15 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:15 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:15 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:15 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:16 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:16 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:17 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:17 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:19 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:19 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 12:15:20 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 12:15:20 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:24:42 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:24:42 p. m.
+Exception Type: System.IO.DirectoryNotFoundException
+Mensaje de Error : No se puede encontrar una parte de la ruta de acceso '\Fotos_Personal\XXAA_2024-04-16_13-24-42_.jpg'.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:27:30 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:27:30 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:31:21 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:31:21 p. m.
+Exception Type: System.IO.DirectoryNotFoundException
+Mensaje de Error : No se puede encontrar una parte de la ruta de acceso '192.168.6.99\\Fotos_Personal\XXX1_2024-04-16_13-30-30_.jpg'.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:31:36 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:31:36 p. m.
+Exception Type: System.IO.DirectoryNotFoundException
+Mensaje de Error : No se puede encontrar una parte de la ruta de acceso '\192.168.6.99\\Fotos_Personal\XXX1_2024-04-16_13-31-24_.jpg'.
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:46:39 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:46:39 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:46:47 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:46:47 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:46:48 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:46:48 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:48:39 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:48:39 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:51:05 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:51:05 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:51:35 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:51:35 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:52:07 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:52:07 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:52:35 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:52:35 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:53:07 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:53:07 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:57:35 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:57:35 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 01:57:38 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 01:57:38 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:04:40 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:04:40 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:05:00 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:05:00 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:05:23 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:05:23 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:07:12 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:07:12 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:08:06 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:08:06 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:08:12 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:08:12 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 02:08:22 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 02:08:22 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------

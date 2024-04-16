@@ -41,6 +41,14 @@ namespace SOFTMART_RRHH.Modelo
             LibAux.EjecutarProcedimiento("SP_ELIMINAR_Usuario", @params);
         }
 
+        internal static string ObtenerNombrePersona(int idPersona)
+        {
+            List<Param> @params = new List<Param> {
+            new Param("vidPersona",idPersona),
+            };
+            return (LibAux.EjecutarSentencia("SELECT CONCAT_WS(' ',Nombre,ApellPaterno,ApellMaterno) as Nombre FROM Personas WHERE idPersona = @vidPersona", @params)).Rows[0][0].ToString();
+        }
+
         internal static object ObtenerUsuarios()
         {
             return LibAux.EjecutarProcedimiento("SP_CONSULTAR_Usuarios");

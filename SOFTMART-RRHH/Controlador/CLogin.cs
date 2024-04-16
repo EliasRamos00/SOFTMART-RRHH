@@ -17,7 +17,7 @@ namespace SOFTMART_RRHH.Controlador
             MLogin User = new MLogin();
             User.User = usuario;
             User.Password = GeneraHashMD5(password);
-            User.Conex = new MySqlConnection(Settings.Default.CadenaConex);
+            User.Conex = new MySqlConnection(LibAux.CadenaConexion());
 
             return MLogin.MAutenticarUsuario(User);
         }

@@ -27,10 +27,10 @@ namespace SOFTMART_RRHH.Vista
         }
 
         public vHistorialCambios(int idPersona)
-        {
-            this.idPersona = idPersona;
-            //OBTENER EL NOMBRE DE LA PERSONA.
+        {                                    
             InitializeComponent();
+            this.idPersona = idPersona;
+            lblGeneral.Text = MUsuarios.ObtenerNombrePersona(idPersona);
         }
 
         private void tlpPrincipal_Paint(object sender, PaintEventArgs e)

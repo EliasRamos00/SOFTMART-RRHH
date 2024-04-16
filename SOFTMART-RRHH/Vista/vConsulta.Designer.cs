@@ -111,7 +111,7 @@
             // 
             this.tbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltro.Location = new System.Drawing.Point(45, 113);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(386, 26);
@@ -134,11 +134,11 @@
             // 
             this.lblColumn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblColumn.AutoSize = true;
-            this.lblColumn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumn.ForeColor = System.Drawing.Color.Black;
             this.lblColumn.Location = new System.Drawing.Point(437, 90);
             this.lblColumn.Name = "lblColumn";
-            this.lblColumn.Size = new System.Drawing.Size(65, 20);
+            this.lblColumn.Size = new System.Drawing.Size(79, 20);
             this.lblColumn.TabIndex = 3;
             this.lblColumn.Text = "Columna";
             // 
@@ -147,7 +147,7 @@
             this.cbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
             this.cbFiltro.Location = new System.Drawing.Point(437, 113);
             this.cbFiltro.Name = "cbFiltro";
@@ -163,7 +163,7 @@
             this.dgvConsultaEmpleados.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -314,7 +314,7 @@
             this.dgvConsultaEmpleados_Antiguedad.HeaderText = "Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.Name = "dgvConsultaEmpleados_Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.ReadOnly = true;
-            this.dgvConsultaEmpleados_Antiguedad.Width = 85;
+            this.dgvConsultaEmpleados_Antiguedad.Width = 104;
             // 
             // dgvConsultaEmpleados_Inactivo
             // 
@@ -359,7 +359,7 @@
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
             this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.btnExcel.IconColor = System.Drawing.Color.White;
@@ -380,7 +380,7 @@
             this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecarga.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
             this.btnRecarga.IconColor = System.Drawing.Color.White;

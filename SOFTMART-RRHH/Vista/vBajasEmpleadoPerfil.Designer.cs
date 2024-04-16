@@ -263,7 +263,7 @@
             this.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.btnDarBaja.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDarBaja.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.btnDarBaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDarBaja.Location = new System.Drawing.Point(857, 607);

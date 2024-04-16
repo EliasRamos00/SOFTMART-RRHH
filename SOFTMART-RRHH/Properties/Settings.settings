@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SOFTMART_RRHH.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="CadenaConex" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Server=192.168.6.99;Database=rrhh;Port=3309;User ID=soporte;Password=Soporte123;Allow User Variables=True;</Value>
-    </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

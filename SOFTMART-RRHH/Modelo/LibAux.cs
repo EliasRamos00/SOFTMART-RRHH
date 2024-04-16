@@ -20,12 +20,20 @@ using System.Security.Policy;
 using System.Windows.Shapes;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Configuration;
 
 
 namespace SOFTMART_RRHH.Modelo
 {
     public class LibAux
     {
+        static string IP = ConfigurationManager.AppSettings["IP"];
+        static string BD = ConfigurationManager.AppSettings["BD"];
+        static string Estacion = ConfigurationManager.AppSettings["ESTACION"];
+        static string User = ConfigurationManager.AppSettings["user"];
+        static string Pass = ConfigurationManager.AppSettings["pass"];
+        static string Port = ConfigurationManager.AppSettings["port"];
+
         public LibAux() { }
         public enum CRUD
         {
@@ -58,11 +66,11 @@ namespace SOFTMART_RRHH.Modelo
         public static DataTable EjecutarProcedimiento(string nombreProcedimiento, List<Param> Parametros = null)
         {
 
-            MySqlConnection conn = new MySqlConnection(Settings.Default.CadenaConex);
+            MySqlConnection conn = new MySqlConnection(CadenaConexion());
             conn.Open();
             if (conn == null)
             {
-                conn = new MySqlConnection(Settings.Default.CadenaConex);
+                conn = new MySqlConnection(CadenaConexion());
             }
             MySqlCommand cmd = new MySqlCommand(nombreProcedimiento, conn);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -139,7 +147,7 @@ namespace SOFTMART_RRHH.Modelo
         /// <returns></returns>
         public static DataTable EjecutarSentencia(string Sentencia, List<Param> Parametros = null)
         {
-            MySqlConnection conn = new MySqlConnection(Settings.Default.CadenaConex);
+            MySqlConnection conn = new MySqlConnection(CadenaConexion());
             MySqlCommand cmd = conn.CreateCommand();
             conn.Open();
             cmd.CommandText = Sentencia;
@@ -323,5 +331,9 @@ namespace SOFTMART_RRHH.Modelo
             return Regex.IsMatch(input, "^[0-9a-fA-F]{32}$", RegexOptions.Compiled);
         }
 
+        public static string CadenaConexion() {
+
+            return  $"Server={IP};Database={BD};Port={Port};User ID={User};Password={Pass};";                                            
+        }
     }
 }

@@ -3,6 +3,7 @@ using SOFTMART_RRHH.Properties;
 using SOFTMART_RRHH.Vista;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.IO;
@@ -23,7 +24,7 @@ namespace SOFTMART_RRHH.Controlador
             object EdoCivil, object esTemp, object sueldo, bool existioPersona, object NSS, object InfoEmer, object fotografiaOrigen, object iNEOrigen, object iNE_Destino, object comentarios)
         {
             //------  SE INICIA LA TRANSACCIÓN Y SE ENVIA LA INFORMACIÓN AL MODELO -------
-            MySqlConnection conn = new MySqlConnection(Settings.Default.CadenaConex);
+            MySqlConnection conn = new MySqlConnection(CadenaConexion());
             conn.Open();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conn;
@@ -47,6 +48,10 @@ namespace SOFTMART_RRHH.Controlador
                     object idPersona = dtemp.Rows[0]["idPersona"].ToString();
                     MEmpleados.CInsertarEmpleado(idPersona, numContrato, idSucursal, idPuesto, fechaingreso, esTemp, sueldo, comentarios, cmd);
                 }
+
+
+                fotografiaDestino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "" + fotografiaDestino.ToString();
+                iNE_Destino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "\\" + iNE_Destino.ToString();
 
                 if (fotografiaOrigen.ToString() != "" && fotografiaDestino.ToString() != "")
                 { //GUARDA LA FOTO PERO EN EL SERVIDOR (Foto personal e INE)
@@ -121,7 +126,7 @@ namespace SOFTMART_RRHH.Controlador
             int idDomicilio = MDomicilios.ObtenerIdDomicilioByIdPersona(idPersona);
 
             //------  SE INICIA LA TRANSACCIÓN Y SE ENVIA LA INFORMACIÓN AL MODELO -------
-            MySqlConnection conn = new MySqlConnection(Settings.Default.CadenaConex);
+            MySqlConnection conn = new MySqlConnection(CadenaConexion());
             conn.Open();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conn;
@@ -134,6 +139,9 @@ namespace SOFTMART_RRHH.Controlador
                 MDomicilios.CModificarDomicilio(idDomicilio, estado, ciudad, colonia, cP, calleNum, cmd);
                 MPersonas.CModificarPersona(idPersona, nombres, apePat, apeMat, rFC, cURP, lugarNac, genero, fechaNac, fotografiaDestino, idEscolaridad, especialidad, edoCivil, NSS, InfoEmer, iNE_Destino, cmd);
                 MEmpleados.CModificarEmpleado(idEmpleado, numContrato, idSucursal, idPuesto, fechaingreso, esTemp, sueldo, comentarios, cmd);
+
+                fotografiaDestino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "" + fotografiaDestino.ToString();
+                iNE_Destino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "\\" + iNE_Destino.ToString();
 
                 if (fotografiaOrigen.ToString() != "" && fotografiaDestino.ToString() != "")
                 {

@@ -5,6 +5,7 @@ using SOFTMART_RRHH.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Diagnostics;
@@ -28,8 +29,8 @@ namespace SOFTMART_RRHH.Vista
         public int idEmpleado = 0;
         public int idPersona = 0;
 
-        string FotografiaDestino = "\\\\192.168.6.99\\Fotos_Personal\\";
-        string INEDestino = "\\\\192.168.6.99\\Fotos_INE\\";
+        string FotografiaDestino = "\\Fotos_Personal\\";
+        string INEDestino = "\\Fotos_INE\\";
 
         string fotografiaOrigen_Ruta = "";
         string INEOrigen_Ruta = "";
@@ -109,7 +110,7 @@ namespace SOFTMART_RRHH.Vista
                 tbCURP.Text = infoPersona.Rows[0]["CURP"].ToString();
                 tb_InfoEmerg.Text = infoPersona.Rows[0]["InfoEmer"].ToString();
                 tbNSS.Text = infoPersona.Rows[0]["NumSeguroSocial"].ToString();
-                INE = infoPersona.Rows[0]["INE"].ToString();
+                INE = "\\\\" + ConfigurationManager.AppSettings["IP"] + infoPersona.Rows[0]["INE"].ToString();
                 if (infoPersona.Rows[0]["Genero"].ToString() == "Masculino")
                 {
                     rBMasc.Checked = true;
@@ -118,7 +119,7 @@ namespace SOFTMART_RRHH.Vista
                 {
                     rBFem.Checked = true;
                 }
-                try { pbPersona.ImageLocation = infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
+                try { pbPersona.ImageLocation = "\\\\"+ ConfigurationManager.AppSettings["IP"] + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
             }
         }
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
@@ -256,6 +257,19 @@ namespace SOFTMART_RRHH.Vista
             pbPersona.Image = null;
         }
 
+        private void LimpiarCamposEmpleado()
+        {
+            tbNumContrato.Text = "";
+            tbRFC.Text = "";
+            tbComentarios.Text = "";
+
+            cbTienda.SelectedIndex = -1;
+            cbArea.SelectedIndex = -1;
+            cbSubarea.SelectedIndex = -1;
+            cbPuesto.SelectedIndex = -1;
+            cbSueldo.Text = "";         
+        }
+
         #endregion
         #region EVENTOS   
         private void vAltaPersonal_Load(object sender, EventArgs e)
@@ -348,7 +362,7 @@ namespace SOFTMART_RRHH.Vista
             try { idSucursal = cbTienda.SelectedValue.ToString(); } catch { idSucursal = ""; }
             try { idPuesto = cbPuesto.SelectedValue.ToString(); } catch { idPuesto = ""; }
             esTemporal = cBEmpleadoTemporada.Checked;
-            sueldo = Convert.ToDecimal(cbSueldo.Text);
+            sueldo = cbSueldo.Text != "" ? Convert.ToDecimal(cbSueldo.Text).ToString("0.00") : "";
             comentarios = tbComentarios.Text;
 
             if (estaModificando) //Si no es una modificación... es una inserción.
@@ -430,6 +444,7 @@ namespace SOFTMART_RRHH.Vista
             if (lblMov.Text == "ALTA")
             {
                 LimpiarCamposPersona();
+                LimpiarCamposEmpleado();
             }
         }
 

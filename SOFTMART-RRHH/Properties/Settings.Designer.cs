@@ -23,16 +23,6 @@ namespace SOFTMART_RRHH.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=192.168.6.99;Database=rrhh;Port=3309;User ID=soporte;Password=Soporte123;A" +
-            "llow User Variables=True;")]
-        public string CadenaConex {
-            get {
-                return ((string)(this["CadenaConex"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
