@@ -1,0 +1,7 @@
+----------Detalles del error en:  16/04/2024 09:49:46 a. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 09:49:46 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh`.`historial`, CONSTRAINT `fk_usuarios` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`))
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------

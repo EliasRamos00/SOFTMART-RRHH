@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using System.Xml;
 using NPOI.XWPF.UserModel;
 using System.Text.RegularExpressions;
+using SOFTMART_RRHH.Controlador;
 //using ScintillaNET;
 
 namespace SOFTMART_RRHH.Vista
@@ -28,6 +29,7 @@ namespace SOFTMART_RRHH.Vista
         public vHistorialCambios(int idPersona)
         {
             this.idPersona = idPersona;
+            //OBTENER EL NOMBRE DE LA PERSONA.
             InitializeComponent();
         }
 
