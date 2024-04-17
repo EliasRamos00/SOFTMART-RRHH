@@ -14,6 +14,7 @@ using SOFTMART_RRHH.Modelo;
 using System.Windows.Controls;
 using System.Diagnostics;
 using System.Reflection;
+using System.Deployment.Application;
 
 
 namespace SOFTMART_RRHH
@@ -150,6 +151,8 @@ namespace SOFTMART_RRHH
         #region EVENTOS
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+      
+                
             string productVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
 
             lblInfo.Text = "USUARIO: " + Properties.Settings.Default.User + " - " + Properties.Settings.Default.Rol + ".";
