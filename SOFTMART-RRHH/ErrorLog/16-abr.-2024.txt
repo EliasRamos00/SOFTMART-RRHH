@@ -229,3 +229,185 @@ Exception Type: System.ComponentModel.Win32Exception
 Mensaje de Error : No se encuentra el nombre de red especificado
 Usuario: SOFIA RAMIREZ
 -----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:51:29 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:51:29 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:52:32 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:52:32 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se ha encontrado la ruta de acceso de la red
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:52:43 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:52:43 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se ha encontrado la ruta de acceso de la red
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:52:44 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:52:44 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se ha encontrado la ruta de acceso de la red
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:52:44 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:52:44 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se ha encontrado la ruta de acceso de la red
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:54:00 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:54:00 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:54:05 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:54:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:54:11 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:54:11 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:54:49 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:54:49 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:54:51 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:54:51 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:55:20 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:55:20 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:55:30 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:55:30 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 03:56:23 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 03:56:23 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: XIMENA JUAREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:07:34 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:07:34 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'RFC' cannot be null
+Usuario: ELIAS RAMOS
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:50:09 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:50:09 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:50:20 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:50:20 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Subquery returns more than 1 row
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:51:26 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:51:26 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'Nombre' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:51:39 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:51:39 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'ApellPaterno' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:51:47 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:51:47 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'RFC' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:52:00 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:52:00 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'CURP' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:52:08 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:52:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:52:21 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:52:21 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:52:27 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:52:27 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'idSucursal' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 04:52:33 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 04:52:33 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'idPuesto' cannot be null
+Usuario: SOFIA RAMIREZ
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 05:14:00 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 05:14:00 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : No se encuentra el nombre de red especificado
+Usuario: OCTAVIO GINEBRA
+-----------------------------------------------
+----------Detalles del error en:  16/04/2024 05:14:16 p. m.----------
+-----------------------------------------------
+Fecha: 16/04/2024 05:14:16 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh`.`historial`, CONSTRAINT `fk_usuarios` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`))
+Usuario: OCTAVIO GINEBRA
+-----------------------------------------------

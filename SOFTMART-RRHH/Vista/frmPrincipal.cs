@@ -20,7 +20,6 @@ namespace SOFTMART_RRHH
 {
     public partial class frmPrincipal : Form
     {
-
         #region VARIABLES GLOBALES        
         vConsulta vConsulta = new vConsulta();
         vPersonal vAltaPersonal = new vPersonal(LibAux.CRUD.INSERT);
@@ -29,7 +28,6 @@ namespace SOFTMART_RRHH
         vHistorialCambios vCambios = new vHistorialCambios();
         vUsuarios vUsuarios = new vUsuarios();
         vErrorLog vErrorLog = new vErrorLog();
-
 
         #endregion
         #region CONSTRUCTORES
@@ -58,14 +56,12 @@ namespace SOFTMART_RRHH
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
             vTodos.DobleClickEmpleado += MostrarEmpleado;
         }
-
         private void EsAdmin(bool @bool)
         {
             btnUsuarios.Visible = @bool;
             btnHistorial.Visible = @bool;
             btnErrorLog.Visible = @bool;            
         }
-
         private void SetToolTips()
         {
             new System.Windows.Forms.ToolTip().SetToolTip(this.btnMenu, "Menu");
@@ -84,7 +80,6 @@ namespace SOFTMART_RRHH
             new System.Windows.Forms.ToolTip().SetToolTip(this.btnReset, "Cerrar sesión");
 
         }
-
         private void AdjuntarUC_frmPrincipal(System.Windows.Forms.UserControl UserControl)
         {
             pPrincipal.Controls.Add(UserControl);
@@ -137,7 +132,6 @@ namespace SOFTMART_RRHH
             vBajasEmpleadoPerfil.Dock = DockStyle.Fill;
             vBajasEmpleadoPerfil.BringToFront();
         }
-
         /// <summary>
         ///  evento Historial de vPersonal que muestra el perfil para eliminación.
         /// </summary>
@@ -154,6 +148,13 @@ namespace SOFTMART_RRHH
 
         #endregion
         #region EVENTOS
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            string productVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
+
+            lblInfo.Text = "USUARIO: " + Properties.Settings.Default.User + " - " + Properties.Settings.Default.Rol + ".";
+            lblInfo2.Text = Application.ProductName + " " + productVersion + ".";
+        }
         /// <summary>
         /// DRAG WINDOW EVENTS
         /// </summary>
@@ -207,39 +208,29 @@ namespace SOFTMART_RRHH
         {
             Application.Exit();
         }
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            MostrarUC(vCambios);
+        }
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            MostrarUC(vUsuarios);
+        }
+        private void btnErrorLog_Click(object sender, EventArgs e)
+        {
+            MostrarUC(vErrorLog);
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frm_Login log = new frm_Login();
+            log.Show();
+            this.Close();
+        }
         private void pTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        #endregion
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            string productVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
-
-            lblInfo.Text = "USUARIO: " + Properties.Settings.Default.User + " - " + Properties.Settings.Default.Rol + ".";
-            lblInfo2.Text = Application.ProductName + " " + productVersion + ".";
-        }
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            MostrarUC(vCambios);
-        }
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            MostrarUC(vUsuarios);
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-            Environment.Exit(0);
-        }
-
-        private void btnErrorLog_Click(object sender, EventArgs e)
-        {
-            MostrarUC(vErrorLog);
-        }
+        #endregion        
     }
 }

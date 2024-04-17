@@ -37,6 +37,7 @@ namespace SOFTMART_RRHH.Modelo
         {
             List<Param> @params = new List<Param> {
             new Param("vidUsuario",idUsuario),
+            new Param("vidCurrentUser",Properties.Settings.Default.idUsuario)
             };
             LibAux.EjecutarProcedimiento("SP_ELIMINAR_Usuario", @params);
         }

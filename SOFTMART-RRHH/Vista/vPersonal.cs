@@ -51,6 +51,8 @@ namespace SOFTMART_RRHH.Vista
         public vPersonal(CRUD crud, int idEmpleado = 0, int idPersona = 0)
         {
             InitializeComponent();
+
+            EsConsultor();
             this.idEmpleado = idEmpleado;
             this.idPersona = idPersona;
             switch (crud)
@@ -77,6 +79,16 @@ namespace SOFTMART_RRHH.Vista
                     lblMov.Text = "?????";
                     lblMov.ForeColor = LibAux.libColores[eColores.Baja];
                     break;
+            }
+        }
+
+        private void EsConsultor()
+        {
+            if (Properties.Settings.Default.Rol.Contains("CONSULT")) {
+                btnActualizar.Enabled = false;
+                btnGuardar.Enabled = false;
+                btnHistorial.Enabled = false;
+                btnDarBaja.Enabled = false;
             }
         }
         #endregion
