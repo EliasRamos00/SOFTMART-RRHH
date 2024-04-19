@@ -1,12 +1,8 @@
 ﻿using MySqlConnector;
 using SOFTMART_RRHH.Modelo;
-using SOFTMART_RRHH.Properties;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SOFTMART_RRHH.Controlador
 {

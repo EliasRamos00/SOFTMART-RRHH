@@ -112,7 +112,7 @@
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5285F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.16062F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.1797F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tlpPrincipal.Controls.Add(this.gBGenre, 5, 5);
             this.tlpPrincipal.Controls.Add(this.lblTienda, 2, 13);
             this.tlpPrincipal.Controls.Add(this.cbTienda, 3, 13);
@@ -203,8 +203,7 @@
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.252931F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpPrincipal.Size = new System.Drawing.Size(1045, 676);
-            this.tlpPrincipal.TabIndex = 0;
-            this.tlpPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpPrincipal_Paint);
+            this.tlpPrincipal.TabIndex = 0;            
             // 
             // gBGenre
             // 
@@ -213,7 +212,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gBGenre.Controls.Add(this.rBFem);
             this.gBGenre.Controls.Add(this.rBMasc);
-            this.gBGenre.Location = new System.Drawing.Point(703, 197);
+            this.gBGenre.Location = new System.Drawing.Point(701, 197);
             this.gBGenre.Margin = new System.Windows.Forms.Padding(0);
             this.gBGenre.Name = "gBGenre";
             this.gBGenre.Padding = new System.Windows.Forms.Padding(0);
@@ -233,8 +232,7 @@
             this.rBFem.Size = new System.Drawing.Size(100, 24);
             this.rBFem.TabIndex = 1;
             this.rBFem.Text = "Femenino";
-            this.rBFem.UseVisualStyleBackColor = true;
-            this.rBFem.CheckedChanged += new System.EventHandler(this.rBFem_CheckedChanged);
+            this.rBFem.UseVisualStyleBackColor = true;            
             // 
             // rBMasc
             // 
@@ -250,8 +248,7 @@
             this.rBMasc.TabIndex = 0;
             this.rBMasc.TabStop = true;
             this.rBMasc.Text = "Masculino";
-            this.rBMasc.UseVisualStyleBackColor = true;
-            this.rBMasc.CheckedChanged += new System.EventHandler(this.rBMasc_CheckedChanged);
+            this.rBMasc.UseVisualStyleBackColor = true;            
             // 
             // lblTienda
             // 
@@ -276,7 +273,7 @@
             this.cbTienda.FormattingEnabled = true;
             this.cbTienda.Location = new System.Drawing.Point(329, 506);
             this.cbTienda.Name = "cbTienda";
-            this.cbTienda.Size = new System.Drawing.Size(246, 28);
+            this.cbTienda.Size = new System.Drawing.Size(245, 28);
             this.cbTienda.TabIndex = 43;
             // 
             // lblRFC
@@ -286,10 +283,10 @@
             this.lblRFC.BackColor = System.Drawing.Color.GhostWhite;
             this.lblRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRFC.ForeColor = System.Drawing.Color.Black;
-            this.lblRFC.Location = new System.Drawing.Point(583, 510);
+            this.lblRFC.Location = new System.Drawing.Point(582, 510);
             this.lblRFC.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblRFC.Name = "lblRFC";
-            this.lblRFC.Size = new System.Drawing.Size(117, 20);
+            this.lblRFC.Size = new System.Drawing.Size(116, 20);
             this.lblRFC.TabIndex = 44;
             this.lblRFC.Text = "RFC*";
             this.lblRFC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,7 +295,7 @@
             // 
             this.tbRFC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRFC.Location = new System.Drawing.Point(706, 506);
+            this.tbRFC.Location = new System.Drawing.Point(704, 506);
             this.tbRFC.Name = "tbRFC";
             this.tbRFC.Size = new System.Drawing.Size(261, 27);
             this.tbRFC.TabIndex = 45;
@@ -324,7 +321,7 @@
             this.tbNumContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumContrato.Location = new System.Drawing.Point(329, 468);
             this.tbNumContrato.Name = "tbNumContrato";
-            this.tbNumContrato.Size = new System.Drawing.Size(246, 27);
+            this.tbNumContrato.Size = new System.Drawing.Size(245, 27);
             this.tbNumContrato.TabIndex = 39;
             // 
             // lblFechaIngreso
@@ -334,20 +331,19 @@
             this.lblFechaIngreso.BackColor = System.Drawing.Color.GhostWhite;
             this.lblFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaIngreso.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaIngreso.Location = new System.Drawing.Point(583, 473);
+            this.lblFechaIngreso.Location = new System.Drawing.Point(582, 473);
             this.lblFechaIngreso.Margin = new System.Windows.Forms.Padding(5, 0, 2, 0);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(118, 18);
+            this.lblFechaIngreso.Size = new System.Drawing.Size(117, 18);
             this.lblFechaIngreso.TabIndex = 40;
             this.lblFechaIngreso.Text = "Fecha Ingreso";
-            this.lblFechaIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblFechaIngreso.Click += new System.EventHandler(this.lblFechaIngreso_Click);
+            this.lblFechaIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;            
             // 
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(707, 468);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(705, 468);
             this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(259, 27);
@@ -376,7 +372,7 @@
             this.cbPuesto.FormattingEnabled = true;
             this.cbPuesto.Location = new System.Drawing.Point(329, 582);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(246, 28);
+            this.cbPuesto.Size = new System.Drawing.Size(245, 28);
             this.cbPuesto.TabIndex = 52;
             this.cbPuesto.DropDown += new System.EventHandler(this.cbPuesto_DropDown);
             // 
@@ -387,12 +383,12 @@
             this.lblSueldo.BackColor = System.Drawing.Color.GhostWhite;
             this.lblSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSueldo.ForeColor = System.Drawing.Color.Black;
-            this.lblSueldo.Location = new System.Drawing.Point(583, 586);
+            this.lblSueldo.Location = new System.Drawing.Point(582, 586);
             this.lblSueldo.Margin = new System.Windows.Forms.Padding(5, 0, 2, 0);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(118, 20);
+            this.lblSueldo.Size = new System.Drawing.Size(117, 20);
             this.lblSueldo.TabIndex = 54;
-            this.lblSueldo.Text = "Sueldo*";
+            this.lblSueldo.Text = "Sueldo";
             this.lblSueldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbSueldo
@@ -400,7 +396,7 @@
             this.cbSueldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSueldo.FormattingEnabled = true;
-            this.cbSueldo.Location = new System.Drawing.Point(706, 582);
+            this.cbSueldo.Location = new System.Drawing.Point(704, 582);
             this.cbSueldo.Name = "cbSueldo";
             this.cbSueldo.Size = new System.Drawing.Size(261, 28);
             this.cbSueldo.TabIndex = 55;
@@ -427,10 +423,10 @@
             this.lblSubarea.BackColor = System.Drawing.Color.GhostWhite;
             this.lblSubarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubarea.ForeColor = System.Drawing.Color.Black;
-            this.lblSubarea.Location = new System.Drawing.Point(583, 548);
+            this.lblSubarea.Location = new System.Drawing.Point(582, 548);
             this.lblSubarea.Margin = new System.Windows.Forms.Padding(5, 0, 2, 0);
             this.lblSubarea.Name = "lblSubarea";
-            this.lblSubarea.Size = new System.Drawing.Size(118, 20);
+            this.lblSubarea.Size = new System.Drawing.Size(117, 20);
             this.lblSubarea.TabIndex = 49;
             this.lblSubarea.Text = "Subárea";
             this.lblSubarea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -443,7 +439,7 @@
             this.cbArea.FormattingEnabled = true;
             this.cbArea.Location = new System.Drawing.Point(329, 544);
             this.cbArea.Name = "cbArea";
-            this.cbArea.Size = new System.Drawing.Size(246, 28);
+            this.cbArea.Size = new System.Drawing.Size(245, 28);
             this.cbArea.TabIndex = 48;
             this.cbArea.DropDown += new System.EventHandler(this.cbArea_DropDown);
             this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
@@ -454,7 +450,7 @@
             this.cbSubarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSubarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSubarea.FormattingEnabled = true;
-            this.cbSubarea.Location = new System.Drawing.Point(706, 544);
+            this.cbSubarea.Location = new System.Drawing.Point(704, 544);
             this.cbSubarea.Name = "cbSubarea";
             this.cbSubarea.Size = new System.Drawing.Size(261, 28);
             this.cbSubarea.TabIndex = 50;
@@ -473,11 +469,10 @@
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
-            this.lblTitulo.Size = new System.Drawing.Size(374, 47);
+            this.lblTitulo.Size = new System.Drawing.Size(372, 47);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "PERFIL DEL EMPLEADO";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;            
             // 
             // btnClose
             // 
@@ -579,7 +574,7 @@
             this.tbCURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCURP.Location = new System.Drawing.Point(329, 88);
             this.tbCURP.Name = "tbCURP";
-            this.tbCURP.Size = new System.Drawing.Size(246, 27);
+            this.tbCURP.Size = new System.Drawing.Size(245, 27);
             this.tbCURP.TabIndex = 3;
             this.tbCURP.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbCURP_KeyUp);
             // 
@@ -590,10 +585,10 @@
             this.FechaNac.BackColor = System.Drawing.Color.GhostWhite;
             this.FechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaNac.ForeColor = System.Drawing.Color.Black;
-            this.FechaNac.Location = new System.Drawing.Point(583, 84);
+            this.FechaNac.Location = new System.Drawing.Point(582, 84);
             this.FechaNac.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.FechaNac.Name = "FechaNac";
-            this.FechaNac.Size = new System.Drawing.Size(117, 36);
+            this.FechaNac.Size = new System.Drawing.Size(116, 36);
             this.FechaNac.TabIndex = 4;
             this.FechaNac.Text = "Fecha Nacimiento";
             this.FechaNac.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -602,7 +597,7 @@
             // 
             this.dtpFechaNac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNac.Location = new System.Drawing.Point(707, 88);
+            this.dtpFechaNac.Location = new System.Drawing.Point(705, 88);
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(259, 27);
@@ -630,7 +625,7 @@
             this.tbApePat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApePat.Location = new System.Drawing.Point(329, 126);
             this.tbApePat.Name = "tbApePat";
-            this.tbApePat.Size = new System.Drawing.Size(246, 27);
+            this.tbApePat.Size = new System.Drawing.Size(245, 27);
             this.tbApePat.TabIndex = 7;
             // 
             // lblApeMat
@@ -640,10 +635,10 @@
             this.lblApeMat.BackColor = System.Drawing.Color.GhostWhite;
             this.lblApeMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApeMat.ForeColor = System.Drawing.Color.Black;
-            this.lblApeMat.Location = new System.Drawing.Point(583, 130);
+            this.lblApeMat.Location = new System.Drawing.Point(582, 130);
             this.lblApeMat.Margin = new System.Windows.Forms.Padding(5, 0, 2, 0);
             this.lblApeMat.Name = "lblApeMat";
-            this.lblApeMat.Size = new System.Drawing.Size(118, 20);
+            this.lblApeMat.Size = new System.Drawing.Size(117, 20);
             this.lblApeMat.TabIndex = 8;
             this.lblApeMat.Text = "A. Materno";
             this.lblApeMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -652,7 +647,7 @@
             // 
             this.tbApeMat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbApeMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApeMat.Location = new System.Drawing.Point(706, 126);
+            this.tbApeMat.Location = new System.Drawing.Point(704, 126);
             this.tbApeMat.Name = "tbApeMat";
             this.tbApeMat.Size = new System.Drawing.Size(261, 27);
             this.tbApeMat.TabIndex = 9;
@@ -679,7 +674,7 @@
             this.tbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombres.Location = new System.Drawing.Point(329, 164);
             this.tbNombres.Name = "tbNombres";
-            this.tbNombres.Size = new System.Drawing.Size(638, 27);
+            this.tbNombres.Size = new System.Drawing.Size(636, 27);
             this.tbNombres.TabIndex = 11;
             // 
             // lblTelefono
@@ -703,7 +698,7 @@
             this.tbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelefono.Location = new System.Drawing.Point(329, 202);
             this.tbTelefono.Name = "tbTelefono";
-            this.tbTelefono.Size = new System.Drawing.Size(246, 27);
+            this.tbTelefono.Size = new System.Drawing.Size(245, 27);
             this.tbTelefono.TabIndex = 13;
             // 
             // lblGenero
@@ -713,10 +708,10 @@
             this.lblGenero.BackColor = System.Drawing.Color.GhostWhite;
             this.lblGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.ForeColor = System.Drawing.Color.Black;
-            this.lblGenero.Location = new System.Drawing.Point(583, 206);
+            this.lblGenero.Location = new System.Drawing.Point(582, 206);
             this.lblGenero.Margin = new System.Windows.Forms.Padding(5, 0, 2, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(118, 20);
+            this.lblGenero.Size = new System.Drawing.Size(117, 20);
             this.lblGenero.TabIndex = 14;
             this.lblGenero.Text = "Genero";
             this.lblGenero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -744,7 +739,7 @@
             this.cbEdoCivil.FormattingEnabled = true;
             this.cbEdoCivil.Location = new System.Drawing.Point(329, 240);
             this.cbEdoCivil.Name = "cbEdoCivil";
-            this.cbEdoCivil.Size = new System.Drawing.Size(246, 28);
+            this.cbEdoCivil.Size = new System.Drawing.Size(245, 28);
             this.cbEdoCivil.TabIndex = 17;
             // 
             // lblLugarNac
@@ -754,10 +749,10 @@
             this.lblLugarNac.BackColor = System.Drawing.Color.GhostWhite;
             this.lblLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugarNac.ForeColor = System.Drawing.Color.Black;
-            this.lblLugarNac.Location = new System.Drawing.Point(583, 236);
+            this.lblLugarNac.Location = new System.Drawing.Point(582, 236);
             this.lblLugarNac.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblLugarNac.Name = "lblLugarNac";
-            this.lblLugarNac.Size = new System.Drawing.Size(117, 36);
+            this.lblLugarNac.Size = new System.Drawing.Size(116, 36);
             this.lblLugarNac.TabIndex = 18;
             this.lblLugarNac.Text = "Lugar nacimiento";
             this.lblLugarNac.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -766,7 +761,7 @@
             // 
             this.tbLugarNac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLugarNac.Location = new System.Drawing.Point(706, 240);
+            this.tbLugarNac.Location = new System.Drawing.Point(704, 240);
             this.tbLugarNac.Name = "tbLugarNac";
             this.tbLugarNac.Size = new System.Drawing.Size(261, 27);
             this.tbLugarNac.TabIndex = 19;
@@ -784,8 +779,7 @@
             this.lblEstado.Size = new System.Drawing.Size(133, 20);
             this.lblEstado.TabIndex = 20;
             this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
+            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;            
             // 
             // tbEstado
             // 
@@ -793,14 +787,14 @@
             this.tbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEstado.Location = new System.Drawing.Point(329, 278);
             this.tbEstado.Name = "tbEstado";
-            this.tbEstado.Size = new System.Drawing.Size(246, 27);
+            this.tbEstado.Size = new System.Drawing.Size(245, 27);
             this.tbEstado.TabIndex = 21;
             // 
             // tbCiudad
             // 
             this.tbCiudad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCiudad.Location = new System.Drawing.Point(706, 278);
+            this.tbCiudad.Location = new System.Drawing.Point(704, 278);
             this.tbCiudad.Name = "tbCiudad";
             this.tbCiudad.Size = new System.Drawing.Size(261, 27);
             this.tbCiudad.TabIndex = 23;
@@ -826,7 +820,7 @@
             this.tbColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbColonia.Location = new System.Drawing.Point(329, 316);
             this.tbColonia.Name = "tbColonia";
-            this.tbColonia.Size = new System.Drawing.Size(246, 27);
+            this.tbColonia.Size = new System.Drawing.Size(245, 27);
             this.tbColonia.TabIndex = 25;
             // 
             // lblCP
@@ -836,10 +830,10 @@
             this.lblCP.BackColor = System.Drawing.Color.GhostWhite;
             this.lblCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.Color.Black;
-            this.lblCP.Location = new System.Drawing.Point(583, 320);
+            this.lblCP.Location = new System.Drawing.Point(582, 320);
             this.lblCP.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(117, 20);
+            this.lblCP.Size = new System.Drawing.Size(116, 20);
             this.lblCP.TabIndex = 26;
             this.lblCP.Text = "C.P.";
             this.lblCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -848,7 +842,7 @@
             // 
             this.tbCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCP.Location = new System.Drawing.Point(706, 316);
+            this.tbCP.Location = new System.Drawing.Point(704, 316);
             this.tbCP.Name = "tbCP";
             this.tbCP.Size = new System.Drawing.Size(261, 27);
             this.tbCP.TabIndex = 27;
@@ -875,7 +869,7 @@
             this.tbCalleNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCalleNum.Location = new System.Drawing.Point(329, 354);
             this.tbCalleNum.Name = "tbCalleNum";
-            this.tbCalleNum.Size = new System.Drawing.Size(638, 27);
+            this.tbCalleNum.Size = new System.Drawing.Size(636, 27);
             this.tbCalleNum.TabIndex = 29;
             // 
             // lbEsco
@@ -901,7 +895,7 @@
             this.cbEscolaridad.FormattingEnabled = true;
             this.cbEscolaridad.Location = new System.Drawing.Point(329, 392);
             this.cbEscolaridad.Name = "cbEscolaridad";
-            this.cbEscolaridad.Size = new System.Drawing.Size(246, 28);
+            this.cbEscolaridad.Size = new System.Drawing.Size(245, 28);
             this.cbEscolaridad.TabIndex = 31;
             // 
             // label5
@@ -911,10 +905,10 @@
             this.label5.BackColor = System.Drawing.Color.GhostWhite;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(583, 397);
+            this.label5.Location = new System.Drawing.Point(582, 397);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 18);
+            this.label5.Size = new System.Drawing.Size(116, 18);
             this.label5.TabIndex = 32;
             this.label5.Text = "Especialidad";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -926,10 +920,10 @@
             this.lblCiudad.BackColor = System.Drawing.Color.GhostWhite;
             this.lblCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudad.ForeColor = System.Drawing.Color.Black;
-            this.lblCiudad.Location = new System.Drawing.Point(583, 282);
+            this.lblCiudad.Location = new System.Drawing.Point(582, 282);
             this.lblCiudad.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(117, 20);
+            this.lblCiudad.Size = new System.Drawing.Size(116, 20);
             this.lblCiudad.TabIndex = 22;
             this.lblCiudad.Text = "Ciudad";
             this.lblCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -938,7 +932,7 @@
             // 
             this.tbEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEspecialidad.Location = new System.Drawing.Point(706, 392);
+            this.tbEspecialidad.Location = new System.Drawing.Point(704, 392);
             this.tbEspecialidad.Name = "tbEspecialidad";
             this.tbEspecialidad.Size = new System.Drawing.Size(261, 27);
             this.tbEspecialidad.TabIndex = 33;
@@ -950,10 +944,10 @@
             this.lblNSS.BackColor = System.Drawing.Color.GhostWhite;
             this.lblNSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNSS.ForeColor = System.Drawing.Color.Black;
-            this.lblNSS.Location = new System.Drawing.Point(583, 434);
+            this.lblNSS.Location = new System.Drawing.Point(582, 434);
             this.lblNSS.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblNSS.Name = "lblNSS";
-            this.lblNSS.Size = new System.Drawing.Size(117, 20);
+            this.lblNSS.Size = new System.Drawing.Size(116, 20);
             this.lblNSS.TabIndex = 36;
             this.lblNSS.Text = "N.S.S.";
             this.lblNSS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -977,7 +971,7 @@
             // 
             this.tbNSS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbNSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNSS.Location = new System.Drawing.Point(706, 430);
+            this.tbNSS.Location = new System.Drawing.Point(704, 430);
             this.tbNSS.Name = "tbNSS";
             this.tbNSS.Size = new System.Drawing.Size(261, 27);
             this.tbNSS.TabIndex = 37;
@@ -988,7 +982,7 @@
             this.tb_InfoEmerg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_InfoEmerg.Location = new System.Drawing.Point(329, 430);
             this.tb_InfoEmerg.Name = "tb_InfoEmerg";
-            this.tb_InfoEmerg.Size = new System.Drawing.Size(246, 27);
+            this.tb_InfoEmerg.Size = new System.Drawing.Size(245, 27);
             this.tb_InfoEmerg.TabIndex = 35;
             // 
             // btnLimpiar
@@ -1002,7 +996,7 @@
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 34;
-            this.btnLimpiar.Location = new System.Drawing.Point(973, 48);
+            this.btnLimpiar.Location = new System.Drawing.Point(971, 48);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(52, 32);
             this.btnLimpiar.TabIndex = 3;
@@ -1071,7 +1065,7 @@
             this.tbComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbComentarios.Location = new System.Drawing.Point(329, 620);
             this.tbComentarios.Name = "tbComentarios";
-            this.tbComentarios.Size = new System.Drawing.Size(638, 27);
+            this.tbComentarios.Size = new System.Drawing.Size(636, 27);
             this.tbComentarios.TabIndex = 57;
             // 
             // pbPersona
@@ -1091,8 +1085,7 @@
             this.pbPersona.Size = new System.Drawing.Size(157, 146);
             this.pbPersona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPersona.TabIndex = 63;
-            this.pbPersona.TabStop = false;
-            this.pbPersona.Click += new System.EventHandler(this.pbPersona_Click);
+            this.pbPersona.TabStop = false;            
             // 
             // btnGuardar
             // 

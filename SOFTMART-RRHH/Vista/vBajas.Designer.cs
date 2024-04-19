@@ -190,8 +190,7 @@
             this.dgvBajasEmpleados.RowHeadersVisible = false;
             this.dgvBajasEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBajasEmpleados.Size = new System.Drawing.Size(974, 502);
-            this.dgvBajasEmpleados.TabIndex = 6;
-            this.dgvBajasEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBajasEmpleados_CellContentClick);
+            this.dgvBajasEmpleados.TabIndex = 6;            
             // 
             // dgvConsultaEmpleados_idEmpleado
             // 

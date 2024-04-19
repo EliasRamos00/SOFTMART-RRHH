@@ -1,14 +1,10 @@
-﻿using SOFTMART_RRHH.Controlador;
+﻿
 using SOFTMART_RRHH.Modelo;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
@@ -21,8 +17,7 @@ namespace SOFTMART_RRHH.Vista
         public vBajas()
         {
             InitializeComponent();
-            CargarCBFiltro();
-            //Set Double buffering on the Grid using reflection and the bindingflags enum.
+            CargarCBFiltro();            
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dgvBajasEmpleados, new object[] { true });
@@ -43,9 +38,7 @@ namespace SOFTMART_RRHH.Vista
                 FechaIni = FechaIni.AddDays(-1);
                 FechaFin = FechaFin.AddDays(-1);
             }
-
             int anios = 0, meses = 0, dias = 0;
-
             // obtiene los años.
             while (FechaFin.CompareTo(FechaIni) >= 0)
             {
@@ -54,8 +47,6 @@ namespace SOFTMART_RRHH.Vista
             }
             FechaFin = FechaFin.AddYears(1);
             anios--;
-
-
             // obtiene los dias y los meses
             MesAnter = FechaFin.Month;
             while (FechaFin.CompareTo(FechaIni) >= 0)
@@ -87,7 +78,7 @@ namespace SOFTMART_RRHH.Vista
                 row.Cells["dgvBajasEmpleados_TiempoBaja"].Value = CalcularDiferencia(fechaTermino, DateTime.Now);
             }
         }
-        public void CargarCBFiltro()
+        private void CargarCBFiltro()
         {
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
 
@@ -95,7 +86,6 @@ namespace SOFTMART_RRHH.Vista
             {
                 if (col.HeaderText == "Nombre" || col.HeaderText == "Tienda" || col.HeaderText == "Patron" || col.HeaderText == "Finiquito" || col.HeaderText == "Comentarios")
                     keyValuePairs.Add(col.Name, col.HeaderText);
-
             }
             cbFiltro.DataSource = keyValuePairs.ToList();
             cbFiltro.DisplayMember = "Value";
@@ -116,10 +106,24 @@ namespace SOFTMART_RRHH.Vista
         {
             CargarPersonasDadasBajas();
 
-        }
-        private void dgvBajasEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        }        
+        private void btnExcel_Click(object sender, EventArgs e)
         {
+            List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
+            foreach (DataGridViewColumn item in dgvBajasEmpleados.Columns)
+            {
+                if (!item.HeaderText.Contains("id"))
+                {
+                    columns.Add(item);
+                }
 
+            }
+            frmExcelCheckList frmExcel = new frmExcelCheckList(columns);            
+            
+            if (frmExcel.ShowDialog() == DialogResult.OK)
+            {
+                LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvBajasEmpleados, frmExcel.ColumnasAExportar));
+            }            
         }
         private void tbFiltro_TextChanged(object sender, EventArgs e)
         {
@@ -137,27 +141,5 @@ namespace SOFTMART_RRHH.Vista
         }
         #endregion
 
-        private void btnExcel_Click(object sender, EventArgs e)
-        {
-
-            List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
-            foreach (DataGridViewColumn item in dgvBajasEmpleados.Columns)
-            {
-                if (!item.HeaderText.Contains("id"))
-                {
-                    columns.Add(item);
-                }
-
-            }
-            frmExcelCheckList frmExcel = new frmExcelCheckList(columns, dgvBajasEmpleados);
-            //DialogResult result = frmExcel.ShowDialog();
-
-            // Verificar si el diálogo fue cerrado o cancelado
-            if (frmExcel.ShowDialog() == DialogResult.OK)
-            {
-                LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvBajasEmpleados, frmExcel.ColumnasAExportar));
-            }
-            //LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvBajasEmpleados));
-        }
     }
 }

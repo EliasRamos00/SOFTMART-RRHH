@@ -1,17 +1,12 @@
 ﻿using MySqlConnector;
-using SOFTMART_RRHH.Properties;
-using SOFTMART_RRHH.Vista;
+
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
+
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using System.Windows;
+
 using static SOFTMART_RRHH.Modelo.LibAux;
 
 namespace SOFTMART_RRHH.Controlador

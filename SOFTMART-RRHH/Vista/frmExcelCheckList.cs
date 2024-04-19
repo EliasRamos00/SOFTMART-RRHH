@@ -1,12 +1,7 @@
-﻿using SOFTMART_RRHH.Modelo;
+﻿
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
@@ -14,21 +9,14 @@ namespace SOFTMART_RRHH.Vista
     public partial class frmExcelCheckList : Form
     {
         public List<string> ColumnasAExportar = new List<string>();
-        List<DataGridViewColumn> columns;
-        DataGridView dgv;
+        List<DataGridViewColumn> columns;        
         Point lastPoint = new Point(10, 35);
-        public frmExcelCheckList()
-        {
-            InitializeComponent();
-        }
-        public frmExcelCheckList(List<DataGridViewColumn> columns, DataGridView dgvConsultaEmpleados)
+        public frmExcelCheckList(List<DataGridViewColumn> columns)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
-            this.columns = columns;
-            this.dgv = dgvConsultaEmpleados;
+            this.columns = columns;            
         }
-
         private void frmExcelCheckList_Load(object sender, EventArgs e)
         {
             CheckBox box = new CheckBox();
@@ -39,8 +27,7 @@ namespace SOFTMART_RRHH.Vista
                 box.Font = new Font("Microsoft Sans Serif", 14);
                 box.AutoSize = false;
                 box.Size = new Size(100, 100);
-
-                //box.Tag = i.ToString();
+                
                 box.Text = column.HeaderText;
                 box.AutoSize = true;
                 box.Location = lastPoint; //vertical                                                   
@@ -56,7 +43,6 @@ namespace SOFTMART_RRHH.Vista
             this.Size = new Size(300, lastPoint.Y + 110);
 
         }
-
         private void btnExportar_Click(object sender, EventArgs e)
         {
             // Itera sobre los controles del formulario para encontrar los CheckBoxes marcados

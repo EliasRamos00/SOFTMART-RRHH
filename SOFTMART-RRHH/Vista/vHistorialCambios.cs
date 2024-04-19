@@ -1,71 +1,31 @@
 ﻿using SOFTMART_RRHH.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Xml.Linq;
-using System.Xml;
-using NPOI.XWPF.UserModel;
 using System.Text.RegularExpressions;
-using SOFTMART_RRHH.Controlador;
-//using ScintillaNET;
 
 namespace SOFTMART_RRHH.Vista
 {
     public partial class vHistorialCambios : System.Windows.Forms.UserControl
     {
+        #region VARIABLES GLOBALES
         int idPersona = -1;
+        #endregion
+        #region CONSTRUCTORES
         public vHistorialCambios()
         {
             InitializeComponent();
         }
-
         public vHistorialCambios(int idPersona)
-        {                                    
+        {
             InitializeComponent();
             this.idPersona = idPersona;
             lblGeneral.Text = MUsuarios.ObtenerNombrePersona(idPersona);
         }
-
-        private void tlpPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void vHistorialCambios_Load(object sender, EventArgs e)
-        {
-            CargarCambios();
-        }
-
-        private void dgvHistorial_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void CargarCambios()
-        {
-            if (idPersona >= 1)
-            {
-                dgvHistorial.DataSource = MHistorial.ConsultarCambios(idPersona);
-            }
-            else
-            {
-                dgvHistorial.DataSource = MHistorial.ConsultarCambios();
-            }
-
-        }
-
-        private void dgvHistorial_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        #endregion
+        #region METODOS        
         static void RemoverNodosDuplicados(XElement node1, XElement node2)
         {
             // Get the names of child nodes in each XML
@@ -95,24 +55,16 @@ namespace SOFTMART_RRHH.Vista
             }
 
         }
-
-        private void btnRecarga_Click(object sender, EventArgs e)
+        private void CargarCambios()
         {
-            CargarCambios();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void txtDespues_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAntes_Click(object sender, EventArgs e)
-        {
+            if (idPersona >= 1)
+            {
+                dgvHistorial.DataSource = MHistorial.ConsultarCambios(idPersona);
+            }
+            else
+            {
+                dgvHistorial.DataSource = MHistorial.ConsultarCambios();
+            }
 
         }
         private void HighlightSyntax(System.Windows.Forms.RichTextBox richTextBox1)
@@ -154,7 +106,20 @@ namespace SOFTMART_RRHH.Vista
             // Devolver el enfoque al control RichTextBox
             richTextBox1.Focus();
         }
-
+        #endregion
+        #region EVENTOS        
+        private void vHistorialCambios_Load(object sender, EventArgs e)
+        {
+            CargarCambios();
+        }
+        private void btnRecarga_Click(object sender, EventArgs e)
+        {
+            CargarCambios();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
         private void dgvHistorial_SelectionChanged(object sender, EventArgs e)
         {
             txtAntes.Text = "";
@@ -195,5 +160,6 @@ namespace SOFTMART_RRHH.Vista
 
             dgvHistorial.Focus();
         }
+        #endregion
     }
 }

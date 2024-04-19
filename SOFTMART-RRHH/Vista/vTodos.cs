@@ -2,13 +2,9 @@
 using SOFTMART_RRHH.Modelo;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
@@ -54,6 +50,23 @@ namespace SOFTMART_RRHH.Vista
             cbFiltro.DisplayMember = "Value";
             cbFiltro.ValueMember = "Key";
         }
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
+            foreach (DataGridViewColumn item in dgvConsultaEmpleados.Columns)
+            {
+                if (!item.HeaderText.Contains("id"))
+                {
+                    columns.Add(item);
+                }
+            }
+            frmExcelCheckList frmExcel = new frmExcelCheckList(columns);
+            // Verificar si el diálogo fue cerrado o cancelado
+            if (frmExcel.ShowDialog() == DialogResult.OK)
+            {
+                LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvConsultaEmpleados, frmExcel.ColumnasAExportar));
+            }
+        }
         #endregion
         #region EVENTOS   
         private void vTodos_Load(object sender, EventArgs e)
@@ -90,23 +103,5 @@ namespace SOFTMART_RRHH.Vista
             MostrarInformacionEmpleado(EventArgs.Empty);
         }
         #endregion
-
-        private void btnExcel_Click(object sender, EventArgs e)
-        {
-            List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
-            foreach (DataGridViewColumn item in dgvConsultaEmpleados.Columns)
-            {
-                if (!item.HeaderText.Contains("id"))
-                {
-                    columns.Add(item);
-                }
-            }
-            frmExcelCheckList frmExcel = new frmExcelCheckList(columns, dgvConsultaEmpleados);
-            // Verificar si el diálogo fue cerrado o cancelado
-            if (frmExcel.ShowDialog() == DialogResult.OK)
-            {
-                LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvConsultaEmpleados, frmExcel.ColumnasAExportar));
-            }
-        }
     }
 }

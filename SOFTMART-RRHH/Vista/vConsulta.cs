@@ -1,21 +1,12 @@
-﻿using NPOI.SS.Formula.Atp;
-using NPOI.SS.Formula.Functions;
+﻿
 using SOFTMART_RRHH.Controlador;
 using SOFTMART_RRHH.Modelo;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static NPOI.POIFS.Crypt.CryptoFunctions;
 
 namespace SOFTMART_RRHH.Vista
 {
@@ -38,16 +29,11 @@ namespace SOFTMART_RRHH.Vista
             CargarColumnas();
         }
         #endregion
-        #region MÉTODOS
-        public virtual void MostrarInformacionEmpleado(EventArgs e)
-        {
-            DobleClickEmpleado?.Invoke(this, e);
-        }
+        #region MÉTODOS        
         private void LlenarGrid()
         {
             dgvConsultaEmpleados.DataSource = MEmpleados.ObtenerEmpleadosActivosReporte();
             CalcularAntiguedad();
-            //FiltrarInformacion();
         }
         private void CargarColumnas()
         {
@@ -62,20 +48,7 @@ namespace SOFTMART_RRHH.Vista
             cbFiltro.DataSource = keyValuePairs.ToList();
             cbFiltro.DisplayMember = "Value";
             cbFiltro.ValueMember = "Key";
-        }
-        #endregion
-        #region EVENTOS   
-        private void vConsulta_Load(object sender, EventArgs e)
-        {
-            LlenarGrid();
-            CargarColumnas();
-            //CalcularAntiguedad();
-        }
-        private void tbFiltro_TextChanged(object sender, EventArgs e)
-        {
-            FiltrarInformacion();
-        }
-
+        }        
         private string CalcularDiferencia(DateTime FechaIni, DateTime FechaFin)
         {
             int MesAnter = FechaFin.Month;
@@ -124,7 +97,6 @@ namespace SOFTMART_RRHH.Vista
                                 ", " + dias.ToString() + " Dia(s)");
 
         }
-
         private void CalcularAntiguedad()
         {
             DateTime fechaInicio;
@@ -134,7 +106,6 @@ namespace SOFTMART_RRHH.Vista
                 row.Cells["dgvConsultaEmpleados_Antiguedad"].Value = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
             }
         }
-
         private void FiltrarInformacion()
         {
             try
@@ -155,9 +126,8 @@ namespace SOFTMART_RRHH.Vista
                     ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format("AntiguedadDias >= " + diasInicio + " AND AntiguedadDias <= " + diasFinal + "AND antiguedad NOT LIKE 'N/A'");
                 }
             }
-            catch (Exception ex){ LibAux.ErrorLog(ex); ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
+            catch (Exception ex) { LibAux.ErrorLog(ex); ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
         }
-
         private int TomarDiasComboBox(ComboBox ComboBox)
         {
             switch (ComboBox.Text)
@@ -189,40 +159,6 @@ namespace SOFTMART_RRHH.Vista
                     return 0;
             }
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-        private void btnRecarga_Click(object sender, EventArgs e)
-        {
-            LlenarGrid();
-        }
-        private void dgvConsultaEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            idEmpleado = Convert.ToInt32(dgvConsultaEmpleados.CurrentRow.Cells["dgvConsultaEmpleados_idEmpleado"].Value);
-            idPersona = Convert.ToInt32(dgvConsultaEmpleados.CurrentRow.Cells["dgvConsultaEmpleados_idPersona"].Value);
-            MostrarInformacionEmpleado(EventArgs.Empty);
-        }
-        #endregion
-
-        private void btnExcel_Click(object sender, EventArgs e)
-        {
-            List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
-            foreach (DataGridViewColumn item in dgvConsultaEmpleados.Columns)
-            {
-                if (!item.HeaderText.Contains("id"))
-                {
-                    columns.Add(item);
-                }
-            }
-            frmExcelCheckList frmExcel = new frmExcelCheckList(columns, dgvConsultaEmpleados);
-            // Verificar si el diálogo fue cerrado o cancelado
-            if (frmExcel.ShowDialog() == DialogResult.OK)
-            {
-                LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvConsultaEmpleados, frmExcel.ColumnasAExportar));
-            }
-        }
         public void esVisibleFiltroAntiguedad(bool @bool)
         {
             ChBFechaFiltro.Visible = @bool;
@@ -233,7 +169,43 @@ namespace SOFTMART_RRHH.Vista
             cbFinal.Visible = @bool;
             tbFiltro.Enabled = !@bool;
         }
-
+        #endregion
+        #region EVENTOS        
+        private void vConsulta_Load(object sender, EventArgs e)
+        {
+            LlenarGrid();
+            CargarColumnas();
+            //CalcularAntiguedad();
+        }        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+        private void btnRecarga_Click(object sender, EventArgs e)
+        {
+            LlenarGrid();
+        }
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
+            foreach (DataGridViewColumn item in dgvConsultaEmpleados.Columns)
+            {
+                if (!item.HeaderText.Contains("id"))
+                {
+                    columns.Add(item);
+                }
+            }
+            frmExcelCheckList frmExcel = new frmExcelCheckList(columns);
+            // Verificar si el diálogo fue cerrado o cancelado
+            if (frmExcel.ShowDialog() == DialogResult.OK)
+            {
+                LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvConsultaEmpleados, frmExcel.ColumnasAExportar));
+            }
+        }
+        private void tbFiltro_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarInformacion();
+        }    
         private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFiltro.Text == "Antiguedad")
@@ -245,7 +217,6 @@ namespace SOFTMART_RRHH.Vista
                 esVisibleFiltroAntiguedad(false);
             }
         }
-
         private void ChBFechaFiltro_CheckedChanged(object sender, EventArgs e)
         {
             //Tomar la fecha de hoy...
@@ -259,34 +230,28 @@ namespace SOFTMART_RRHH.Vista
                 dtpFechaFiltro.Enabled = true;
             }
         }
-
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             FiltrarInformacion();
         }
-
         private void cbFinal_SelectedIndexChanged(object sender, EventArgs e)
         {
             FiltrarInformacion();
         }
-
         private void dtpFechaFiltro_ValueChanged(object sender, EventArgs e)
         {
             LlenarGrid();
         }
-
-        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        private void dgvConsultaEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            idEmpleado = Convert.ToInt32(dgvConsultaEmpleados.CurrentRow.Cells["dgvConsultaEmpleados_idEmpleado"].Value);
+            idPersona = Convert.ToInt32(dgvConsultaEmpleados.CurrentRow.Cells["dgvConsultaEmpleados_idPersona"].Value);
+            MostrarInformacionEmpleado(EventArgs.Empty);
         }
-        private void dgvConsultaEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public virtual void MostrarInformacionEmpleado(EventArgs e)
         {
-
+            DobleClickEmpleado?.Invoke(this, e);
         }
+        #endregion
     }
 }

@@ -210,7 +210,6 @@
             this.dgvConsultaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultaEmpleados.Size = new System.Drawing.Size(974, 503);
             this.dgvConsultaEmpleados.TabIndex = 6;
-            this.dgvConsultaEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleados_CellContentClick);
             this.dgvConsultaEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleados_CellDoubleClick);
             // 
             // dgvConsultaEmpleados_idEmpleado

@@ -79,8 +79,7 @@
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.29831F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpPrincipal.Size = new System.Drawing.Size(1045, 676);
-            this.tlpPrincipal.TabIndex = 1;
-            this.tlpPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpPrincipal_Paint);
+            this.tlpPrincipal.TabIndex = 1;            
             // 
             // btnClose
             // 
@@ -135,8 +134,6 @@
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorial.Size = new System.Drawing.Size(386, 502);
             this.dgvHistorial.TabIndex = 6;
-            this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
-            this.dgvHistorial.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellEnter);
             this.dgvHistorial.SelectionChanged += new System.EventHandler(this.dgvHistorial_SelectionChanged);
             // 
             // dgvHistorial_idHistorial

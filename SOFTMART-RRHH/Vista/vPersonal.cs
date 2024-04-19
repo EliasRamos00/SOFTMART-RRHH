@@ -1,20 +1,11 @@
-﻿using MySqlConnector;
-using SOFTMART_RRHH.Controlador;
+﻿using SOFTMART_RRHH.Controlador;
 using SOFTMART_RRHH.Modelo;
-using SOFTMART_RRHH.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
 using static SOFTMART_RRHH.Modelo.LibAux;
 
@@ -23,7 +14,7 @@ namespace SOFTMART_RRHH.Vista
     public partial class vPersonal : UserControl
     {
         #region VARIABLES GLOBALES
-        public string oldCurp { get; private set; }
+        public string OldCurp { get; private set; }
         public event EventHandler BtnEliminar;
         public event EventHandler BtnHistorial;
         public int idEmpleado = 0;
@@ -34,11 +25,8 @@ namespace SOFTMART_RRHH.Vista
 
         string fotografiaOrigen_Ruta = "";
         string INEOrigen_Ruta = "";
-
         bool esFotoNueva = false, esINENueva = false;
-
         string INE;
-
         bool estaModificando = false;
         bool existióPersona = false;
 
@@ -82,15 +70,7 @@ namespace SOFTMART_RRHH.Vista
             }
         }
 
-        private void EsConsultor()
-        {
-            if (Properties.Settings.Default.Rol.Contains("CONSULT")) {
-                btnActualizar.Enabled = false;
-                btnGuardar.Enabled = false;
-                btnHistorial.Enabled = false;
-                btnDarBaja.Enabled = false;
-            }
-        }
+        
         #endregion
         #region MÉTODOS
         private void CargarInformacion()
@@ -199,7 +179,6 @@ namespace SOFTMART_RRHH.Vista
             cbPuesto.ValueMember = "idPuesto";
             cbPuesto.SelectedIndex = -1;
         }
-
         private void CargarSucursales()
         {
             cbTienda.DataSource = MSucursales.ObtenerSucursales();
@@ -226,8 +205,6 @@ namespace SOFTMART_RRHH.Vista
             tbNSS.ReadOnly = @bool;
             tb_InfoEmerg.ReadOnly = @bool;
 
-            //btnSubirINE.Enabled = !@bool;
-            //btnSubirFoto.Enabled = !@bool;
             cbEdoCivil.Enabled = !@bool;
             cbEscolaridad.Enabled = !@bool;
             dtpFechaNac.Enabled = !@bool;
@@ -245,6 +222,16 @@ namespace SOFTMART_RRHH.Vista
             cbPuesto.Enabled = !@bool;
             dtpFechaIngreso.Enabled = !@bool;
             cbSubarea.Enabled = !@bool;
+        }
+        private void EsConsultor()
+        {
+            if (Properties.Settings.Default.Rol.Contains("CONSULT"))
+            {
+                btnActualizar.Enabled = false;
+                btnGuardar.Enabled = false;
+                btnHistorial.Enabled = false;
+                btnDarBaja.Enabled = false;
+            }
         }
         private void LimpiarCamposPersona()
         {
@@ -267,8 +254,7 @@ namespace SOFTMART_RRHH.Vista
             tbNSS.Text = "";
             cbEscolaridad.SelectedIndex = -1;
             pbPersona.Image = null;
-        }
-
+        }        
         private void LimpiarCamposEmpleado()
         {
             tbNumContrato.Text = "";
@@ -280,6 +266,10 @@ namespace SOFTMART_RRHH.Vista
             cbSubarea.SelectedIndex = -1;
             cbPuesto.SelectedIndex = -1;
             cbSueldo.Text = "";         
+        }
+        public virtual void MostrarVentanaEliminacion(EventArgs e)
+        {
+            BtnEliminar?.Invoke(this, e);
         }
 
         #endregion
@@ -306,10 +296,6 @@ namespace SOFTMART_RRHH.Vista
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-        private void rBMasc_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -414,7 +400,7 @@ namespace SOFTMART_RRHH.Vista
                 btnSubirFoto.Text = "Subir Fotografia";
                 btnSubirINE.Text = "Subir INE";
                 estaModificando = true;
-                oldCurp = tbCURP.Text;
+                OldCurp = tbCURP.Text;
                 lblMov.Text = "MODIFICACIÓN";
                 lblMov.ForeColor = LibAux.libColores[eColores.Modificacion];
                 btnActualizar.Text = "Cancelar edición";
@@ -440,26 +426,7 @@ namespace SOFTMART_RRHH.Vista
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
             MostrarVentanaEliminacion(EventArgs.Empty);
-        }
-        private void tbCURP_KeyUp(object sender, KeyEventArgs e)
-        {
-            ConsultarExistenciaPersona();
-        }
-        public virtual void MostrarVentanaEliminacion(EventArgs e)
-        {
-            BtnEliminar?.Invoke(this, e);
-        }
-        #endregion
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            if (lblMov.Text == "ALTA")
-            {
-                LimpiarCamposPersona();
-                LimpiarCamposEmpleado();
-            }
-        }
-
+        }        
         private void btnSubirFoto_Click(object sender, EventArgs e)
         {
             if (btnSubirFoto.Text.Contains("Subir"))
@@ -495,70 +462,6 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
         }
-
-        private void lblFechaIngreso_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rBFem_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tlpPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblEstado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbPersona_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            BtnHistorial?.Invoke(this, e);
-        }
-
-        private void cbSubarea_DropDown(object sender, EventArgs e)
-        {
-            CargarSubAreas();
-        }
-
-        private void cbPuesto_DropDown(object sender, EventArgs e)
-        {
-            CargarPuestos();
-        }
-
-        private void cbArea_DropDown(object sender, EventArgs e)
-        {
-            CargarAreas();
-        }
-
-        private void cbSubarea_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarPuestos();
-            cbPuesto.SelectedIndex = -1;
-        }
-
-        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarSubAreas();
-            cbSubarea.SelectedIndex = -1;
-            cbPuesto.SelectedIndex = -1;
-        }
-
         private void btnSubirINE_Click(object sender, EventArgs e)
         {
 
@@ -595,5 +498,45 @@ namespace SOFTMART_RRHH.Vista
 
             }
         }
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            BtnHistorial?.Invoke(this, e);
+        }
+        private void cbSubarea_DropDown(object sender, EventArgs e)
+        {
+            CargarSubAreas();
+        }        
+        private void cbArea_DropDown(object sender, EventArgs e)
+        {
+            CargarAreas();
+        }
+        private void cbPuesto_DropDown(object sender, EventArgs e)
+        {
+            CargarPuestos();
+        }
+        private void cbSubarea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarPuestos();
+            cbPuesto.SelectedIndex = -1;
+        }
+        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarSubAreas();
+            cbSubarea.SelectedIndex = -1;
+            cbPuesto.SelectedIndex = -1;
+        }
+        private void tbCURP_KeyUp(object sender, KeyEventArgs e)
+        {
+            ConsultarExistenciaPersona();
+        }
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            if (lblMov.Text == "ALTA")
+            {
+                LimpiarCamposPersona();
+                LimpiarCamposEmpleado();
+            }
+        }
+        #endregion        
     }
 }

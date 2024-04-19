@@ -1,29 +1,29 @@
-﻿using NPOI.SS.Formula.Functions;
+﻿
 using SOFTMART_RRHH.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
 {
     public partial class vUsuarios : System.Windows.Forms.UserControl
     {
-        int idPersona = 0;
-        string nombre = "";
-        string oldPass = "";
-
+        #region VARIABLES GLOBALES
+        
+        #endregion
+        #region CONSTRUCTORES
         public vUsuarios()
         {
             InitializeComponent();
         }
-
+        #endregion
+        #region METODOS
+        private void CargarUsuarios()
+        {
+            dgvUsuarios.DataSource = MUsuarios.ObtenerUsuarios();
+        }
+        #endregion
+        #region EVENTOS
         private void vUsuarios_Load(object sender, EventArgs e)
         {
             dgvUsuarios_Nombre.ReadOnly = true;
@@ -31,32 +31,7 @@ namespace SOFTMART_RRHH.Vista
             dgvUsuarios_RolCB.ValueMember = "Rol";
             dgvUsuarios_RolCB.DisplayMember = "Rol";
             CargarUsuarios();
-        }
-
-        private void CargarUsuarios()
-        {
-            dgvUsuarios.DataSource = MUsuarios.ObtenerUsuarios();
-        }
-
-        private void dgvUsuarios_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (Convert.ToInt16(dgvUsuarios.Rows[dgvUsuarios.CurrentCell.RowIndex].Cells["dgvUsuarios_hasChanged"].Value) == 0)
-            {
-                dgvUsuarios.Rows[dgvUsuarios.CurrentCell.RowIndex].Cells["dgvUsuarios_hasChanged"].Value = 1;
-            }
-
-        }
-
-        private void dgvUsuarios_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
-
-        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        }                                
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvUsuarios.Rows)
@@ -97,7 +72,6 @@ namespace SOFTMART_RRHH.Vista
             }
             CargarUsuarios();
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Estas seguro de eliminar este usuario?", "¡Alto!", MessageBoxButtons.YesNo);
@@ -116,13 +90,7 @@ namespace SOFTMART_RRHH.Vista
                 }
                 CargarUsuarios();
             }
-        }
-
-        private void dgvUsuarios_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        {
-            oldPass = dgvUsuarios.CurrentRow.Cells["dgvUsuarios_password"].Value.ToString();
-        }
-
+        }        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvUsuarios.DataSource as DataTable;
@@ -132,12 +100,26 @@ namespace SOFTMART_RRHH.Vista
             dt.Rows.Add(newRow);
 
         }
-
         private void btnRecarga_Click(object sender, EventArgs e)
         {
             CargarUsuarios();
         }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+        private void dgvUsuarios_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Convert.ToInt16(dgvUsuarios.Rows[dgvUsuarios.CurrentCell.RowIndex].Cells["dgvUsuarios_hasChanged"].Value) == 0)
+            {
+                dgvUsuarios.Rows[dgvUsuarios.CurrentCell.RowIndex].Cells["dgvUsuarios_hasChanged"].Value = 1;
+            }
 
+        }
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
         private void dgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgvUsuarios.Columns["dgvUsuarios_Nombre"].Index)
@@ -164,11 +146,12 @@ namespace SOFTMART_RRHH.Vista
                     }
                 }
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
+        }        
+        private void dgvUsuarios_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            this.Hide();
+            //NO QUITAR ESTE EVENTO.    
         }
+        #endregion
+
     }
 }

@@ -1,20 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.Drawing.Text;
 using SOFTMART_RRHH.Vista;
 using SOFTMART_RRHH.Modelo;
 using System.Windows.Controls;
 using System.Diagnostics;
 using System.Reflection;
-using System.Deployment.Application;
+
 
 
 namespace SOFTMART_RRHH
@@ -150,9 +143,7 @@ namespace SOFTMART_RRHH
         #endregion
         #region EVENTOS
         private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-      
-                
+        {                      
             string productVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
 
             lblInfo.Text = "USUARIO: " + Properties.Settings.Default.User + " - " + Properties.Settings.Default.Rol + ".";

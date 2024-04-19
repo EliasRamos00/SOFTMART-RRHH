@@ -1,23 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using MySqlConnector;
-using SOFTMART_RRHH.Properties;
 using Tulpep.NotificationWindow;
 using System.Drawing;
-using System.Drawing.Text;
 using System.IO;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using NPOI.XSSF.UserModel;
-using System.Runtime.Remoting.Contexts;
-using System.Security.Policy;
-using System.Windows.Shapes;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Configuration;
@@ -86,7 +77,6 @@ namespace SOFTMART_RRHH.Modelo
                     //-------------- CADENA DE CONEXION A BASE DE DATOS REAL-----------------
             return $"Server={produccion_IP};Database={produccion_BD};Port={produccion_Port};User ID={produccion_User};Password={produccion_Pass};";
         }
-
         public static DataTable EjecutarProcedimiento(string nombreProcedimiento, List<Param> Parametros = null)
         {
 
@@ -336,10 +326,7 @@ namespace SOFTMART_RRHH.Modelo
                     sw.Close();
                 }
             }
-            catch (Exception e)
-            {
-                
-            }
+            catch{}
         }
         public static string GenerateMD5(string cadena)
         {
