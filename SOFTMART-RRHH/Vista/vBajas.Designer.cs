@@ -39,6 +39,10 @@
             this.lblColumn = new System.Windows.Forms.Label();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.dgvBajasEmpleados = new System.Windows.Forms.DataGridView();
+            this.btnRecarga = new FontAwesome.Sharp.IconButton();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.rowCounting = new System.Windows.Forms.Label();
+            this.btnExcel = new FontAwesome.Sharp.IconButton();
             this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Tienda = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +53,6 @@
             this.dgvBajasEmpleados_TiempoTrabajado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Finiquito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcel = new FontAwesome.Sharp.IconButton();
-            this.btnRecarga = new FontAwesome.Sharp.IconButton();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBajasEmpleados)).BeginInit();
@@ -72,9 +73,10 @@
             this.tlpPrincipal.Controls.Add(this.lblColumn, 2, 2);
             this.tlpPrincipal.Controls.Add(this.cbFiltro, 2, 3);
             this.tlpPrincipal.Controls.Add(this.dgvBajasEmpleados, 1, 4);
-            this.tlpPrincipal.Controls.Add(this.btnExcel, 4, 2);
             this.tlpPrincipal.Controls.Add(this.btnRecarga, 4, 3);
             this.tlpPrincipal.Controls.Add(this.lblTitulo, 1, 0);
+            this.tlpPrincipal.Controls.Add(this.rowCounting, 4, 5);
+            this.tlpPrincipal.Controls.Add(this.btnExcel, 3, 3);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
@@ -103,7 +105,7 @@
             // 
             this.tbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltro.Location = new System.Drawing.Point(45, 113);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(386, 26);
@@ -126,11 +128,11 @@
             // 
             this.lblColumn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblColumn.AutoSize = true;
-            this.lblColumn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumn.ForeColor = System.Drawing.Color.Black;
             this.lblColumn.Location = new System.Drawing.Point(437, 90);
             this.lblColumn.Name = "lblColumn";
-            this.lblColumn.Size = new System.Drawing.Size(65, 20);
+            this.lblColumn.Size = new System.Drawing.Size(79, 20);
             this.lblColumn.TabIndex = 3;
             this.lblColumn.Text = "Columna";
             // 
@@ -139,7 +141,7 @@
             this.cbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
             this.cbFiltro.Location = new System.Drawing.Point(437, 113);
             this.cbFiltro.Name = "cbFiltro";
@@ -190,7 +192,79 @@
             this.dgvBajasEmpleados.RowHeadersVisible = false;
             this.dgvBajasEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBajasEmpleados.Size = new System.Drawing.Size(974, 502);
-            this.dgvBajasEmpleados.TabIndex = 6;            
+            this.dgvBajasEmpleados.TabIndex = 6;
+            // 
+            // btnRecarga
+            // 
+            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
+            this.btnRecarga.IconColor = System.Drawing.Color.White;
+            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecarga.IconSize = 34;
+            this.btnRecarga.Location = new System.Drawing.Point(905, 110);
+            this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRecarga.Name = "btnRecarga";
+            this.btnRecarga.Size = new System.Drawing.Size(117, 36);
+            this.btnRecarga.TabIndex = 27;
+            this.btnRecarga.UseVisualStyleBackColor = false;
+            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
+            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 2);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo.Location = new System.Drawing.Point(47, 27);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
+            this.lblTitulo.Size = new System.Drawing.Size(678, 47);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "BAJAS DE EMPLEADOS";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // rowCounting
+            // 
+            this.rowCounting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rowCounting.AutoSize = true;
+            this.rowCounting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rowCounting.Location = new System.Drawing.Point(878, 657);
+            this.rowCounting.Name = "rowCounting";
+            this.rowCounting.Size = new System.Drawing.Size(141, 15);
+            this.rowCounting.TabIndex = 32;
+            this.rowCounting.Text = "Registros : 0";
+            this.rowCounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExcel.IconColor = System.Drawing.Color.White;
+            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcel.IconSize = 28;
+            this.btnExcel.Location = new System.Drawing.Point(758, 110);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(117, 36);
+            this.btnExcel.TabIndex = 28;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // dgvConsultaEmpleados_idEmpleado
             // 
@@ -220,12 +294,11 @@
             // 
             // dgvBajasEmpleados_Patron
             // 
-            this.dgvBajasEmpleados_Patron.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             this.dgvBajasEmpleados_Patron.DataPropertyName = "UltimoPatron";
             this.dgvBajasEmpleados_Patron.HeaderText = "Patron";
             this.dgvBajasEmpleados_Patron.Name = "dgvBajasEmpleados_Patron";
             this.dgvBajasEmpleados_Patron.ReadOnly = true;
-            this.dgvBajasEmpleados_Patron.Width = 5;
+            this.dgvBajasEmpleados_Patron.Width = 120;
             // 
             // dgvBajasEmpleados_Inicio
             // 
@@ -284,66 +357,6 @@
             this.dgvBajasEmpleados_Comentarios.Name = "dgvBajasEmpleados_Comentarios";
             this.dgvBajasEmpleados_Comentarios.ReadOnly = true;
             // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.White;
-            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcel.IconSize = 28;
-            this.btnExcel.Location = new System.Drawing.Point(905, 74);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(117, 36);
-            this.btnExcel.TabIndex = 28;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // btnRecarga
-            // 
-            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecarga.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            this.btnRecarga.IconColor = System.Drawing.Color.White;
-            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRecarga.IconSize = 34;
-            this.btnRecarga.Location = new System.Drawing.Point(905, 110);
-            this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRecarga.Name = "btnRecarga";
-            this.btnRecarga.Size = new System.Drawing.Size(117, 36);
-            this.btnRecarga.TabIndex = 27;
-            this.btnRecarga.UseVisualStyleBackColor = false;
-            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
-            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 2);
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(47, 27);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
-            this.lblTitulo.Size = new System.Drawing.Size(678, 47);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "BAJAS DE EMPLEADOS";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // vBajas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -374,6 +387,9 @@
         private System.Windows.Forms.Label lblColumn;
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.DataGridView dgvBajasEmpleados;
+        private FontAwesome.Sharp.IconButton btnRecarga;
+        private FontAwesome.Sharp.IconButton btnExcel;
+        private System.Windows.Forms.Label rowCounting;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_idEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Tienda;
@@ -384,7 +400,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_TiempoTrabajado;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Finiquito;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Comentarios;
-        private FontAwesome.Sharp.IconButton btnRecarga;
-        private FontAwesome.Sharp.IconButton btnExcel;
     }
 }

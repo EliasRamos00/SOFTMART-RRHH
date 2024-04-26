@@ -39,6 +39,8 @@ namespace SOFTMART_RRHH
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnMax = new FontAwesome.Sharp.IconButton();
             this.pSideBar = new System.Windows.Forms.Panel();
+            this.btnImportacion = new FontAwesome.Sharp.IconButton();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnErrorLog = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnHistorial = new FontAwesome.Sharp.IconButton();
@@ -48,7 +50,6 @@ namespace SOFTMART_RRHH
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
             this.pPrincipal = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -178,6 +179,7 @@ namespace SOFTMART_RRHH
             // pSideBar
             // 
             this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.pSideBar.Controls.Add(this.btnImportacion);
             this.pSideBar.Controls.Add(this.btnUsuarios);
             this.pSideBar.Controls.Add(this.btnErrorLog);
             this.pSideBar.Controls.Add(this.btnReset);
@@ -192,6 +194,45 @@ namespace SOFTMART_RRHH
             this.pSideBar.Name = "pSideBar";
             this.pSideBar.Size = new System.Drawing.Size(235, 720);
             this.pSideBar.TabIndex = 1;
+            // 
+            // btnImportacion
+            // 
+            this.btnImportacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnImportacion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnImportacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImportacion.IconChar = FontAwesome.Sharp.IconChar.StickerMule;
+            this.btnImportacion.IconColor = System.Drawing.Color.White;
+            this.btnImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportacion.Location = new System.Drawing.Point(0, 341);
+            this.btnImportacion.Name = "btnImportacion";
+            this.btnImportacion.Size = new System.Drawing.Size(235, 39);
+            this.btnImportacion.TabIndex = 10;
+            this.btnImportacion.Text = "importar";
+            this.btnImportacion.UseVisualStyleBackColor = false;
+            this.btnImportacion.Visible = false;
+            this.btnImportacion.Click += new System.EventHandler(this.btnImportacion_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 488);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(235, 39);
+            this.btnUsuarios.TabIndex = 9;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnErrorLog
             // 
@@ -352,25 +393,6 @@ namespace SOFTMART_RRHH
             this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
             this.pPrincipal.TabIndex = 0;
             // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
-            this.btnUsuarios.IconColor = System.Drawing.Color.White;
-            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 488);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(235, 39);
-            this.btnUsuarios.TabIndex = 9;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -413,5 +435,6 @@ namespace SOFTMART_RRHH
         private FontAwesome.Sharp.IconButton btnReset;
         private FontAwesome.Sharp.IconButton btnErrorLog;
         private FontAwesome.Sharp.IconButton btnUsuarios;
+        private FontAwesome.Sharp.IconButton btnImportacion;
     }
 }

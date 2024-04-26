@@ -34,6 +34,8 @@ namespace SOFTMART_RRHH.Vista
         {
             dgvConsultaEmpleados.DataSource = MEmpleados.ObtenerEmpleadosActivosReporte();
             CalcularAntiguedad();
+            rowCounting.Text = "Registros : "+ dgvConsultaEmpleados.Rows.Count.ToString();
+
         }
         private void CargarColumnas()
         {
@@ -101,9 +103,11 @@ namespace SOFTMART_RRHH.Vista
         {
             DateTime fechaInicio;
             foreach (DataGridViewRow row in dgvConsultaEmpleados.Rows)
-            {
-                fechaInicio = Convert.ToDateTime(row.Cells["dgvConsultaEmpleados_FechaInicio"].Value);
-                row.Cells["dgvConsultaEmpleados_Antiguedad"].Value = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
+            {      
+                    if (row.Cells["dgvConsultaEmpleados_FechaInicio"].Value != DBNull.Value) {
+                        fechaInicio = Convert.ToDateTime(row.Cells["dgvConsultaEmpleados_FechaInicio"].Value);
+                        row.Cells["dgvConsultaEmpleados_Antiguedad"].Value = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
+                    }                       
             }
         }
         private void FiltrarInformacion()
@@ -125,8 +129,9 @@ namespace SOFTMART_RRHH.Vista
                     int diasFinal = TomarDiasComboBox(cbFinal) + 13;
                     ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format("AntiguedadDias >= " + diasInicio + " AND AntiguedadDias <= " + diasFinal + "AND antiguedad NOT LIKE 'N/A'");
                 }
-            }
+            }    
             catch (Exception ex) { LibAux.ErrorLog(ex); ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
+            rowCounting.Text = "Registros : " + dgvConsultaEmpleados.Rows.Count.ToString();
         }
         private int TomarDiasComboBox(ComboBox ComboBox)
         {

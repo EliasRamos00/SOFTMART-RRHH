@@ -35,6 +35,7 @@ namespace SOFTMART_RRHH.Vista
         private void LlenarGrid()
         {
             dgvConsultaEmpleados.DataSource = MEmpleados.ObtenerEmpleadosReporte();
+            rowCounting.Text = "Registros : " + dgvConsultaEmpleados.Rows.Count.ToString();
         }
         private void CargarColumnas()
         {
@@ -87,6 +88,7 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
             catch { ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
+            rowCounting.Text = "Registros : " + dgvConsultaEmpleados.Rows.Count.ToString();
         }
         private void btnClose_Click(object sender, EventArgs e)
         {

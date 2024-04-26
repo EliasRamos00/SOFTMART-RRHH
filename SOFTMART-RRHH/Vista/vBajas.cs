@@ -1,17 +1,25 @@
 ﻿
+using NPOI.SS.Formula.Functions;
 using SOFTMART_RRHH.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
+using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Threading;
 
 namespace SOFTMART_RRHH.Vista
 {
-    public partial class vBajas : UserControl
+    public partial class vBajas : System.Windows.Forms.UserControl
     {
         #region VARIABLES GLOBALES
+        string r1="";
+        string r2 = "";
+        string r3 = "";
+        string r4 = "";
         #endregion
         #region CONSTRUCTORES
         public vBajas()
@@ -30,7 +38,7 @@ namespace SOFTMART_RRHH.Vista
         /// <param name="FechaIni"></param>
         /// <param name="FechaFin"></param>
         /// <returns></returns>
-        private string CalcularDiferencia(DateTime FechaIni, DateTime FechaFin)
+        private string CalcularDiferencia(DateTime FechaIni, DateTime FechaFin, int i)
         {
             int MesAnter = FechaFin.Month;
             while (MesAnter == FechaFin.Month)
@@ -60,7 +68,7 @@ namespace SOFTMART_RRHH.Vista
                     MesAnter = FechaFin.Month;
                 }
             }
-            dias--;
+            dias--;         
             return (anios.ToString() + " Año(s)" +
                                 ", " + meses.ToString() + " Mes(es)" +
                                 ", " + dias.ToString() + " Dia(s)");
@@ -72,11 +80,28 @@ namespace SOFTMART_RRHH.Vista
 
             foreach (DataGridViewRow row in dgvBajasEmpleados.Rows)
             {
-                fechaInicio = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Inicio"].Value);
-                fechaTermino = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Termino"].Value);
-                row.Cells["dgvBajasEmpleados_TiempoTrabajado"].Value = CalcularDiferencia(fechaInicio, fechaTermino);
-                row.Cells["dgvBajasEmpleados_TiempoBaja"].Value = CalcularDiferencia(fechaTermino, DateTime.Now);
+                try { fechaInicio = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Inicio"].Value); } catch { }                                
+                try { fechaTermino = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Termino"].Value); } catch { }
+                //row.Cells["dgvBajasEmpleados_TiempoTrabajado"].Value = CalcularDiferencia(fechaInicio, fechaTermino);
+                //row.Cells["dgvBajasEmpleados_TiempoBaja"].Value = CalcularDiferencia(fechaTermino, DateTime.Now);
+
             }
+
+
+            //for (int i = 0; i < dgvBajasEmpleados.Rows.Count; i++)
+            //{               
+            //    //if (i < dgvBajasEmpleados.Rows.Count)
+            //    //{
+            //    //    fechaInicio = Convert.ToDateTime(dgvBajasEmpleados.Rows[i].Cells["dgvBajasEmpleados_Inicio"].Value);
+            //    //    fechaTermino = Convert.ToDateTime(dgvBajasEmpleados.Rows[i].Cells["dgvBajasEmpleados_Termino"].Value);
+            //    //    Thread hilo1 = new Thread(() => CalcularDiferencia(fechaInicio, fechaTermino, 1));
+            //    //    hilo1.Start();
+            //    //}
+            //    //dgvBajasEmpleados.Rows[i].Cells["dgvBajasEmpleados_TiempoTrabajado"].Value = r1;
+                                                        
+            //}
+            
+            rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();
         }
         private void CargarCBFiltro()
         {
@@ -138,6 +163,7 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
             catch { ((DataTable)dgvBajasEmpleados.DataSource).DefaultView.RowFilter = ""; }
+            rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();
         }
         #endregion
 

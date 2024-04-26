@@ -28,22 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltro = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.lblColumn = new System.Windows.Forms.Label();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.dgvConsultaEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnExcel = new FontAwesome.Sharp.IconButton();
-            this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_idPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +51,11 @@
             this.dgvConsultaEmpleados_FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_Antiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_Inactivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.btnRecarga = new FontAwesome.Sharp.IconButton();
+            this.rowCounting = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -77,8 +78,9 @@
             this.tlpPrincipal.Controls.Add(this.dgvConsultaEmpleados, 1, 4);
             this.tlpPrincipal.Controls.Add(this.btnClose, 0, 0);
             this.tlpPrincipal.Controls.Add(this.lblTitulo, 1, 0);
-            this.tlpPrincipal.Controls.Add(this.btnExcel, 4, 2);
             this.tlpPrincipal.Controls.Add(this.btnRecarga, 4, 3);
+            this.tlpPrincipal.Controls.Add(this.rowCounting, 4, 5);
+            this.tlpPrincipal.Controls.Add(this.btnExcel, 3, 3);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlpPrincipal.ForeColor = System.Drawing.Color.Black;
@@ -98,7 +100,7 @@
             // 
             this.tbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltro.Location = new System.Drawing.Point(45, 113);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(386, 26);
@@ -121,11 +123,11 @@
             // 
             this.lblColumn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblColumn.AutoSize = true;
-            this.lblColumn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumn.ForeColor = System.Drawing.Color.Black;
             this.lblColumn.Location = new System.Drawing.Point(437, 90);
             this.lblColumn.Name = "lblColumn";
-            this.lblColumn.Size = new System.Drawing.Size(65, 20);
+            this.lblColumn.Size = new System.Drawing.Size(79, 20);
             this.lblColumn.TabIndex = 3;
             this.lblColumn.Text = "Columna";
             // 
@@ -134,7 +136,7 @@
             this.cbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
             this.cbFiltro.Location = new System.Drawing.Point(437, 113);
             this.cbFiltro.Name = "cbFiltro";
@@ -161,104 +163,33 @@
             this.dgvConsultaEmpleados_Antiguedad,
             this.dgvConsultaEmpleados_Inactivo});
             this.tlpPrincipal.SetColumnSpan(this.dgvConsultaEmpleados, 4);
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultaEmpleados.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultaEmpleados.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvConsultaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvConsultaEmpleados.GridColor = System.Drawing.Color.Black;
             this.dgvConsultaEmpleados.Location = new System.Drawing.Point(45, 149);
             this.dgvConsultaEmpleados.MultiSelect = false;
             this.dgvConsultaEmpleados.Name = "dgvConsultaEmpleados";
             this.dgvConsultaEmpleados.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvConsultaEmpleados.RowHeadersVisible = false;
             this.dgvConsultaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultaEmpleados.Size = new System.Drawing.Size(974, 502);
             this.dgvConsultaEmpleados.TabIndex = 6;
             this.dgvConsultaEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleados_CellDoubleClick);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Location = new System.Drawing.Point(3, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 32);
-            this.btnClose.TabIndex = 26;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
-            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 2);
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(47, 27);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
-            this.lblTitulo.Size = new System.Drawing.Size(678, 47);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "TODOS LOS EMPLEADOS";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.White;
-            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcel.IconSize = 28;
-            this.btnExcel.Location = new System.Drawing.Point(905, 74);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(117, 36);
-            this.btnExcel.TabIndex = 27;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // btnRecarga
-            // 
-            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecarga.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            this.btnRecarga.IconColor = System.Drawing.Color.White;
-            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRecarga.IconSize = 34;
-            this.btnRecarga.Location = new System.Drawing.Point(905, 110);
-            this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRecarga.Name = "btnRecarga";
-            this.btnRecarga.Size = new System.Drawing.Size(117, 36);
-            this.btnRecarga.TabIndex = 5;
-            this.btnRecarga.UseVisualStyleBackColor = false;
-            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
             // 
             // dgvConsultaEmpleados_idEmpleado
             // 
@@ -313,9 +244,9 @@
             // 
             this.dgvConsultaEmpleados_FechaNac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_FechaNac.DataPropertyName = "FechaNac";
-            dataGridViewCellStyle1.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgvConsultaEmpleados_FechaNac.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dgvConsultaEmpleados_FechaNac.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvConsultaEmpleados_FechaNac.HeaderText = "Fecha Nacimiento";
             this.dgvConsultaEmpleados_FechaNac.Name = "dgvConsultaEmpleados_FechaNac";
             this.dgvConsultaEmpleados_FechaNac.ReadOnly = true;
@@ -324,8 +255,8 @@
             // 
             this.dgvConsultaEmpleados_Edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_Edad.DataPropertyName = "Edad";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvConsultaEmpleados_Edad.HeaderText = "Edad";
             this.dgvConsultaEmpleados_Edad.Name = "dgvConsultaEmpleados_Edad";
             this.dgvConsultaEmpleados_Edad.ReadOnly = true;
@@ -335,9 +266,9 @@
             // 
             this.dgvConsultaEmpleados_FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_FechaInicio.DataPropertyName = "FechaInicio";
-            dataGridViewCellStyle3.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvConsultaEmpleados_FechaInicio.HeaderText = "Fecha Inicio";
             this.dgvConsultaEmpleados_FechaInicio.Name = "dgvConsultaEmpleados_FechaInicio";
             this.dgvConsultaEmpleados_FechaInicio.ReadOnly = true;
@@ -346,8 +277,8 @@
             // 
             this.dgvConsultaEmpleados_Antiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_Antiguedad.DataPropertyName = "Antiguedad";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvConsultaEmpleados_Antiguedad.HeaderText = "Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.Name = "dgvConsultaEmpleados_Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.ReadOnly = true;
@@ -358,6 +289,89 @@
             this.dgvConsultaEmpleados_Inactivo.HeaderText = "Activos";
             this.dgvConsultaEmpleados_Inactivo.Name = "dgvConsultaEmpleados_Inactivo";
             this.dgvConsultaEmpleados_Inactivo.ReadOnly = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 32);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
+            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 2);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo.Location = new System.Drawing.Point(47, 27);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
+            this.lblTitulo.Size = new System.Drawing.Size(678, 47);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "TODOS LOS EMPLEADOS";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExcel.IconColor = System.Drawing.Color.White;
+            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcel.IconSize = 28;
+            this.btnExcel.Location = new System.Drawing.Point(758, 110);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(117, 36);
+            this.btnExcel.TabIndex = 27;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnRecarga
+            // 
+            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
+            this.btnRecarga.IconColor = System.Drawing.Color.White;
+            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecarga.IconSize = 34;
+            this.btnRecarga.Location = new System.Drawing.Point(905, 110);
+            this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRecarga.Name = "btnRecarga";
+            this.btnRecarga.Size = new System.Drawing.Size(117, 36);
+            this.btnRecarga.TabIndex = 5;
+            this.btnRecarga.UseVisualStyleBackColor = false;
+            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
+            // 
+            // rowCounting
+            // 
+            this.rowCounting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rowCounting.AutoSize = true;
+            this.rowCounting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rowCounting.Location = new System.Drawing.Point(878, 657);
+            this.rowCounting.Name = "rowCounting";
+            this.rowCounting.Size = new System.Drawing.Size(141, 15);
+            this.rowCounting.TabIndex = 32;
+            this.rowCounting.Text = "Registros : 0";
+            this.rowCounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // vTodos
             // 
@@ -399,5 +413,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Antiguedad;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvConsultaEmpleados_Inactivo;
+        private System.Windows.Forms.Label rowCounting;
     }
 }

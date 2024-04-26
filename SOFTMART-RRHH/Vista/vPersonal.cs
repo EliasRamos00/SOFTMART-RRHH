@@ -90,7 +90,10 @@ namespace SOFTMART_RRHH.Vista
                 tbRFC.Text = infoPersona.Rows[0]["RFC"].ToString();
                 cbEdoCivil.Text = infoPersona.Rows[0]["EdoCivil"].ToString();
                 tbLugarNac.Text = infoPersona.Rows[0]["LugarNac"].ToString();
-                dtpFechaNac.Value = Convert.ToDateTime(infoPersona.Rows[0]["FechaNac"]);
+                try {
+                    dtpFechaNac.Value = Convert.ToDateTime(infoPersona.Rows[0]["FechaNac"]);
+                } catch { }
+                
                 tbEspecialidad.Text = infoPersona.Rows[0]["Especialidad"].ToString();
                 tbEstado.Text = infoPersona.Rows[0]["Estado"].ToString();
                 tbCiudad.Text = infoPersona.Rows[0]["Ciudad"].ToString();
@@ -117,7 +120,11 @@ namespace SOFTMART_RRHH.Vista
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
         {
             cbSueldo.Text = infoEmpleado.Rows[0]["Sueldo"].ToString();
-            dtpFechaIngreso.Value = Convert.ToDateTime(infoEmpleado.Rows[0]["FechaInicio"]);
+            try {
+                dtpFechaIngreso.Value = Convert.ToDateTime(infoEmpleado.Rows[0]["FechaInicio"]);
+            }
+            catch { }
+            
             cBEmpleadoTemporada.Checked = Convert.ToBoolean(infoEmpleado.Rows[0]["esEmpleadoTemp"]);
             cbTienda.Text = infoEmpleado.Rows[0]["Sucursal"].ToString();
             cbArea.Text = infoEmpleado.Rows[0]["Area"].ToString();

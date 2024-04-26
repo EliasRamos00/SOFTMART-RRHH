@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltro = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cbFinal = new System.Windows.Forms.ComboBox();
             this.lblMax = new System.Windows.Forms.Label();
+            this.rowCounting = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -94,6 +95,7 @@
             this.tlpPrincipal.Controls.Add(this.dtpFechaFiltro, 4, 1);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 3, 2);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 4, 2);
+            this.tlpPrincipal.Controls.Add(this.rowCounting, 4, 5);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
@@ -161,14 +163,14 @@
             this.dgvConsultaEmpleados.AllowUserToDeleteRows = false;
             this.dgvConsultaEmpleados.AllowUserToOrderColumns = true;
             this.dgvConsultaEmpleados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvConsultaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvConsultaEmpleados_idEmpleado,
@@ -184,28 +186,28 @@
             this.dgvConsultaEmpleados_Antiguedad,
             this.dgvConsultaEmpleados_Inactivo});
             this.tlpPrincipal.SetColumnSpan(this.dgvConsultaEmpleados, 4);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultaEmpleados.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultaEmpleados.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvConsultaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvConsultaEmpleados.GridColor = System.Drawing.Color.Black;
             this.dgvConsultaEmpleados.Location = new System.Drawing.Point(45, 149);
             this.dgvConsultaEmpleados.MultiSelect = false;
             this.dgvConsultaEmpleados.Name = "dgvConsultaEmpleados";
             this.dgvConsultaEmpleados.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvConsultaEmpleados.RowHeadersVisible = false;
             this.dgvConsultaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultaEmpleados.Size = new System.Drawing.Size(974, 503);
@@ -275,9 +277,9 @@
             // 
             this.dgvConsultaEmpleados_FechaNacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_FechaNacimiento.DataPropertyName = "FechaNac";
-            dataGridViewCellStyle2.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgvConsultaEmpleados_FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dgvConsultaEmpleados_FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvConsultaEmpleados_FechaNacimiento.HeaderText = "Fecha Nacimiento";
             this.dgvConsultaEmpleados_FechaNacimiento.Name = "dgvConsultaEmpleados_FechaNacimiento";
             this.dgvConsultaEmpleados_FechaNacimiento.ReadOnly = true;
@@ -286,8 +288,8 @@
             // 
             this.dgvConsultaEmpleados_Edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_Edad.DataPropertyName = "Edad";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvConsultaEmpleados_Edad.HeaderText = "Edad";
             this.dgvConsultaEmpleados_Edad.Name = "dgvConsultaEmpleados_Edad";
             this.dgvConsultaEmpleados_Edad.ReadOnly = true;
@@ -297,9 +299,9 @@
             // 
             this.dgvConsultaEmpleados_FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_FechaInicio.DataPropertyName = "FechaInicio";
-            dataGridViewCellStyle4.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle11.NullValue = null;
+            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvConsultaEmpleados_FechaInicio.HeaderText = "Fecha Inicio";
             this.dgvConsultaEmpleados_FechaInicio.Name = "dgvConsultaEmpleados_FechaInicio";
             this.dgvConsultaEmpleados_FechaInicio.ReadOnly = true;
@@ -308,8 +310,8 @@
             // 
             this.dgvConsultaEmpleados_Antiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvConsultaEmpleados_Antiguedad.DataPropertyName = "Antiguedad";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvConsultaEmpleados_Antiguedad.HeaderText = "Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.Name = "dgvConsultaEmpleados_Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.ReadOnly = true;
@@ -527,6 +529,18 @@
             this.lblMax.TabIndex = 2;
             this.lblMax.Text = "Antiguedad maxima";
             // 
+            // rowCounting
+            // 
+            this.rowCounting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rowCounting.AutoSize = true;
+            this.rowCounting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rowCounting.Location = new System.Drawing.Point(878, 658);
+            this.rowCounting.Name = "rowCounting";
+            this.rowCounting.Size = new System.Drawing.Size(141, 15);
+            this.rowCounting.TabIndex = 31;
+            this.rowCounting.Text = "Registros : 0";
+            this.rowCounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // vConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,5 +594,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Antiguedad;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvConsultaEmpleados_Inactivo;
+        private System.Windows.Forms.Label rowCounting;
     }
 }
