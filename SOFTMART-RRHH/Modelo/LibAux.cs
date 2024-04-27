@@ -67,7 +67,7 @@ namespace SOFTMART_RRHH.Modelo
         /// <returns></returns>
         public static string CadenaConexion()
         {
-                    //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
+                    //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------ 
                     //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
                     //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
           
