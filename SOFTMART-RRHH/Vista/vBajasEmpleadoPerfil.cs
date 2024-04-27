@@ -38,11 +38,11 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
-            if (System.Windows.Forms.MessageBox.Show("¿Estas seguro de borrar este registro?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (System.Windows.Forms.MessageBox.Show("¿Estas seguro de dar de baja a "+lblNombre.Text+" ?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 try
                 {
-                    CBajasPersonal.BajaPersonal(dtpFechaBaja, "Patron", tbFiniquito, tbComentarios, idEmpleado);
+                    CBajasPersonal.BajaPersonal(dtpFechaBaja, tbPatron, tbFiniquito, tbComentarios, idEmpleado);
                     LibAux.PopUp("¡Éxito!", "El empleado ha sido dado de baja con éxito.", LibAux.TipoNotif.Success);
                 }
                 catch (Exception ex)

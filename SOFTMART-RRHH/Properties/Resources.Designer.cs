@@ -161,6 +161,16 @@ namespace SOFTMART_RRHH.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noimage {
+            get {
+                object obj = ResourceManager.GetObject("noimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] Roboto_Light {
@@ -177,6 +187,16 @@ namespace SOFTMART_RRHH.Properties {
             get {
                 object obj = ResourceManager.GetObject("Roboto_Thin", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Softmart_RRHH {
+            get {
+                object obj = ResourceManager.GetObject("Softmart RRHH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

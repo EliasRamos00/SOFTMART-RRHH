@@ -72,10 +72,10 @@ namespace SOFTMART_RRHH.Modelo
                     //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
           
                     //-------------- CADENA DE CONEXION A BASE DE DATOS DE DESARROLLO--------
-            //return  $"Server={IP};Database={BD};Port={Port};User ID={User};Password={Pass};Allow User Variables=True";
+            return  $"Server={IP};Database={BD};Port={Port};User ID={User};Password={Pass};Allow User Variables=True";
 
             //-------------- CADENA DE CONEXION A BASE DE DATOS REAL-----------------
-            return $"Server={produccion_IP};Database={produccion_BD};Port={produccion_Port};User ID={produccion_User};Password={produccion_Pass};Allow User Variables=True";
+            //return $"Server={produccion_IP};Database={produccion_BD};Port={produccion_Port};User ID={produccion_User};Password={produccion_Pass};Allow User Variables=True";
         }
         public static DataTable EjecutarProcedimiento(string nombreProcedimiento, List<Param> Parametros = null)
         {

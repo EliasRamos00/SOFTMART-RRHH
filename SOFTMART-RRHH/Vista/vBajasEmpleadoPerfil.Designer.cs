@@ -45,6 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.tbPatron = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -75,6 +77,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 14);
             this.tableLayoutPanel1.Controls.Add(this.label4, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl, 4, 12);
+            this.tableLayoutPanel1.Controls.Add(this.tbPatron, 4, 13);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -310,6 +314,29 @@
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lbl, 2);
+            this.lbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Black;
+            this.lbl.Location = new System.Drawing.Point(619, 486);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(108, 17);
+            this.lbl.TabIndex = 62;
+            this.lbl.Text = "Ultimo Patron";
+            // 
+            // tbPatron
+            // 
+            this.tbPatron.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPatron.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.tbPatron.ForeColor = System.Drawing.Color.Black;
+            this.tbPatron.Location = new System.Drawing.Point(619, 506);
+            this.tbPatron.Name = "tbPatron";
+            this.tbPatron.Size = new System.Drawing.Size(378, 29);
+            this.tbPatron.TabIndex = 63;
+            // 
             // vBajasEmpleadoPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -348,5 +375,7 @@
         private System.Windows.Forms.Button btnDarBaja;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox tbPatron;
     }
 }
