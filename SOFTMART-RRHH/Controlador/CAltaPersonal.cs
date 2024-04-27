@@ -45,8 +45,8 @@ namespace SOFTMART_RRHH.Controlador
                 }
 
 
-                fotografiaDestino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "" + fotografiaDestino.ToString();
-                iNE_Destino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "\\" + iNE_Destino.ToString();
+                fotografiaDestino = "\\\\" + ConfigurationManager.AppSettings["produccion_IP"] + "" + fotografiaDestino.ToString();
+                iNE_Destino = "\\\\" + ConfigurationManager.AppSettings["produccion_IP"] + "\\" + iNE_Destino.ToString();
 
                 if (fotografiaOrigen.ToString() != "" && fotografiaDestino.ToString() != "")
                 { //GUARDA LA FOTO PERO EN EL SERVIDOR (Foto personal e INE)
@@ -135,8 +135,8 @@ namespace SOFTMART_RRHH.Controlador
                 MPersonas.CModificarPersona(idPersona, nombres, apePat, apeMat, rFC, cURP, lugarNac, genero, fechaNac, fotografiaDestino, idEscolaridad, especialidad, edoCivil, NSS, InfoEmer, iNE_Destino, cmd);
                 MEmpleados.CModificarEmpleado(idEmpleado, numContrato, idSucursal, idPuesto, fechaingreso, esTemp, sueldo, comentarios, cmd);
 
-                fotografiaDestino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "" + fotografiaDestino.ToString();
-                iNE_Destino = "\\\\" + ConfigurationManager.AppSettings["IP"] + "\\" + iNE_Destino.ToString();
+                fotografiaDestino = "\\\\" + ConfigurationManager.AppSettings["produccion_IP"] + "" + fotografiaDestino.ToString();
+                iNE_Destino = "\\\\" + ConfigurationManager.AppSettings["produccion_IP"] + "\\" + iNE_Destino.ToString();
 
                 if (fotografiaOrigen.ToString() != "" && fotografiaDestino.ToString() != "")
                 {

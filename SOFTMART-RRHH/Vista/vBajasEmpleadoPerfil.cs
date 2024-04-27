@@ -1,6 +1,7 @@
 ﻿using SOFTMART_RRHH.Controlador;
 using SOFTMART_RRHH.Modelo;
 using System;
+using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
 
@@ -29,6 +30,7 @@ namespace SOFTMART_RRHH.Vista
             lblNombre.Text = dtTemp.Rows[0]["ApellPaterno"].ToString() + " " + dtTemp.Rows[0]["ApellMaterno"].ToString() + " " + dtTemp.Rows[0]["Nombre"].ToString();
             lblContrato.Text = dtTemp.Rows[0]["NumContrato"].ToString();
             lblTienda.Text = dtTemp.Rows[0]["Sucursal"].ToString();
+            try { pbFoto.ImageLocation = "\\\\" + ConfigurationManager.AppSettings["IP"] + dtTemp.Rows[0]["Fotografia"].ToString(); } catch { }
         }
         #endregion
         #region EVENTOS

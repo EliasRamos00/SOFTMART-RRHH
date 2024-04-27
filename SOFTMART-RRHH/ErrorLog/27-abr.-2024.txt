@@ -61,3 +61,31 @@ Exception Type: System.NullReferenceException
 Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
 Usuario: ROOT ROOT
 -----------------------------------------------
+----------Detalles del error en:  27/04/2024 04:15:55 p. m.----------
+-----------------------------------------------
+Fecha: 27/04/2024 04:15:55 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: ROOT ROOT
+-----------------------------------------------
+----------Detalles del error en:  27/04/2024 04:15:57 p. m.----------
+-----------------------------------------------
+Fecha: 27/04/2024 04:15:57 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: ROOT ROOT
+-----------------------------------------------
+----------Detalles del error en:  27/04/2024 04:16:04 p. m.----------
+-----------------------------------------------
+Fecha: 27/04/2024 04:16:04 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: ROOT ROOT
+-----------------------------------------------
+----------Detalles del error en:  27/04/2024 04:17:33 p. m.----------
+-----------------------------------------------
+Fecha: 27/04/2024 04:17:33 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: ROOT ROOT
+-----------------------------------------------

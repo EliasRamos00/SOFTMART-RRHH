@@ -124,6 +124,7 @@ namespace SOFTMART_RRHH.Vista
         {
             txtAntes.Text = "";
             txtDespues.Text = "";
+            if (dgvHistorial.CurrentRow != null) {             
             try
             {
                 DataTable dtTemp = MHistorial.ConsultarXML(dgvHistorial.CurrentRow.Cells["dgvHistorial_idHistorial"].Value);
@@ -149,13 +150,12 @@ namespace SOFTMART_RRHH.Vista
                         HighlightSyntax(txtDespues);
                     }
                 }
-
-
             }
             catch (Exception ex)
             {
                 LibAux.PopUp("atención", ex.Message, LibAux.TipoNotif.Error);
                 LibAux.ErrorLog(ex);
+            }
             }
 
             dgvHistorial.Focus();

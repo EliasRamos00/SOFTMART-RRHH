@@ -105,7 +105,7 @@ namespace SOFTMART_RRHH.Vista
                 tbCURP.Text = infoPersona.Rows[0]["CURP"].ToString();
                 tb_InfoEmerg.Text = infoPersona.Rows[0]["InfoEmer"].ToString();
                 tbNSS.Text = infoPersona.Rows[0]["NumSeguroSocial"].ToString();
-                INE = "\\\\" + ConfigurationManager.AppSettings["IP"] + infoPersona.Rows[0]["INE"].ToString();
+                INE = "\\\\" + ConfigurationManager.AppSettings["produccion_IP"] + infoPersona.Rows[0]["INE"].ToString();
                 if (infoPersona.Rows[0]["Genero"].ToString() == "Masculino")
                 {
                     rBMasc.Checked = true;
@@ -114,7 +114,7 @@ namespace SOFTMART_RRHH.Vista
                 {
                     rBFem.Checked = true;
                 }
-                try { pbPersona.ImageLocation = "\\\\"+ ConfigurationManager.AppSettings["IP"] + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
+                try { pbPersona.ImageLocation = "\\\\"+ ConfigurationManager.AppSettings["produccion_IP"] + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
             }
         }
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
