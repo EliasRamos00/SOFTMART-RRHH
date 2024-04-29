@@ -1,0 +1,28 @@
+----------Detalles del error en:  29/04/2024 11:04:13 a. m.----------
+-----------------------------------------------
+Fecha: 29/04/2024 11:04:13 a. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  29/04/2024 11:04:18 a. m.----------
+-----------------------------------------------
+Fecha: 29/04/2024 11:04:18 a. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  29/04/2024 11:04:23 a. m.----------
+-----------------------------------------------
+Fecha: 29/04/2024 11:04:23 a. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  29/04/2024 11:15:55 a. m.----------
+-----------------------------------------------
+Fecha: 29/04/2024 11:15:55 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Data truncated for column 'RFC' at row 1
+Usuario: JOSE RAMOS
+-----------------------------------------------

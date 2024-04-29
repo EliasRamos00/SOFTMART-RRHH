@@ -81,7 +81,7 @@ namespace SOFTMART_RRHH.Controlador
             {
                 new Param("vCURP",CURP)
             };
-            return LibAux.EjecutarSentencia("SELECT * FROM personas p, domicilios d, contactos c, Escolaridades e WHERE e.idEscolaridad = p.idEscolaridad AND p.idDomicilio = d.idDomicilio AND c.idContacto = p.idContacto AND curp LIKE @vCURP;", parametros);
+            return LibAux.EjecutarSentencia("SELECT * FROM  Personas p LEFT JOIN Escolaridades e ON e.idEscolaridad = p.idEscolaridad INNER JOIN Domicilios d ON p.idDomicilio = d.idDomicilio  INNER JOIN Contactos c ON c.idContacto = p.idContacto AND p.CURP LIKE @vCURP ;", parametros);
         }
         internal static DataTable ObtenerUltimoIDPersona()
         {

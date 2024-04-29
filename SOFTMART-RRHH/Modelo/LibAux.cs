@@ -18,19 +18,12 @@ namespace SOFTMART_RRHH.Modelo
 {
     public class LibAux
     {
-        static string IP = ConfigurationManager.AppSettings["IP"];
-        static string BD = ConfigurationManager.AppSettings["BD"];        
-        static string User = ConfigurationManager.AppSettings["user"];
-        static string Pass = ConfigurationManager.AppSettings["pass"];
-        static string Port = ConfigurationManager.AppSettings["port"];
-
-        static string produccion_IP = ConfigurationManager.AppSettings["produccion_IP"];
-        static string produccion_BD = ConfigurationManager.AppSettings["produccion_BD"];
-        static string produccion_User = ConfigurationManager.AppSettings["produccion_user"];
-        static string produccion_Pass = ConfigurationManager.AppSettings["produccion_pass"];
-        static string produccion_Port = ConfigurationManager.AppSettings["produccion_port"];
+        static string IP = Properties.Settings.Default.Ip;
+        static string BD = Properties.Settings.Default.BD;
+        static string User = Properties.Settings.Default.Usuario;
+        static string Pass = Properties.Settings.Default.Contrasenia;
+        static string Port = Properties.Settings.Default.Port;
         
-
         public LibAux() { }
         public enum CRUD
         {
@@ -67,19 +60,12 @@ namespace SOFTMART_RRHH.Modelo
         /// <returns></returns>
         public static string CadenaConexion()
         {
-                    //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------ 
                     //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
-                    //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
-          
                     //-------------- CADENA DE CONEXION A BASE DE DATOS DE DESARROLLO--------
             return  $"Server={IP};Database={BD};Port={Port};User ID={User};Password={Pass};Allow User Variables=True";
-
-            //-------------- CADENA DE CONEXION A BASE DE DATOS REAL-----------------
-            //return $"Server={produccion_IP};Database={produccion_BD};Port={produccion_Port};User ID={produccion_User};Password={produccion_Pass};Allow User Variables=True";
         }
         public static DataTable EjecutarProcedimiento(string nombreProcedimiento, List<Param> Parametros = null)
         {
-
             MySqlConnection conn = new MySqlConnection(CadenaConexion());
             conn.Open();
             if (conn == null)

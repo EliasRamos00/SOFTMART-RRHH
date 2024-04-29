@@ -1,7 +1,9 @@
 ﻿using SOFTMART_RRHH.Controlador;
 using SOFTMART_RRHH.Modelo;
 using System;
+using System.Configuration;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
@@ -11,7 +13,25 @@ namespace SOFTMART_RRHH.Vista
         public frm_Login()
         {
             InitializeComponent();
-
+            string filepath = System.Windows.Forms.Application.StartupPath;
+            string ProyectPathPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(filepath, @"..\..\"));
+            string newPath = System.IO.Path.Combine(ProyectPathPath, "DevEnv\\");
+            if (!Directory.Exists(newPath)) // Es produccion
+            {
+                Properties.Settings.Default.Ip = ConfigurationManager.AppSettings["produccion_IP"];
+                Properties.Settings.Default.Usuario = ConfigurationManager.AppSettings["produccion_User"];
+                Properties.Settings.Default.Contrasenia = ConfigurationManager.AppSettings["produccion_Pass"];
+                Properties.Settings.Default.BD = ConfigurationManager.AppSettings["produccion_BD"];
+                Properties.Settings.Default.Port = ConfigurationManager.AppSettings["produccion_Port"];
+            }
+            else
+            { //Es Entorno de Desarrollo
+                Properties.Settings.Default.Ip = ConfigurationManager.AppSettings["IP"];
+                Properties.Settings.Default.Usuario = ConfigurationManager.AppSettings["User"];
+                Properties.Settings.Default.Contrasenia = ConfigurationManager.AppSettings["Pass"];
+                Properties.Settings.Default.BD = ConfigurationManager.AppSettings["BD"];
+                Properties.Settings.Default.Port = ConfigurationManager.AppSettings["Port"];
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

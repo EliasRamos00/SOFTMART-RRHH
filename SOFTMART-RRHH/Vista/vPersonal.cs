@@ -105,7 +105,7 @@ namespace SOFTMART_RRHH.Vista
                 tbCURP.Text = infoPersona.Rows[0]["CURP"].ToString();
                 tb_InfoEmerg.Text = infoPersona.Rows[0]["InfoEmer"].ToString();
                 tbNSS.Text = infoPersona.Rows[0]["NumSeguroSocial"].ToString();
-                INE = "\\\\" + ConfigurationManager.AppSettings["IP"] + infoPersona.Rows[0]["INE"].ToString();
+                INE = "\\\\" + Properties.Settings.Default.Ip + infoPersona.Rows[0]["INE"].ToString();
                 if (infoPersona.Rows[0]["Genero"].ToString() == "Masculino")
                 {
                     rBMasc.Checked = true;
@@ -114,7 +114,7 @@ namespace SOFTMART_RRHH.Vista
                 {
                     rBFem.Checked = true;
                 }
-                try { pbPersona.ImageLocation = "\\\\"+ ConfigurationManager.AppSettings["IP"] + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
+                try { pbPersona.ImageLocation = "\\\\"+ Properties.Settings.Default.Ip + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
             }
         }
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
@@ -336,7 +336,6 @@ namespace SOFTMART_RRHH.Vista
             EdoCivil = cbEdoCivil.Text;
             NSS = tbNSS.Text;
             InfoEmer = tb_InfoEmerg.Text;
-
             if (esFotoNueva)
             {
                 fotografiaDestino = Path.Combine(FotografiaDestino, tbCURP.Text + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss_") + ".jpg");
@@ -347,7 +346,6 @@ namespace SOFTMART_RRHH.Vista
                 fotografiaDestino = "";
                 fotografiaOrigen = "";
             }
-
             if (esINENueva)
             {
                 INE_Destino = Path.Combine(INEDestino, "INE_" + tbCURP.Text + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss_") + ".jpg");
@@ -358,9 +356,7 @@ namespace SOFTMART_RRHH.Vista
                 INE_Destino = "";
                 INE_Origen = "";
             }
-
             //INE_Destino = Path.Combine(INEDestino, "INE_" + tbCURP.Text + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss_") + ".jpg");
-
             //INFORMACIÓN DE EMPLEADO
             object NumContrato, idSucursal, idPuesto, esTemporal, sueldo, comentarios;
             NumContrato = tbNumContrato.Text;
@@ -471,7 +467,6 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnSubirINE_Click(object sender, EventArgs e)
         {
-
             if (btnSubirINE.Text.Contains("Subir"))
             {
                 OpenFileDialog open = new OpenFileDialog();
@@ -495,14 +490,11 @@ namespace SOFTMART_RRHH.Vista
                     {
                         PopUp("Identificación no encontrada", "Esta persona no tiene INE registrada.", TipoNotif.Info);
                     }
-
                     else
                     {
                         PopUp("Error desconocido", ex.Message, TipoNotif.Info);
                     }
                 }
-
-
             }
         }
         private void btnHistorial_Click(object sender, EventArgs e)
