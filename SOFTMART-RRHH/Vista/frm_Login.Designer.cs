@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbUsuario = new System.Windows.Forms.TextBox();
@@ -68,11 +69,11 @@
             // 
             this.tbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsuario.ForeColor = System.Drawing.Color.DarkGray;
             this.tbUsuario.Location = new System.Drawing.Point(66, 249);
             this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(174, 20);
+            this.tbUsuario.Size = new System.Drawing.Size(174, 19);
             this.tbUsuario.TabIndex = 2;
             this.tbUsuario.Text = "Usuario";
             this.tbUsuario.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -82,11 +83,11 @@
             // 
             this.tbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.Color.DarkGray;
             this.tbPassword.Location = new System.Drawing.Point(66, 297);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(174, 20);
+            this.tbPassword.Size = new System.Drawing.Size(174, 19);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.Text = "Contraseña";
             this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
@@ -96,11 +97,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
             this.label1.Location = new System.Drawing.Point(118, 194);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "LOGIN";
             // 
@@ -152,6 +153,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Login";
             this.Opacity = 0.75D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

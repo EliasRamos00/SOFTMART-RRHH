@@ -40,7 +40,7 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
-            if (System.Windows.Forms.MessageBox.Show("¿Estas seguro de dar de baja a "+lblNombre.Text+" ?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (System.Windows.Forms.MessageBox.Show("¿Estas seguro de dar de baja a " + lblNombre.Text + " ?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 try
                 {
@@ -58,13 +58,9 @@ namespace SOFTMART_RRHH.Vista
                     {
                         LibAux.PopUp("¡Atención!", "Ha ocurrido un error al dar de baja al empleado." + ex.Message, LibAux.TipoNotif.Error);
                     }
-
-
                 }
                 this.Hide();
-
             }
-
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
