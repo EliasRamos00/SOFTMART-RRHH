@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
@@ -17,6 +18,7 @@ namespace SOFTMART_RRHH.Vista
         public int idPersona { get; private set; }
         public event EventHandler DobleClickEmpleado;
         public int DiasAntigu, MesesAntigu, AniosAntigu;
+        DataTable dtEmpledosActivos;
         #endregion
         #region CONSTRUCTORES
         public vConsulta()
@@ -30,10 +32,14 @@ namespace SOFTMART_RRHH.Vista
         }
         #endregion
         #region MÉTODOS        
-        private void LlenarGrid()
+        private async void LlenarGrid()
         {
-            dgvConsultaEmpleados.DataSource = MEmpleados.ObtenerEmpleadosActivosReporte();
-            CalcularAntiguedad();
+            frmCarga carga = new frmCarga();
+            carga.Show();
+            dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();            
+            await Task.Run(() =>  CalcularAntiguedad());
+            dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
+            carga.Hide();
             rowCounting.Text = "Registros : "+ dgvConsultaEmpleados.Rows.Count.ToString();
 
         }
@@ -102,11 +108,11 @@ namespace SOFTMART_RRHH.Vista
         private void CalcularAntiguedad()
         {
             DateTime fechaInicio;
-            foreach (DataGridViewRow row in dgvConsultaEmpleados.Rows)
+            foreach (DataRow row in dtEmpledosActivos.Rows)
             {      
-                    if (row.Cells["dgvConsultaEmpleados_FechaInicio"].Value != DBNull.Value) {
-                        fechaInicio = Convert.ToDateTime(row.Cells["dgvConsultaEmpleados_FechaInicio"].Value);
-                        row.Cells["dgvConsultaEmpleados_Antiguedad"].Value = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
+                    if (row["FechaInicio"] != DBNull.Value) {
+                        fechaInicio = Convert.ToDateTime(row["FechaInicio"].ToString());
+                        row["Antiguedad"] = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
                     }                       
             }
         }

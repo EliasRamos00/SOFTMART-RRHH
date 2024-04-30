@@ -63,9 +63,29 @@ namespace SOFTMART_RRHH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carga {
+            get {
+                object obj = ResourceManager.GetObject("carga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chekedgif {
             get {
                 object obj = ResourceManager.GetObject("chekedgif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulocarga {
+            get {
+                object obj = ResourceManager.GetObject("circulocarga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

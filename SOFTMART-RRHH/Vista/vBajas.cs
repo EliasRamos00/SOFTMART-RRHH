@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Threading;
@@ -17,7 +18,7 @@ namespace SOFTMART_RRHH.Vista
     public partial class vBajas : System.Windows.Forms.UserControl
     {
         #region VARIABLES GLOBALES
-        public DataTable info = new DataTable();
+        public DataTable info = new DataTable();        
         #endregion
         #region CONSTRUCTORES
         public vBajas()
@@ -48,12 +49,12 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
 
-            if (RenglonSiguiente["FechaInicio"].ToString() == "") {
+            if (RenglonSiguiente["FechaTermino"].ToString() == "") {
                 return;
             }
 
-
-            DateTime FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaInicio"].ToString());
+            ////// CALCULA TIEMPO DE BAJA.
+            DateTime FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
             DateTime FechaFin = DateTime.Now;
 
             int MesAnter = FechaFin.Month;
@@ -90,8 +91,9 @@ namespace SOFTMART_RRHH.Vista
                                 ", " + dias.ToString() + " Dia(s)";
             RenglonSiguiente["TiempoBaja"] = result;
 
-             FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
-
+            ///// CALCULA TIEMPO TRABAJADO.
+            FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaInicio"].ToString());
+            FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());            
              MesAnter = FechaFin.Month;
             while (MesAnter == FechaFin.Month)
             {
@@ -130,68 +132,12 @@ namespace SOFTMART_RRHH.Vista
 
 
         }
-
-        private void CalcularDiferenciaTiempoTrabajado()
+      
+        private async void CargarPersonasDadasBajas()
         {
-            DataRow RenglonSiguiente = info.NewRow();
-            foreach (DataRow dr in info.Rows)
-            {
-
-                if (dr["isBeingCalculated"].ToString() == "0")
-                {
-                    dr["isBeingCalculated"] = "1";
-                    RenglonSiguiente = dr;
-                    break;
-                }
-            }
-
-            if (RenglonSiguiente["FechaInicio"].ToString() == "")
-            {
-                return;
-            }
-
-
-            DateTime FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaInicio"].ToString());
-            DateTime FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
-
-            int MesAnter = FechaFin.Month;
-            while (MesAnter == FechaFin.Month)
-            {
-                FechaIni = FechaIni.AddDays(-1);
-                FechaFin = FechaFin.AddDays(-1);
-            }
-            int anios = 0, meses = 0, dias = 0;
-            // obtiene los años.
-            while (FechaFin.CompareTo(FechaIni) >= 0)
-            {
-                anios++;
-                FechaFin = FechaFin.AddYears(-1);
-            }
-            FechaFin = FechaFin.AddYears(1);
-            anios--;
-            // obtiene los dias y los meses
-            MesAnter = FechaFin.Month;
-            while (FechaFin.CompareTo(FechaIni) >= 0)
-            {
-                dias++;
-                FechaFin = FechaFin.AddDays(-1);
-                if ((FechaFin.CompareTo(FechaIni) >= 0) && (MesAnter != FechaFin.Month))
-                {
-                    meses++;
-                    dias = 0;
-                    MesAnter = FechaFin.Month;
-                }
-            }
-            dias--;
-            string result = anios.ToString() + " Año(s)" +
-                                ", " + meses.ToString() + " Mes(es)" +
-                                ", " + dias.ToString() + " Dia(s)";
-            RenglonSiguiente["TiempoTrabajado"] = result;
-
-
-        }
-        private void CargarPersonasDadasBajas()
-        {
+            frmCarga carga = new frmCarga();
+            carga.Show();
+            btnRecarga.Enabled = false;
             info = MBajas.ObtenerPersonasDadasBaja();
             //Se crea una columna nueva para los calculos.
             DataColumn dataColumn = new DataColumn();
@@ -199,8 +145,8 @@ namespace SOFTMART_RRHH.Vista
             dataColumn.DefaultValue = 0;
             info.Columns.Add(dataColumn);
 
-            CalcularTiempos();
-            dgvBajasEmpleados.DataSource = info;
+            await Task.Run(() => CalcularTiempos());
+            dgvBajasEmpleados.DataSource = info;            
             DateTime fechaInicio, fechaTermino;
 
             foreach (DataGridViewRow row in dgvBajasEmpleados.Rows)
@@ -208,15 +154,19 @@ namespace SOFTMART_RRHH.Vista
                 try { fechaInicio = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Inicio"].Value); } catch { }                                
                 try { fechaTermino = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Termino"].Value); } catch { }            
             }
-                  
-            rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();
+
+            carga.Hide();
+            btnRecarga.Enabled = true;
+            rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();            
         }
 
         private void CalcularTiempos()
         {
+
             try { 
             for (int i = 0; i < info.Rows.Count/3; i++)
-            {
+            {                               
+
                 Thread Hilo1 = new Thread(CalcularDiferencia);
                 Hilo1.IsBackground = true;
                 Hilo1.Start();
@@ -236,12 +186,17 @@ namespace SOFTMART_RRHH.Vista
                 Hilo4.IsBackground = true;
                 Hilo4.Start();
                 Hilo4.Join();
-            }
+
+                }
+            
             }
             catch { 
             }
         }
+        public void MostrarAnimacionCarga() {
+      
 
+        }
         private void CargarCBFiltro()
         {
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
