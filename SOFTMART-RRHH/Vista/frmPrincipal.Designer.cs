@@ -407,7 +407,7 @@ namespace SOFTMART_RRHH
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "z";
+            this.Text = "SOFTMART-RRHH";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.pTitleBar.ResumeLayout(false);
             this.pTitleBar.PerformLayout();

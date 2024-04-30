@@ -99,11 +99,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(118, 194);
+            this.label1.Location = new System.Drawing.Point(52, 199);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.Size = new System.Drawing.Size(208, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "LOGIN";
+            this.label1.Text = "INICIO DE SESIÓN";
             // 
             // panel2
             // 
@@ -143,11 +143,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(310, 462);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.panel1);
@@ -157,7 +157,7 @@
             this.Name = "frm_Login";
             this.Opacity = 0.75D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.frm_Login_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frm_Login_KeyUp);
             this.ResumeLayout(false);
