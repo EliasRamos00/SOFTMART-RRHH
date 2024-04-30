@@ -9,7 +9,7 @@ namespace SOFTMART_RRHH.Vista
     public partial class vUsuarios : System.Windows.Forms.UserControl
     {
         #region VARIABLES GLOBALES
-        
+
         #endregion
         #region CONSTRUCTORES
         public vUsuarios()
@@ -31,7 +31,7 @@ namespace SOFTMART_RRHH.Vista
             dgvUsuarios_RolCB.ValueMember = "Rol";
             dgvUsuarios_RolCB.DisplayMember = "Rol";
             CargarUsuarios();
-        }                                
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvUsuarios.Rows)
@@ -90,7 +90,7 @@ namespace SOFTMART_RRHH.Vista
                 }
                 CargarUsuarios();
             }
-        }        
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvUsuarios.DataSource as DataTable;
@@ -146,7 +146,7 @@ namespace SOFTMART_RRHH.Vista
                     }
                 }
             }
-        }        
+        }
         private void dgvUsuarios_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             //NO QUITAR ESTE EVENTO.    

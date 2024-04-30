@@ -16,7 +16,7 @@ namespace SOFTMART_RRHH.Vista
             string filepath = System.Windows.Forms.Application.StartupPath;
             string ProyectPathPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(filepath, @"..\..\"));
             string newPath = System.IO.Path.Combine(ProyectPathPath, "DevEnv\\");
-            if (!Directory.Exists(newPath)) // Es produccion
+            if (!Directory.Exists(newPath)) // Si no existe... Es produccion
             {
                 Properties.Settings.Default.Ip = ConfigurationManager.AppSettings["produccion_IP"];
                 Properties.Settings.Default.Usuario = ConfigurationManager.AppSettings["produccion_User"];

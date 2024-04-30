@@ -70,7 +70,7 @@ namespace SOFTMART_RRHH.Vista
             }
         }
 
-        
+
         #endregion
         #region MÉTODOS
         private void CargarInformacion()
@@ -90,10 +90,12 @@ namespace SOFTMART_RRHH.Vista
                 tbRFC.Text = infoPersona.Rows[0]["RFC"].ToString();
                 cbEdoCivil.Text = infoPersona.Rows[0]["EdoCivil"].ToString();
                 tbLugarNac.Text = infoPersona.Rows[0]["LugarNac"].ToString();
-                try {
+                try
+                {
                     dtpFechaNac.Value = Convert.ToDateTime(infoPersona.Rows[0]["FechaNac"]);
-                } catch { }
-                
+                }
+                catch { }
+
                 tbEspecialidad.Text = infoPersona.Rows[0]["Especialidad"].ToString();
                 tbEstado.Text = infoPersona.Rows[0]["Estado"].ToString();
                 tbCiudad.Text = infoPersona.Rows[0]["Ciudad"].ToString();
@@ -114,17 +116,18 @@ namespace SOFTMART_RRHH.Vista
                 {
                     rBFem.Checked = true;
                 }
-                try { pbPersona.ImageLocation = "\\\\"+ Properties.Settings.Default.Ip + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
+                try { pbPersona.ImageLocation = "\\\\" + Properties.Settings.Default.Ip + infoPersona.Rows[0]["Fotografia"].ToString(); } catch { }
             }
         }
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
         {
             cbSueldo.Text = infoEmpleado.Rows[0]["Sueldo"].ToString();
-            try {
+            try
+            {
                 dtpFechaIngreso.Value = Convert.ToDateTime(infoEmpleado.Rows[0]["FechaInicio"]);
             }
             catch { }
-            
+
             cBEmpleadoTemporada.Checked = Convert.ToBoolean(infoEmpleado.Rows[0]["esEmpleadoTemp"]);
             cbTienda.Text = infoEmpleado.Rows[0]["Sucursal"].ToString();
             cbArea.Text = infoEmpleado.Rows[0]["Area"].ToString();
@@ -261,7 +264,7 @@ namespace SOFTMART_RRHH.Vista
             tbNSS.Text = "";
             cbEscolaridad.SelectedIndex = -1;
             pbPersona.Image = null;
-        }        
+        }
         private void LimpiarCamposEmpleado()
         {
             tbNumContrato.Text = "";
@@ -272,7 +275,7 @@ namespace SOFTMART_RRHH.Vista
             cbArea.SelectedIndex = -1;
             cbSubarea.SelectedIndex = -1;
             cbPuesto.SelectedIndex = -1;
-            cbSueldo.Text = "";         
+            cbSueldo.Text = "";
         }
         public virtual void MostrarVentanaEliminacion(EventArgs e)
         {
@@ -284,7 +287,6 @@ namespace SOFTMART_RRHH.Vista
         private void vAltaPersonal_Load(object sender, EventArgs e)
         {
             CargarSucursales();
-            //CargarPuestos();
             CargarAreas();
             CargarEscolaridades();
             CargarEdosCiviles();
@@ -356,7 +358,6 @@ namespace SOFTMART_RRHH.Vista
                 INE_Destino = "";
                 INE_Origen = "";
             }
-            //INE_Destino = Path.Combine(INEDestino, "INE_" + tbCURP.Text + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss_") + ".jpg");
             //INFORMACIÓN DE EMPLEADO
             object NumContrato, idSucursal, idPuesto, esTemporal, sueldo, comentarios;
             NumContrato = tbNumContrato.Text;
@@ -429,7 +430,7 @@ namespace SOFTMART_RRHH.Vista
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
             MostrarVentanaEliminacion(EventArgs.Empty);
-        }        
+        }
         private void btnSubirFoto_Click(object sender, EventArgs e)
         {
             if (btnSubirFoto.Text.Contains("Subir"))
@@ -504,7 +505,7 @@ namespace SOFTMART_RRHH.Vista
         private void cbSubarea_DropDown(object sender, EventArgs e)
         {
             CargarSubAreas();
-        }        
+        }
         private void cbArea_DropDown(object sender, EventArgs e)
         {
             CargarAreas();

@@ -31,6 +31,7 @@ namespace SOFTMART_RRHH
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pTitleBar = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
@@ -403,6 +404,7 @@ namespace SOFTMART_RRHH
             this.Controls.Add(this.pTitleBar);
             this.Controls.Add(this.pSideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "z";

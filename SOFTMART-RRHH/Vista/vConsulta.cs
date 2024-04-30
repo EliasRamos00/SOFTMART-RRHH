@@ -36,12 +36,13 @@ namespace SOFTMART_RRHH.Vista
         {
             frmCarga carga = new frmCarga();
             carga.Show();
-            dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();            
-            await Task.Run(() =>  CalcularAntiguedad());
-            dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
-            carga.Hide();
-            rowCounting.Text = "Registros : "+ dgvConsultaEmpleados.Rows.Count.ToString();
 
+            dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();  // OBTIENE LA LISTA DE EMPLEADOS ACTIVOS
+            await Task.Run(() => CalcularAntiguedad()); // CALCULA LA ANTIGUEDAD EN UN HILO APARTE
+            dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
+
+            carga.Hide();
+            rowCounting.Text = "Registros : " + dgvConsultaEmpleados.Rows.Count.ToString();
         }
         private void CargarColumnas()
         {
@@ -56,7 +57,7 @@ namespace SOFTMART_RRHH.Vista
             cbFiltro.DataSource = keyValuePairs.ToList();
             cbFiltro.DisplayMember = "Value";
             cbFiltro.ValueMember = "Key";
-        }        
+        }
         private string CalcularDiferencia(DateTime FechaIni, DateTime FechaFin)
         {
             int MesAnter = FechaFin.Month;
@@ -109,11 +110,12 @@ namespace SOFTMART_RRHH.Vista
         {
             DateTime fechaInicio;
             foreach (DataRow row in dtEmpledosActivos.Rows)
-            {      
-                    if (row["FechaInicio"] != DBNull.Value) {
-                        fechaInicio = Convert.ToDateTime(row["FechaInicio"].ToString());
-                        row["Antiguedad"] = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
-                    }                       
+            {
+                if (row["FechaInicio"] != DBNull.Value)
+                {
+                    fechaInicio = Convert.ToDateTime(row["FechaInicio"].ToString());
+                    row["Antiguedad"] = CalcularDiferencia(fechaInicio, dtpFechaFiltro.Value);
+                }
             }
         }
         private void FiltrarInformacion()
@@ -135,7 +137,7 @@ namespace SOFTMART_RRHH.Vista
                     int diasFinal = TomarDiasComboBox(cbFinal) + 13;
                     ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format("AntiguedadDias >= " + diasInicio + " AND AntiguedadDias <= " + diasFinal + "AND antiguedad NOT LIKE 'N/A'");
                 }
-            }    
+            }
             catch (Exception ex) { LibAux.ErrorLog(ex); ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = ""; }
             rowCounting.Text = "Registros : " + dgvConsultaEmpleados.Rows.Count.ToString();
         }
@@ -186,8 +188,7 @@ namespace SOFTMART_RRHH.Vista
         {
             LlenarGrid();
             CargarColumnas();
-            //CalcularAntiguedad();
-        }        
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -216,7 +217,7 @@ namespace SOFTMART_RRHH.Vista
         private void tbFiltro_TextChanged(object sender, EventArgs e)
         {
             FiltrarInformacion();
-        }    
+        }
         private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFiltro.Text == "Antiguedad")

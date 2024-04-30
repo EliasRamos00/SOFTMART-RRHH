@@ -17,10 +17,5 @@ namespace SOFTMART_RRHH.Vista
             InitializeComponent();
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

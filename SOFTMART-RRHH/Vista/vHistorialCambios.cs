@@ -103,7 +103,7 @@ namespace SOFTMART_RRHH.Vista
             richTextBox1.Select(selectionStart, selectionLength);
             richTextBox1.SelectionColor = defaultColor;
 
-            // Devolver el enfoque al control RichTextBox
+            // Devolver el enfoque al control RichTextBox 
             richTextBox1.Focus();
         }
         #endregion
@@ -124,38 +124,39 @@ namespace SOFTMART_RRHH.Vista
         {
             txtAntes.Text = "";
             txtDespues.Text = "";
-            if (dgvHistorial.CurrentRow != null) {             
-            try
+            if (dgvHistorial.CurrentRow != null)
             {
-                DataTable dtTemp = MHistorial.ConsultarXML(dgvHistorial.CurrentRow.Cells["dgvHistorial_idHistorial"].Value);
-                if (dtTemp.Rows.Count >= 1)
+                try
                 {
-                    string xmlAntes = dtTemp.Rows[0]["XMLAntes"].ToString();
-                    string xmlDespues = dtTemp.Rows[0]["XMLDespues"].ToString();
+                    DataTable dtTemp = MHistorial.ConsultarXML(dgvHistorial.CurrentRow.Cells["dgvHistorial_idHistorial"].Value);
+                    if (dtTemp.Rows.Count >= 1)
+                    {
+                        string xmlAntes = dtTemp.Rows[0]["XMLAntes"].ToString();
+                        string xmlDespues = dtTemp.Rows[0]["XMLDespues"].ToString();
 
-                    if (xmlAntes != "" && xmlDespues != "")
-                    {
-                        XDocument xDocumentAntes = XDocument.Parse(xmlAntes);
-                        XDocument xDocumentDespues = XDocument.Parse(xmlDespues);
-                        RemoverNodosDuplicados(xDocumentAntes.Root, xDocumentDespues.Root);
-                        txtAntes.Text = xDocumentAntes.ToString();//ToString will format xml string with indent
-                        txtDespues.Text = xDocumentDespues.ToString();//ToString will format xml string with indent
-                        HighlightSyntax(txtAntes);
-                        HighlightSyntax(txtDespues);
-                    }
-                    else if (xmlAntes == "" && xmlDespues != "")
-                    {
-                        XDocument xDocument = XDocument.Parse(xmlDespues);
-                        txtDespues.Text = xDocument.ToString();//ToString will format xml string with indent
-                        HighlightSyntax(txtDespues);
+                        if (xmlAntes != "" && xmlDespues != "")
+                        {
+                            XDocument xDocumentAntes = XDocument.Parse(xmlAntes);
+                            XDocument xDocumentDespues = XDocument.Parse(xmlDespues);
+                            RemoverNodosDuplicados(xDocumentAntes.Root, xDocumentDespues.Root);
+                            txtAntes.Text = xDocumentAntes.ToString();//ToString will format xml string with indent
+                            txtDespues.Text = xDocumentDespues.ToString();//ToString will format xml string with indent
+                            HighlightSyntax(txtAntes);
+                            HighlightSyntax(txtDespues);
+                        }
+                        else if (xmlAntes == "" && xmlDespues != "")
+                        {
+                            XDocument xDocument = XDocument.Parse(xmlDespues);
+                            txtDespues.Text = xDocument.ToString();//ToString will format xml string with indent
+                            HighlightSyntax(txtDespues);
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                LibAux.PopUp("atención", ex.Message, LibAux.TipoNotif.Error);
-                LibAux.ErrorLog(ex);
-            }
+                catch (Exception ex)
+                {
+                    LibAux.PopUp("atención", ex.Message, LibAux.TipoNotif.Error);
+                    LibAux.ErrorLog(ex);
+                }
             }
 
             dgvHistorial.Focus();

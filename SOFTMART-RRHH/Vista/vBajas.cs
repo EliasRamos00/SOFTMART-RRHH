@@ -18,13 +18,13 @@ namespace SOFTMART_RRHH.Vista
     public partial class vBajas : System.Windows.Forms.UserControl
     {
         #region VARIABLES GLOBALES
-        public DataTable info = new DataTable();        
+        public DataTable info = new DataTable();
         #endregion
         #region CONSTRUCTORES
         public vBajas()
         {
             InitializeComponent();
-            CargarCBFiltro();            
+            CargarCBFiltro();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dgvBajasEmpleados, new object[] { true });
@@ -40,16 +40,19 @@ namespace SOFTMART_RRHH.Vista
         private void CalcularDiferencia()
         {
             DataRow RenglonSiguiente = info.NewRow();
-            foreach (DataRow dr in info.Rows) {
+            foreach (DataRow dr in info.Rows)
+            {
 
-                if (dr["isBeingCalculated"].ToString() == "0") {
+                if (dr["isBeingCalculated"].ToString() == "0")
+                {
                     dr["isBeingCalculated"] = "1";
                     RenglonSiguiente = dr;
                     break;
                 }
             }
 
-            if (RenglonSiguiente["FechaTermino"].ToString() == "") {
+            if (RenglonSiguiente["FechaTermino"].ToString() == "")
+            {
                 return;
             }
 
@@ -85,7 +88,7 @@ namespace SOFTMART_RRHH.Vista
                     MesAnter = FechaFin.Month;
                 }
             }
-            dias--;         
+            dias--;
             string result = anios.ToString() + " Año(s)" +
                                 ", " + meses.ToString() + " Mes(es)" +
                                 ", " + dias.ToString() + " Dia(s)";
@@ -93,8 +96,8 @@ namespace SOFTMART_RRHH.Vista
 
             ///// CALCULA TIEMPO TRABAJADO.
             FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaInicio"].ToString());
-            FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());            
-             MesAnter = FechaFin.Month;
+            FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
+            MesAnter = FechaFin.Month;
             while (MesAnter == FechaFin.Month)
             {
                 FechaIni = FechaIni.AddDays(-1);
@@ -129,10 +132,7 @@ namespace SOFTMART_RRHH.Vista
                                 ", " + meses.ToString() + " Mes(es)" +
                                 ", " + dias.ToString() + " Dia(s)";
             RenglonSiguiente["TiempoTrabajado"] = result;
-
-
         }
-      
         private async void CargarPersonasDadasBajas()
         {
             frmCarga carga = new frmCarga();
@@ -146,56 +146,48 @@ namespace SOFTMART_RRHH.Vista
             info.Columns.Add(dataColumn);
 
             await Task.Run(() => CalcularTiempos());
-            dgvBajasEmpleados.DataSource = info;            
+            dgvBajasEmpleados.DataSource = info;
             DateTime fechaInicio, fechaTermino;
 
             foreach (DataGridViewRow row in dgvBajasEmpleados.Rows)
             {
-                try { fechaInicio = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Inicio"].Value); } catch { }                                
-                try { fechaTermino = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Termino"].Value); } catch { }            
+                try { fechaInicio = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Inicio"].Value); } catch { }
+                try { fechaTermino = Convert.ToDateTime(row.Cells["dgvBajasEmpleados_Termino"].Value); } catch { }
             }
 
             carga.Hide();
             btnRecarga.Enabled = true;
-            rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();            
+            rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();
         }
-
         private void CalcularTiempos()
         {
+            try
+            {
+                for (int i = 0; i < info.Rows.Count / 3; i++)
+                {
+                    Thread Hilo1 = new Thread(CalcularDiferencia);
+                    Hilo1.IsBackground = true;
+                    Hilo1.Start();
+                    Hilo1.Join();
 
-            try { 
-            for (int i = 0; i < info.Rows.Count/3; i++)
-            {                               
+                    Thread Hilo2 = new Thread(CalcularDiferencia);
+                    Hilo2.IsBackground = true;
+                    Hilo2.Start();
+                    Hilo2.Join();
 
-                Thread Hilo1 = new Thread(CalcularDiferencia);
-                Hilo1.IsBackground = true;
-                Hilo1.Start();
-                Hilo1.Join();
+                    Thread Hilo3 = new Thread(CalcularDiferencia);
+                    Hilo3.IsBackground = true;
+                    Hilo3.Start();
+                    Hilo3.Join();
 
-                Thread Hilo2 = new Thread(CalcularDiferencia);
-                Hilo2.IsBackground = true;
-                Hilo2.Start();
-                Hilo2.Join();
-
-                Thread Hilo3 = new Thread(CalcularDiferencia);
-                Hilo3.IsBackground = true;
-                Hilo3.Start();
-                Hilo3.Join();
-
-                Thread Hilo4 = new Thread(CalcularDiferencia);
-                Hilo4.IsBackground = true;
-                Hilo4.Start();
-                Hilo4.Join();
+                    Thread Hilo4 = new Thread(CalcularDiferencia);
+                    Hilo4.IsBackground = true;
+                    Hilo4.Start();
+                    Hilo4.Join();
 
                 }
-            
             }
-            catch { 
-            }
-        }
-        public void MostrarAnimacionCarga() {
-      
-
+            catch { }
         }
         private void CargarCBFiltro()
         {
@@ -225,7 +217,7 @@ namespace SOFTMART_RRHH.Vista
         {
             CargarPersonasDadasBajas();
 
-        }        
+        }
         private void btnExcel_Click(object sender, EventArgs e)
         {
             List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
@@ -237,12 +229,12 @@ namespace SOFTMART_RRHH.Vista
                 }
 
             }
-            frmExcelCheckList frmExcel = new frmExcelCheckList(columns);            
-            
+            frmExcelCheckList frmExcel = new frmExcelCheckList(columns);
+
             if (frmExcel.ShowDialog() == DialogResult.OK)
             {
                 LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvBajasEmpleados, frmExcel.ColumnasAExportar));
-            }            
+            }
         }
         private void tbFiltro_TextChanged(object sender, EventArgs e)
         {

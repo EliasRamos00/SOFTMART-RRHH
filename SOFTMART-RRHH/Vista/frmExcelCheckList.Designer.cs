@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExcelCheckList));
             this.btnExportar = new System.Windows.Forms.Button();
             this.lblSelecciona = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(252, 457);
             this.Controls.Add(this.lblSelecciona);
             this.Controls.Add(this.btnExportar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmExcelCheckList";
             this.Text = "frmExcelCheckList";
             this.Load += new System.EventHandler(this.frmExcelCheckList_Load);
