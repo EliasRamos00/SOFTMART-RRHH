@@ -21,15 +21,13 @@ namespace SOFTMART_RRHH
     {
         #region VARIABLES GLOBALES        
         vConsulta vConsulta = new vConsulta();
+        vAjustes vAjustes = new vAjustes();
         vPersonal vAltaPersonal = new vPersonal(LibAux.CRUD.INSERT);
         vBajas vBajas = new vBajas();
         vTodos vTodos = new vTodos();
         vHistorialCambios vCambios = new vHistorialCambios();
         vUsuarios vUsuarios = new vUsuarios();
         vErrorLog vErrorLog = new vErrorLog();
-
-        int idPersona = -1;
-        int idEmpleado = -1;
 
         #endregion
         #region CONSTRUCTORES
@@ -45,6 +43,7 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vTodos);
             AdjuntarUC_frmPrincipal(vUsuarios);
             AdjuntarUC_frmPrincipal(vErrorLog);
+            AdjuntarUC_frmPrincipal(vAjustes);
             if (Properties.Settings.Default.Rol.Contains("ADM"))
             {
                 EsAdmin(true);
@@ -147,7 +146,6 @@ namespace SOFTMART_RRHH
             HistorialCambios.Dock = DockStyle.Fill;
             HistorialCambios.BringToFront();
         }
-
         #endregion
         #region EVENTOS
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -222,6 +220,11 @@ namespace SOFTMART_RRHH
         {
             MostrarUC(vErrorLog);
         }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            MostrarUC(vAjustes);
+        }
         private void btnReset_Click(object sender, EventArgs e)
         {
             frm_Login log = new frm_Login();
@@ -235,293 +238,254 @@ namespace SOFTMART_RRHH
         }
         #endregion
 
-        private void btnImportacion_Click(object sender, EventArgs e)
-        {
-            // Ruta del archivo CSV                        
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+        #region SCRIPTS USADOS PARA LA IMPORTACIÓN MASIVA DE INFORMACIÓN
+        //private void btnImportacion_Click(object sender, EventArgs e)
+        //{
+        //    // Ruta del archivo CSV                        
+        //    OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "ALL FILES|*.*";
-            openFileDialog1.FilterIndex = 0;
-            openFileDialog1.RestoreDirectory = true;
+        //    openFileDialog1.InitialDirectory = "c:\\";
+        //    openFileDialog1.Filter = "ALL FILES|*.*";
+        //    openFileDialog1.FilterIndex = 0;
+        //    openFileDialog1.RestoreDirectory = true;
 
-            if (openFileDialog1.ShowDialog() != DialogResult.OK)
-            {
-                return;
-            }
+        //    if (openFileDialog1.ShowDialog() != DialogResult.OK)
+        //    {
+        //        return;
+        //    }
 
-            string selectedFileName = openFileDialog1.FileName;
-            // Lee el archivo CSV y carga los datos en un DataTable
-            DataTable dt = ReadCsvToDataTable(selectedFileName);
+        //    string selectedFileName = openFileDialog1.FileName;
+        //    // Lee el archivo CSV y carga los datos en un DataTable
+        //    DataTable dt = ReadCsvToDataTable(selectedFileName);
 
-            // Ahora puedes trabajar con el DataTable
-            // Por ejemplo, imprimir el contenido
-            //PrintDataTable(dataTable);
-            foreach (DataRow row in dt.Rows)
-            {
-                string apellPaterno = row["APELLIDO PATERNO"].ToString();
-                string apellMaterno = row["APELLIDO MATERNO"].ToString();
-                string nombre = row["NOMBRES"].ToString();
-                string nss = row["NSS"].ToString();
-                string curp = row["CURP"].ToString();
-                string rfc = row["RFC"].ToString();
-                string puesto = row["puesto"].ToString();
-                string contrato = row["contrato"].ToString();
-                object fechainicio = row["fechaInicio"].ToString();
-                object fechanacimiento = row["fechanacimiento"].ToString();
-                string tienda = row["tienda"].ToString();
+        //    //PrintDataTable(dataTable);
+        //    foreach (DataRow row in dt.Rows)
+        //    {
+        //        string apellPaterno = row["APELLIDO PATERNO"].ToString();
+        //        string apellMaterno = row["APELLIDO MATERNO"].ToString();
+        //        string nombre = row["NOMBRES"].ToString();
+        //        string nss = row["NSS"].ToString();
+        //        string curp = row["CURP"].ToString();
+        //        string rfc = row["RFC"].ToString();
+        //        string puesto = row["puesto"].ToString();
+        //        string contrato = row["contrato"].ToString();
+        //        object fechainicio = row["fechaInicio"].ToString();
+        //        object fechanacimiento = row["fechanacimiento"].ToString();
+        //        string tienda = row["tienda"].ToString();
 
-                object fechabaja = row["fechabaja"].ToString();
-                object Finiquito = row["Finiquito"].ToString();
-                object ComentarioBaja = row["ComentarioBaja"].ToString();
+        //        object fechabaja = row["fechabaja"].ToString();
+        //        object Finiquito = row["Finiquito"].ToString();
+        //        object ComentarioBaja = row["ComentarioBaja"].ToString();
 
-                object patron = row["ultimoPatron"].ToString();
+        //        object patron = row["ultimoPatron"].ToString();
 
-                try { 
+        //        try { 
 
-                //SI EXISTE, ENTONCES SE MODIFICA CON LA NUEVA INFORMACION QUE PUEDA TENER, SINO, SOLAMENTE SE INSERTA.
-                if (esPersonaExistente(nombre, apellPaterno, apellMaterno)) //MODIFICA EXISTENTE
-                {
-                    ModificaExistente(apellPaterno, apellMaterno, nombre, nss, curp, rfc, "", "", "", fechanacimiento, "");
-                    if (fechabaja != DBNull.Value)
-                    {
-                        InsertaEmpleadoContratoNuevo(idEmpleado, puesto, contrato, fechainicio, tienda, fechabaja, Finiquito, ComentarioBaja, patron);
-                    }
-                }
-                else {  //INSERTA NUEVO
-                    InsertaNuevo(apellPaterno, apellMaterno, nombre, nss, curp, rfc, puesto, contrato, fechainicio, fechanacimiento, tienda,fechabaja,Finiquito,ComentarioBaja, patron);
-                }
-                
-                }catch (Exception ex){
-                    if (!ex.Message.Contains("Index")) {                        
-                    }
-                }
-                idPersona = -1;
-                
-            }
+        //        //SI EXISTE, ENTONCES SE MODIFICA CON LA NUEVA INFORMACION QUE PUEDA TENER, SINO, SOLAMENTE SE INSERTA.
+        //        if (esPersonaExistente(nombre, apellPaterno, apellMaterno)) //MODIFICA EXISTENTE
+        //        {
+        //            ModificaExistente(apellPaterno, apellMaterno, nombre, nss, curp, rfc, "", "", "", fechanacimiento, "");
+        //            if (fechabaja != DBNull.Value)
+        //            {
+        //                InsertaEmpleadoContratoNuevo(idEmpleado, puesto, contrato, fechainicio, tienda, fechabaja, Finiquito, ComentarioBaja, patron);
+        //            }
+        //        }
+        //        else {  //INSERTA NUEVO
+        //            InsertaNuevo(apellPaterno, apellMaterno, nombre, nss, curp, rfc, puesto, contrato, fechainicio, fechanacimiento, tienda,fechabaja,Finiquito,ComentarioBaja, patron);
+        //        }
 
-        }
+        //        }catch (Exception ex){
+        //            if (!ex.Message.Contains("Index")) {                        
+        //            }
+        //        }
+        //        idPersona = -1;
 
-        private void InsertaEmpleadoContratoNuevo(int idEmpleado, string puesto, string contrato, object fechainicio, string tienda, object fechabaja, object finiquito, object comentarioBaja, object patron)
-        {
-            if (fechabaja.ToString() != "")
-            {
-                fechabaja = Convert.ToDateTime(fechabaja);
-            }
-            if (fechainicio.ToString() != "")
-            {
-                fechainicio = Convert.ToDateTime(fechainicio);
-            }
-            List<Param> @params = new List<Param> {
-                new Param("vNombres",""),
-                new Param("vApellPaterno",""),
-                new Param("vApellMaterno",""),
-                new Param("vNSS",""),
-                new Param("vCURP",""),
-                new Param("vRFC",""),
-                new Param("vIdPersona",idPersona),
-                new Param("vFechaNac",""),
-                new Param("vFechaInicio",fechainicio),
-                new Param("vTienda",tienda),
-                new Param("vContrato",contrato),
-                new Param("vidEmpleado",idEmpleado),
-                new Param("vFechaBaja",fechabaja),
-                new Param("vFiniquito",finiquito),
-                new Param("vComentarioBaja",comentarioBaja),
-                new Param("vPatron",""),
-                new Param("vPuesto",puesto),
-                new Param("vCRUD","NuevoContrato")
-            };
-            LibAux.EjecutarProcedimiento("XX", @params);
-        }
+        //    }
 
-        private void InsertaNuevo(string apellPaterno, string apellMaterno, string nombre, string nss, string curp, string rfc, string puesto, string contrato, object fechainicio, object fechanacimiento, string tienda, object fechabaja, object finiquito, object comentarioBaja, object patron)
-        {
-            if (fechanacimiento.ToString() != "")
-            {
-                fechanacimiento = Convert.ToDateTime(fechanacimiento);
-            }
-            if (fechainicio.ToString() != "")
-            {
-                fechainicio = Convert.ToDateTime(fechainicio);
-            }
-            if (fechabaja.ToString() != "")
-            {
-                fechabaja = Convert.ToDateTime(fechabaja);
-            }
+        //}
+        //private void InsertaEmpleadoContratoNuevo(int idEmpleado, string puesto, string contrato, object fechainicio, string tienda, object fechabaja, object finiquito, object comentarioBaja, object patron)
+        //{
+        //    if (fechabaja.ToString() != "")
+        //    {
+        //        fechabaja = Convert.ToDateTime(fechabaja);
+        //    }
+        //    if (fechainicio.ToString() != "")
+        //    {
+        //        fechainicio = Convert.ToDateTime(fechainicio);
+        //    }
+        //    List<Param> @params = new List<Param> {
+        //        new Param("vNombres",""),
+        //        new Param("vApellPaterno",""),
+        //        new Param("vApellMaterno",""),
+        //        new Param("vNSS",""),
+        //        new Param("vCURP",""),
+        //        new Param("vRFC",""),
+        //        new Param("vIdPersona",idPersona),
+        //        new Param("vFechaNac",""),
+        //        new Param("vFechaInicio",fechainicio),
+        //        new Param("vTienda",tienda),
+        //        new Param("vContrato",contrato),
+        //        new Param("vidEmpleado",idEmpleado),
+        //        new Param("vFechaBaja",fechabaja),
+        //        new Param("vFiniquito",finiquito),
+        //        new Param("vComentarioBaja",comentarioBaja),
+        //        new Param("vPatron",""),
+        //        new Param("vPuesto",puesto),
+        //        new Param("vCRUD","NuevoContrato")
+        //    };
+        //    LibAux.EjecutarProcedimiento("XX", @params);
+        //}
+        //private void InsertaNuevo(string apellPaterno, string apellMaterno, string nombre, string nss, string curp, string rfc, string puesto, string contrato, object fechainicio, object fechanacimiento, string tienda, object fechabaja, object finiquito, object comentarioBaja, object patron)
+        //{
+        //    if (fechanacimiento.ToString() != "")
+        //    {
+        //        fechanacimiento = Convert.ToDateTime(fechanacimiento);
+        //    }
+        //    if (fechainicio.ToString() != "")
+        //    {
+        //        fechainicio = Convert.ToDateTime(fechainicio);
+        //    }
+        //    if (fechabaja.ToString() != "")
+        //    {
+        //        fechabaja = Convert.ToDateTime(fechabaja);
+        //    }
 
-            List<Param> @params = new List<Param> {
-                new Param("vNombres",nombre),
-                new Param("vApellPaterno",apellPaterno),
-                new Param("vApellMaterno",apellMaterno),
-                new Param("vNSS",nss),
-                new Param("vCURP",curp),
-                new Param("vRFC",rfc),
-                new Param("vFechaNac",fechanacimiento),
-                new Param("vFechaInicio",fechainicio),
-                new Param("vFechaBaja",fechabaja),
-                new Param("vTienda",tienda),
-                new Param("vContrato",contrato),
-                new Param("vidPersona",""),
-                new Param("vFiniquito",finiquito),
-                new Param("vComentarioBaja",comentarioBaja),
-                new Param("vPuesto",puesto),
-                new Param("vPatron",patron),
-                new Param("vCRUD","INSERT")
-            };
-            LibAux.EjecutarProcedimiento("XX", @params);
+        //    List<Param> @params = new List<Param> {
+        //        new Param("vNombres",nombre),
+        //        new Param("vApellPaterno",apellPaterno),
+        //        new Param("vApellMaterno",apellMaterno),
+        //        new Param("vNSS",nss),
+        //        new Param("vCURP",curp),
+        //        new Param("vRFC",rfc),
+        //        new Param("vFechaNac",fechanacimiento),
+        //        new Param("vFechaInicio",fechainicio),
+        //        new Param("vFechaBaja",fechabaja),
+        //        new Param("vTienda",tienda),
+        //        new Param("vContrato",contrato),
+        //        new Param("vidPersona",""),
+        //        new Param("vFiniquito",finiquito),
+        //        new Param("vComentarioBaja",comentarioBaja),
+        //        new Param("vPuesto",puesto),
+        //        new Param("vPatron",patron),
+        //        new Param("vCRUD","INSERT")
+        //    };
+        //    LibAux.EjecutarProcedimiento("XX", @params);
 
-        }
+        //}
+        //private void ModificaExistente(string apellPaterno, string apellMaterno, string nombre, string nss, string curp, string rfc, string puesto, string contrato, object fechainicio, object fechanacimiento, string tienda)
+        //{
 
-        private void ModificaExistente(string apellPaterno, string apellMaterno, string nombre, string nss, string curp, string rfc, string puesto, string contrato, object fechainicio, object fechanacimiento, string tienda)
-        {
+        //    if (fechanacimiento.ToString() != "") {
+        //        fechanacimiento = Convert.ToDateTime(fechanacimiento);
+        //    }
+        //    if (fechainicio.ToString() != "")
+        //    {
+        //        fechainicio = Convert.ToDateTime(fechainicio);
+        //    }
 
-            if (fechanacimiento.ToString() != "") {
-                fechanacimiento = Convert.ToDateTime(fechanacimiento);
-            }
-            if (fechainicio.ToString() != "")
-            {
-                fechainicio = Convert.ToDateTime(fechainicio);
-            }
+        //    List<Param> @params = new List<Param> {
+        //        new Param("vNombres",nombre),
+        //        new Param("vApellPaterno",apellPaterno),
+        //        new Param("vApellMaterno",apellMaterno),
+        //        new Param("vNSS",nss),
+        //        new Param("vCURP",curp),
+        //        new Param("vRFC",rfc),
+        //        new Param("vFechaNac",fechanacimiento),
+        //        new Param("vFechaInicio",""),
+        //        new Param("vTienda",""),
+        //        new Param("vContrato",""),
+        //        new Param("vidPersona",idPersona),                
+        //        new Param("vFiniquito",""),
+        //        new Param("vFechabaja",""),
+        //        new Param("vComentarioBaja",""),
+        //        new Param("vPuesto",""),
+        //        new Param("vPatron",""),
+        //        new Param("vCRUD","UPDATE")
+        //    };
 
-            List<Param> @params = new List<Param> {
-                new Param("vNombres",nombre),
-                new Param("vApellPaterno",apellPaterno),
-                new Param("vApellMaterno",apellMaterno),
-                new Param("vNSS",nss),
-                new Param("vCURP",curp),
-                new Param("vRFC",rfc),
-                new Param("vFechaNac",fechanacimiento),
-                new Param("vFechaInicio",""),
-                new Param("vTienda",""),
-                new Param("vContrato",""),
-                new Param("vidPersona",idPersona),                
-                new Param("vFiniquito",""),
-                new Param("vFechabaja",""),
-                new Param("vComentarioBaja",""),
-                new Param("vPuesto",""),
-                new Param("vPatron",""),
-                new Param("vCRUD","UPDATE")
-            };
-
-            if (curp != "") {
-                string a = "a";
-            }
+        //    if (curp != "") {
+        //        string a = "a";
+        //    }
 
 
-            LibAux.EjecutarProcedimiento("XX", @params);
-        }
+        //    LibAux.EjecutarProcedimiento("XX", @params);
+        //}
+        //private bool esPersonaExistente(string nombre, string apellPaterno, string apellMaterno)
+        //{
+        //    try {
+        //        List<Param> @params = new List<Param> {
+        //        new Param("vNombres",nombre),
+        //        new Param("vApellPaterno",apellPaterno),
+        //        new Param("vApellMaterno",apellMaterno),
 
-        private bool esPersonaExistente(string nombre, string apellPaterno, string apellMaterno)
-        {
-            try {
-                List<Param> @params = new List<Param> {
-                new Param("vNombres",nombre),
-                new Param("vApellPaterno",apellPaterno),
-                new Param("vApellMaterno",apellMaterno),
+        //    };
+        //        DataTable temp = LibAux.EjecutarSentencia("SELECT idPersona FROM Personas WHERE Nombre = @vNombres AND ApellPaterno = @vApellPaterno AND ApellMaterno = @vApellMaterno;", @params);
+        //        idPersona = Convert.ToInt16(temp.Rows[0][0].ToString());
+        //        if (idPersona > 0)
+        //        {
+        //            return true;
+        //        }
+        //        else {
+        //            return false;
+        //        }
 
-            };
-                DataTable temp = LibAux.EjecutarSentencia("SELECT idPersona FROM Personas WHERE Nombre = @vNombres AND ApellPaterno = @vApellPaterno AND ApellMaterno = @vApellMaterno;", @params);
-                idPersona = Convert.ToInt16(temp.Rows[0][0].ToString());
-                if (idPersona > 0)
-                {
-                    return true;
-                }
-                else {
-                    return false;
-                }
+        //    } catch {
+        //        return false;
+        //    }
+        //}
+        //private bool esEmpleadoExistenteConContratoActivo(string nombre, string apellPaterno, string apellMaterno)
+        //{
+        //    try
+        //    {
+        //        List<Param> @params = new List<Param> {
+        //        new Param("vNombres",nombre),
+        //        new Param("vApellPaterno",apellPaterno),
+        //        new Param("vApellMaterno",apellMaterno),
+        //        };
+        //        DataTable temp = LibAux.EjecutarSentencia("SELECT idEmpleado FROM Empleados E, Personas P WHERE E.fechaTermino IS NULL AND Nombre = @vNombres AND ApellPaterno = @vApellPaterno AND ApellMaterno = @vApellMaterno;", @params);
+        //        idEmpleado = Convert.ToInt16(temp.Rows[0][0].ToString());
+        //        if (idEmpleado > 0)
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
 
-            } catch {
-                return false;
-            }
-        }
+        //    }
+        //    catch
+        //    {
+        //        return false;
+        //    }
+        //}
+        //static DataTable ReadCsvToDataTable(string filePath)
+        //{
+        //    DataTable dataTable = new DataTable();
 
-        private bool esEmpleadoExistenteConContratoActivo(string nombre, string apellPaterno, string apellMaterno)
-        {
-            try
-            {
-                List<Param> @params = new List<Param> {
-                new Param("vNombres",nombre),
-                new Param("vApellPaterno",apellPaterno),
-                new Param("vApellMaterno",apellMaterno),
-                };
-                DataTable temp = LibAux.EjecutarSentencia("SELECT idEmpleado FROM Empleados E, Personas P WHERE E.fechaTermino IS NULL AND Nombre = @vNombres AND ApellPaterno = @vApellPaterno AND ApellMaterno = @vApellMaterno;", @params);
-                idEmpleado = Convert.ToInt16(temp.Rows[0][0].ToString());
-                if (idEmpleado > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+        //    using (TextFieldParser parser = new TextFieldParser(filePath))
+        //    {
+        //        parser.TextFieldType = FieldType.Delimited;
+        //        parser.SetDelimiters(",");
 
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        //        // Lee la primera fila para establecer las columnas del DataTable
+        //        string[] headers = parser.ReadFields();
+        //        foreach (string header in headers)
+        //        {
+        //            dataTable.Columns.Add(header);
+        //        }
 
-        static DataTable ReadCsvToDataTable(string filePath)
-        {
-            DataTable dataTable = new DataTable();
+        //        // Lee el resto de las filas y agrega los datos al DataTable
+        //        while (!parser.EndOfData)
+        //        {
+        //            string[] fields = parser.ReadFields();
+        //            dataTable.Rows.Add(fields);
+        //        }
+        //    }
 
-            using (TextFieldParser parser = new TextFieldParser(filePath))
-            {
-                parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters(",");
+        //    return dataTable;
+        //}        
+        #endregion
 
-                // Lee la primera fila para establecer las columnas del DataTable
-                string[] headers = parser.ReadFields();
-                foreach (string header in headers)
-                {
-                    dataTable.Columns.Add(header);
-                }
-
-                // Lee el resto de las filas y agrega los datos al DataTable
-                while (!parser.EndOfData)
-                {
-                    string[] fields = parser.ReadFields();
-                    dataTable.Rows.Add(fields);
-                }
-            }
-
-            return dataTable;
-        }
-
-        static void PrintDataTable(DataTable dataTable)
-        {
-            foreach (DataRow row in dataTable.Rows)
-            {
-
-                string Apaterno = row["Apaterno"].ToString();
-                string Amaterno = row["Apaterno"].ToString();
-                string NOMBRES = row["NOMBRES"].ToString();
-                string NSS = row["NSS"].ToString();
-                string RFC = row["RFC"].ToString();
-                string CURP = row["CURP"].ToString();
-                string puesto = row["puesto"].ToString();
-                string contrato = row["contrato"].ToString();
-                
-                List<Param> @params = new List<Param> {
-                new Param("vnombres",NOMBRES),
-                new Param("apaterno",Apaterno),
-                new Param("amaterno",Amaterno)
-                };
-
-                DataTable dtExiste = LibAux.EjecutarSentencia("SELECT idPersona FROM Personas WHERE Nombre LIKE @vnombres AND ApellPaterno LIKE @apaterno AND ApellMaterno = @amaterno;");
-                if (dtExiste.Rows[0][0] != DBNull.Value)
-                {  //EXISTE MODIFICA LO DEMAS
-
-
-                }
-                // NO EXISTE INSERTA
-                else
-                { 
-                
-                }                
-            }
-        }
     }
 }

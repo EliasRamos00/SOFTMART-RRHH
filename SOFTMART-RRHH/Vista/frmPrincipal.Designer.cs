@@ -34,23 +34,24 @@ namespace SOFTMART_RRHH
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pTitleBar = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
+            this.pSideBar = new System.Windows.Forms.Panel();
+            this.lblInfo2 = new System.Windows.Forms.Label();
+            this.pPrincipal = new System.Windows.Forms.Panel();
+            this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnMax = new FontAwesome.Sharp.IconButton();
-            this.pSideBar = new System.Windows.Forms.Panel();
+            this.btnAjustes = new FontAwesome.Sharp.IconButton();
             this.btnImportacion = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnErrorLog = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnHistorial = new FontAwesome.Sharp.IconButton();
-            this.lblInfo2 = new System.Windows.Forms.Label();
             this.btnTodos = new FontAwesome.Sharp.IconButton();
             this.btnBajas = new FontAwesome.Sharp.IconButton();
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
-            this.pPrincipal = new System.Windows.Forms.Panel();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -83,24 +84,6 @@ namespace SOFTMART_RRHH
             this.lblInfo.Text = "TXT_INFORMACION";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.ListUl;
-            this.btnMenu.IconColor = System.Drawing.Color.White;
-            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMenu.IconSize = 28;
-            this.btnMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(42, 38);
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
             // tlpBotones
             // 
             this.tlpBotones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -118,6 +101,68 @@ namespace SOFTMART_RRHH
             this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tlpBotones.Size = new System.Drawing.Size(171, 26);
             this.tlpBotones.TabIndex = 0;
+            // 
+            // pSideBar
+            // 
+            this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.pSideBar.Controls.Add(this.btnAjustes);
+            this.pSideBar.Controls.Add(this.btnImportacion);
+            this.pSideBar.Controls.Add(this.btnUsuarios);
+            this.pSideBar.Controls.Add(this.btnErrorLog);
+            this.pSideBar.Controls.Add(this.btnReset);
+            this.pSideBar.Controls.Add(this.btnHistorial);
+            this.pSideBar.Controls.Add(this.lblInfo2);
+            this.pSideBar.Controls.Add(this.btnTodos);
+            this.pSideBar.Controls.Add(this.btnBajas);
+            this.pSideBar.Controls.Add(this.btnConsulta);
+            this.pSideBar.Controls.Add(this.btnAltasEmpleados);
+            this.pSideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pSideBar.Location = new System.Drawing.Point(0, 0);
+            this.pSideBar.Name = "pSideBar";
+            this.pSideBar.Size = new System.Drawing.Size(235, 720);
+            this.pSideBar.TabIndex = 1;
+            // 
+            // lblInfo2
+            // 
+            this.lblInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInfo2.AutoSize = true;
+            this.lblInfo2.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo2.ForeColor = System.Drawing.Color.Snow;
+            this.lblInfo2.Location = new System.Drawing.Point(56, 705);
+            this.lblInfo2.Name = "lblInfo2";
+            this.lblInfo2.Size = new System.Drawing.Size(111, 15);
+            this.lblInfo2.TabIndex = 5;
+            this.lblInfo2.Text = "TXT_INFORMACION";
+            this.lblInfo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pPrincipal
+            // 
+            this.pPrincipal.BackColor = System.Drawing.Color.GhostWhite;
+            this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pPrincipal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pPrincipal.Location = new System.Drawing.Point(235, 32);
+            this.pPrincipal.Name = "pPrincipal";
+            this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
+            this.pPrincipal.TabIndex = 0;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.ListUl;
+            this.btnMenu.IconColor = System.Drawing.Color.White;
+            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenu.IconSize = 28;
+            this.btnMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(42, 38);
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnClose
             // 
@@ -177,24 +222,25 @@ namespace SOFTMART_RRHH
             this.btnMax.UseVisualStyleBackColor = false;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
-            // pSideBar
+            // btnAjustes
             // 
-            this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.pSideBar.Controls.Add(this.btnImportacion);
-            this.pSideBar.Controls.Add(this.btnUsuarios);
-            this.pSideBar.Controls.Add(this.btnErrorLog);
-            this.pSideBar.Controls.Add(this.btnReset);
-            this.pSideBar.Controls.Add(this.btnHistorial);
-            this.pSideBar.Controls.Add(this.lblInfo2);
-            this.pSideBar.Controls.Add(this.btnTodos);
-            this.pSideBar.Controls.Add(this.btnBajas);
-            this.pSideBar.Controls.Add(this.btnConsulta);
-            this.pSideBar.Controls.Add(this.btnAltasEmpleados);
-            this.pSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pSideBar.Location = new System.Drawing.Point(0, 0);
-            this.pSideBar.Name = "pSideBar";
-            this.pSideBar.Size = new System.Drawing.Size(235, 720);
-            this.pSideBar.TabIndex = 1;
+            this.btnAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnAjustes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjustes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAjustes.IconChar = FontAwesome.Sharp.IconChar.Whmcs;
+            this.btnAjustes.IconColor = System.Drawing.Color.White;
+            this.btnAjustes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAjustes.IconSize = 44;
+            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAjustes.Location = new System.Drawing.Point(0, 443);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(235, 39);
+            this.btnAjustes.TabIndex = 11;
+            this.btnAjustes.Text = "Ajustes";
+            this.btnAjustes.UseVisualStyleBackColor = false;
+            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
             // 
             // btnImportacion
             // 
@@ -207,14 +253,13 @@ namespace SOFTMART_RRHH
             this.btnImportacion.IconColor = System.Drawing.Color.White;
             this.btnImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportacion.Location = new System.Drawing.Point(0, 341);
+            this.btnImportacion.Location = new System.Drawing.Point(0, 0);
             this.btnImportacion.Name = "btnImportacion";
-            this.btnImportacion.Size = new System.Drawing.Size(235, 39);
+            this.btnImportacion.Size = new System.Drawing.Size(52, 39);
             this.btnImportacion.TabIndex = 10;
             this.btnImportacion.Text = "importar";
             this.btnImportacion.UseVisualStyleBackColor = false;
             this.btnImportacion.Visible = false;
-            this.btnImportacion.Click += new System.EventHandler(this.btnImportacion_Click);
             // 
             // btnUsuarios
             // 
@@ -245,6 +290,7 @@ namespace SOFTMART_RRHH
             this.btnErrorLog.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.btnErrorLog.IconColor = System.Drawing.Color.White;
             this.btnErrorLog.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnErrorLog.IconSize = 44;
             this.btnErrorLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnErrorLog.Location = new System.Drawing.Point(0, 578);
             this.btnErrorLog.Name = "btnErrorLog";
@@ -284,6 +330,7 @@ namespace SOFTMART_RRHH
             this.btnHistorial.IconChar = FontAwesome.Sharp.IconChar.ClockRotateLeft;
             this.btnHistorial.IconColor = System.Drawing.Color.White;
             this.btnHistorial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHistorial.IconSize = 44;
             this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorial.Location = new System.Drawing.Point(0, 533);
             this.btnHistorial.Name = "btnHistorial";
@@ -292,20 +339,6 @@ namespace SOFTMART_RRHH
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
-            // 
-            // lblInfo2
-            // 
-            this.lblInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInfo2.AutoSize = true;
-            this.lblInfo2.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo2.ForeColor = System.Drawing.Color.Snow;
-            this.lblInfo2.Location = new System.Drawing.Point(56, 705);
-            this.lblInfo2.Name = "lblInfo2";
-            this.lblInfo2.Size = new System.Drawing.Size(111, 15);
-            this.lblInfo2.TabIndex = 5;
-            this.lblInfo2.Text = "TXT_INFORMACION";
-            this.lblInfo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnTodos
             // 
@@ -384,16 +417,6 @@ namespace SOFTMART_RRHH
             this.btnAltasEmpleados.UseVisualStyleBackColor = false;
             this.btnAltasEmpleados.Click += new System.EventHandler(this.btnAltasEmpleados_Click);
             // 
-            // pPrincipal
-            // 
-            this.pPrincipal.BackColor = System.Drawing.Color.GhostWhite;
-            this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pPrincipal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pPrincipal.Location = new System.Drawing.Point(235, 32);
-            this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
-            this.pPrincipal.TabIndex = 0;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -438,5 +461,6 @@ namespace SOFTMART_RRHH
         private FontAwesome.Sharp.IconButton btnErrorLog;
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private FontAwesome.Sharp.IconButton btnImportacion;
+        private FontAwesome.Sharp.IconButton btnAjustes;
     }
 }

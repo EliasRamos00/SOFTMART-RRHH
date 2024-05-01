@@ -54,7 +54,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "ACCEDER";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnIniciar);
             // 
             // panel1
             // 
@@ -99,11 +99,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(52, 199);
+            this.label1.Location = new System.Drawing.Point(105, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 25);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "INICIO DE SESIÓN";
+            this.label1.Text = "LOG IN";
             // 
             // panel2
             // 
