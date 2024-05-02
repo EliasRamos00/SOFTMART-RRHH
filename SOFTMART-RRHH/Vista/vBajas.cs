@@ -39,99 +39,103 @@ namespace SOFTMART_RRHH.Vista
         /// <returns></returns>
         private void CalcularDiferencia()
         {
-            DataRow RenglonSiguiente = info.NewRow();
-            foreach (DataRow dr in info.Rows)
+            try
             {
-
-                if (dr["isBeingCalculated"].ToString() == "0")
+                DataRow RenglonSiguiente = info.NewRow();
+                foreach (DataRow dr in info.Rows)
                 {
-                    dr["isBeingCalculated"] = "1";
-                    RenglonSiguiente = dr;
-                    break;
+
+                    if (dr["isBeingCalculated"].ToString() == "0")
+                    {
+                        dr["isBeingCalculated"] = "1";
+                        RenglonSiguiente = dr;
+                        break;
+                    }
                 }
-            }
 
-            if (RenglonSiguiente["FechaTermino"].ToString() == "")
-            {
-                return;
-            }
-
-            ////// CALCULA TIEMPO DE BAJA.
-            DateTime FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
-            DateTime FechaFin = DateTime.Now;
-
-            int MesAnter = FechaFin.Month;
-            while (MesAnter == FechaFin.Month)
-            {
-                FechaIni = FechaIni.AddDays(-1);
-                FechaFin = FechaFin.AddDays(-1);
-            }
-            int anios = 0, meses = 0, dias = 0;
-            // obtiene los años.
-            while (FechaFin.CompareTo(FechaIni) >= 0)
-            {
-                anios++;
-                FechaFin = FechaFin.AddYears(-1);
-            }
-            FechaFin = FechaFin.AddYears(1);
-            anios--;
-            // obtiene los dias y los meses
-            MesAnter = FechaFin.Month;
-            while (FechaFin.CompareTo(FechaIni) >= 0)
-            {
-                dias++;
-                FechaFin = FechaFin.AddDays(-1);
-                if ((FechaFin.CompareTo(FechaIni) >= 0) && (MesAnter != FechaFin.Month))
+                if (RenglonSiguiente["FechaTermino"].ToString() == "")
                 {
-                    meses++;
-                    dias = 0;
-                    MesAnter = FechaFin.Month;
+                    return;
                 }
-            }
-            dias--;
-            string result = anios.ToString() + " Año(s)" +
-                                ", " + meses.ToString() + " Mes(es)" +
-                                ", " + dias.ToString() + " Dia(s)";
-            RenglonSiguiente["TiempoBaja"] = result;
 
-            ///// CALCULA TIEMPO TRABAJADO.
-            FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaInicio"].ToString());
-            FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
-            MesAnter = FechaFin.Month;
-            while (MesAnter == FechaFin.Month)
-            {
-                FechaIni = FechaIni.AddDays(-1);
-                FechaFin = FechaFin.AddDays(-1);
-            }
-            anios = 0;
-            meses = 0;
-            dias = 0;
-            // obtiene los años.
-            while (FechaFin.CompareTo(FechaIni) >= 0)
-            {
-                anios++;
-                FechaFin = FechaFin.AddYears(-1);
-            }
-            FechaFin = FechaFin.AddYears(1);
-            anios--;
-            // obtiene los dias y los meses
-            MesAnter = FechaFin.Month;
-            while (FechaFin.CompareTo(FechaIni) >= 0)
-            {
-                dias++;
-                FechaFin = FechaFin.AddDays(-1);
-                if ((FechaFin.CompareTo(FechaIni) >= 0) && (MesAnter != FechaFin.Month))
+                ////// CALCULA TIEMPO DE BAJA.
+                DateTime FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
+                DateTime FechaFin = DateTime.Now;
+
+                int MesAnter = FechaFin.Month;
+                while (MesAnter == FechaFin.Month)
                 {
-                    meses++;
-                    dias = 0;
-                    MesAnter = FechaFin.Month;
+                    FechaIni = FechaIni.AddDays(-1);
+                    FechaFin = FechaFin.AddDays(-1);
                 }
+                int anios = 0, meses = 0, dias = 0;
+                // obtiene los años.
+                while (FechaFin.CompareTo(FechaIni) >= 0)
+                {
+                    anios++;
+                    FechaFin = FechaFin.AddYears(-1);
+                }
+                FechaFin = FechaFin.AddYears(1);
+                anios--;
+                // obtiene los dias y los meses
+                MesAnter = FechaFin.Month;
+                while (FechaFin.CompareTo(FechaIni) >= 0)
+                {
+                    dias++;
+                    FechaFin = FechaFin.AddDays(-1);
+                    if ((FechaFin.CompareTo(FechaIni) >= 0) && (MesAnter != FechaFin.Month))
+                    {
+                        meses++;
+                        dias = 0;
+                        MesAnter = FechaFin.Month;
+                    }
+                }
+                dias--;
+                string result = anios.ToString() + " Año(s)" +
+                                    ", " + meses.ToString() + " Mes(es)" +
+                                    ", " + dias.ToString() + " Dia(s)";
+                RenglonSiguiente["TiempoBaja"] = result;
+
+                ///// CALCULA TIEMPO TRABAJADO.
+                FechaIni = Convert.ToDateTime(RenglonSiguiente["FechaInicio"].ToString());
+                FechaFin = Convert.ToDateTime(RenglonSiguiente["FechaTermino"].ToString());
+                MesAnter = FechaFin.Month;
+                while (MesAnter == FechaFin.Month)
+                {
+                    FechaIni = FechaIni.AddDays(-1);
+                    FechaFin = FechaFin.AddDays(-1);
+                }
+                anios = 0;
+                meses = 0;
+                dias = 0;
+                // obtiene los años.
+                while (FechaFin.CompareTo(FechaIni) >= 0)
+                {
+                    anios++;
+                    FechaFin = FechaFin.AddYears(-1);
+                }
+                FechaFin = FechaFin.AddYears(1);
+                anios--;
+                // obtiene los dias y los meses
+                MesAnter = FechaFin.Month;
+                while (FechaFin.CompareTo(FechaIni) >= 0)
+                {
+                    dias++;
+                    FechaFin = FechaFin.AddDays(-1);
+                    if ((FechaFin.CompareTo(FechaIni) >= 0) && (MesAnter != FechaFin.Month))
+                    {
+                        meses++;
+                        dias = 0;
+                        MesAnter = FechaFin.Month;
+                    }
+                }
+                dias--;
+                result = anios.ToString() + " Año(s)" +
+                                    ", " + meses.ToString() + " Mes(es)" +
+                                    ", " + dias.ToString() + " Dia(s)";
+                RenglonSiguiente["TiempoTrabajado"] = result;
             }
-            dias--;
-            result = anios.ToString() + " Año(s)" +
-                                ", " + meses.ToString() + " Mes(es)" +
-                                ", " + dias.ToString() + " Dia(s)";
-            RenglonSiguiente["TiempoTrabajado"] = result;
+            catch { return; }
         }
         private async void CargarPersonasDadasBajas()
         {
