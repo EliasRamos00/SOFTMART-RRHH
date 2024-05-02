@@ -34,24 +34,24 @@ namespace SOFTMART_RRHH
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pTitleBar = new System.Windows.Forms.Panel();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
-            this.pSideBar = new System.Windows.Forms.Panel();
-            this.lblInfo2 = new System.Windows.Forms.Label();
-            this.pPrincipal = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
+            this.tlpBotones = new System.Windows.Forms.TableLayoutPanel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnMax = new FontAwesome.Sharp.IconButton();
+            this.pSideBar = new System.Windows.Forms.Panel();
             this.btnAjustes = new FontAwesome.Sharp.IconButton();
             this.btnImportacion = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnErrorLog = new FontAwesome.Sharp.IconButton();
             this.btnReset = new FontAwesome.Sharp.IconButton();
             this.btnHistorial = new FontAwesome.Sharp.IconButton();
+            this.lblInfo2 = new System.Windows.Forms.Label();
             this.btnTodos = new FontAwesome.Sharp.IconButton();
             this.btnBajas = new FontAwesome.Sharp.IconButton();
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
+            this.pPrincipal = new System.Windows.Forms.Panel();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -84,68 +84,6 @@ namespace SOFTMART_RRHH
             this.lblInfo.Text = "TXT_INFORMACION";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tlpBotones
-            // 
-            this.tlpBotones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpBotones.ColumnCount = 3;
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpBotones.Controls.Add(this.btnClose, 2, 0);
-            this.tlpBotones.Controls.Add(this.btnMin, 0, 0);
-            this.tlpBotones.Controls.Add(this.btnMax, 1, 0);
-            this.tlpBotones.Location = new System.Drawing.Point(871, 3);
-            this.tlpBotones.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpBotones.Name = "tlpBotones";
-            this.tlpBotones.RowCount = 1;
-            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpBotones.Size = new System.Drawing.Size(171, 26);
-            this.tlpBotones.TabIndex = 0;
-            // 
-            // pSideBar
-            // 
-            this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.pSideBar.Controls.Add(this.btnAjustes);
-            this.pSideBar.Controls.Add(this.btnImportacion);
-            this.pSideBar.Controls.Add(this.btnUsuarios);
-            this.pSideBar.Controls.Add(this.btnErrorLog);
-            this.pSideBar.Controls.Add(this.btnReset);
-            this.pSideBar.Controls.Add(this.btnHistorial);
-            this.pSideBar.Controls.Add(this.lblInfo2);
-            this.pSideBar.Controls.Add(this.btnTodos);
-            this.pSideBar.Controls.Add(this.btnBajas);
-            this.pSideBar.Controls.Add(this.btnConsulta);
-            this.pSideBar.Controls.Add(this.btnAltasEmpleados);
-            this.pSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pSideBar.Location = new System.Drawing.Point(0, 0);
-            this.pSideBar.Name = "pSideBar";
-            this.pSideBar.Size = new System.Drawing.Size(235, 720);
-            this.pSideBar.TabIndex = 1;
-            // 
-            // lblInfo2
-            // 
-            this.lblInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInfo2.AutoSize = true;
-            this.lblInfo2.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo2.ForeColor = System.Drawing.Color.Snow;
-            this.lblInfo2.Location = new System.Drawing.Point(56, 705);
-            this.lblInfo2.Name = "lblInfo2";
-            this.lblInfo2.Size = new System.Drawing.Size(111, 15);
-            this.lblInfo2.TabIndex = 5;
-            this.lblInfo2.Text = "TXT_INFORMACION";
-            this.lblInfo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pPrincipal
-            // 
-            this.pPrincipal.BackColor = System.Drawing.Color.GhostWhite;
-            this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pPrincipal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pPrincipal.Location = new System.Drawing.Point(235, 32);
-            this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
-            this.pPrincipal.TabIndex = 0;
-            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -163,6 +101,24 @@ namespace SOFTMART_RRHH
             this.btnMenu.TabIndex = 0;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // tlpBotones
+            // 
+            this.tlpBotones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpBotones.ColumnCount = 3;
+            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpBotones.Controls.Add(this.btnClose, 2, 0);
+            this.tlpBotones.Controls.Add(this.btnMin, 0, 0);
+            this.tlpBotones.Controls.Add(this.btnMax, 1, 0);
+            this.tlpBotones.Location = new System.Drawing.Point(871, 3);
+            this.tlpBotones.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpBotones.Name = "tlpBotones";
+            this.tlpBotones.RowCount = 1;
+            this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpBotones.Size = new System.Drawing.Size(171, 26);
+            this.tlpBotones.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -221,6 +177,26 @@ namespace SOFTMART_RRHH
             this.btnMax.TabIndex = 1;
             this.btnMax.UseVisualStyleBackColor = false;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // pSideBar
+            // 
+            this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.pSideBar.Controls.Add(this.btnAjustes);
+            this.pSideBar.Controls.Add(this.btnImportacion);
+            this.pSideBar.Controls.Add(this.btnUsuarios);
+            this.pSideBar.Controls.Add(this.btnErrorLog);
+            this.pSideBar.Controls.Add(this.btnReset);
+            this.pSideBar.Controls.Add(this.btnHistorial);
+            this.pSideBar.Controls.Add(this.lblInfo2);
+            this.pSideBar.Controls.Add(this.btnTodos);
+            this.pSideBar.Controls.Add(this.btnBajas);
+            this.pSideBar.Controls.Add(this.btnConsulta);
+            this.pSideBar.Controls.Add(this.btnAltasEmpleados);
+            this.pSideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pSideBar.Location = new System.Drawing.Point(0, 0);
+            this.pSideBar.Name = "pSideBar";
+            this.pSideBar.Size = new System.Drawing.Size(235, 720);
+            this.pSideBar.TabIndex = 1;
             // 
             // btnAjustes
             // 
@@ -340,6 +316,20 @@ namespace SOFTMART_RRHH
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
+            // lblInfo2
+            // 
+            this.lblInfo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInfo2.AutoSize = true;
+            this.lblInfo2.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo2.ForeColor = System.Drawing.Color.Snow;
+            this.lblInfo2.Location = new System.Drawing.Point(56, 705);
+            this.lblInfo2.Name = "lblInfo2";
+            this.lblInfo2.Size = new System.Drawing.Size(111, 15);
+            this.lblInfo2.TabIndex = 5;
+            this.lblInfo2.Text = "TXT_INFORMACION";
+            this.lblInfo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnTodos
             // 
             this.btnTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
@@ -416,6 +406,16 @@ namespace SOFTMART_RRHH
             this.btnAltasEmpleados.Text = "Alta";
             this.btnAltasEmpleados.UseVisualStyleBackColor = false;
             this.btnAltasEmpleados.Click += new System.EventHandler(this.btnAltasEmpleados_Click);
+            // 
+            // pPrincipal
+            // 
+            this.pPrincipal.BackColor = System.Drawing.Color.GhostWhite;
+            this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pPrincipal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pPrincipal.Location = new System.Drawing.Point(235, 32);
+            this.pPrincipal.Name = "pPrincipal";
+            this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
+            this.pPrincipal.TabIndex = 0;
             // 
             // frmPrincipal
             // 

@@ -18,12 +18,10 @@ namespace SOFTMART_RRHH.Vista
         {
             InitializeComponent();
         }
-
         private void vAjustes_Load(object sender, EventArgs e)
         {
             CargarPuestos();
         }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvPuestos.DataSource as DataTable;
@@ -32,12 +30,10 @@ namespace SOFTMART_RRHH.Vista
             newRow["hasChanged"] = 2;
             dt.Rows.Add(newRow);
         }
-
         private void btnRecarga_Click(object sender, EventArgs e)
         {
             CargarPuestos();
         }
-
         private void dgvPuestos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (Convert.ToInt16(dgvPuestos.Rows[dgvPuestos.CurrentCell.RowIndex].Cells["dgvPuestos_hasChanged"].Value) == 0)
@@ -45,7 +41,6 @@ namespace SOFTMART_RRHH.Vista
                 dgvPuestos.Rows[dgvPuestos.CurrentCell.RowIndex].Cells["dgvPuestos_hasChanged"].Value = 1;
             }
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
@@ -81,7 +76,6 @@ namespace SOFTMART_RRHH.Vista
             }
             CargarPuestos();
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Estas seguro de eliminar este puesto?", "¡Alto!", MessageBoxButtons.YesNo);
@@ -101,13 +95,9 @@ namespace SOFTMART_RRHH.Vista
                 CargarPuestos();
             }
         }
-
         private void CargarPuestos()
         {
             dgvPuestos.DataSource = MPuestos.ObtenerTodosPuestos();
         }
-
-
-
     }
 }

@@ -40,7 +40,6 @@
             this.dgvPuestos_Subarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPuestos_Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPuestos_hasChanged = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.tabPrincipal.SuspendLayout();
             this.tabPuestos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).BeginInit();
@@ -49,7 +48,6 @@
             // tabPrincipal
             // 
             this.tabPrincipal.Controls.Add(this.tabPuestos);
-            this.tabPrincipal.Controls.Add(this.tabUsuarios);
             this.tabPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tabPrincipal.Name = "tabPrincipal";
@@ -212,15 +210,6 @@
             this.dgvPuestos_hasChanged.Name = "dgvPuestos_hasChanged";
             this.dgvPuestos_hasChanged.Visible = false;
             // 
-            // tabUsuarios
-            // 
-            this.tabUsuarios.Location = new System.Drawing.Point(4, 22);
-            this.tabUsuarios.Name = "tabUsuarios";
-            this.tabUsuarios.Size = new System.Drawing.Size(1037, 650);
-            this.tabUsuarios.TabIndex = 1;
-            this.tabUsuarios.Text = "Usuarios";
-            this.tabUsuarios.UseVisualStyleBackColor = true;
-            // 
             // vAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +240,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPuestos_Subarea;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPuestos_Puesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPuestos_hasChanged;
-        private System.Windows.Forms.TabPage tabUsuarios;
     }
 }
