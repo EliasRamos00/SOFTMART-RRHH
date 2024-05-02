@@ -65,20 +65,20 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 12);
             this.tableLayoutPanel1.Controls.Add(this.tbFiniquito, 2, 13);
             this.tableLayoutPanel1.Controls.Add(this.lblContrato, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblNombre, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblTienda, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.tbComentarios, 2, 14);
-            this.tableLayoutPanel1.Controls.Add(this.dtpFechaBaja, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.pbFoto, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnDarBaja, 4, 14);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbl, 4, 12);
-            this.tableLayoutPanel1.Controls.Add(this.tbPatron, 4, 13);
+            this.tableLayoutPanel1.Controls.Add(this.dtpFechaBaja, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.tbPatron, 3, 11);
+            this.tableLayoutPanel1.Controls.Add(this.lbl, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 1, 13);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -157,19 +157,22 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label5, 2);
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(427, 486);
+            this.label5.Location = new System.Drawing.Point(350, 503);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.Size = new System.Drawing.Size(71, 32);
             this.label5.TabIndex = 9;
             this.label5.Text = "Finiquito";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tbFiniquito
             // 
-            this.tbFiniquito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbFiniquito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.tbFiniquito, 2);
             this.tbFiniquito.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
@@ -239,18 +242,19 @@
             // 
             // dtpFechaBaja
             // 
-            this.dtpFechaBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.dtpFechaBaja, 2);
-            this.dtpFechaBaja.Location = new System.Drawing.Point(427, 457);
+            this.dtpFechaBaja.CustomFormat = "dd \'de\'MMMM \'del\' yyyy";
+            this.dtpFechaBaja.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaBaja.Location = new System.Drawing.Point(231, 457);
+            this.dtpFechaBaja.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.dtpFechaBaja.Name = "dtpFechaBaja";
-            this.dtpFechaBaja.Size = new System.Drawing.Size(186, 25);
+            this.dtpFechaBaja.Size = new System.Drawing.Size(279, 25);
             this.dtpFechaBaja.TabIndex = 8;
             // 
             // pbFoto
             // 
-            this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbFoto.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pbFoto.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoAccount;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -293,15 +297,18 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label4, 2);
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(427, 437);
+            this.label4.Location = new System.Drawing.Point(233, 437);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 184, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Fecha de baja";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnClose
             // 
@@ -321,7 +328,8 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lbl, 2);
             this.lbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.Color.Black;
-            this.lbl.Location = new System.Drawing.Point(619, 486);
+            this.lbl.Location = new System.Drawing.Point(530, 437);
+            this.lbl.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(108, 17);
             this.lbl.TabIndex = 62;
@@ -329,13 +337,13 @@
             // 
             // tbPatron
             // 
-            this.tbPatron.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.tbPatron, 2);
             this.tbPatron.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.tbPatron.ForeColor = System.Drawing.Color.Black;
-            this.tbPatron.Location = new System.Drawing.Point(619, 506);
+            this.tbPatron.Location = new System.Drawing.Point(530, 457);
+            this.tbPatron.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.tbPatron.Name = "tbPatron";
-            this.tbPatron.Size = new System.Drawing.Size(378, 29);
+            this.tbPatron.Size = new System.Drawing.Size(276, 29);
             this.tbPatron.TabIndex = 63;
             // 
             // vBajasEmpleadoPerfil

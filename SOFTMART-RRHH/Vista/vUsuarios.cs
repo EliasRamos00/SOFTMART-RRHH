@@ -2,12 +2,14 @@
 using SOFTMART_RRHH.Modelo;
 using System;
 using System.Data;
+using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
 {
     public partial class vUsuarios : System.Windows.Forms.UserControl
     {
+        private System.Timers.Timer tListener;
         #region VARIABLES GLOBALES
 
         #endregion

@@ -62,7 +62,7 @@
             this.Controls.Add(this.btnExportar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmExcelCheckList";
-            this.Text = "frmExcelCheckList";
+            this.Text = "Selecciona columnas";
             this.Load += new System.EventHandler(this.frmExcelCheckList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

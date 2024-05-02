@@ -31,7 +31,7 @@ namespace SOFTMART_RRHH.Vista
             CargarColumnas();
         }
         #endregion
-        #region MÉTODOS        
+        #region MÉTODOS       
         private async void LlenarGrid()
         {
             frmCarga carga = new frmCarga();

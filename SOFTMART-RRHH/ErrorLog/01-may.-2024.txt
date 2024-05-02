@@ -1,0 +1,86 @@
+----------Detalles del error en:  01/05/2024 02:21:02 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 02:21:02 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '26611' for key 'UK_BajasEmpleado'
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 02:21:07 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 02:21:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '26611' for key 'UK_BajasEmpleado'
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 02:21:14 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 02:21:14 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '26611' for key 'UK_BajasEmpleado'
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 02:21:19 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 02:21:19 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '26611' for key 'UK_BajasEmpleado'
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 02:22:29 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 02:22:29 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '26611' for key 'UK_BajasEmpleado'
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 02:22:50 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 02:22:50 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '26611' for key 'UK_BajasEmpleado'
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 04:24:07 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 04:24:07 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : No se pudo encontrar la columna denominada dgvUsuarios_idPuesto.
+Nombre del parámetro: columnName
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 04:24:44 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 04:24:44 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : No se pudo encontrar la columna denominada dgvUsuarios_idPuesto.
+Nombre del parámetro: columnName
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 04:39:58 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 04:39:58 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh-copy`.`empleados`, CONSTRAINT `fk_empleadopuesto` FOREIGN KEY (`idPuesto`) REFERENCES `puestos` (`idPuesto`))
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 04:41:54 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 04:41:54 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh-copy`.`empleados`, CONSTRAINT `fk_empleadopuesto` FOREIGN KEY (`idPuesto`) REFERENCES `puestos` (`idPuesto`))
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 04:42:07 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 04:42:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh-copy`.`empleados`, CONSTRAINT `fk_empleadopuesto` FOREIGN KEY (`idPuesto`) REFERENCES `puestos` (`idPuesto`))
+Usuario: JOSE RAMOS
+-----------------------------------------------
+----------Detalles del error en:  01/05/2024 04:43:08 p. m.----------
+-----------------------------------------------
+Fecha: 01/05/2024 04:43:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh-copy`.`empleados`, CONSTRAINT `fk_empleadopuesto` FOREIGN KEY (`idPuesto`) REFERENCES `puestos` (`idPuesto`))
+Usuario: JOSE RAMOS
+-----------------------------------------------

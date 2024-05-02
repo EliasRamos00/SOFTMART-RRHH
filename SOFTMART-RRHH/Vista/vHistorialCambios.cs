@@ -11,7 +11,7 @@ namespace SOFTMART_RRHH.Vista
     public partial class vHistorialCambios : System.Windows.Forms.UserControl
     {
         #region VARIABLES GLOBALES
-        int idPersona = -1;
+        private int idPersona = -1;
         #endregion
         #region CONSTRUCTORES
         public vHistorialCambios()
@@ -53,7 +53,6 @@ namespace SOFTMART_RRHH.Vista
                     }
                 }
             }
-
         }
         private void CargarCambios()
         {
@@ -139,15 +138,15 @@ namespace SOFTMART_RRHH.Vista
                             XDocument xDocumentAntes = XDocument.Parse(xmlAntes);
                             XDocument xDocumentDespues = XDocument.Parse(xmlDespues);
                             RemoverNodosDuplicados(xDocumentAntes.Root, xDocumentDespues.Root);
-                            txtAntes.Text = xDocumentAntes.ToString();//ToString will format xml string with indent
-                            txtDespues.Text = xDocumentDespues.ToString();//ToString will format xml string with indent
+                            txtAntes.Text = xDocumentAntes.ToString();
+                            txtDespues.Text = xDocumentDespues.ToString();
                             HighlightSyntax(txtAntes);
                             HighlightSyntax(txtDespues);
                         }
                         else if (xmlAntes == "" && xmlDespues != "")
                         {
                             XDocument xDocument = XDocument.Parse(xmlDespues);
-                            txtDespues.Text = xDocument.ToString();//ToString will format xml string with indent
+                            txtDespues.Text = xDocument.ToString();
                             HighlightSyntax(txtDespues);
                         }
                     }
