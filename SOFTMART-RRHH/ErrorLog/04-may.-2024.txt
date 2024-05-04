@@ -33,3 +33,374 @@ Exception Type: MySqlConnector.MySqlException
 Mensaje de Error : The user specified as a definer ('soporte'@'%') does not exist
 Usuario: ELIAS JR. RAMOS
 -----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:49:59 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:49:59 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:01 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:01 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:01 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:01 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:02 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:02 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:02 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:02 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:02 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:02 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:02 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:02 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:03 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:04 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:04 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:05 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:05 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:06 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:06 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:06 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:06 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:07 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:07 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:08 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:08 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:08 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:08 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:08 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:08 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:09 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:09 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:09 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:09 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 03:50:17 p. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 03:50:17 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '2' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------

@@ -33,23 +33,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.tbFiniquito = new System.Windows.Forms.TextBox();
             this.lblContrato = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTienda = new System.Windows.Forms.Label();
             this.tbComentarios = new System.Windows.Forms.TextBox();
-            this.dtpFechaBaja = new System.Windows.Forms.DateTimePicker();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.btnDarBaja = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.lbl = new System.Windows.Forms.Label();
+            this.dtpFechaBaja = new System.Windows.Forms.DateTimePicker();
             this.tbPatron = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,7 +75,6 @@
             this.tableLayoutPanel1.Controls.Add(this.lblTienda, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.tbComentarios, 2, 14);
             this.tableLayoutPanel1.Controls.Add(this.pbFoto, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnDarBaja, 4, 14);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 14);
             this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpFechaBaja, 1, 11);
@@ -79,6 +82,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl, 3, 10);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 4, 14);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -155,20 +159,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Tienda";
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(350, 503);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 32);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Finiquito";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // tbFiniquito
             // 
             this.tbFiniquito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -240,18 +230,6 @@
             this.tbComentarios.Size = new System.Drawing.Size(186, 106);
             this.tbComentarios.TabIndex = 12;
             // 
-            // dtpFechaBaja
-            // 
-            this.dtpFechaBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.dtpFechaBaja, 2);
-            this.dtpFechaBaja.CustomFormat = "dd \'de\'MMMM \'del\' yyyy";
-            this.dtpFechaBaja.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaBaja.Location = new System.Drawing.Point(231, 457);
-            this.dtpFechaBaja.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.dtpFechaBaja.Name = "dtpFechaBaja";
-            this.dtpFechaBaja.Size = new System.Drawing.Size(279, 25);
-            this.dtpFechaBaja.TabIndex = 8;
-            // 
             // pbFoto
             // 
             this.pbFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -275,9 +253,9 @@
             this.btnDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.btnDarBaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDarBaja.Location = new System.Drawing.Point(857, 607);
+            this.btnDarBaja.Location = new System.Drawing.Point(222, 73);
             this.btnDarBaja.Name = "btnDarBaja";
-            this.btnDarBaja.Size = new System.Drawing.Size(140, 37);
+            this.btnDarBaja.Size = new System.Drawing.Size(153, 30);
             this.btnDarBaja.TabIndex = 13;
             this.btnDarBaja.Text = "Dar de baja";
             this.btnDarBaja.UseVisualStyleBackColor = false;
@@ -295,6 +273,54 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Comentarios";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.tableLayoutPanel1.SetRowSpan(this.btnClose, 2);
+            this.btnClose.Size = new System.Drawing.Size(34, 32);
+            this.btnClose.TabIndex = 61;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // dtpFechaBaja
+            // 
+            this.dtpFechaBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.dtpFechaBaja, 2);
+            this.dtpFechaBaja.CustomFormat = "dd \'de\'MMMM \'del\' yyyy";
+            this.dtpFechaBaja.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaBaja.Location = new System.Drawing.Point(231, 457);
+            this.dtpFechaBaja.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.dtpFechaBaja.Name = "dtpFechaBaja";
+            this.dtpFechaBaja.Size = new System.Drawing.Size(279, 25);
+            this.dtpFechaBaja.TabIndex = 8;
+            // 
+            // tbPatron
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tbPatron, 2);
+            this.tbPatron.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.tbPatron.ForeColor = System.Drawing.Color.Black;
+            this.tbPatron.Location = new System.Drawing.Point(530, 457);
+            this.tbPatron.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.tbPatron.Name = "tbPatron";
+            this.tbPatron.Size = new System.Drawing.Size(276, 29);
+            this.tbPatron.TabIndex = 63;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lbl, 2);
+            this.lbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Black;
+            this.lbl.Location = new System.Drawing.Point(530, 437);
+            this.lbl.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(108, 17);
+            this.lbl.TabIndex = 62;
+            this.lbl.Text = "Ultimo Patron";
+            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -310,41 +336,71 @@
             this.label4.Text = "Fecha de baja";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // btnClose
+            // label5
             // 
-            this.btnClose.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Location = new System.Drawing.Point(3, 3);
-            this.btnClose.Name = "btnClose";
-            this.tableLayoutPanel1.SetRowSpan(this.btnClose, 2);
-            this.btnClose.Size = new System.Drawing.Size(34, 32);
-            this.btnClose.TabIndex = 61;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(350, 503);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 32);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Finiquito";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // lbl
+            // tableLayoutPanel2
             // 
-            this.lbl.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.lbl, 2);
-            this.lbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.Black;
-            this.lbl.Location = new System.Drawing.Point(530, 437);
-            this.lbl.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(108, 17);
-            this.lbl.TabIndex = 62;
-            this.lbl.Text = "Ultimo Patron";
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnDarBaja, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnGuardar, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnActualizar, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(619, 538);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(378, 106);
+            this.tableLayoutPanel2.TabIndex = 64;
             // 
-            // tbPatron
+            // btnActualizar
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.tbPatron, 2);
-            this.tbPatron.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.tbPatron.ForeColor = System.Drawing.Color.Black;
-            this.tbPatron.Location = new System.Drawing.Point(530, 457);
-            this.tbPatron.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.tbPatron.Name = "tbPatron";
-            this.tbPatron.Size = new System.Drawing.Size(276, 29);
-            this.tbPatron.TabIndex = 63;
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(222, 3);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(153, 29);
+            this.btnActualizar.TabIndex = 62;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(222, 38);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(153, 29);
+            this.btnGuardar.TabIndex = 63;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // vBajasEmpleadoPerfil
             // 
@@ -361,6 +417,7 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -386,5 +443,8 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox tbPatron;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

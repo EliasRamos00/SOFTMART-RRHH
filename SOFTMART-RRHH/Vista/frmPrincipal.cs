@@ -45,10 +45,11 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vErrorLog);
             AdjuntarUC_frmPrincipal(vAjustes);
 
-
             //Eventos de los U.C.
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
             vTodos.DobleClickEmpleado += MostrarEmpleado;
+            vBajas.DobleClickBaja += MostrarBaja;
+
         }
         private void EsAdmin(bool @bool)
         {
@@ -109,6 +110,7 @@ namespace SOFTMART_RRHH
             vPersonal perfil = new vPersonal(LibAux.CRUD.SELECT, idEmpleado, idPersona);
             perfil.BtnEliminar += MostrarVentanaElim;
             perfil.BtnHistorial += MostarVentanaHistorial;
+
             pPrincipal.Controls.Add(perfil);
             perfil.Dock = DockStyle.Fill;
             perfil.BringToFront();
@@ -139,6 +141,17 @@ namespace SOFTMART_RRHH
             HistorialCambios.Dock = DockStyle.Fill;
             HistorialCambios.BringToFront();
         }
+
+        private void MostrarBaja(object sender, EventArgs e)
+        {
+            int idBaja = ((vBajas)sender).idBaja;
+            vBajasEmpleadoPerfil frmBajaEmpleado = new vBajasEmpleadoPerfil(idBaja, LibAux.CRUD.SELECT);
+            pPrincipal.Controls.Add(frmBajaEmpleado);
+            frmBajaEmpleado.Dock = DockStyle.Fill;
+            frmBajaEmpleado.BringToFront();
+        }
+
+
         #endregion
         #region EVENTOS
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -485,24 +498,27 @@ namespace SOFTMART_RRHH
         //}        
         #endregion
 
-        private void btnImportacion_Click(object sender, EventArgs e)
-        {
-            int contador = 40000;
-            DataTable dtTemp = LibAux.EjecutarSentencia("SELECT * FROM empleados where NumContrato IS NULL");
 
-            for (int i = 0; i < dtTemp.Rows.Count; i++)
-            {
-                string idEmpleado = dtTemp.Rows[i][0].ToString();
-                List<Param> @params = new List<Param>
-                {
-                    new Param("vidEmpleado",idEmpleado),
-                    new Param("vNumContrato",contador)
+        //Generacion de numeros de contrato para los que no tengan.
+        //private void btnImportacion_Click(object sender, EventArgs e)
+        //{
+        //    int contador = 40000;
+        //    DataTable dtTemp = LibAux.EjecutarSentencia("SELECT * FROM empleados where NumContrato IS NULL");
 
-                };
-                LibAux.EjecutarSentencia("UPDATE Empleados SET numContrato = @vNumContrato WHERE idEmpleado = @vidEmpleado; ", @params);
-                contador++;
-            }
-            MessageBox.Show("Listo");
-        }
+        //    for (int i = 0; i < dtTemp.Rows.Count; i++)
+        //    {
+        //        string idEmpleado = dtTemp.Rows[i][0].ToString();
+        //        List<Param> @params = new List<Param>
+        //        {
+        //            new Param("vidEmpleado",idEmpleado),
+        //            new Param("vNumContrato",contador)
+
+        //        };
+        //        LibAux.EjecutarSentencia("UPDATE Empleados SET numContrato = @vNumContrato WHERE idEmpleado = @vidEmpleado; ", @params);
+        //        contador++;
+        //    }
+        //    MessageBox.Show("Listo");
+        //}
+
     }
 }

@@ -39,7 +39,6 @@ namespace SOFTMART_RRHH.Vista
         public vPersonal(CRUD crud, int idEmpleado = 0, int idPersona = 0)
         {
             InitializeComponent();
-
             EsConsultor();
             this.idEmpleado = idEmpleado;
             this.idPersona = idPersona;
@@ -308,7 +307,8 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos()) {                
+            if (!ValidarCampos())
+            {
                 return;
             }
             //------- SE OBTIENE LA INFORMACIÓN DEL FORMULARIO --------
@@ -388,6 +388,7 @@ namespace SOFTMART_RRHH.Vista
                     lblMov.Text = "CONSULTA";
                     lblMov.ForeColor = LibAux.libColores[eColores.Consulta];
                     btnActualizar.Text = "Actualizar";
+                    btnGuardar.Enabled = false;
                     CamposSoloLecturaPersona(true);
                     CamposSoloLecturaEmpleado(true);
                 }
@@ -409,9 +410,10 @@ namespace SOFTMART_RRHH.Vista
 
         private bool ValidarCampos()
         {
-            if (tbRFC.Text == "") {
+            if (tbRFC.Text == "")
+            {
                 LibAux.PopUp("¡ATENCIÓN!", "Ingresa RFC", TipoNotif.Info);
-                return false;            
+                return false;
             }
             if (cbPuesto.Text == "")
             {

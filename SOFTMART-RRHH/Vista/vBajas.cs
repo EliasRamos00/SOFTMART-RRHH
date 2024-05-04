@@ -18,7 +18,9 @@ namespace SOFTMART_RRHH.Vista
     public partial class vBajas : System.Windows.Forms.UserControl
     {
         #region VARIABLES GLOBALES
+        public int idBaja;
         public DataTable info = new DataTable();
+        public event EventHandler DobleClickBaja;
         #endregion
         #region CONSTRUCTORES
         public vBajas()
@@ -256,6 +258,15 @@ namespace SOFTMART_RRHH.Vista
             rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();
         }
         #endregion
+        public virtual void MostrarInformacionEmpleado(EventArgs e)
+        {
 
+        }
+
+        private void dgvBajasEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idBaja = Convert.ToInt16(dgvBajasEmpleados.CurrentRow.Cells["dgvBajasEmpleados_idBaja"].Value);
+            DobleClickBaja?.Invoke(this, e);
+        }
     }
 }
