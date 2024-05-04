@@ -40,6 +40,7 @@ namespace SOFTMART_RRHH
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnMax = new FontAwesome.Sharp.IconButton();
             this.pSideBar = new System.Windows.Forms.Panel();
+            this.lblBD = new System.Windows.Forms.Label();
             this.btnAjustes = new FontAwesome.Sharp.IconButton();
             this.btnImportacion = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
@@ -52,7 +53,6 @@ namespace SOFTMART_RRHH
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
             this.pPrincipal = new System.Windows.Forms.Panel();
-            this.lblBD = new System.Windows.Forms.Label();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -200,6 +200,19 @@ namespace SOFTMART_RRHH
             this.pSideBar.Size = new System.Drawing.Size(235, 720);
             this.pSideBar.TabIndex = 1;
             // 
+            // lblBD
+            // 
+            this.lblBD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBD.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBD.ForeColor = System.Drawing.Color.Snow;
+            this.lblBD.Location = new System.Drawing.Point(56, 689);
+            this.lblBD.Name = "lblBD";
+            this.lblBD.Size = new System.Drawing.Size(148, 16);
+            this.lblBD.TabIndex = 12;
+            this.lblBD.Text = "TXT_INFORMACION";
+            this.lblBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btnAjustes
             // 
             this.btnAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
@@ -236,6 +249,7 @@ namespace SOFTMART_RRHH
             this.btnImportacion.Size = new System.Drawing.Size(52, 39);
             this.btnImportacion.TabIndex = 10;
             this.btnImportacion.UseVisualStyleBackColor = false;
+            this.btnImportacion.Visible = false;
             this.btnImportacion.Click += new System.EventHandler(this.btnImportacion_Click);
             // 
             // btnUsuarios
@@ -417,19 +431,6 @@ namespace SOFTMART_RRHH
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
             this.pPrincipal.TabIndex = 0;
-            // 
-            // lblBD
-            // 
-            this.lblBD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBD.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBD.ForeColor = System.Drawing.Color.Snow;
-            this.lblBD.Location = new System.Drawing.Point(56, 689);
-            this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(148, 16);
-            this.lblBD.TabIndex = 12;
-            this.lblBD.Text = "TXT_INFORMACION";
-            this.lblBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmPrincipal
             // 
