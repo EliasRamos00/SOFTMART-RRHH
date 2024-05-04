@@ -52,6 +52,7 @@ namespace SOFTMART_RRHH
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.lblBD = new System.Windows.Forms.Label();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -181,6 +182,7 @@ namespace SOFTMART_RRHH
             // pSideBar
             // 
             this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.pSideBar.Controls.Add(this.lblBD);
             this.pSideBar.Controls.Add(this.btnAjustes);
             this.pSideBar.Controls.Add(this.btnImportacion);
             this.pSideBar.Controls.Add(this.btnUsuarios);
@@ -229,13 +231,12 @@ namespace SOFTMART_RRHH
             this.btnImportacion.IconColor = System.Drawing.Color.White;
             this.btnImportacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportacion.Location = new System.Drawing.Point(0, 0);
+            this.btnImportacion.Location = new System.Drawing.Point(91, 383);
             this.btnImportacion.Name = "btnImportacion";
             this.btnImportacion.Size = new System.Drawing.Size(52, 39);
             this.btnImportacion.TabIndex = 10;
-            this.btnImportacion.Text = "importar";
             this.btnImportacion.UseVisualStyleBackColor = false;
-            this.btnImportacion.Visible = false;
+            this.btnImportacion.Click += new System.EventHandler(this.btnImportacion_Click);
             // 
             // btnUsuarios
             // 
@@ -417,6 +418,19 @@ namespace SOFTMART_RRHH
             this.pPrincipal.Size = new System.Drawing.Size(1045, 688);
             this.pPrincipal.TabIndex = 0;
             // 
+            // lblBD
+            // 
+            this.lblBD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBD.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBD.ForeColor = System.Drawing.Color.Snow;
+            this.lblBD.Location = new System.Drawing.Point(56, 689);
+            this.lblBD.Name = "lblBD";
+            this.lblBD.Size = new System.Drawing.Size(148, 16);
+            this.lblBD.TabIndex = 12;
+            this.lblBD.Text = "TXT_INFORMACION";
+            this.lblBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -462,5 +476,6 @@ namespace SOFTMART_RRHH
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private FontAwesome.Sharp.IconButton btnImportacion;
         private FontAwesome.Sharp.IconButton btnAjustes;
+        private Label lblBD;
     }
 }

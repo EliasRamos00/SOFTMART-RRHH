@@ -13,7 +13,7 @@ namespace SOFTMART_RRHH.Controlador
 {
     internal class CAltaPersonal
     {
-        internal static void CInsertarPersonal(string medio, string valor, object estado, object ciudad, object colonia, object cP, object calleNum,
+        internal static bool CInsertarPersonal(string medio, string valor, object estado, object ciudad, object colonia, object cP, object calleNum,
             object nombres, object apePat, object apeMat, object rFC, object cURP, object lugarNac, object genero, DateTime fechaNac,
             object fotografiaDestino, object idEscolaridad, object especialidad, object numContrato, object idSucursal, object idPuesto, DateTime fechaingreso,
             object EdoCivil, object esTemp, object sueldo, bool existioPersona, object NSS, object InfoEmer, object fotografiaOrigen, object iNEOrigen, object iNE_Destino, object comentarios)
@@ -61,6 +61,7 @@ namespace SOFTMART_RRHH.Controlador
 
                 transact.Commit();
                 PopUp("Registro terminado", "Empleado dado de alta con éxito.", TipoNotif.Success);
+                return true;
             }
             catch (Exception ex)
             {
@@ -110,6 +111,7 @@ namespace SOFTMART_RRHH.Controlador
                 if (!err)
                     ShowNotification("Error desconocido - " + ex.Message, TipoNotif.Error);
             }
+            return false;
         }
 
         internal static bool CModificarPersonal(string medio, object valor, object estado, object ciudad, object colonia, object cP, object calleNum,
