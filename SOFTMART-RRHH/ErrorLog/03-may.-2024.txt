@@ -1,0 +1,269 @@
+----------Detalles del error en:  03/05/2024 11:27:30 a. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 11:27:30 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 11:27:34 a. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 11:27:34 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '0' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 11:50:16 a. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 11:50:16 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '0' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 11:50:32 a. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 11:50:32 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '41111' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 11:54:35 a. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 11:54:35 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 11:54:38 a. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 11:54:38 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '1' for key 'UQ_Empleados'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 12:06:45 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 12:06:45 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 12:35:45 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 12:35:45 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_Puesto does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:24:09 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:24:09 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Cannot delete or update a parent row: a foreign key constraint fails (`rrhh-dev`.`empleados`, CONSTRAINT `fk_empleadopuesto` FOREIGN KEY (`idPuesto`) REFERENCES `puestos` (`idPuesto`))
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:24:26 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:24:26 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_Puesto does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:32:00 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:32:00 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_EdoCivil does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:32:32 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:32:32 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_EdoCivil does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:34:26 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:34:26 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_EdoCivil does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:34:29 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:34:29 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Table 'rrhh-dev.edocivil' doesn't exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 02:36:00 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 02:36:00 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Table 'rrhh-dev.edocivil' doesn't exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:26:55 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:26:55 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : No se pudo encontrar la columna denominada dgvEdoCivil_EstadoCivil.
+Nombre del parámetro: columnName
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:06 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:06 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : No se pudo encontrar la columna denominada dgvEdoCivil_EstadoCivil.
+Nombre del parámetro: columnName
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:19 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:19 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:22 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:22 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:24 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:24 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:24 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:24 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:26 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:26 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:27 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:27 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:30 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:30 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:31 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:31 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:32 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:32 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:34 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:34 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:27:34 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:27:34 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'PRUEBA2343434' for key 'PRIMARY'
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 03:31:23 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 03:31:23 p. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : No se pudo encontrar la columna denominada dgvEdosCiviles_EstadoCivil.
+Nombre del parámetro: columnName
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:10:10 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:10:10 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:10:32 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:10:32 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:10:59 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:10:59 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:11:05 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:11:05 p. m.
+Exception Type: System.NullReferenceException
+Mensaje de Error : Referencia a objeto no establecida como instancia de un objeto.
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:11:14 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:11:14 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_ELIMINAR_Escolaridad does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:12:44 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:12:44 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_ELIMINAR_Escolaridad does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:14:15 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:14:15 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_ELIMINAR_Escolaridad does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:46:12 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:46:12 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_Sucursal does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  03/05/2024 05:47:03 p. m.----------
+-----------------------------------------------
+Fecha: 03/05/2024 05:47:03 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : PROCEDURE rrhh-dev.SP_INSERTA_Sucursal does not exist
+Usuario: USUARIO RAIZ
+-----------------------------------------------

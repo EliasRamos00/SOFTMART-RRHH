@@ -44,14 +44,7 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vUsuarios);
             AdjuntarUC_frmPrincipal(vErrorLog);
             AdjuntarUC_frmPrincipal(vAjustes);
-            if (Properties.Settings.Default.Rol.Contains("ADM"))
-            {
-                EsAdmin(true);
-            }
-            else
-            {
-                EsAdmin(false);
-            }
+
 
             //Eventos de los U.C.
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
@@ -151,9 +144,14 @@ namespace SOFTMART_RRHH
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             string productVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
-
             lblInfo.Text = "USUARIO: " + Properties.Settings.Default.User + " - " + Properties.Settings.Default.Rol + ".";
             lblInfo2.Text = Application.ProductName + " " + productVersion + ".";
+            lblBD.Text = Properties.Settings.Default.BD.ToString();
+
+            if (!Properties.Settings.Default.Rol.Contains("ADM"))
+            {
+                EsAdmin(false);
+            }
         }
         /// <summary>
         /// DRAG WINDOW EVENTS
@@ -487,5 +485,24 @@ namespace SOFTMART_RRHH
         //}        
         #endregion
 
+        private void btnImportacion_Click(object sender, EventArgs e)
+        {
+            int contador = 40000;
+            DataTable dtTemp = LibAux.EjecutarSentencia("SELECT * FROM empleados where NumContrato IS NULL");
+
+            for (int i = 0; i < dtTemp.Rows.Count; i++)
+            {
+                string idEmpleado = dtTemp.Rows[i][0].ToString();
+                List<Param> @params = new List<Param>
+                {
+                    new Param("vidEmpleado",idEmpleado),
+                    new Param("vNumContrato",contador)
+
+                };
+                LibAux.EjecutarSentencia("UPDATE Empleados SET numContrato = @vNumContrato WHERE idEmpleado = @vidEmpleado; ", @params);
+                contador++;
+            }
+            MessageBox.Show("Listo");
+        }
     }
 }

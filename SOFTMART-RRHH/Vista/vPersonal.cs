@@ -308,6 +308,9 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) {                
+                return;
+            }
             //------- SE OBTIENE LA INFORMACIÓN DEL FORMULARIO --------
             //INFORMACION DE CONTACTO
             string telefono;
@@ -391,12 +394,38 @@ namespace SOFTMART_RRHH.Vista
             }
             else
             {
-                CAltaPersonal.CInsertarPersonal("TELEFONO", telefono, Estado, Ciudad, Colonia, CP, CalleNum, Nombres, ApePat, ApeMat, RFC,
-                CURP, LugarNac, Genero, FechaNac, fotografiaDestino, idEscolaridad, Especialidad, NumContrato, idSucursal, idPuesto, dtpFechaIngreso.Value, EdoCivil, esTemporal, sueldo, existióPersona, NSS, InfoEmer, fotografiaOrigen, INE_Origen, INE_Destino, comentarios);
+                if (CAltaPersonal.CInsertarPersonal("TELEFONO", telefono, Estado, Ciudad, Colonia, CP, CalleNum, Nombres, ApePat, ApeMat, RFC,
+                CURP, LugarNac, Genero, FechaNac, fotografiaDestino, idEscolaridad, Especialidad, NumContrato, idSucursal, idPuesto, dtpFechaIngreso.Value, EdoCivil, esTemporal, sueldo, existióPersona, NSS, InfoEmer, fotografiaOrigen, INE_Origen, INE_Destino, comentarios))
+                {
+                    LimpiarCamposPersona();
+                    LimpiarCamposEmpleado();
+                    tbCURP.Text = "";
+                }
+
             }
 
 
         }
+
+        private bool ValidarCampos()
+        {
+            if (tbRFC.Text == "") {
+                LibAux.PopUp("¡ATENCIÓN!", "Ingresa RFC", TipoNotif.Info);
+                return false;            
+            }
+            if (cbPuesto.Text == "")
+            {
+                LibAux.PopUp("¡ATENCIÓN!", "Selecciona Puesto", TipoNotif.Info);
+                return false;
+            }
+            if (cbTienda.Text == "")
+            {
+                LibAux.PopUp("¡ATENCIÓN!", "Selecciona Tienda", TipoNotif.Info);
+                return false;
+            }
+            return true;
+        }
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (idEmpleado != 0 && estaModificando == false)
