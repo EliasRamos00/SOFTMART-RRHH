@@ -54,15 +54,15 @@
             this.btnEliminarEscola = new FontAwesome.Sharp.IconButton();
             this.btnRefreshEscola = new FontAwesome.Sharp.IconButton();
             this.dgvEscolaridades = new System.Windows.Forms.DataGridView();
+            this.dgvEscolaridades_idEscolaridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEscolaridades_Escolaridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEscolaridades_hasChanged = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabTienda = new System.Windows.Forms.TabPage();
             this.btnAgregarSucursal = new FontAwesome.Sharp.IconButton();
             this.btnGuardarSucursales = new FontAwesome.Sharp.IconButton();
             this.btnBorrarSucursal = new FontAwesome.Sharp.IconButton();
             this.btnRefreshSucursales = new FontAwesome.Sharp.IconButton();
             this.dgvTiendas = new System.Windows.Forms.DataGridView();
-            this.dgvEscolaridades_idEscolaridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEscolaridades_Escolaridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEscolaridades_hasChanged = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTiendas_Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTiendas_idSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTiendas_hasChanged = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -190,6 +190,7 @@
             // 
             this.dgvPuestos.AllowUserToAddRows = false;
             this.dgvPuestos.AllowUserToDeleteRows = false;
+            this.dgvPuestos.AllowUserToResizeRows = false;
             this.dgvPuestos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -344,6 +345,7 @@
             // 
             this.dgvEdosCiviles.AllowUserToAddRows = false;
             this.dgvEdosCiviles.AllowUserToDeleteRows = false;
+            this.dgvEdosCiviles.AllowUserToResizeRows = false;
             this.dgvEdosCiviles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -473,6 +475,7 @@
             // 
             this.dgvEscolaridades.AllowUserToAddRows = false;
             this.dgvEscolaridades.AllowUserToDeleteRows = false;
+            this.dgvEscolaridades.AllowUserToResizeRows = false;
             this.dgvEscolaridades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -488,6 +491,27 @@
             this.dgvEscolaridades.Size = new System.Drawing.Size(839, 588);
             this.dgvEscolaridades.TabIndex = 42;
             this.dgvEscolaridades.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEscolaridades_CellEndEdit);
+            // 
+            // dgvEscolaridades_idEscolaridad
+            // 
+            this.dgvEscolaridades_idEscolaridad.DataPropertyName = "idEscolaridad";
+            this.dgvEscolaridades_idEscolaridad.HeaderText = "idEscolaridad";
+            this.dgvEscolaridades_idEscolaridad.Name = "dgvEscolaridades_idEscolaridad";
+            this.dgvEscolaridades_idEscolaridad.Visible = false;
+            // 
+            // dgvEscolaridades_Escolaridad
+            // 
+            this.dgvEscolaridades_Escolaridad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvEscolaridades_Escolaridad.DataPropertyName = "Escolaridad";
+            this.dgvEscolaridades_Escolaridad.HeaderText = "Escolaridad";
+            this.dgvEscolaridades_Escolaridad.Name = "dgvEscolaridades_Escolaridad";
+            // 
+            // dgvEscolaridades_hasChanged
+            // 
+            this.dgvEscolaridades_hasChanged.DataPropertyName = "hasChanged";
+            this.dgvEscolaridades_hasChanged.HeaderText = "hasChanged";
+            this.dgvEscolaridades_hasChanged.Name = "dgvEscolaridades_hasChanged";
+            this.dgvEscolaridades_hasChanged.Visible = false;
             // 
             // tabTienda
             // 
@@ -588,6 +612,7 @@
             // 
             this.dgvTiendas.AllowUserToAddRows = false;
             this.dgvTiendas.AllowUserToDeleteRows = false;
+            this.dgvTiendas.AllowUserToResizeRows = false;
             this.dgvTiendas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -603,27 +628,6 @@
             this.dgvTiendas.Size = new System.Drawing.Size(839, 588);
             this.dgvTiendas.TabIndex = 42;
             this.dgvTiendas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTiendas_CellEndEdit);
-            // 
-            // dgvEscolaridades_idEscolaridad
-            // 
-            this.dgvEscolaridades_idEscolaridad.DataPropertyName = "idEscolaridad";
-            this.dgvEscolaridades_idEscolaridad.HeaderText = "idEscolaridad";
-            this.dgvEscolaridades_idEscolaridad.Name = "dgvEscolaridades_idEscolaridad";
-            this.dgvEscolaridades_idEscolaridad.Visible = false;
-            // 
-            // dgvEscolaridades_Escolaridad
-            // 
-            this.dgvEscolaridades_Escolaridad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvEscolaridades_Escolaridad.DataPropertyName = "Escolaridad";
-            this.dgvEscolaridades_Escolaridad.HeaderText = "Escolaridad";
-            this.dgvEscolaridades_Escolaridad.Name = "dgvEscolaridades_Escolaridad";
-            // 
-            // dgvEscolaridades_hasChanged
-            // 
-            this.dgvEscolaridades_hasChanged.DataPropertyName = "hasChanged";
-            this.dgvEscolaridades_hasChanged.HeaderText = "hasChanged";
-            this.dgvEscolaridades_hasChanged.Name = "dgvEscolaridades_hasChanged";
-            this.dgvEscolaridades_hasChanged.Visible = false;
             // 
             // dgvTiendas_Sucursal
             // 

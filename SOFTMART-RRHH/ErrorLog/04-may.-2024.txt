@@ -1,0 +1,35 @@
+----------Detalles del error en:  04/05/2024 09:40:41 a. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 09:40:41 a. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vEdoCivil' not found in the collection.
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 09:42:34 a. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 09:42:34 a. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vEdoCivil' not found in the collection.
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 09:42:40 a. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 09:42:40 a. m.
+Exception Type: System.ArgumentException
+Mensaje de Error : Parameter 'vEdoCivil' not found in the collection.
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 09:43:11 a. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 09:43:11 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : The user specified as a definer ('soporte'@'%') does not exist
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  04/05/2024 09:43:56 a. m.----------
+-----------------------------------------------
+Fecha: 04/05/2024 09:43:56 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : The user specified as a definer ('soporte'@'%') does not exist
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
