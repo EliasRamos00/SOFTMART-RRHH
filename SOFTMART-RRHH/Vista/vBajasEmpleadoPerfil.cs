@@ -87,6 +87,7 @@ namespace SOFTMART_RRHH.Vista
                     {
                         CBajasPersonal.EliminarBaja(idBaja);
                         LibAux.PopUp("¡Éxito!", "Se revocó la baja con éxito.", LibAux.TipoNotif.Success);
+                        this.Hide();
                     }
                     catch (Exception ex)
                     {
@@ -105,6 +106,7 @@ namespace SOFTMART_RRHH.Vista
                     {
                         CBajasPersonal.BajaPersonal(dtpFechaBaja, tbPatron, tbFiniquito, tbComentarios, idEmpleado);
                         LibAux.PopUp("¡Éxito!", "El empleado ha sido dado de baja con éxito.", LibAux.TipoNotif.Success);
+                        this.Hide();
                     }
                     catch (Exception ex)
                     {
