@@ -110,3 +110,10 @@ Exception Type: MySqlConnector.MySqlException
 Mensaje de Error : Duplicate entry 'joselitoram' for key 'UQ_Usuario'
 Usuario: USUARIO RAIZ
 -----------------------------------------------
+----------Detalles del error en:  06/05/2024 01:01:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 01:01:48 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry 'raiz' for key 'UQ_Usuarios'
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------

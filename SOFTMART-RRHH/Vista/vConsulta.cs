@@ -32,7 +32,7 @@ namespace SOFTMART_RRHH.Vista
         }
         #endregion
         #region MÉTODOS       
-        private async void LlenarGrid()
+        private async void CargarEmpleadosActivos()
         {
             frmCarga carga = new frmCarga();
             carga.Show();
@@ -186,7 +186,7 @@ namespace SOFTMART_RRHH.Vista
         #region EVENTOS        
         private void vConsulta_Load(object sender, EventArgs e)
         {
-            LlenarGrid();
+            CargarEmpleadosActivos();
             CargarColumnas();
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnRecarga_Click(object sender, EventArgs e)
         {
-            LlenarGrid();
+            CargarEmpleadosActivos();
         }
         private void btnExcel_Click(object sender, EventArgs e)
         {
@@ -252,7 +252,7 @@ namespace SOFTMART_RRHH.Vista
         }
         private void dtpFechaFiltro_ValueChanged(object sender, EventArgs e)
         {
-            LlenarGrid();
+            CargarEmpleadosActivos();
         }
         private void dgvConsultaEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
