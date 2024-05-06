@@ -9,38 +9,57 @@ namespace SOFTMART_RRHH.Vista
     public partial class frmExcelCheckList : Form
     {
         public List<string> ColumnasAExportar = new List<string>();
-        List<DataGridViewColumn> columns;        
+        List<DataGridViewColumn> columns;
+        int horizontal = 10;
+        int vertical = 60;
+        bool columnON = false;
         Point lastPoint = new Point(10, 35);
         public frmExcelCheckList(List<DataGridViewColumn> columns)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
-            this.columns = columns;            
+            this.columns = columns;
         }
         private void frmExcelCheckList_Load(object sender, EventArgs e)
         {
-            CheckBox box = new CheckBox();
+            CheckBox box;
             foreach (DataGridViewColumn column in columns)
             {
-                box = new CheckBox();
-                box.Appearance = Appearance.Normal;
-                box.Font = new Font("Microsoft Sans Serif", 14);
-                box.AutoSize = false;
-                box.Size = new Size(100, 100);
-                
-                box.Text = column.HeaderText;
+                box = new CheckBox
+                {
+                    Appearance = Appearance.Normal,
+                    Font = new Font("Microsoft Sans Serif", 14),
+                    AutoSize = false,
+                    Size = new Size(100, 100),
+                    Text = column.HeaderText
+                };
                 box.AutoSize = true;
                 box.Location = lastPoint; //vertical                                                   
 
                 this.Controls.Add(box);
-                lastPoint = new Point(10, box.Location.Y + 30);
+                vertical = box.Location.Y+30;
+                lastPoint = new Point(horizontal, box.Location.Y+30);
+                
+                if (box.Location.Y >= 600)
+                {
+                    columnON = true;
+                    horizontal = horizontal + 300;
+                    this.Width = this.Width + 600;
+                    lastPoint = new Point(horizontal, 35);
+                }
             }
-
+            if (columnON)
+            {
+                this.Size = new Size(horizontal + 160, 680);
+            }
+            else {
+                this.Size = new Size(horizontal + 350, vertical+120);
+            }
             btnExportar.Text = "Exportar";
             btnExportar.AutoSize = true;
             btnExportar.Location = lastPoint;
             btnExportar.Size = new Size(100, 38);
-            this.Size = new Size(300, lastPoint.Y + 110);
+            
 
         }
         private void btnExportar_Click(object sender, EventArgs e)

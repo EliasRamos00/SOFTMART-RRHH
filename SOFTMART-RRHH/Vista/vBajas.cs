@@ -239,6 +239,7 @@ namespace SOFTMART_RRHH.Vista
 
             if (frmExcel.ShowDialog() == DialogResult.OK)
             {
+
                 LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvBajasEmpleados, frmExcel.ColumnasAExportar));
             }
         }

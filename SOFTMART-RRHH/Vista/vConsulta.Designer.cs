@@ -41,18 +41,6 @@
             this.lblColumn = new System.Windows.Forms.Label();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.dgvConsultaEmpleados = new System.Windows.Forms.DataGridView();
-            this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_idPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_DiasAntiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_Antiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvConsultaEmpleados_Inactivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
@@ -66,6 +54,37 @@
             this.cbFinal = new System.Windows.Forms.ComboBox();
             this.lblMax = new System.Windows.Forms.Label();
             this.rowCounting = new System.Windows.Forms.Label();
+            this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_idPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_DiasAntiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HApellPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HApellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HRFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HCURP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HLugarNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HEdoCivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HNSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HInfoEmerg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HComentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HColonia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HCalleNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HCodigoPostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_HDepartamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_Antiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleados_Inactivo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvConsultaEmpleados_FNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -181,10 +200,29 @@
             this.dgvConsultaEmpleados_Sucursal,
             this.dgvConsultaEmpleados_Puesto,
             this.dgvConsultaEmpleados_FechaNacimiento,
+            this.dgvConsultaEmpleados_HNombre,
+            this.dgvConsultaEmpleados_HApellPaterno,
+            this.dgvConsultaEmpleados_HApellidoMaterno,
+            this.dgvConsultaEmpleados_HRFC,
+            this.dgvConsultaEmpleados_HCURP,
+            this.dgvConsultaEmpleados_HGenero,
+            this.dgvConsultaEmpleados_HLugarNac,
+            this.dgvConsultaEmpleados_HEdoCivil,
+            this.dgvConsultaEmpleados_HNSS,
+            this.dgvConsultaEmpleados_HInfoEmerg,
+            this.dgvConsultaEmpleados_HComentarios,
+            this.dgvConsultaEmpleados_HEstado,
+            this.dgvConsultaEmpleados_HCiudad,
+            this.dgvConsultaEmpleados_HColonia,
+            this.dgvConsultaEmpleados_HCalleNum,
+            this.dgvConsultaEmpleados_HCodigoPostal,
+            this.dgvConsultaEmpleados_HTelefono,
+            this.dgvConsultaEmpleados_HDepartamento,
             this.dgvConsultaEmpleados_Edad,
             this.dgvConsultaEmpleados_FechaInicio,
             this.dgvConsultaEmpleados_Antiguedad,
-            this.dgvConsultaEmpleados_Inactivo});
+            this.dgvConsultaEmpleados_Inactivo,
+            this.dgvConsultaEmpleados_FNac});
             this.tlpPrincipal.SetColumnSpan(this.dgvConsultaEmpleados, 4);
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaShell;
@@ -213,117 +251,6 @@
             this.dgvConsultaEmpleados.Size = new System.Drawing.Size(974, 503);
             this.dgvConsultaEmpleados.TabIndex = 6;
             this.dgvConsultaEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleados_CellDoubleClick);
-            // 
-            // dgvConsultaEmpleados_idEmpleado
-            // 
-            this.dgvConsultaEmpleados_idEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_idEmpleado.DataPropertyName = "idEmpleado";
-            this.dgvConsultaEmpleados_idEmpleado.HeaderText = "idEmpleado";
-            this.dgvConsultaEmpleados_idEmpleado.Name = "dgvConsultaEmpleados_idEmpleado";
-            this.dgvConsultaEmpleados_idEmpleado.ReadOnly = true;
-            this.dgvConsultaEmpleados_idEmpleado.Visible = false;
-            // 
-            // dgvConsultaEmpleados_idPersona
-            // 
-            this.dgvConsultaEmpleados_idPersona.DataPropertyName = "idPersona";
-            this.dgvConsultaEmpleados_idPersona.HeaderText = "idPersona";
-            this.dgvConsultaEmpleados_idPersona.Name = "dgvConsultaEmpleados_idPersona";
-            this.dgvConsultaEmpleados_idPersona.ReadOnly = true;
-            this.dgvConsultaEmpleados_idPersona.Visible = false;
-            // 
-            // dgvConsultaEmpleados_DiasAntiguedad
-            // 
-            this.dgvConsultaEmpleados_DiasAntiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_DiasAntiguedad.DataPropertyName = "AntiguedadDias";
-            this.dgvConsultaEmpleados_DiasAntiguedad.HeaderText = "DiasAntiguedad";
-            this.dgvConsultaEmpleados_DiasAntiguedad.Name = "dgvConsultaEmpleados_DiasAntiguedad";
-            this.dgvConsultaEmpleados_DiasAntiguedad.ReadOnly = true;
-            this.dgvConsultaEmpleados_DiasAntiguedad.Visible = false;
-            this.dgvConsultaEmpleados_DiasAntiguedad.Width = 40;
-            // 
-            // dgvConsultaEmpleados_Nombre
-            // 
-            this.dgvConsultaEmpleados_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvConsultaEmpleados_Nombre.DataPropertyName = "Nombre";
-            this.dgvConsultaEmpleados_Nombre.HeaderText = "Nombre";
-            this.dgvConsultaEmpleados_Nombre.Name = "dgvConsultaEmpleados_Nombre";
-            this.dgvConsultaEmpleados_Nombre.ReadOnly = true;
-            // 
-            // dgvConsultaEmpleados_NumContrato
-            // 
-            this.dgvConsultaEmpleados_NumContrato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_NumContrato.DataPropertyName = "NumContrato";
-            this.dgvConsultaEmpleados_NumContrato.HeaderText = "NumContrato";
-            this.dgvConsultaEmpleados_NumContrato.Name = "dgvConsultaEmpleados_NumContrato";
-            this.dgvConsultaEmpleados_NumContrato.ReadOnly = true;
-            // 
-            // dgvConsultaEmpleados_Sucursal
-            // 
-            this.dgvConsultaEmpleados_Sucursal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_Sucursal.DataPropertyName = "Sucursal";
-            this.dgvConsultaEmpleados_Sucursal.HeaderText = "Sucursal";
-            this.dgvConsultaEmpleados_Sucursal.Name = "dgvConsultaEmpleados_Sucursal";
-            this.dgvConsultaEmpleados_Sucursal.ReadOnly = true;
-            // 
-            // dgvConsultaEmpleados_Puesto
-            // 
-            this.dgvConsultaEmpleados_Puesto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_Puesto.DataPropertyName = "Puesto";
-            this.dgvConsultaEmpleados_Puesto.HeaderText = "Puesto";
-            this.dgvConsultaEmpleados_Puesto.Name = "dgvConsultaEmpleados_Puesto";
-            this.dgvConsultaEmpleados_Puesto.ReadOnly = true;
-            // 
-            // dgvConsultaEmpleados_FechaNacimiento
-            // 
-            this.dgvConsultaEmpleados_FechaNacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_FechaNacimiento.DataPropertyName = "FechaNac";
-            dataGridViewCellStyle2.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgvConsultaEmpleados_FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvConsultaEmpleados_FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.dgvConsultaEmpleados_FechaNacimiento.Name = "dgvConsultaEmpleados_FechaNacimiento";
-            this.dgvConsultaEmpleados_FechaNacimiento.ReadOnly = true;
-            // 
-            // dgvConsultaEmpleados_Edad
-            // 
-            this.dgvConsultaEmpleados_Edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_Edad.DataPropertyName = "Edad";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvConsultaEmpleados_Edad.HeaderText = "Edad";
-            this.dgvConsultaEmpleados_Edad.Name = "dgvConsultaEmpleados_Edad";
-            this.dgvConsultaEmpleados_Edad.ReadOnly = true;
-            this.dgvConsultaEmpleados_Edad.Width = 60;
-            // 
-            // dgvConsultaEmpleados_FechaInicio
-            // 
-            this.dgvConsultaEmpleados_FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvConsultaEmpleados_FechaInicio.DataPropertyName = "FechaInicio";
-            dataGridViewCellStyle4.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvConsultaEmpleados_FechaInicio.HeaderText = "Fecha Inicio";
-            this.dgvConsultaEmpleados_FechaInicio.Name = "dgvConsultaEmpleados_FechaInicio";
-            this.dgvConsultaEmpleados_FechaInicio.ReadOnly = true;
-            // 
-            // dgvConsultaEmpleados_Antiguedad
-            // 
-            this.dgvConsultaEmpleados_Antiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvConsultaEmpleados_Antiguedad.DataPropertyName = "Antiguedad";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvConsultaEmpleados_Antiguedad.HeaderText = "Antiguedad";
-            this.dgvConsultaEmpleados_Antiguedad.Name = "dgvConsultaEmpleados_Antiguedad";
-            this.dgvConsultaEmpleados_Antiguedad.ReadOnly = true;
-            this.dgvConsultaEmpleados_Antiguedad.Width = 104;
-            // 
-            // dgvConsultaEmpleados_Inactivo
-            // 
-            this.dgvConsultaEmpleados_Inactivo.DataPropertyName = "estaActivo";
-            this.dgvConsultaEmpleados_Inactivo.HeaderText = "Activos";
-            this.dgvConsultaEmpleados_Inactivo.Name = "dgvConsultaEmpleados_Inactivo";
-            this.dgvConsultaEmpleados_Inactivo.ReadOnly = true;
-            this.dgvConsultaEmpleados_Inactivo.Visible = false;
             // 
             // btnClose
             // 
@@ -542,6 +469,269 @@
             this.rowCounting.Text = "Registros : 0";
             this.rowCounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvConsultaEmpleados_idEmpleado
+            // 
+            this.dgvConsultaEmpleados_idEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_idEmpleado.DataPropertyName = "idEmpleado";
+            this.dgvConsultaEmpleados_idEmpleado.HeaderText = "idEmpleado";
+            this.dgvConsultaEmpleados_idEmpleado.Name = "dgvConsultaEmpleados_idEmpleado";
+            this.dgvConsultaEmpleados_idEmpleado.ReadOnly = true;
+            this.dgvConsultaEmpleados_idEmpleado.Visible = false;
+            // 
+            // dgvConsultaEmpleados_idPersona
+            // 
+            this.dgvConsultaEmpleados_idPersona.DataPropertyName = "idPersona";
+            this.dgvConsultaEmpleados_idPersona.HeaderText = "idPersona";
+            this.dgvConsultaEmpleados_idPersona.Name = "dgvConsultaEmpleados_idPersona";
+            this.dgvConsultaEmpleados_idPersona.ReadOnly = true;
+            this.dgvConsultaEmpleados_idPersona.Visible = false;
+            // 
+            // dgvConsultaEmpleados_DiasAntiguedad
+            // 
+            this.dgvConsultaEmpleados_DiasAntiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_DiasAntiguedad.DataPropertyName = "AntiguedadDias";
+            this.dgvConsultaEmpleados_DiasAntiguedad.HeaderText = "DiasAntiguedad";
+            this.dgvConsultaEmpleados_DiasAntiguedad.Name = "dgvConsultaEmpleados_DiasAntiguedad";
+            this.dgvConsultaEmpleados_DiasAntiguedad.ReadOnly = true;
+            this.dgvConsultaEmpleados_DiasAntiguedad.Visible = false;
+            this.dgvConsultaEmpleados_DiasAntiguedad.Width = 40;
+            // 
+            // dgvConsultaEmpleados_Nombre
+            // 
+            this.dgvConsultaEmpleados_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvConsultaEmpleados_Nombre.DataPropertyName = "NombreCompl";
+            this.dgvConsultaEmpleados_Nombre.HeaderText = "Nombre completo";
+            this.dgvConsultaEmpleados_Nombre.Name = "dgvConsultaEmpleados_Nombre";
+            this.dgvConsultaEmpleados_Nombre.ReadOnly = true;
+            // 
+            // dgvConsultaEmpleados_NumContrato
+            // 
+            this.dgvConsultaEmpleados_NumContrato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_NumContrato.DataPropertyName = "NumContrato";
+            this.dgvConsultaEmpleados_NumContrato.HeaderText = "NumContrato";
+            this.dgvConsultaEmpleados_NumContrato.Name = "dgvConsultaEmpleados_NumContrato";
+            this.dgvConsultaEmpleados_NumContrato.ReadOnly = true;
+            // 
+            // dgvConsultaEmpleados_Sucursal
+            // 
+            this.dgvConsultaEmpleados_Sucursal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_Sucursal.DataPropertyName = "Sucursal";
+            this.dgvConsultaEmpleados_Sucursal.HeaderText = "Sucursal";
+            this.dgvConsultaEmpleados_Sucursal.Name = "dgvConsultaEmpleados_Sucursal";
+            this.dgvConsultaEmpleados_Sucursal.ReadOnly = true;
+            // 
+            // dgvConsultaEmpleados_Puesto
+            // 
+            this.dgvConsultaEmpleados_Puesto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_Puesto.DataPropertyName = "Puesto";
+            this.dgvConsultaEmpleados_Puesto.HeaderText = "Puesto";
+            this.dgvConsultaEmpleados_Puesto.Name = "dgvConsultaEmpleados_Puesto";
+            this.dgvConsultaEmpleados_Puesto.ReadOnly = true;
+            // 
+            // dgvConsultaEmpleados_FechaNacimiento
+            // 
+            this.dgvConsultaEmpleados_FechaNacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_FechaNacimiento.DataPropertyName = "FechaNac";
+            dataGridViewCellStyle2.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgvConsultaEmpleados_FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvConsultaEmpleados_FechaNacimiento.HeaderText = "Fecha Nacimiento.";
+            this.dgvConsultaEmpleados_FechaNacimiento.Name = "dgvConsultaEmpleados_FechaNacimiento";
+            this.dgvConsultaEmpleados_FechaNacimiento.ReadOnly = true;
+            // 
+            // dgvConsultaEmpleados_HNombre
+            // 
+            this.dgvConsultaEmpleados_HNombre.DataPropertyName = "Nombre";
+            this.dgvConsultaEmpleados_HNombre.HeaderText = "Nombre";
+            this.dgvConsultaEmpleados_HNombre.Name = "dgvConsultaEmpleados_HNombre";
+            this.dgvConsultaEmpleados_HNombre.ReadOnly = true;
+            this.dgvConsultaEmpleados_HNombre.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HApellPaterno
+            // 
+            this.dgvConsultaEmpleados_HApellPaterno.DataPropertyName = "ApellPaterno";
+            this.dgvConsultaEmpleados_HApellPaterno.HeaderText = "Apellido Paterno";
+            this.dgvConsultaEmpleados_HApellPaterno.Name = "dgvConsultaEmpleados_HApellPaterno";
+            this.dgvConsultaEmpleados_HApellPaterno.ReadOnly = true;
+            this.dgvConsultaEmpleados_HApellPaterno.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HApellidoMaterno
+            // 
+            this.dgvConsultaEmpleados_HApellidoMaterno.DataPropertyName = "ApellMaterno";
+            this.dgvConsultaEmpleados_HApellidoMaterno.HeaderText = "Apellido Materno";
+            this.dgvConsultaEmpleados_HApellidoMaterno.Name = "dgvConsultaEmpleados_HApellidoMaterno";
+            this.dgvConsultaEmpleados_HApellidoMaterno.ReadOnly = true;
+            this.dgvConsultaEmpleados_HApellidoMaterno.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HRFC
+            // 
+            this.dgvConsultaEmpleados_HRFC.DataPropertyName = "RFC";
+            this.dgvConsultaEmpleados_HRFC.HeaderText = "RFC";
+            this.dgvConsultaEmpleados_HRFC.Name = "dgvConsultaEmpleados_HRFC";
+            this.dgvConsultaEmpleados_HRFC.ReadOnly = true;
+            this.dgvConsultaEmpleados_HRFC.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HCURP
+            // 
+            this.dgvConsultaEmpleados_HCURP.DataPropertyName = "CURP";
+            this.dgvConsultaEmpleados_HCURP.HeaderText = "CURP";
+            this.dgvConsultaEmpleados_HCURP.Name = "dgvConsultaEmpleados_HCURP";
+            this.dgvConsultaEmpleados_HCURP.ReadOnly = true;
+            this.dgvConsultaEmpleados_HCURP.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HGenero
+            // 
+            this.dgvConsultaEmpleados_HGenero.DataPropertyName = "Genero";
+            this.dgvConsultaEmpleados_HGenero.HeaderText = "Genero";
+            this.dgvConsultaEmpleados_HGenero.Name = "dgvConsultaEmpleados_HGenero";
+            this.dgvConsultaEmpleados_HGenero.ReadOnly = true;
+            this.dgvConsultaEmpleados_HGenero.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HLugarNac
+            // 
+            this.dgvConsultaEmpleados_HLugarNac.DataPropertyName = "LugarNac";
+            this.dgvConsultaEmpleados_HLugarNac.HeaderText = "Lugar de Nacimiento";
+            this.dgvConsultaEmpleados_HLugarNac.Name = "dgvConsultaEmpleados_HLugarNac";
+            this.dgvConsultaEmpleados_HLugarNac.ReadOnly = true;
+            this.dgvConsultaEmpleados_HLugarNac.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HEdoCivil
+            // 
+            this.dgvConsultaEmpleados_HEdoCivil.DataPropertyName = "EdoCivil";
+            this.dgvConsultaEmpleados_HEdoCivil.HeaderText = "Estado civil";
+            this.dgvConsultaEmpleados_HEdoCivil.Name = "dgvConsultaEmpleados_HEdoCivil";
+            this.dgvConsultaEmpleados_HEdoCivil.ReadOnly = true;
+            this.dgvConsultaEmpleados_HEdoCivil.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HNSS
+            // 
+            this.dgvConsultaEmpleados_HNSS.DataPropertyName = "NumSeguroSocial";
+            this.dgvConsultaEmpleados_HNSS.HeaderText = "Numero de seguro social";
+            this.dgvConsultaEmpleados_HNSS.Name = "dgvConsultaEmpleados_HNSS";
+            this.dgvConsultaEmpleados_HNSS.ReadOnly = true;
+            this.dgvConsultaEmpleados_HNSS.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HInfoEmerg
+            // 
+            this.dgvConsultaEmpleados_HInfoEmerg.DataPropertyName = "InfoEmer";
+            this.dgvConsultaEmpleados_HInfoEmerg.HeaderText = "Informacion de emergencia";
+            this.dgvConsultaEmpleados_HInfoEmerg.Name = "dgvConsultaEmpleados_HInfoEmerg";
+            this.dgvConsultaEmpleados_HInfoEmerg.ReadOnly = true;
+            this.dgvConsultaEmpleados_HInfoEmerg.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HComentarios
+            // 
+            this.dgvConsultaEmpleados_HComentarios.DataPropertyName = "Comentarios";
+            this.dgvConsultaEmpleados_HComentarios.HeaderText = "Comentarios";
+            this.dgvConsultaEmpleados_HComentarios.Name = "dgvConsultaEmpleados_HComentarios";
+            this.dgvConsultaEmpleados_HComentarios.ReadOnly = true;
+            this.dgvConsultaEmpleados_HComentarios.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HEstado
+            // 
+            this.dgvConsultaEmpleados_HEstado.DataPropertyName = "Estado";
+            this.dgvConsultaEmpleados_HEstado.HeaderText = "Estado";
+            this.dgvConsultaEmpleados_HEstado.Name = "dgvConsultaEmpleados_HEstado";
+            this.dgvConsultaEmpleados_HEstado.ReadOnly = true;
+            this.dgvConsultaEmpleados_HEstado.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HCiudad
+            // 
+            this.dgvConsultaEmpleados_HCiudad.DataPropertyName = "Ciudad";
+            this.dgvConsultaEmpleados_HCiudad.HeaderText = "Ciudad";
+            this.dgvConsultaEmpleados_HCiudad.Name = "dgvConsultaEmpleados_HCiudad";
+            this.dgvConsultaEmpleados_HCiudad.ReadOnly = true;
+            this.dgvConsultaEmpleados_HCiudad.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HColonia
+            // 
+            this.dgvConsultaEmpleados_HColonia.DataPropertyName = "Colonia";
+            this.dgvConsultaEmpleados_HColonia.HeaderText = "Colonia";
+            this.dgvConsultaEmpleados_HColonia.Name = "dgvConsultaEmpleados_HColonia";
+            this.dgvConsultaEmpleados_HColonia.ReadOnly = true;
+            this.dgvConsultaEmpleados_HColonia.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HCalleNum
+            // 
+            this.dgvConsultaEmpleados_HCalleNum.DataPropertyName = "CalleNum";
+            this.dgvConsultaEmpleados_HCalleNum.HeaderText = "Calle y Numero";
+            this.dgvConsultaEmpleados_HCalleNum.Name = "dgvConsultaEmpleados_HCalleNum";
+            this.dgvConsultaEmpleados_HCalleNum.ReadOnly = true;
+            this.dgvConsultaEmpleados_HCalleNum.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HCodigoPostal
+            // 
+            this.dgvConsultaEmpleados_HCodigoPostal.DataPropertyName = "CodigoPostal";
+            this.dgvConsultaEmpleados_HCodigoPostal.HeaderText = "Codigo Postal";
+            this.dgvConsultaEmpleados_HCodigoPostal.Name = "dgvConsultaEmpleados_HCodigoPostal";
+            this.dgvConsultaEmpleados_HCodigoPostal.ReadOnly = true;
+            this.dgvConsultaEmpleados_HCodigoPostal.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HTelefono
+            // 
+            this.dgvConsultaEmpleados_HTelefono.DataPropertyName = "Telefono";
+            this.dgvConsultaEmpleados_HTelefono.HeaderText = "Telefono";
+            this.dgvConsultaEmpleados_HTelefono.Name = "dgvConsultaEmpleados_HTelefono";
+            this.dgvConsultaEmpleados_HTelefono.ReadOnly = true;
+            this.dgvConsultaEmpleados_HTelefono.Visible = false;
+            // 
+            // dgvConsultaEmpleados_HDepartamento
+            // 
+            this.dgvConsultaEmpleados_HDepartamento.DataPropertyName = "Departamento";
+            this.dgvConsultaEmpleados_HDepartamento.HeaderText = "Departamento";
+            this.dgvConsultaEmpleados_HDepartamento.Name = "dgvConsultaEmpleados_HDepartamento";
+            this.dgvConsultaEmpleados_HDepartamento.ReadOnly = true;
+            this.dgvConsultaEmpleados_HDepartamento.Visible = false;
+            // 
+            // dgvConsultaEmpleados_Edad
+            // 
+            this.dgvConsultaEmpleados_Edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_Edad.DataPropertyName = "Edad";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvConsultaEmpleados_Edad.HeaderText = "Edad";
+            this.dgvConsultaEmpleados_Edad.Name = "dgvConsultaEmpleados_Edad";
+            this.dgvConsultaEmpleados_Edad.ReadOnly = true;
+            this.dgvConsultaEmpleados_Edad.Width = 60;
+            // 
+            // dgvConsultaEmpleados_FechaInicio
+            // 
+            this.dgvConsultaEmpleados_FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvConsultaEmpleados_FechaInicio.DataPropertyName = "FechaInicio";
+            dataGridViewCellStyle4.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvConsultaEmpleados_FechaInicio.HeaderText = "Fecha Inicio";
+            this.dgvConsultaEmpleados_FechaInicio.Name = "dgvConsultaEmpleados_FechaInicio";
+            this.dgvConsultaEmpleados_FechaInicio.ReadOnly = true;
+            // 
+            // dgvConsultaEmpleados_Antiguedad
+            // 
+            this.dgvConsultaEmpleados_Antiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvConsultaEmpleados_Antiguedad.DataPropertyName = "Antiguedad";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvConsultaEmpleados_Antiguedad.HeaderText = "Antiguedad";
+            this.dgvConsultaEmpleados_Antiguedad.Name = "dgvConsultaEmpleados_Antiguedad";
+            this.dgvConsultaEmpleados_Antiguedad.ReadOnly = true;
+            this.dgvConsultaEmpleados_Antiguedad.Width = 104;
+            // 
+            // dgvConsultaEmpleados_Inactivo
+            // 
+            this.dgvConsultaEmpleados_Inactivo.DataPropertyName = "estaActivo";
+            this.dgvConsultaEmpleados_Inactivo.HeaderText = "Activos";
+            this.dgvConsultaEmpleados_Inactivo.Name = "dgvConsultaEmpleados_Inactivo";
+            this.dgvConsultaEmpleados_Inactivo.ReadOnly = true;
+            this.dgvConsultaEmpleados_Inactivo.Visible = false;
+            // 
+            // dgvConsultaEmpleados_FNac
+            // 
+            this.dgvConsultaEmpleados_FNac.DataPropertyName = "FNac";
+            this.dgvConsultaEmpleados_FNac.HeaderText = "Fecha Nacimiento";
+            this.dgvConsultaEmpleados_FNac.Name = "dgvConsultaEmpleados_FNac";
+            this.dgvConsultaEmpleados_FNac.ReadOnly = true;
+            this.dgvConsultaEmpleados_FNac.Visible = false;
+            // 
             // vConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,9 +782,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Sucursal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Puesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_FechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HApellPaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HApellidoMaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HRFC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HCURP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HGenero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HLugarNac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HEdoCivil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HNSS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HInfoEmerg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HComentarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HEstado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HCiudad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HColonia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HCalleNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HCodigoPostal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_HDepartamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Antiguedad;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvConsultaEmpleados_Inactivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_FNac;
     }
 }
