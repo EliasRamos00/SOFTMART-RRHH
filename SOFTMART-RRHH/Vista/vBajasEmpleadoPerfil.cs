@@ -10,6 +10,9 @@ namespace SOFTMART_RRHH.Vista
     public partial class vBajasEmpleadoPerfil : UserControl
     {
         #region VARIABLES GLOBALES
+        string patronAnterior, finiquitoAnterior, comentariosAnterior;
+        DateTime fechaAnterior;
+
         int idEmpleado = 0;
         int idBaja = 0;
         bool estaModificando = false;
@@ -129,6 +132,12 @@ namespace SOFTMART_RRHH.Vista
         {
             if (estaModificando)
             {
+                LibAux.PopUp("¡Atención!", "Edición cancelada. Se regresaron los valores anteriores.", LibAux.TipoNotif.Info);
+                tbPatron.Text = patronAnterior;
+                tbComentarios.Text = comentariosAnterior;
+                tbFiniquito.Text = finiquitoAnterior;
+                dtpFechaBaja.Value = fechaAnterior;
+
                 btnActualizar.Text = "Actualizar";
                 estaModificando = !estaModificando;
                 this.btnGuardar.Enabled = false;
@@ -136,6 +145,11 @@ namespace SOFTMART_RRHH.Vista
             }
             else
             {
+                this.patronAnterior = tbPatron.Text;
+                this.comentariosAnterior = tbComentarios.Text;
+                this.finiquitoAnterior = tbFiniquito.Text;
+                this.fechaAnterior = dtpFechaBaja.Value;
+
                 btnActualizar.Text = "Cancelar edición.";
                 estaModificando = !estaModificando;
                 this.btnGuardar.Enabled = true;

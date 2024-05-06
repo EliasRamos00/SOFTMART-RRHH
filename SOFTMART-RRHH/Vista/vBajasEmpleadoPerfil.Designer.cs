@@ -39,7 +39,6 @@
             this.lblTienda = new System.Windows.Forms.Label();
             this.tbComentarios = new System.Windows.Forms.TextBox();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.btnDarBaja = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.dtpFechaBaja = new System.Windows.Forms.DateTimePicker();
@@ -48,8 +47,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnDarBaja = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -244,23 +244,6 @@
             this.pbFoto.TabIndex = 14;
             this.pbFoto.TabStop = false;
             // 
-            // btnDarBaja
-            // 
-            this.btnDarBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.btnDarBaja.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.btnDarBaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDarBaja.Location = new System.Drawing.Point(222, 73);
-            this.btnDarBaja.Name = "btnDarBaja";
-            this.btnDarBaja.Size = new System.Drawing.Size(153, 30);
-            this.btnDarBaja.TabIndex = 13;
-            this.btnDarBaja.Text = "Dar de baja";
-            this.btnDarBaja.UseVisualStyleBackColor = false;
-            this.btnDarBaja.Click += new System.EventHandler(this.btnDarBaja_Click);
-            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -368,22 +351,22 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(378, 106);
             this.tableLayoutPanel2.TabIndex = 64;
             // 
-            // btnActualizar
+            // btnDarBaja
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(222, 3);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(153, 29);
-            this.btnActualizar.TabIndex = 62;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnDarBaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnDarBaja.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnDarBaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDarBaja.Location = new System.Drawing.Point(222, 73);
+            this.btnDarBaja.Name = "btnDarBaja";
+            this.btnDarBaja.Size = new System.Drawing.Size(153, 30);
+            this.btnDarBaja.TabIndex = 13;
+            this.btnDarBaja.Text = "Dar de baja";
+            this.btnDarBaja.UseVisualStyleBackColor = false;
+            this.btnDarBaja.Click += new System.EventHandler(this.btnDarBaja_Click);
             // 
             // btnGuardar
             // 
@@ -401,6 +384,23 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(222, 3);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(153, 29);
+            this.btnActualizar.TabIndex = 62;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // vBajasEmpleadoPerfil
             // 
