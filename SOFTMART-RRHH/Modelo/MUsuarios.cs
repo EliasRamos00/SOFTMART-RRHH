@@ -1,5 +1,7 @@
 ﻿
+using System;
 using System.Collections.Generic;
+using System.Data;
 
 
 namespace SOFTMART_RRHH.Modelo
@@ -51,6 +53,22 @@ namespace SOFTMART_RRHH.Modelo
         internal static object ObtenerUsuarios()
         {
             return LibAux.EjecutarProcedimiento("SP_CONSULTAR_Usuarios");
+        }
+
+        internal static bool VerificaTieneCuentaActiva(object idPersona)
+        {
+            List<Param> @params = new List<Param> {
+            new Param("vidPersona",idPersona),
+            };
+            DataTable dtTemp = LibAux.EjecutarSentencia("SELECT * FROM Usuarios WHERE idPersona = @vidPersona AND estaActivo = 1",@params);
+
+            if (dtTemp.Rows.Count == 0)
+            {
+                return false;
+            }
+            else {
+                return true;
+            }                        
         }
     }
 }

@@ -36,12 +36,14 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            bool error = false;
             foreach (DataGridViewRow row in dgvUsuarios.Rows)
             {
                 try
                 {
                     if (Convert.ToInt16(row.Cells["dgvUsuarios_hasChanged"].Value) == 1) // MODIFICADO
-                    {
+                    {                
                         object idUsuario = row.Cells["dgvUsuarios_idUsuario"].Value;
                         object usuario = row.Cells["dgvUsuarios_Usuario"].Value;
                         object rol = row.Cells["dgvUsuarios_rol"].Value;
@@ -54,9 +56,15 @@ namespace SOFTMART_RRHH.Vista
                         }
                         MUsuarios.ActualizarUsuario(usuario, password, rol, idPersona, idUsuario);
                         LibAux.PopUp("¡Éxito!", "El usuario ha sido actualizado con éxito.", LibAux.TipoNotif.Success);
+                        
                     }
                     if (Convert.ToInt16(row.Cells["dgvUsuarios_hasChanged"].Value) == 2) //INSERTADO
                     {
+                        if (MUsuarios.VerificaTieneCuentaActiva(row.Cells["dgvUsuarios_idPersona"].Value))
+                        {
+                            LibAux.PopUp("¡Atención!", "Esta persona ya tiene un usuario.", LibAux.TipoNotif.Info);
+                            return;
+                        }
                         object usuario = row.Cells["dgvUsuarios_Usuario"].Value;
                         object rol = row.Cells["dgvUsuarios_rol"].Value;
                         object idPersona = row.Cells["dgvUsuarios_idPersona"].Value;
@@ -64,15 +72,26 @@ namespace SOFTMART_RRHH.Vista
 
                         MUsuarios.AgregarUsuario(usuario, password, rol, idPersona);
                         LibAux.PopUp("¡Éxito!", "El usuario ha sido agregado con éxito.", LibAux.TipoNotif.Success);
+                        
                     }
+
                 }
                 catch (Exception ex)
                 {
-                    LibAux.PopUp("Error", "Hubo un error al intentar actualizar/agregar al usuario: " + row.Cells["dgvUsuarios_Usuario"].Value.ToString() + ex.Message, LibAux.TipoNotif.Error);
+                    if (ex.Message.Contains("UQ"))
+                    {
+                        LibAux.PopUp("Error", "Este nombre de usuario no esta disponible: " + row.Cells["dgvUsuarios_Usuario"].Value.ToString()+ " Cambios no guardados.", LibAux.TipoNotif.Error);
+                    }
+                    else {
+                        LibAux.PopUp("Error", "Hubo un error al intentar actualizar/agregar al usuario: " + row.Cells["dgvUsuarios_Usuario"].Value.ToString(), LibAux.TipoNotif.Error);
+                    }                    
                     LibAux.ErrorLog(ex);
+                    error = true;
                 }
             }
-            CargarUsuarios();
+            if (!error) {
+                CargarUsuarios();
+            }            
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -95,6 +114,14 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //Si existe un reglón que este siendo insertado, no permite agregar más.
+            foreach (DataGridViewRow row in dgvUsuarios.Rows)
+            {
+                if (Convert.ToInt16(row.Cells["dgvUsuarios_hasChanged"].Value) == 2) {
+                    return;
+                }
+            }
+
             DataTable dt = dgvUsuarios.DataSource as DataTable;
             DataRow newRow;
             newRow = dt.NewRow();
