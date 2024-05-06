@@ -1,0 +1,7 @@
+----------Detalles del error en:  06/05/2024 10:45:16 a. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 10:45:16 a. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Duplicate entry '27222' for key 'UQ_Persona'
+Usuario: USUARIO RAIZ
+-----------------------------------------------

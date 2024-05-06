@@ -44,6 +44,7 @@
             this.rowCounting = new System.Windows.Forms.Label();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
             this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBajasEmpleados_idBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isBeingCalculated = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Tienda = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -158,6 +159,7 @@
             this.dgvBajasEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBajasEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvConsultaEmpleados_idEmpleado,
+            this.dgvBajasEmpleados_idBaja,
             this.isBeingCalculated,
             this.dgvBajasEmpleados_Nombre,
             this.dgvBajasEmpleados_Tienda,
@@ -195,6 +197,7 @@
             this.dgvBajasEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBajasEmpleados.Size = new System.Drawing.Size(974, 502);
             this.dgvBajasEmpleados.TabIndex = 6;
+            this.dgvBajasEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBajasEmpleados_CellDoubleClick);
             // 
             // btnRecarga
             // 
@@ -276,6 +279,14 @@
             this.dgvConsultaEmpleados_idEmpleado.Name = "dgvConsultaEmpleados_idEmpleado";
             this.dgvConsultaEmpleados_idEmpleado.ReadOnly = true;
             this.dgvConsultaEmpleados_idEmpleado.Visible = false;
+            // 
+            // dgvBajasEmpleados_idBaja
+            // 
+            this.dgvBajasEmpleados_idBaja.DataPropertyName = "idBaja";
+            this.dgvBajasEmpleados_idBaja.HeaderText = "idBaja";
+            this.dgvBajasEmpleados_idBaja.Name = "dgvBajasEmpleados_idBaja";
+            this.dgvBajasEmpleados_idBaja.ReadOnly = true;
+            this.dgvBajasEmpleados_idBaja.Visible = false;
             // 
             // isBeingCalculated
             // 
@@ -402,6 +413,7 @@
         private FontAwesome.Sharp.IconButton btnExcel;
         private System.Windows.Forms.Label rowCounting;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_idEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_idBaja;
         private System.Windows.Forms.DataGridViewTextBoxColumn isBeingCalculated;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Tienda;
