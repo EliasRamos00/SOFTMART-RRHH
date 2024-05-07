@@ -50,7 +50,7 @@ namespace SOFTMART_RRHH.Vista
 
             foreach (DataGridViewColumn col in dgvConsultaEmpleados.Columns)
             {
-                if (col.HeaderText == "Nombre" || col.HeaderText == "NumContrato" || col.HeaderText == "Sucursal" || col.HeaderText == "Puesto" || col.HeaderText == "Edad" || col.HeaderText == "Antiguedad")
+                if (col.HeaderText == "NombreCompleto" || col.HeaderText == "NumContrato" || col.HeaderText == "Sucursal" || col.HeaderText == "Puesto" || col.HeaderText == "Edad" || col.HeaderText == "Antiguedad")
                     keyValuePairs.Add(col.Name, col.HeaderText);
 
             }
@@ -202,15 +202,23 @@ namespace SOFTMART_RRHH.Vista
             List<DataGridViewColumn> columns = new List<DataGridViewColumn>();
             foreach (DataGridViewColumn item in dgvConsultaEmpleados.Columns)
             {
-                if (!item.HeaderText.Contains("id"))
+                string id = item.HeaderText.Substring(0, 2);
+                if (id != "id")
                 {
-                    columns.Add(item);
+                    if (!item.HeaderText.Contains("Activos"))
+                    {
+                        if (!item.HeaderText.Contains("."))
+                        {
+                            columns.Add(item);
+                        }
+                    }
                 }
             }
             frmExcelCheckList frmExcel = new frmExcelCheckList(columns);
             // Verificar si el diálogo fue cerrado o cancelado
             if (frmExcel.ShowDialog() == DialogResult.OK)
             {
+
                 LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvConsultaEmpleados, frmExcel.ColumnasAExportar));
             }
         }

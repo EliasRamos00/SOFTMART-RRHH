@@ -23,7 +23,7 @@ namespace SOFTMART_RRHH.Modelo
         static string User = Properties.Settings.Default.Usuario;
         static string Pass = Properties.Settings.Default.Contrasenia;
         static string Port = Properties.Settings.Default.Port;
-        
+
         public LibAux() { }
         public enum CRUD
         {
@@ -60,9 +60,9 @@ namespace SOFTMART_RRHH.Modelo
         /// <returns></returns>
         public static string CadenaConexion()
         {
-                    //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
-                    //-------------- CADENA DE CONEXION A BASE DE DATOS DE DESARROLLO--------
-            return  $"Server={IP};Database={BD};Port={Port};User ID={User};Password={Pass};Allow User Variables=True";
+            //-------------- ¡ ¡ ¡  I M P O R T A N T E ! ! ! ------------
+            //-------------- CADENA DE CONEXION A BASE DE DATOS DE DESARROLLO--------
+            return $"Server={IP};Database={BD};Port={Port};User ID={User};Password={Pass};Allow User Variables=True";
         }
         public static DataTable EjecutarProcedimiento(string nombreProcedimiento, List<Param> Parametros = null)
         {
@@ -214,11 +214,22 @@ namespace SOFTMART_RRHH.Modelo
             up.Popup();
 
         }
+        public static void ChangeColumnType(System.Data.DataTable dt, string p, Type type)
+        {
+            dt.Columns.Add(p + "_new", type);
+            foreach (System.Data.DataRow dr in dt.Rows)
+            {   // Will need switch Case for others if Date is not the only one.
+                dr[p + "_new"] = DateTime.FromOADate(double.Parse(dr[p].ToString())); // dr[p].ToString();
+            }
+            dt.Columns.Remove(p);
+            dt.Columns[p + "_new"].ColumnName = p;
+        }
         internal static void ExportarAExcel(DataTable dt)
         {
+            
             using (var workbook = new XSSFWorkbook())
             {
-                var sheet = workbook.CreateSheet("Sheet1");
+                var sheet = workbook.CreateSheet("Hoja 1");
 
                 // Agregar encabezados
                 var headerRow = sheet.CreateRow(0);
@@ -233,6 +244,10 @@ namespace SOFTMART_RRHH.Modelo
                     var dataRow = sheet.CreateRow(i + 1);
                     for (int j = 0; j < dt.Columns.Count; j++)
                     {
+                        //if (dt.Rows[i][j].Equals(typeof(DateTime)))
+                        //{
+                        //    dt.Rows[i][j] = Convert.ToDateTime(dt.Rows[i][j]).ToString("dd-MMMM-yyyy");
+                        //}
                         dataRow.CreateCell(j).SetCellValue(dt.Rows[i][j]?.ToString() ?? "");
                     }
                 }
@@ -240,8 +255,8 @@ namespace SOFTMART_RRHH.Modelo
                 // Guardar el archivo
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-                saveFileDialog.Title = "Export to Excel";
-                saveFileDialog.FileName = "ExportedData.xlsx"; // Nombre predeterminado del archivo
+                saveFileDialog.Title = "Exportar a Excel";
+                saveFileDialog.FileName = "Exportacion SOFTMART-RRHH.xlsx"; // Nombre predeterminado del archivo
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     using (var fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create))
@@ -312,7 +327,7 @@ namespace SOFTMART_RRHH.Modelo
                     sw.Close();
                 }
             }
-            catch{}
+            catch { }
         }
         public static string GenerateMD5(string cadena)
         {
