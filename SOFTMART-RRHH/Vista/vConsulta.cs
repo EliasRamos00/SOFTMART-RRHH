@@ -50,7 +50,7 @@ namespace SOFTMART_RRHH.Vista
 
             foreach (DataGridViewColumn col in dgvConsultaEmpleados.Columns)
             {
-                if (col.HeaderText == "Nombre" || col.HeaderText == "NumContrato" || col.HeaderText == "Sucursal" || col.HeaderText == "Puesto" || col.HeaderText == "Edad" || col.HeaderText == "Antiguedad")
+                if (col.HeaderText == "NombreCompleto" || col.HeaderText == "NumContrato" || col.HeaderText == "Sucursal" || col.HeaderText == "Puesto" || col.HeaderText == "Edad" || col.HeaderText == "Antiguedad")
                     keyValuePairs.Add(col.Name, col.HeaderText);
 
             }

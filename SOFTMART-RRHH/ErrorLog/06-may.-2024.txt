@@ -117,3 +117,227 @@ Exception Type: MySqlConnector.MySqlException
 Mensaje de Error : Duplicate entry 'raiz' for key 'UQ_Usuarios'
 Usuario: ELIAS JR. RAMOS
 -----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:36 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:36 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:36 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:36 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:37 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:37 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:37 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:37 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:37 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:37 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:37 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:37 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:37 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:37 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:38 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:38 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:38 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:38 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:39 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:39 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:39 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:39 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:39 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:39 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:39 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:39 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:39 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:39 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:40 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:40 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:19:40 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:19:40 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:45 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:45 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:46 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:46 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:46 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:46 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:46 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:46 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:47 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:47 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:47 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:47 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:47 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:47 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:47 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:47 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:47 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:47 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------
+----------Detalles del error en:  06/05/2024 05:20:48 p. m.----------
+-----------------------------------------------
+Fecha: 06/05/2024 05:20:48 p. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Nombre_Completo].
+Usuario: USUARIO RAIZ
+-----------------------------------------------

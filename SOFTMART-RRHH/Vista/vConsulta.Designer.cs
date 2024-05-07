@@ -499,8 +499,8 @@
             // dgvConsultaEmpleados_Nombre
             // 
             this.dgvConsultaEmpleados_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvConsultaEmpleados_Nombre.DataPropertyName = "NombreCompl";
-            this.dgvConsultaEmpleados_Nombre.HeaderText = "Nombre completo";
+            this.dgvConsultaEmpleados_Nombre.DataPropertyName = "NombreCompleto";
+            this.dgvConsultaEmpleados_Nombre.HeaderText = "NombreCompleto";
             this.dgvConsultaEmpleados_Nombre.Name = "dgvConsultaEmpleados_Nombre";
             this.dgvConsultaEmpleados_Nombre.ReadOnly = true;
             // 
