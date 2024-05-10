@@ -38,6 +38,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -59,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.pbLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -137,6 +141,16 @@
             this.panel5.Size = new System.Drawing.Size(215, 2);
             this.panel5.TabIndex = 7;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::SOFTMART_RRHH.Properties.Resources.logo_para_miriam;
+            this.pbLogo.Location = new System.Drawing.Point(0, 38);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(310, 110);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +174,8 @@
             this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.frm_Login_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frm_Login_KeyUp);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +192,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }
 

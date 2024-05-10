@@ -398,6 +398,8 @@
     <None Include="Resources\Softmart RRHH.png" />
     <None Include="Resources\carga.gif" />
     <None Include="Resources\circulocarga.gif" />
+    <None Include="Resources\logo para miriam .png" />
+    <None Include="Resources\logo para miriam2.png" />
     <Content Include="Softmart-RRHH.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

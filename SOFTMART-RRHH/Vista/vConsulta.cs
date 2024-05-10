@@ -167,7 +167,6 @@ namespace SOFTMART_RRHH.Vista
                     return 999999;
                 case "0 Año(s), 0 Mes(es)":
                     return 0;
-
                 default:
                     return 0;
             }
