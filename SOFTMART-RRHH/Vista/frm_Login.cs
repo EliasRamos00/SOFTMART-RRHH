@@ -104,5 +104,10 @@ namespace SOFTMART_RRHH.Vista
         {
             this.ActiveControl = tbUsuario;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

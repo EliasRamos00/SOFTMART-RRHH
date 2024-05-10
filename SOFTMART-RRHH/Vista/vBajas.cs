@@ -231,7 +231,10 @@ namespace SOFTMART_RRHH.Vista
             {
                 if (!item.HeaderText.Contains("id"))
                 {
-                    columns.Add(item);
+                    if (!item.HeaderText.Contains("isBeingCalculated"))
+                    {
+                        columns.Add(item);
+                    }
                 }
 
             }
