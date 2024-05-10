@@ -95,11 +95,12 @@ namespace SOFTMART_RRHH
         /// <param name="e"></param>
         private void MostrarEmpleado(object sender, EventArgs e)
         {
-            int idEmpleado = 0, idPersona = 0;
+            int idEmpleado = 0, idPersona = 0, vTodos = 0;
             if (sender.ToString().Contains("vTodos"))
             {
                 idEmpleado = ((vTodos)sender).idEmpleado;
                 idPersona = ((vTodos)sender).idPersona;
+                vTodos = 1;
 
             }
             else if (sender.ToString().Contains("vConsulta"))
@@ -107,7 +108,7 @@ namespace SOFTMART_RRHH
                 idEmpleado = ((vConsulta)sender).idEmpleado;
                 idPersona = ((vConsulta)sender).idPersona;
             }
-            vPersonal perfil = new vPersonal(LibAux.CRUD.SELECT, idEmpleado, idPersona);
+            vPersonal perfil = new vPersonal(LibAux.CRUD.SELECT, idEmpleado, idPersona, vTodos);
             perfil.BtnEliminar += MostrarVentanaElim;
             perfil.BtnHistorial += MostarVentanaHistorial;
 

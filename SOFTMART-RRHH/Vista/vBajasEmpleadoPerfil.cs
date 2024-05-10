@@ -28,6 +28,9 @@ namespace SOFTMART_RRHH.Vista
         {
             InitializeComponent();
             this.idEmpleado = idEmpleado;
+            btnGuardar.Hide();
+            btnActualizar.Hide();
+
         }
         public vBajasEmpleadoPerfil(int idBaja, LibAux.CRUD CRUD)
         {

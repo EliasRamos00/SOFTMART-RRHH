@@ -19,6 +19,7 @@ namespace SOFTMART_RRHH.Vista
         public event EventHandler BtnHistorial;
         public int idEmpleado = 0;
         public int idPersona = 0;
+        private int vTodos = 0;
 
         string FotografiaDestino = "\\Fotos_Personal\\";
         string INEDestino = "\\Fotos_INE\\";
@@ -36,12 +37,13 @@ namespace SOFTMART_RRHH.Vista
         {
             InitializeComponent();
         }
-        public vPersonal(CRUD crud, int idEmpleado = 0, int idPersona = 0)
+        public vPersonal(CRUD crud, int idEmpleado = 0, int idPersona = 0, int vTodos = 0)
         {
             InitializeComponent();
-            EsConsultor();
+            EsConsultor();            
             this.idEmpleado = idEmpleado;
             this.idPersona = idPersona;
+            this.vTodos = vTodos;
             switch (crud)
             {
                 case CRUD.SELECT:
@@ -66,6 +68,15 @@ namespace SOFTMART_RRHH.Vista
                     lblMov.Text = "?????";
                     lblMov.ForeColor = LibAux.libColores[eColores.Baja];
                     break;
+            }
+        }
+
+        private void EsvTodos()
+        {
+            if (this.vTodos == 1)
+            {
+                btnDarBaja.Hide();
+                btnHistorial.Hide();
             }
         }
 
@@ -299,6 +310,7 @@ namespace SOFTMART_RRHH.Vista
                 CargarInformacion();
                 CamposSoloLecturaPersona(true);
                 CamposSoloLecturaEmpleado(true);
+                EsvTodos(); // Este metodo es para saber si entra desde la opcion de vTodos, y si es así ocultar las opciones que no van.
             }
         }
         private void btnClose_Click(object sender, EventArgs e)
