@@ -8,8 +8,7 @@ using System.Windows.Forms;
 namespace SOFTMART_RRHH.Vista
 {
     public partial class vUsuarios : System.Windows.Forms.UserControl
-    {
-        private System.Timers.Timer tListener;
+    {        
         #region VARIABLES GLOBALES
 
         #endregion
@@ -36,7 +35,6 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
             bool error = false;
             foreach (DataGridViewRow row in dgvUsuarios.Rows)
             {
@@ -55,8 +53,7 @@ namespace SOFTMART_RRHH.Vista
                             password = LibAux.GenerateMD5(row.Cells["dgvUsuarios_password"].Value.ToString());
                         }
                         MUsuarios.ActualizarUsuario(usuario, password, rol, idPersona, idUsuario);
-                        LibAux.PopUp("¡Éxito!", "El usuario ha sido actualizado con éxito.", LibAux.TipoNotif.Success);
-                        
+                        LibAux.PopUp("¡Éxito!", "El usuario ha sido actualizado con éxito.", LibAux.TipoNotif.Success);                        
                     }
                     if (Convert.ToInt16(row.Cells["dgvUsuarios_hasChanged"].Value) == 2) //INSERTADO
                     {
@@ -71,8 +68,7 @@ namespace SOFTMART_RRHH.Vista
                         object password = LibAux.GenerateMD5(row.Cells["dgvUsuarios_password"].Value.ToString());
 
                         MUsuarios.AgregarUsuario(usuario, password, rol, idPersona);
-                        LibAux.PopUp("¡Éxito!", "El usuario ha sido agregado con éxito.", LibAux.TipoNotif.Success);
-                        
+                        LibAux.PopUp("¡Éxito!", "El usuario ha sido agregado con éxito.", LibAux.TipoNotif.Success);                        
                     }
 
                 }
@@ -143,10 +139,6 @@ namespace SOFTMART_RRHH.Vista
             {
                 dgvUsuarios.Rows[dgvUsuarios.CurrentCell.RowIndex].Cells["dgvUsuarios_hasChanged"].Value = 1;
             }
-
-        }
-        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
         private void dgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

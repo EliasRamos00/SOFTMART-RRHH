@@ -213,7 +213,7 @@ namespace SOFTMART_RRHH.Vista
                     }
                 }
             }
-            frmExcelCheckList frmExcel = new frmExcelCheckList(columns);
+            frmColumnasExportarEmpleados frmExcel = new frmColumnasExportarEmpleados();
             // Verificar si el diálogo fue cerrado o cancelado
             if (frmExcel.ShowDialog() == DialogResult.OK)
             {

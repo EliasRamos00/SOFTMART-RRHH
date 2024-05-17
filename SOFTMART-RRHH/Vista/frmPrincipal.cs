@@ -1,5 +1,4 @@
 using System;
-
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using SOFTMART_RRHH.Vista;
@@ -7,12 +6,6 @@ using SOFTMART_RRHH.Modelo;
 using System.Windows.Controls;
 using System.Diagnostics;
 using System.Reflection;
-using System.Data;
-using Microsoft.VisualBasic.FileIO;
-using System.IO;
-using System.Collections.Generic;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-
 
 
 namespace SOFTMART_RRHH

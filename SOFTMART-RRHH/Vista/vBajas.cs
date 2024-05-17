@@ -262,11 +262,6 @@ namespace SOFTMART_RRHH.Vista
             rowCounting.Text = "Registros : " + dgvBajasEmpleados.Rows.Count.ToString();
         }
         #endregion
-        public virtual void MostrarInformacionEmpleado(EventArgs e)
-        {
-
-        }
-
         private void dgvBajasEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             idBaja = Convert.ToInt16(dgvBajasEmpleados.CurrentRow.Cells["dgvBajasEmpleados_idBaja"].Value);

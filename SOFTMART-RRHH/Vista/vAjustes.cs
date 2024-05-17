@@ -113,7 +113,6 @@ namespace SOFTMART_RRHH.Vista
         {
             dgvEdosCiviles.DataSource = MEstadosCiviles.ObtenerEdosCivilesAjustes();
         }
-
         private void btnGuardarEdoCiv_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvEdosCiviles.Rows)
@@ -141,7 +140,6 @@ namespace SOFTMART_RRHH.Vista
             }
             CargarEdosCiviles();
         }
-
         private void dgvEdosCiviles_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (Convert.ToInt16(dgvEdosCiviles.Rows[dgvEdosCiviles.CurrentCell.RowIndex].Cells["dgvEdosCiviles_hasChanged"].Value) == 0)
@@ -149,7 +147,6 @@ namespace SOFTMART_RRHH.Vista
                 dgvEdosCiviles.Rows[dgvEdosCiviles.CurrentCell.RowIndex].Cells["dgvEdosCiviles_hasChanged"].Value = 1;
             }
         }
-
         private void btnEliminarEdosCiviles_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Estas seguro de eliminar este estado civil?", "¡Alto!", MessageBoxButtons.YesNo);
@@ -169,7 +166,6 @@ namespace SOFTMART_RRHH.Vista
                 CargarEdosCiviles();
             }
         }
-
         private void btnAgregarEdoCivil_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvEdosCiviles.DataSource as DataTable;
@@ -178,12 +174,10 @@ namespace SOFTMART_RRHH.Vista
             newRow["hasChanged"] = 2;
             dt.Rows.Add(newRow);
         }
-
         private void btnRefreshEdoCiviles_Click(object sender, EventArgs e)
         {
             CargarEdosCiviles();
         }
-
         private void dgvEdosCiviles_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             EdoCivilAnterior = dgvEdosCiviles.CurrentRow.Cells["dgvEdosCiviles_EstadoCivil"].Value.ToString();
@@ -191,12 +185,10 @@ namespace SOFTMART_RRHH.Vista
         #endregion
 
         #region CRUD - ESCOLARIDADES
-
         private void CargarEscolaridades()
         {
             dgvEscolaridades.DataSource = MEscolaridades.ObtenerEscolaridadesAjustes();
         }
-
         private void dgvEscolaridades_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (Convert.ToInt16(dgvEscolaridades.Rows[dgvEscolaridades.CurrentCell.RowIndex].Cells["dgvEscolaridades_hasChanged"].Value) == 0)
@@ -205,12 +197,10 @@ namespace SOFTMART_RRHH.Vista
             }
 
         }
-
         private void btnRefreshEscola_Click(object sender, EventArgs e)
         {
             CargarEscolaridades();
         }
-
         private void btnGuardarEscola_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvEscolaridades.Rows)
@@ -238,7 +228,6 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
         }
-
         private void btnEliminarEscola_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Estas seguro de eliminar esta escolaridad?", "¡Alto!", MessageBoxButtons.YesNo);
@@ -259,7 +248,6 @@ namespace SOFTMART_RRHH.Vista
                 CargarEscolaridades();
             }
         }
-
         private void btnAgregarEscola_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvEscolaridades.DataSource as DataTable;
@@ -282,12 +270,10 @@ namespace SOFTMART_RRHH.Vista
                 dgvTiendas.Rows[dgvTiendas.CurrentCell.RowIndex].Cells["dgvTiendas_hasChanged"].Value = 1;
             }
         }
-
         private void btnRefreshSucursales_Click(object sender, EventArgs e)
         {
             CargarSucursales();
         }
-
         private void btnGuardarSucursales_Click(object sender, EventArgs e)
         {
 
@@ -339,7 +325,6 @@ namespace SOFTMART_RRHH.Vista
                 CargarSucursales();
             }
         }
-
         private void btnAgregarSucursal_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvTiendas.DataSource as DataTable;

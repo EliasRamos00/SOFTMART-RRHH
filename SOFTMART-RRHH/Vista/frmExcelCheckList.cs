@@ -37,9 +37,9 @@ namespace SOFTMART_RRHH.Vista
                 box.Location = lastPoint; //vertical                                                   
 
                 this.Controls.Add(box);
-                vertical = box.Location.Y+30;
-                lastPoint = new Point(horizontal, box.Location.Y+30);
-                
+                vertical = box.Location.Y + 30;
+                lastPoint = new Point(horizontal, box.Location.Y + 30);
+
                 if (box.Location.Y >= 600)
                 {
                     columnON = true;
@@ -52,15 +52,14 @@ namespace SOFTMART_RRHH.Vista
             {
                 this.Size = new Size(horizontal + 160, 680);
             }
-            else {
-                this.Size = new Size(horizontal + 350, vertical+120);
+            else
+            {
+                this.Size = new Size(horizontal + 350, vertical + 120);
             }
             btnExportar.Text = "Exportar";
             btnExportar.AutoSize = true;
             btnExportar.Location = lastPoint;
             btnExportar.Size = new Size(100, 38);
-            
-
         }
         private void btnExportar_Click(object sender, EventArgs e)
         {

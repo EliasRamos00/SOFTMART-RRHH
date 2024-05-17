@@ -42,6 +42,10 @@
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.dgvConsultaEmpleados = new System.Windows.Forms.DataGridView();
             this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleo_Escolaridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleo_Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleo_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultaEmpleo_Sueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_idPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_DiasAntiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -193,6 +197,10 @@
             this.dgvConsultaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvConsultaEmpleados_idEmpleado,
+            this.dgvConsultaEmpleo_Escolaridad,
+            this.dgvConsultaEmpleo_Especialidad,
+            this.dgvConsultaEmpleo_Area,
+            this.dgvConsultaEmpleo_Sueldo,
             this.dgvConsultaEmpleados_idPersona,
             this.dgvConsultaEmpleados_DiasAntiguedad,
             this.dgvConsultaEmpleados_Nombre,
@@ -260,6 +268,38 @@
             this.dgvConsultaEmpleados_idEmpleado.Name = "dgvConsultaEmpleados_idEmpleado";
             this.dgvConsultaEmpleados_idEmpleado.ReadOnly = true;
             this.dgvConsultaEmpleados_idEmpleado.Visible = false;
+            // 
+            // dgvConsultaEmpleo_Escolaridad
+            // 
+            this.dgvConsultaEmpleo_Escolaridad.DataPropertyName = "Escolaridad";
+            this.dgvConsultaEmpleo_Escolaridad.HeaderText = "Escolaridad";
+            this.dgvConsultaEmpleo_Escolaridad.Name = "dgvConsultaEmpleo_Escolaridad";
+            this.dgvConsultaEmpleo_Escolaridad.ReadOnly = true;
+            this.dgvConsultaEmpleo_Escolaridad.Visible = false;
+            // 
+            // dgvConsultaEmpleo_Especialidad
+            // 
+            this.dgvConsultaEmpleo_Especialidad.DataPropertyName = "Especialidad";
+            this.dgvConsultaEmpleo_Especialidad.HeaderText = "Especialidad";
+            this.dgvConsultaEmpleo_Especialidad.Name = "dgvConsultaEmpleo_Especialidad";
+            this.dgvConsultaEmpleo_Especialidad.ReadOnly = true;
+            this.dgvConsultaEmpleo_Especialidad.Visible = false;
+            // 
+            // dgvConsultaEmpleo_Area
+            // 
+            this.dgvConsultaEmpleo_Area.DataPropertyName = "Area";
+            this.dgvConsultaEmpleo_Area.HeaderText = "Area";
+            this.dgvConsultaEmpleo_Area.Name = "dgvConsultaEmpleo_Area";
+            this.dgvConsultaEmpleo_Area.ReadOnly = true;
+            this.dgvConsultaEmpleo_Area.Visible = false;
+            // 
+            // dgvConsultaEmpleo_Sueldo
+            // 
+            this.dgvConsultaEmpleo_Sueldo.DataPropertyName = "Sueldo";
+            this.dgvConsultaEmpleo_Sueldo.HeaderText = "Sueldo";
+            this.dgvConsultaEmpleo_Sueldo.Name = "dgvConsultaEmpleo_Sueldo";
+            this.dgvConsultaEmpleo_Sueldo.ReadOnly = true;
+            this.dgvConsultaEmpleo_Sueldo.Visible = false;
             // 
             // dgvConsultaEmpleados_idPersona
             // 
@@ -775,6 +815,10 @@
         private System.Windows.Forms.ComboBox cbFinal;
         private System.Windows.Forms.Label rowCounting;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_idEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleo_Escolaridad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleo_Especialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleo_Area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleo_Sueldo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_idPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_DiasAntiguedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Nombre;

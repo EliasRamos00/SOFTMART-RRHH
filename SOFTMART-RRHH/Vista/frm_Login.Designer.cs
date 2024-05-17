@@ -55,7 +55,7 @@
             this.button1.Location = new System.Drawing.Point(66, 360);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 31);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 8;
             this.button1.Text = "ACCEDER";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnIniciar);
@@ -68,7 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 187);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 0;
             // 
             // pbLogo
             // 
@@ -103,7 +103,7 @@
             this.tbPassword.Location = new System.Drawing.Point(66, 297);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(174, 19);
-            this.tbPassword.TabIndex = 3;
+            this.tbPassword.TabIndex = 5;
             this.tbPassword.Text = "Contraseña";
             this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
             this.tbPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyUp);
@@ -117,7 +117,7 @@
             this.label1.Location = new System.Drawing.Point(105, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 1;
             this.label1.Text = "LOG IN";
             // 
             // panel2
@@ -126,7 +126,7 @@
             this.panel2.Location = new System.Drawing.Point(53, 273);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 2);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 3;
             // 
             // panel3
             // 
@@ -134,7 +134,7 @@
             this.panel3.Location = new System.Drawing.Point(57, 273);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(215, 2);
-            this.panel3.TabIndex = 6;
+            this.panel3.TabIndex = 4;
             // 
             // panel4
             // 
@@ -142,7 +142,7 @@
             this.panel4.Location = new System.Drawing.Point(57, 323);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 2);
-            this.panel4.TabIndex = 8;
+            this.panel4.TabIndex = 7;
             // 
             // panel5
             // 
@@ -150,7 +150,7 @@
             this.panel5.Location = new System.Drawing.Point(53, 323);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(215, 2);
-            this.panel5.TabIndex = 7;
+            this.panel5.TabIndex = 6;
             // 
             // button2
             // 

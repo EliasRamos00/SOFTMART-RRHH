@@ -30,7 +30,7 @@
     <SuiteName>RRHH</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>21</ApplicationRevision>
+    <ApplicationRevision>22</ApplicationRevision>
     <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -207,6 +207,12 @@
     <Compile Include="Vista\frmCarga.Designer.cs">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmColumnasExportarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmColumnasExportarEmpleados.Designer.cs">
+      <DependentUpon>frmColumnasExportarEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\vAjustes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\frmCarga.resx">
       <DependentUpon>frmCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmColumnasExportarEmpleados.resx">
+      <DependentUpon>frmColumnasExportarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\vAjustes.resx">
       <DependentUpon>vAjustes.cs</DependentUpon>

@@ -1,0 +1,7 @@
+----------Detalles del error en:  17/05/2024 09:19:48 a. m.----------
+-----------------------------------------------
+Fecha: 17/05/2024 09:19:48 a. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------

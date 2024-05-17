@@ -40,7 +40,7 @@ namespace SOFTMART_RRHH.Vista
         public vPersonal(CRUD crud, int idEmpleado = 0, int idPersona = 0, int vTodos = 0)
         {
             InitializeComponent();
-            EsConsultor();            
+            EsConsultor();
             this.idEmpleado = idEmpleado;
             this.idPersona = idPersona;
             this.vTodos = vTodos;
@@ -414,10 +414,7 @@ namespace SOFTMART_RRHH.Vista
                     LimpiarCamposEmpleado();
                     tbCURP.Text = "";
                 }
-
             }
-
-
         }
 
         private bool ValidarCampos()

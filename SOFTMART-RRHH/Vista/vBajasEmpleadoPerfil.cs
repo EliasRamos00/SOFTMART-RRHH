@@ -19,18 +19,13 @@ namespace SOFTMART_RRHH.Vista
         bool esConsulta = false;
 
         #endregion
-        #region CONSTRUCTORES
-        public vBajasEmpleadoPerfil()
-        {
-            InitializeComponent();
-        }
+        #region CONSTRUCTORES        
         public vBajasEmpleadoPerfil(int idEmpleado)
         {
             InitializeComponent();
             this.idEmpleado = idEmpleado;
             btnGuardar.Hide();
             btnActualizar.Hide();
-
         }
         public vBajasEmpleadoPerfil(int idBaja, LibAux.CRUD CRUD)
         {
@@ -43,9 +38,7 @@ namespace SOFTMART_RRHH.Vista
             this.esConsulta = true;
             this.btnGuardar.Visible = true;
             this.btnGuardar.Enabled = false;
-
         }
-
         private void CamposSoloLectura(bool @bool)
         {
             this.dtpFechaBaja.Enabled = !@bool;
@@ -81,7 +74,6 @@ namespace SOFTMART_RRHH.Vista
         }
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
-
             if (esConsulta)
             {
                 if (System.Windows.Forms.MessageBox.Show("¿Estas seguro de revocar la baja a " + lblNombre.Text + " ?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -98,11 +90,9 @@ namespace SOFTMART_RRHH.Vista
                         LibAux.PopUp("¡Atención!", "Ocurrió un error al revocar la baja.", LibAux.TipoNotif.Error);
                     }
                 }
-
             }
             else
             {
-
                 if (System.Windows.Forms.MessageBox.Show("¿Estas seguro de dar de baja a " + lblNombre.Text + " ?", "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     try
@@ -132,7 +122,6 @@ namespace SOFTMART_RRHH.Vista
             this.Hide();
         }
         #endregion
-
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (estaModificando)
@@ -159,10 +148,8 @@ namespace SOFTMART_RRHH.Vista
                 estaModificando = !estaModificando;
                 this.btnGuardar.Enabled = true;
                 CamposSoloLectura(false);
-
             }
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (esConsulta && estaModificando)
