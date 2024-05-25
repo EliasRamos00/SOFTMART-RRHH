@@ -226,7 +226,7 @@ namespace SOFTMART_RRHH.Modelo
         }
         internal static void ExportarAExcel(DataTable dt)
         {
-            
+
             using (var workbook = new XSSFWorkbook())
             {
                 var sheet = workbook.CreateSheet("Hoja 1");
@@ -244,10 +244,6 @@ namespace SOFTMART_RRHH.Modelo
                     var dataRow = sheet.CreateRow(i + 1);
                     for (int j = 0; j < dt.Columns.Count; j++)
                     {
-                        //if (dt.Rows[i][j].Equals(typeof(DateTime)))
-                        //{
-                        //    dt.Rows[i][j] = Convert.ToDateTime(dt.Rows[i][j]).ToString("dd-MMMM-yyyy");
-                        //}
                         dataRow.CreateCell(j).SetCellValue(dt.Rows[i][j]?.ToString() ?? "");
                     }
                 }
