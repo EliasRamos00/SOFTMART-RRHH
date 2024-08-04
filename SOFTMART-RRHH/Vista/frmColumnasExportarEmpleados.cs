@@ -50,7 +50,7 @@ namespace SOFTMART_RRHH.Vista
         private void CambiarNombresCB()
         {
             cbNombre.Text = "Nombre";
-            cbNumContrato.Text = "NumContrato";
+            cbNumContrato.Text = "Num. Contrato";
             cbTienda.Text = "Sucursal";
             cbFechaNac.Text = "Fecha Nacimiento";
             cbFechaIngreso.Text = "Fecha Inicio";
@@ -60,9 +60,15 @@ namespace SOFTMART_RRHH.Vista
             cbEdoCivil.Text = "Estado civil";
             cbNumSegSocial.Text = "Numero de seguro social";
             cbInfoEmerg.Text = "Informacion de emergencia";
-            cbComentarios.Text = "Comentarios";
             cbCalleNum.Text = "Calle y Numero";
             cbCodigoPostal.Text = "Codigo Postal";
+
+            cbAntiguedad.Text = "Antiguedad";
+            cbFoto.Text = "tieneFoto";
+            cbINE.Text = "tieneINE";
+            cbEmpleadoTemporada.Text = "esEmpleadoTemp";
+            cbNombreCompleto.Text = "NombreCompleto";
+
         }
     }
 }

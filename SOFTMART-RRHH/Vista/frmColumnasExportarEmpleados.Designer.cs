@@ -54,7 +54,7 @@
             this.cbTelefono = new System.Windows.Forms.CheckBox();
             this.cbFechaIngreso = new System.Windows.Forms.CheckBox();
             this.cbNombre = new System.Windows.Forms.CheckBox();
-            this.cbComentarios = new System.Windows.Forms.CheckBox();
+            this.cbAntiguedad = new System.Windows.Forms.CheckBox();
             this.gBLaboral = new System.Windows.Forms.GroupBox();
             this.tlpLaboral = new System.Windows.Forms.TableLayoutPanel();
             this.gBPersonal = new System.Windows.Forms.GroupBox();
@@ -63,6 +63,11 @@
             this.tlpDomiciliar = new System.Windows.Forms.TableLayoutPanel();
             this.lblInstruct = new System.Windows.Forms.Label();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.cbComentarios = new System.Windows.Forms.CheckBox();
+            this.cbINE = new System.Windows.Forms.CheckBox();
+            this.cbFoto = new System.Windows.Forms.CheckBox();
+            this.cbNombreCompleto = new System.Windows.Forms.CheckBox();
+            this.cbEmpleadoTemporada = new System.Windows.Forms.CheckBox();
             this.gBLaboral.SuspendLayout();
             this.tlpLaboral.SuspendLayout();
             this.gBPersonal.SuspendLayout();
@@ -75,11 +80,13 @@
             // 
             this.cbApePat.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbApePat.AutoSize = true;
+            this.cbApePat.Checked = true;
+            this.cbApePat.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbApePat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbApePat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbApePat.Location = new System.Drawing.Point(3, 3);
             this.cbApePat.Name = "cbApePat";
-            this.cbApePat.Size = new System.Drawing.Size(174, 34);
+            this.cbApePat.Size = new System.Drawing.Size(174, 35);
             this.cbApePat.TabIndex = 0;
             this.cbApePat.Text = "Apellido Paterno";
             this.cbApePat.UseVisualStyleBackColor = true;
@@ -101,11 +108,13 @@
             // 
             this.cbNumContrato.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbNumContrato.AutoSize = true;
+            this.cbNumContrato.Checked = true;
+            this.cbNumContrato.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbNumContrato.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbNumContrato.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNumContrato.Location = new System.Drawing.Point(3, 46);
+            this.cbNumContrato.Location = new System.Drawing.Point(3, 44);
             this.cbNumContrato.Name = "cbNumContrato";
-            this.cbNumContrato.Size = new System.Drawing.Size(173, 37);
+            this.cbNumContrato.Size = new System.Drawing.Size(173, 35);
             this.cbNumContrato.TabIndex = 3;
             this.cbNumContrato.Text = "Num. de Contrato";
             this.cbNumContrato.UseVisualStyleBackColor = true;
@@ -116,9 +125,9 @@
             this.cbCURP.AutoSize = true;
             this.cbCURP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbCURP.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCURP.Location = new System.Drawing.Point(3, 43);
+            this.cbCURP.Location = new System.Drawing.Point(3, 44);
             this.cbCURP.Name = "cbCURP";
-            this.cbCURP.Size = new System.Drawing.Size(174, 34);
+            this.cbCURP.Size = new System.Drawing.Size(174, 35);
             this.cbCURP.TabIndex = 3;
             this.cbCURP.Text = "CURP";
             this.cbCURP.UseVisualStyleBackColor = true;
@@ -129,9 +138,9 @@
             this.cbGenero.AutoSize = true;
             this.cbGenero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbGenero.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGenero.Location = new System.Drawing.Point(3, 83);
+            this.cbGenero.Location = new System.Drawing.Point(3, 85);
             this.cbGenero.Name = "cbGenero";
-            this.cbGenero.Size = new System.Drawing.Size(174, 36);
+            this.cbGenero.Size = new System.Drawing.Size(174, 35);
             this.cbGenero.TabIndex = 6;
             this.cbGenero.Text = "Genero";
             this.cbGenero.UseVisualStyleBackColor = true;
@@ -142,9 +151,9 @@
             this.cbArea.AutoSize = true;
             this.cbArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbArea.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbArea.Location = new System.Drawing.Point(3, 89);
+            this.cbArea.Location = new System.Drawing.Point(3, 85);
             this.cbArea.Name = "cbArea";
-            this.cbArea.Size = new System.Drawing.Size(173, 37);
+            this.cbArea.Size = new System.Drawing.Size(173, 35);
             this.cbArea.TabIndex = 6;
             this.cbArea.Text = "Area";
             this.cbArea.UseVisualStyleBackColor = true;
@@ -155,9 +164,9 @@
             this.cbRFC.AutoSize = true;
             this.cbRFC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbRFC.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRFC.Location = new System.Drawing.Point(3, 132);
+            this.cbRFC.Location = new System.Drawing.Point(3, 126);
             this.cbRFC.Name = "cbRFC";
-            this.cbRFC.Size = new System.Drawing.Size(173, 37);
+            this.cbRFC.Size = new System.Drawing.Size(173, 35);
             this.cbRFC.TabIndex = 9;
             this.cbRFC.Text = "RFC";
             this.cbRFC.UseVisualStyleBackColor = true;
@@ -183,7 +192,7 @@
             this.cbEscolaridad.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEscolaridad.Location = new System.Drawing.Point(3, 3);
             this.cbEscolaridad.Name = "cbEscolaridad";
-            this.cbEscolaridad.Size = new System.Drawing.Size(173, 37);
+            this.cbEscolaridad.Size = new System.Drawing.Size(173, 35);
             this.cbEscolaridad.TabIndex = 0;
             this.cbEscolaridad.Text = "Escolaridad";
             this.cbEscolaridad.UseVisualStyleBackColor = true;
@@ -196,7 +205,7 @@
             this.cbEspecialidad.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEspecialidad.Location = new System.Drawing.Point(182, 3);
             this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(173, 37);
+            this.cbEspecialidad.Size = new System.Drawing.Size(173, 35);
             this.cbEspecialidad.TabIndex = 1;
             this.cbEspecialidad.Text = "Especialidad";
             this.cbEspecialidad.UseVisualStyleBackColor = true;
@@ -220,9 +229,9 @@
             this.cbSueldo.AutoSize = true;
             this.cbSueldo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbSueldo.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSueldo.Location = new System.Drawing.Point(182, 132);
+            this.cbSueldo.Location = new System.Drawing.Point(182, 126);
             this.cbSueldo.Name = "cbSueldo";
-            this.cbSueldo.Size = new System.Drawing.Size(173, 37);
+            this.cbSueldo.Size = new System.Drawing.Size(173, 35);
             this.cbSueldo.TabIndex = 10;
             this.cbSueldo.Text = "Sueldo";
             this.cbSueldo.UseVisualStyleBackColor = true;
@@ -233,9 +242,9 @@
             this.cbDepto.AutoSize = true;
             this.cbDepto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbDepto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDepto.Location = new System.Drawing.Point(182, 89);
+            this.cbDepto.Location = new System.Drawing.Point(182, 85);
             this.cbDepto.Name = "cbDepto";
-            this.cbDepto.Size = new System.Drawing.Size(173, 37);
+            this.cbDepto.Size = new System.Drawing.Size(173, 35);
             this.cbDepto.TabIndex = 7;
             this.cbDepto.Text = "Departamento";
             this.cbDepto.UseVisualStyleBackColor = true;
@@ -246,9 +255,9 @@
             this.cbEdoCivil.AutoSize = true;
             this.cbEdoCivil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbEdoCivil.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEdoCivil.Location = new System.Drawing.Point(183, 83);
+            this.cbEdoCivil.Location = new System.Drawing.Point(183, 85);
             this.cbEdoCivil.Name = "cbEdoCivil";
-            this.cbEdoCivil.Size = new System.Drawing.Size(174, 36);
+            this.cbEdoCivil.Size = new System.Drawing.Size(174, 35);
             this.cbEdoCivil.TabIndex = 7;
             this.cbEdoCivil.Text = "Estado Civil";
             this.cbEdoCivil.UseVisualStyleBackColor = true;
@@ -257,11 +266,13 @@
             // 
             this.cbFechaNac.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbFechaNac.AutoSize = true;
+            this.cbFechaNac.Checked = true;
+            this.cbFechaNac.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbFechaNac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbFechaNac.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFechaNac.Location = new System.Drawing.Point(183, 43);
+            this.cbFechaNac.Location = new System.Drawing.Point(183, 44);
             this.cbFechaNac.Name = "cbFechaNac";
-            this.cbFechaNac.Size = new System.Drawing.Size(174, 34);
+            this.cbFechaNac.Size = new System.Drawing.Size(174, 35);
             this.cbFechaNac.TabIndex = 4;
             this.cbFechaNac.Text = "Fecha de Nac.";
             this.cbFechaNac.UseVisualStyleBackColor = true;
@@ -270,13 +281,15 @@
             // 
             this.cbTienda.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbTienda.AutoSize = true;
+            this.cbTienda.Checked = true;
+            this.cbTienda.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTienda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbTienda.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTienda.Location = new System.Drawing.Point(182, 46);
+            this.cbTienda.Location = new System.Drawing.Point(182, 44);
             this.cbTienda.Name = "cbTienda";
-            this.cbTienda.Size = new System.Drawing.Size(173, 37);
+            this.cbTienda.Size = new System.Drawing.Size(173, 35);
             this.cbTienda.TabIndex = 4;
-            this.cbTienda.Text = "Tienda";
+            this.cbTienda.Text = "Sucursal";
             this.cbTienda.UseVisualStyleBackColor = true;
             // 
             // cbCalleNum
@@ -296,11 +309,13 @@
             // 
             this.cbApeMat.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbApeMat.AutoSize = true;
+            this.cbApeMat.Checked = true;
+            this.cbApeMat.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbApeMat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbApeMat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbApeMat.Location = new System.Drawing.Point(183, 3);
             this.cbApeMat.Name = "cbApeMat";
-            this.cbApeMat.Size = new System.Drawing.Size(174, 34);
+            this.cbApeMat.Size = new System.Drawing.Size(174, 35);
             this.cbApeMat.TabIndex = 1;
             this.cbApeMat.Text = "Apellido Materno";
             this.cbApeMat.UseVisualStyleBackColor = true;
@@ -313,7 +328,7 @@
             this.cbNumSegSocial.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNumSegSocial.Location = new System.Drawing.Point(361, 3);
             this.cbNumSegSocial.Name = "cbNumSegSocial";
-            this.cbNumSegSocial.Size = new System.Drawing.Size(175, 37);
+            this.cbNumSegSocial.Size = new System.Drawing.Size(175, 35);
             this.cbNumSegSocial.TabIndex = 2;
             this.cbNumSegSocial.Text = "Num. de Seg. Social";
             this.cbNumSegSocial.UseVisualStyleBackColor = true;
@@ -337,9 +352,9 @@
             this.cbInfoEmerg.AutoSize = true;
             this.cbInfoEmerg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbInfoEmerg.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbInfoEmerg.Location = new System.Drawing.Point(361, 132);
+            this.cbInfoEmerg.Location = new System.Drawing.Point(361, 126);
             this.cbInfoEmerg.Name = "cbInfoEmerg";
-            this.cbInfoEmerg.Size = new System.Drawing.Size(175, 37);
+            this.cbInfoEmerg.Size = new System.Drawing.Size(175, 35);
             this.cbInfoEmerg.TabIndex = 11;
             this.cbInfoEmerg.Text = "Info. Emerg.";
             this.cbInfoEmerg.UseVisualStyleBackColor = true;
@@ -348,11 +363,13 @@
             // 
             this.cbPuesto.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbPuesto.AutoSize = true;
+            this.cbPuesto.Checked = true;
+            this.cbPuesto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbPuesto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbPuesto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPuesto.Location = new System.Drawing.Point(361, 89);
+            this.cbPuesto.Location = new System.Drawing.Point(361, 85);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(175, 37);
+            this.cbPuesto.Size = new System.Drawing.Size(175, 35);
             this.cbPuesto.TabIndex = 8;
             this.cbPuesto.Text = "Puesto";
             this.cbPuesto.UseVisualStyleBackColor = true;
@@ -363,9 +380,9 @@
             this.cbLugarNac.AutoSize = true;
             this.cbLugarNac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbLugarNac.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLugarNac.Location = new System.Drawing.Point(363, 83);
+            this.cbLugarNac.Location = new System.Drawing.Point(363, 85);
             this.cbLugarNac.Name = "cbLugarNac";
-            this.cbLugarNac.Size = new System.Drawing.Size(176, 36);
+            this.cbLugarNac.Size = new System.Drawing.Size(176, 35);
             this.cbLugarNac.TabIndex = 8;
             this.cbLugarNac.Text = "Lugar de Nac.";
             this.cbLugarNac.UseVisualStyleBackColor = true;
@@ -376,9 +393,9 @@
             this.cbTelefono.AutoSize = true;
             this.cbTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbTelefono.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTelefono.Location = new System.Drawing.Point(363, 43);
+            this.cbTelefono.Location = new System.Drawing.Point(363, 44);
             this.cbTelefono.Name = "cbTelefono";
-            this.cbTelefono.Size = new System.Drawing.Size(176, 34);
+            this.cbTelefono.Size = new System.Drawing.Size(176, 35);
             this.cbTelefono.TabIndex = 5;
             this.cbTelefono.Text = "Telefono";
             this.cbTelefono.UseVisualStyleBackColor = true;
@@ -387,11 +404,13 @@
             // 
             this.cbFechaIngreso.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbFechaIngreso.AutoSize = true;
+            this.cbFechaIngreso.Checked = true;
+            this.cbFechaIngreso.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbFechaIngreso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbFechaIngreso.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFechaIngreso.Location = new System.Drawing.Point(361, 46);
+            this.cbFechaIngreso.Location = new System.Drawing.Point(361, 44);
             this.cbFechaIngreso.Name = "cbFechaIngreso";
-            this.cbFechaIngreso.Size = new System.Drawing.Size(175, 37);
+            this.cbFechaIngreso.Size = new System.Drawing.Size(175, 35);
             this.cbFechaIngreso.TabIndex = 5;
             this.cbFechaIngreso.Text = "Fecha Ingreso";
             this.cbFechaIngreso.UseVisualStyleBackColor = true;
@@ -400,37 +419,39 @@
             // 
             this.cbNombre.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbNombre.AutoSize = true;
+            this.cbNombre.Checked = true;
+            this.cbNombre.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbNombre.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNombre.Location = new System.Drawing.Point(363, 3);
             this.cbNombre.Name = "cbNombre";
-            this.cbNombre.Size = new System.Drawing.Size(176, 34);
+            this.cbNombre.Size = new System.Drawing.Size(176, 35);
             this.cbNombre.TabIndex = 2;
             this.cbNombre.Text = "Nombre (s)";
             this.cbNombre.UseVisualStyleBackColor = true;
             // 
-            // cbComentarios
+            // cbAntiguedad
             // 
-            this.cbComentarios.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbComentarios.AutoSize = true;
-            this.cbComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbComentarios.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComentarios.Location = new System.Drawing.Point(3, 175);
-            this.cbComentarios.Name = "cbComentarios";
-            this.cbComentarios.Size = new System.Drawing.Size(173, 40);
-            this.cbComentarios.TabIndex = 12;
-            this.cbComentarios.Text = "Comentarios";
-            this.cbComentarios.UseVisualStyleBackColor = true;
+            this.cbAntiguedad.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbAntiguedad.AutoSize = true;
+            this.cbAntiguedad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbAntiguedad.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAntiguedad.Location = new System.Drawing.Point(182, 167);
+            this.cbAntiguedad.Name = "cbAntiguedad";
+            this.cbAntiguedad.Size = new System.Drawing.Size(173, 36);
+            this.cbAntiguedad.TabIndex = 13;
+            this.cbAntiguedad.Text = "Antiguedad";
+            this.cbAntiguedad.UseVisualStyleBackColor = true;
             // 
             // gBLaboral
             // 
             this.gBLaboral.Controls.Add(this.tlpLaboral);
-            this.gBLaboral.Location = new System.Drawing.Point(31, 293);
+            this.gBLaboral.Location = new System.Drawing.Point(34, 351);
             this.gBLaboral.Name = "gBLaboral";
-            this.gBLaboral.Size = new System.Drawing.Size(545, 237);
+            this.gBLaboral.Size = new System.Drawing.Size(545, 225);
             this.gBLaboral.TabIndex = 3;
             this.gBLaboral.TabStop = false;
-            this.gBLaboral.Text = "Inform. Laboral";
+            this.gBLaboral.Text = "Info. Laboral";
             // 
             // tlpLaboral
             // 
@@ -438,10 +459,12 @@
             this.tlpLaboral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpLaboral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tlpLaboral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlpLaboral.Controls.Add(this.cbEmpleadoTemporada, 3, 4);
+            this.tlpLaboral.Controls.Add(this.cbComentarios, 0, 4);
             this.tlpLaboral.Controls.Add(this.cbEscolaridad, 0, 0);
             this.tlpLaboral.Controls.Add(this.cbEspecialidad, 1, 0);
             this.tlpLaboral.Controls.Add(this.cbNumSegSocial, 2, 0);
-            this.tlpLaboral.Controls.Add(this.cbComentarios, 0, 4);
+            this.tlpLaboral.Controls.Add(this.cbAntiguedad, 0, 4);
             this.tlpLaboral.Controls.Add(this.cbNumContrato, 0, 1);
             this.tlpLaboral.Controls.Add(this.cbInfoEmerg, 2, 3);
             this.tlpLaboral.Controls.Add(this.cbTienda, 1, 1);
@@ -460,7 +483,7 @@
             this.tlpLaboral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0008F));
             this.tlpLaboral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.9988F));
             this.tlpLaboral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.9988F));
-            this.tlpLaboral.Size = new System.Drawing.Size(539, 218);
+            this.tlpLaboral.Size = new System.Drawing.Size(539, 206);
             this.tlpLaboral.TabIndex = 0;
             // 
             // gBPersonal
@@ -468,10 +491,10 @@
             this.gBPersonal.Controls.Add(this.tlpPersonal);
             this.gBPersonal.Location = new System.Drawing.Point(28, 46);
             this.gBPersonal.Name = "gBPersonal";
-            this.gBPersonal.Size = new System.Drawing.Size(548, 141);
+            this.gBPersonal.Size = new System.Drawing.Size(548, 184);
             this.gBPersonal.TabIndex = 1;
             this.gBPersonal.TabStop = false;
-            this.gBPersonal.Text = "Inform. Personal";
+            this.gBPersonal.Text = "Info. Personal";
             // 
             // tlpPersonal
             // 
@@ -479,6 +502,9 @@
             this.tlpPersonal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpPersonal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpPersonal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpPersonal.Controls.Add(this.cbNombreCompleto, 0, 3);
+            this.tlpPersonal.Controls.Add(this.cbFoto, 0, 3);
+            this.tlpPersonal.Controls.Add(this.cbINE, 0, 3);
             this.tlpPersonal.Controls.Add(this.cbApePat, 0, 0);
             this.tlpPersonal.Controls.Add(this.cbApeMat, 1, 0);
             this.tlpPersonal.Controls.Add(this.cbNombre, 2, 0);
@@ -491,22 +517,23 @@
             this.tlpPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPersonal.Location = new System.Drawing.Point(3, 16);
             this.tlpPersonal.Name = "tlpPersonal";
-            this.tlpPersonal.RowCount = 3;
-            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpPersonal.Size = new System.Drawing.Size(542, 122);
+            this.tlpPersonal.RowCount = 4;
+            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
+            this.tlpPersonal.Size = new System.Drawing.Size(542, 165);
             this.tlpPersonal.TabIndex = 0;
             // 
             // cBDomiciliar
             // 
             this.cBDomiciliar.Controls.Add(this.tlpDomiciliar);
-            this.cBDomiciliar.Location = new System.Drawing.Point(28, 193);
+            this.cBDomiciliar.Location = new System.Drawing.Point(31, 251);
             this.cBDomiciliar.Name = "cBDomiciliar";
             this.cBDomiciliar.Size = new System.Drawing.Size(545, 94);
             this.cBDomiciliar.TabIndex = 2;
             this.cBDomiciliar.TabStop = false;
-            this.cBDomiciliar.Text = "Inform. Domiciliar";
+            this.cBDomiciliar.Text = "Info. Domiciliar";
             // 
             // tlpDomiciliar
             // 
@@ -550,7 +577,7 @@
             this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcel.IconSize = 38;
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(201, 536);
+            this.btnExcel.Location = new System.Drawing.Point(188, 613);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(201, 47);
             this.btnExcel.TabIndex = 4;
@@ -558,11 +585,76 @@
             this.btnExcel.UseVisualStyleBackColor = false;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
+            // cbComentarios
+            // 
+            this.cbComentarios.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbComentarios.AutoSize = true;
+            this.cbComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbComentarios.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComentarios.Location = new System.Drawing.Point(3, 167);
+            this.cbComentarios.Name = "cbComentarios";
+            this.cbComentarios.Size = new System.Drawing.Size(173, 36);
+            this.cbComentarios.TabIndex = 12;
+            this.cbComentarios.Text = "Comentarios";
+            this.cbComentarios.UseVisualStyleBackColor = true;
+            // 
+            // cbINE
+            // 
+            this.cbINE.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbINE.AutoSize = true;
+            this.cbINE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbINE.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbINE.Location = new System.Drawing.Point(363, 126);
+            this.cbINE.Name = "cbINE";
+            this.cbINE.Size = new System.Drawing.Size(176, 36);
+            this.cbINE.TabIndex = 11;
+            this.cbINE.Text = "tiene INE";
+            this.cbINE.UseVisualStyleBackColor = true;
+            // 
+            // cbFoto
+            // 
+            this.cbFoto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbFoto.AutoSize = true;
+            this.cbFoto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbFoto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFoto.Location = new System.Drawing.Point(183, 126);
+            this.cbFoto.Name = "cbFoto";
+            this.cbFoto.Size = new System.Drawing.Size(174, 36);
+            this.cbFoto.TabIndex = 10;
+            this.cbFoto.Text = "tiene Foto";
+            this.cbFoto.UseVisualStyleBackColor = true;
+            // 
+            // cbNombreCompleto
+            // 
+            this.cbNombreCompleto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbNombreCompleto.AutoSize = true;
+            this.cbNombreCompleto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNombreCompleto.Location = new System.Drawing.Point(3, 126);
+            this.cbNombreCompleto.Name = "cbNombreCompleto";
+            this.cbNombreCompleto.Size = new System.Drawing.Size(174, 36);
+            this.cbNombreCompleto.TabIndex = 9;
+            this.cbNombreCompleto.Text = "Nombre Completo";
+            this.cbNombreCompleto.UseVisualStyleBackColor = true;
+            // 
+            // cbEmpleadoTemporada
+            // 
+            this.cbEmpleadoTemporada.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbEmpleadoTemporada.AutoSize = true;
+            this.cbEmpleadoTemporada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbEmpleadoTemporada.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmpleadoTemporada.Location = new System.Drawing.Point(361, 167);
+            this.cbEmpleadoTemporada.Name = "cbEmpleadoTemporada";
+            this.cbEmpleadoTemporada.Size = new System.Drawing.Size(175, 36);
+            this.cbEmpleadoTemporada.TabIndex = 14;
+            this.cbEmpleadoTemporada.Text = "Es de temporada";
+            this.cbEmpleadoTemporada.UseVisualStyleBackColor = true;
+            // 
             // frmColumnasExportarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 588);
+            this.ClientSize = new System.Drawing.Size(617, 672);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.lblInstruct);
             this.Controls.Add(this.cBDomiciliar);
@@ -612,7 +704,7 @@
         private System.Windows.Forms.CheckBox cbTelefono;
         private System.Windows.Forms.CheckBox cbFechaIngreso;
         private System.Windows.Forms.CheckBox cbNombre;
-        private System.Windows.Forms.CheckBox cbComentarios;
+        private System.Windows.Forms.CheckBox cbAntiguedad;
         private System.Windows.Forms.GroupBox gBLaboral;
         private System.Windows.Forms.TableLayoutPanel tlpLaboral;
         private System.Windows.Forms.GroupBox gBPersonal;
@@ -621,5 +713,10 @@
         private System.Windows.Forms.TableLayoutPanel tlpDomiciliar;
         private System.Windows.Forms.Label lblInstruct;
         private FontAwesome.Sharp.IconButton btnExcel;
+        private System.Windows.Forms.CheckBox cbComentarios;
+        private System.Windows.Forms.CheckBox cbEmpleadoTemporada;
+        private System.Windows.Forms.CheckBox cbNombreCompleto;
+        private System.Windows.Forms.CheckBox cbFoto;
+        private System.Windows.Forms.CheckBox cbINE;
     }
 }

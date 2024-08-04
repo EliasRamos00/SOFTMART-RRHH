@@ -226,10 +226,14 @@ namespace SOFTMART_RRHH.Modelo
         }
         internal static void ExportarAExcel(DataTable dt)
         {
-
             using (var workbook = new XSSFWorkbook())
             {
                 var sheet = workbook.CreateSheet("Hoja 1");
+
+                // Crear un estilo para celdas de fecha
+                var dateCellStyle = workbook.CreateCellStyle();
+                var createHelper = workbook.GetCreationHelper();
+                dateCellStyle.DataFormat = createHelper.CreateDataFormat().GetFormat("yyyy-MM-dd");
 
                 // Agregar encabezados
                 var headerRow = sheet.CreateRow(0);
@@ -244,15 +248,29 @@ namespace SOFTMART_RRHH.Modelo
                     var dataRow = sheet.CreateRow(i + 1);
                     for (int j = 0; j < dt.Columns.Count; j++)
                     {
-                        dataRow.CreateCell(j).SetCellValue(dt.Rows[i][j]?.ToString() ?? "");
+                        var cell = dataRow.CreateCell(j);
+                        var cellValue = dt.Rows[i][j];
+
+                        if (DateTime.TryParse(cellValue.ToString(), out DateTime date))
+                        {
+                            cell.SetCellValue(date);
+                            cell.CellStyle = dateCellStyle; // Aplicar el estilo de fecha
+                        }
+                        else
+                        {
+                            cell.SetCellValue(cellValue?.ToString() ?? "");
+                        }
                     }
                 }
 
                 // Guardar el archivo
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-                saveFileDialog.Title = "Exportar a Excel";
-                saveFileDialog.FileName = "Exportacion SOFTMART-RRHH.xlsx"; // Nombre predeterminado del archivo
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+                    Title = "Exportar a Excel",
+                    FileName = "Exportacion SOFTMART-RRHH.xlsx" // Nombre predeterminado del archivo
+                };
+
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     using (var fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create))
@@ -277,15 +295,35 @@ namespace SOFTMART_RRHH.Modelo
             // Pasar los datos del DataGridView al DataTable
             foreach (DataGridViewRow row in dgv.Rows)
             {
-                DataRow dataRow = dt.NewRow();
-                foreach (string columnName in columns)
+                try
                 {
-                    string columnHeader = dgv.Columns.Cast<DataGridViewColumn>()
-                                                .First(c => c.HeaderText == columnName)
-                                                .Name;
-                    dataRow[columnName] = row.Cells[columnHeader].Value;
+                    DataRow dataRow = dt.NewRow();
+                    foreach (string columnName in columns)
+                    {
+                        string columnHeader = dgv.Columns.Cast<DataGridViewColumn>()
+                                                    .First(c => c.HeaderText == columnName)
+                                                    .Name;
+
+                        if (columnName.Contains("Fecha"))
+                        {
+                            dataRow[columnName] = Convert.ToDateTime(row.Cells[columnHeader].Value).ToString("yyyy-MM-dd");
+
+                        }
+                        else
+                        {
+                            dataRow[columnName] = row.Cells[columnHeader].Value;
+
+                        }
+
+
+                    }
+                    dt.Rows.Add(dataRow);
                 }
-                dt.Rows.Add(dataRow);
+                catch (Exception ex)
+                {
+
+                }
+
             }
 
             return dt;

@@ -1,0 +1,21 @@
+----------Detalles del error en:  02/08/2024 02:52:09 p. m.----------
+-----------------------------------------------
+Fecha: 02/08/2024 02:52:09 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  02/08/2024 02:52:12 p. m.----------
+-----------------------------------------------
+Fecha: 02/08/2024 02:52:12 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  02/08/2024 02:52:15 p. m.----------
+-----------------------------------------------
+Fecha: 02/08/2024 02:52:15 p. m.
+Exception Type: System.ComponentModel.Win32Exception
+Mensaje de Error : El sistema no puede encontrar el archivo especificado
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------

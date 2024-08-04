@@ -217,7 +217,6 @@ namespace SOFTMART_RRHH.Vista
             // Verificar si el diálogo fue cerrado o cancelado
             if (frmExcel.ShowDialog() == DialogResult.OK)
             {
-
                 LibAux.ExportarAExcel(LibAux.DgvToDataTable(dgvConsultaEmpleados, frmExcel.ColumnasAExportar));
             }
         }
