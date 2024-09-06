@@ -50,8 +50,13 @@ namespace SOFTMART_RRHH.Vista
 
             foreach (DataGridViewColumn col in dgvConsultaEmpleados.Columns)
             {
-                if (col.HeaderText == "NombreCompleto" || col.HeaderText == "NumContrato" || col.HeaderText == "Sucursal" || col.HeaderText == "Puesto" || col.HeaderText == "Edad" || col.HeaderText == "Antiguedad")
-                    keyValuePairs.Add(col.Name, col.HeaderText);
+                if (col.HeaderText == "Num. Contrato" || col.HeaderText == "NombreCompleto" || col.HeaderText == "NumContrato" || col.HeaderText == "Sucursal" || col.HeaderText == "Puesto" || col.HeaderText == "Edad" || col.HeaderText == "Antiguedad")
+                {
+                    if (!keyValuePairs.ContainsKey(col.HeaderText))
+                    {
+                        keyValuePairs.Add(col.Name, col.HeaderText);
+                    }
+                }
 
             }
             cbFiltro.DataSource = keyValuePairs.ToList();

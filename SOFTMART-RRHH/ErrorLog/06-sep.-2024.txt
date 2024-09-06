@@ -1,0 +1,35 @@
+----------Detalles del error en:  06/09/2024 01:17:06 a. m.----------
+-----------------------------------------------
+Fecha: 06/09/2024 01:17:06 a. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Num. Contrato].
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  06/09/2024 01:17:06 a. m.----------
+-----------------------------------------------
+Fecha: 06/09/2024 01:17:06 a. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Num. Contrato].
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  06/09/2024 01:17:26 a. m.----------
+-----------------------------------------------
+Fecha: 06/09/2024 01:17:26 a. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Num. Contrato].
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  06/09/2024 01:17:26 a. m.----------
+-----------------------------------------------
+Fecha: 06/09/2024 01:17:26 a. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Num. Contrato].
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  06/09/2024 01:19:12 a. m.----------
+-----------------------------------------------
+Fecha: 06/09/2024 01:19:12 a. m.
+Exception Type: System.Data.EvaluateException
+Mensaje de Error : No se puede encontrar la columna [Num. Contrato].
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------

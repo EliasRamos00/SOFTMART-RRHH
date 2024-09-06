@@ -497,7 +497,7 @@
             // dgvConsultaEmpleados_NombreCompleto
             // 
             this.dgvConsultaEmpleados_NombreCompleto.DataPropertyName = "NombreCompleto";
-            this.dgvConsultaEmpleados_NombreCompleto.HeaderText = "NombreCompleto";
+            this.dgvConsultaEmpleados_NombreCompleto.HeaderText = "NombreCompletoCompleto";
             this.dgvConsultaEmpleados_NombreCompleto.Name = "dgvConsultaEmpleados_NombreCompleto";
             this.dgvConsultaEmpleados_NombreCompleto.ReadOnly = true;
             this.dgvConsultaEmpleados_NombreCompleto.Visible = false;
@@ -556,7 +556,7 @@
             // 
             this.dgvConsultaEmpleados_NumContrato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_NumContrato.DataPropertyName = "NumContrato";
-            this.dgvConsultaEmpleados_NumContrato.HeaderText = "Num. Contrato";
+            this.dgvConsultaEmpleados_NumContrato.HeaderText = "NumContrato";
             this.dgvConsultaEmpleados_NumContrato.Name = "dgvConsultaEmpleados_NumContrato";
             this.dgvConsultaEmpleados_NumContrato.ReadOnly = true;
             this.dgvConsultaEmpleados_NumContrato.Width = 66;
