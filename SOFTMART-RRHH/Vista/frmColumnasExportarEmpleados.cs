@@ -50,7 +50,7 @@ namespace SOFTMART_RRHH.Vista
         private void CambiarNombresCB()
         {
             cbNombre.Text = "Nombre";
-            cbNumContrato.Text = "Num. Contrato";
+            cbNumContrato.Text = "NumContrato";
             cbTienda.Text = "Sucursal";
             cbFechaNac.Text = "Fecha Nacimiento";
             cbFechaIngreso.Text = "Fecha Inicio";
