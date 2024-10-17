@@ -41,19 +41,6 @@
             this.lblColumn = new System.Windows.Forms.Label();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.dgvConsultaEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnExcel = new FontAwesome.Sharp.IconButton();
-            this.btnRecarga = new FontAwesome.Sharp.IconButton();
-            this.ChBFechaFiltro = new System.Windows.Forms.CheckBox();
-            this.dtpFechaFiltro = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblMin = new System.Windows.Forms.Label();
-            this.cbInicio = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbFinal = new System.Windows.Forms.ComboBox();
-            this.lblMax = new System.Windows.Forms.Label();
-            this.rowCounting = new System.Windows.Forms.Label();
             this.dgvConsultaEmpleados_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleo_Escolaridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +80,19 @@
             this.dgvConsultaEmpleados_tieneFotografia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_tieneINE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvConsultaEmpleados_esEmpleadoTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnExcel = new FontAwesome.Sharp.IconButton();
+            this.btnRecarga = new FontAwesome.Sharp.IconButton();
+            this.ChBFechaFiltro = new System.Windows.Forms.CheckBox();
+            this.dtpFechaFiltro = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblMin = new System.Windows.Forms.Label();
+            this.cbInicio = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbFinal = new System.Windows.Forms.ComboBox();
+            this.lblMax = new System.Windows.Forms.Label();
+            this.rowCounting = new System.Windows.Forms.Label();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -267,223 +267,6 @@
             this.dgvConsultaEmpleados.Size = new System.Drawing.Size(974, 503);
             this.dgvConsultaEmpleados.TabIndex = 6;
             this.dgvConsultaEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaEmpleados_CellDoubleClick);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Location = new System.Drawing.Point(3, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 32);
-            this.btnClose.TabIndex = 26;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
-            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 2);
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
-            this.lblTitulo.Location = new System.Drawing.Point(47, 25);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
-            this.lblTitulo.Size = new System.Drawing.Size(681, 41);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "EMPLEADOS ACTIVOS";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExcel.IconColor = System.Drawing.Color.White;
-            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcel.IconSize = 28;
-            this.btnExcel.Location = new System.Drawing.Point(905, 110);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(117, 36);
-            this.btnExcel.TabIndex = 5;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // btnRecarga
-            // 
-            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
-            this.btnRecarga.IconColor = System.Drawing.Color.White;
-            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRecarga.IconSize = 30;
-            this.btnRecarga.Location = new System.Drawing.Point(758, 110);
-            this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRecarga.Name = "btnRecarga";
-            this.btnRecarga.Size = new System.Drawing.Size(117, 36);
-            this.btnRecarga.TabIndex = 6;
-            this.btnRecarga.UseVisualStyleBackColor = false;
-            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
-            // 
-            // ChBFechaFiltro
-            // 
-            this.ChBFechaFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ChBFechaFiltro.AutoSize = true;
-            this.ChBFechaFiltro.Checked = true;
-            this.ChBFechaFiltro.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChBFechaFiltro.Location = new System.Drawing.Point(731, 41);
-            this.ChBFechaFiltro.Name = "ChBFechaFiltro";
-            this.ChBFechaFiltro.Size = new System.Drawing.Size(141, 22);
-            this.ChBFechaFiltro.TabIndex = 27;
-            this.ChBFechaFiltro.Text = "Tomar la fecha de hoy";
-            this.ChBFechaFiltro.UseVisualStyleBackColor = true;
-            this.ChBFechaFiltro.Visible = false;
-            this.ChBFechaFiltro.CheckedChanged += new System.EventHandler(this.ChBFechaFiltro_CheckedChanged);
-            // 
-            // dtpFechaFiltro
-            // 
-            this.dtpFechaFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFechaFiltro.Enabled = false;
-            this.dtpFechaFiltro.Location = new System.Drawing.Point(878, 42);
-            this.dtpFechaFiltro.Name = "dtpFechaFiltro";
-            this.dtpFechaFiltro.Size = new System.Drawing.Size(141, 20);
-            this.dtpFechaFiltro.TabIndex = 28;
-            this.dtpFechaFiltro.Visible = false;
-            this.dtpFechaFiltro.ValueChanged += new System.EventHandler(this.dtpFechaFiltro_ValueChanged);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblMin, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cbInicio, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(731, 69);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(141, 38);
-            this.tableLayoutPanel1.TabIndex = 29;
-            // 
-            // lblMin
-            // 
-            this.lblMin.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.lblMin, 2);
-            this.lblMin.Location = new System.Drawing.Point(3, 0);
-            this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(96, 13);
-            this.lblMin.TabIndex = 2;
-            this.lblMin.Text = "Antiguedad minima";
-            // 
-            // cbInicio
-            // 
-            this.cbInicio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cbInicio.AutoCompleteCustomSource.AddRange(new string[] {
-            "1 MES",
-            "3 MESES",
-            "6 MESES",
-            "8 MESES",
-            "1 AÑO",
-            "2 AÑOS",
-            "4 AÑOS",
-            "6 AÑOS"});
-            this.tableLayoutPanel1.SetColumnSpan(this.cbInicio, 2);
-            this.cbInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInicio.FormattingEnabled = true;
-            this.cbInicio.Items.AddRange(new object[] {
-            "0 Año(s), 0 Mes(es)",
-            "0 Año(s), 1 Mes(es)",
-            "0 Año(s), 3 Mes(es)",
-            "0 Año(s), 6 Mes(es)",
-            "0 Año(s), 8 Mes(es)",
-            "1 Año(s), 0 Mes(es)",
-            "2 Año(s), 0 Mes(es)",
-            "3 Año(s), 0 Mes(es)",
-            "4 Año(s), 0 Mes(es)",
-            "5 Año(s), 0 Mes(es)"});
-            this.cbInicio.Location = new System.Drawing.Point(27, 16);
-            this.cbInicio.Name = "cbInicio";
-            this.cbInicio.Size = new System.Drawing.Size(111, 21);
-            this.cbInicio.TabIndex = 4;
-            this.cbInicio.SelectedIndexChanged += new System.EventHandler(this.cbInicio_SelectedIndexChanged);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.cbFinal, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblMax, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(878, 69);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(141, 38);
-            this.tableLayoutPanel2.TabIndex = 30;
-            // 
-            // cbFinal
-            // 
-            this.cbFinal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tableLayoutPanel2.SetColumnSpan(this.cbFinal, 2);
-            this.cbFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFinal.FormattingEnabled = true;
-            this.cbFinal.Items.AddRange(new object[] {
-            "0 Año(s), 1 Mes(es)",
-            "0 Año(s), 3 Mes(es)",
-            "0 Año(s), 6 Mes(es)",
-            "0 Año(s), 8 Mes(es)",
-            "1 Año(s), 0 Mes(es)",
-            "2 Año(s), 0 Mes(es)",
-            "3 Año(s), 0 Mes(es)",
-            "4 Año(s), 0 Mes(es)",
-            "5 Año(s), 0 Mes(es)",
-            "99 Año(s), 0 Mes(es)"});
-            this.cbFinal.Location = new System.Drawing.Point(27, 16);
-            this.cbFinal.Name = "cbFinal";
-            this.cbFinal.Size = new System.Drawing.Size(111, 21);
-            this.cbFinal.TabIndex = 32;
-            this.cbFinal.SelectedIndexChanged += new System.EventHandler(this.cbFinal_SelectedIndexChanged);
-            // 
-            // lblMax
-            // 
-            this.lblMax.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.lblMax, 2);
-            this.lblMax.Location = new System.Drawing.Point(3, 0);
-            this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(99, 13);
-            this.lblMax.TabIndex = 2;
-            this.lblMax.Text = "Antiguedad maxima";
-            // 
-            // rowCounting
-            // 
-            this.rowCounting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.rowCounting.AutoSize = true;
-            this.rowCounting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rowCounting.Location = new System.Drawing.Point(878, 658);
-            this.rowCounting.Name = "rowCounting";
-            this.rowCounting.Size = new System.Drawing.Size(141, 15);
-            this.rowCounting.TabIndex = 31;
-            this.rowCounting.Text = "Registros : 0";
-            this.rowCounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvConsultaEmpleados_idEmpleado
             // 
@@ -810,6 +593,223 @@
             this.dgvConsultaEmpleados_esEmpleadoTemp.Name = "dgvConsultaEmpleados_esEmpleadoTemp";
             this.dgvConsultaEmpleados_esEmpleadoTemp.ReadOnly = true;
             this.dgvConsultaEmpleados_esEmpleadoTemp.Visible = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Location = new System.Drawing.Point(3, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 32);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.GhostWhite;
+            this.tlpPrincipal.SetColumnSpan(this.lblTitulo, 2);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo.Location = new System.Drawing.Point(47, 25);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.tlpPrincipal.SetRowSpan(this.lblTitulo, 2);
+            this.lblTitulo.Size = new System.Drawing.Size(681, 41);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "EMPLEADOS ACTIVOS";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExcel.IconColor = System.Drawing.Color.White;
+            this.btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcel.IconSize = 28;
+            this.btnExcel.Location = new System.Drawing.Point(905, 110);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(117, 36);
+            this.btnExcel.TabIndex = 5;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnRecarga
+            // 
+            this.btnRecarga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnRecarga.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecarga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.ArrowsRotate;
+            this.btnRecarga.IconColor = System.Drawing.Color.White;
+            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecarga.IconSize = 30;
+            this.btnRecarga.Location = new System.Drawing.Point(758, 110);
+            this.btnRecarga.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRecarga.Name = "btnRecarga";
+            this.btnRecarga.Size = new System.Drawing.Size(117, 36);
+            this.btnRecarga.TabIndex = 6;
+            this.btnRecarga.UseVisualStyleBackColor = false;
+            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
+            // 
+            // ChBFechaFiltro
+            // 
+            this.ChBFechaFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ChBFechaFiltro.AutoSize = true;
+            this.ChBFechaFiltro.Checked = true;
+            this.ChBFechaFiltro.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChBFechaFiltro.Location = new System.Drawing.Point(731, 41);
+            this.ChBFechaFiltro.Name = "ChBFechaFiltro";
+            this.ChBFechaFiltro.Size = new System.Drawing.Size(141, 22);
+            this.ChBFechaFiltro.TabIndex = 27;
+            this.ChBFechaFiltro.Text = "Tomar la fecha de hoy";
+            this.ChBFechaFiltro.UseVisualStyleBackColor = true;
+            this.ChBFechaFiltro.Visible = false;
+            this.ChBFechaFiltro.CheckedChanged += new System.EventHandler(this.ChBFechaFiltro_CheckedChanged);
+            // 
+            // dtpFechaFiltro
+            // 
+            this.dtpFechaFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaFiltro.Enabled = false;
+            this.dtpFechaFiltro.Location = new System.Drawing.Point(878, 42);
+            this.dtpFechaFiltro.Name = "dtpFechaFiltro";
+            this.dtpFechaFiltro.Size = new System.Drawing.Size(141, 20);
+            this.dtpFechaFiltro.TabIndex = 28;
+            this.dtpFechaFiltro.Visible = false;
+            this.dtpFechaFiltro.ValueChanged += new System.EventHandler(this.dtpFechaFiltro_ValueChanged);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lblMin, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbInicio, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(731, 69);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(141, 38);
+            this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // lblMin
+            // 
+            this.lblMin.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblMin, 2);
+            this.lblMin.Location = new System.Drawing.Point(3, 0);
+            this.lblMin.Name = "lblMin";
+            this.lblMin.Size = new System.Drawing.Size(96, 13);
+            this.lblMin.TabIndex = 2;
+            this.lblMin.Text = "Antiguedad minima";
+            // 
+            // cbInicio
+            // 
+            this.cbInicio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cbInicio.AutoCompleteCustomSource.AddRange(new string[] {
+            "1 MES",
+            "3 MESES",
+            "6 MESES",
+            "8 MESES",
+            "1 AÑO",
+            "2 AÑOS",
+            "4 AÑOS",
+            "6 AÑOS"});
+            this.tableLayoutPanel1.SetColumnSpan(this.cbInicio, 2);
+            this.cbInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInicio.FormattingEnabled = true;
+            this.cbInicio.Items.AddRange(new object[] {
+            "0 Año(s), 0 Mes(es)",
+            "0 Año(s), 1 Mes(es)",
+            "0 Año(s), 3 Mes(es)",
+            "0 Año(s), 6 Mes(es)",
+            "0 Año(s), 8 Mes(es)",
+            "1 Año(s), 0 Mes(es)",
+            "2 Año(s), 0 Mes(es)",
+            "3 Año(s), 0 Mes(es)",
+            "4 Año(s), 0 Mes(es)",
+            "5 Año(s), 0 Mes(es)"});
+            this.cbInicio.Location = new System.Drawing.Point(27, 16);
+            this.cbInicio.Name = "cbInicio";
+            this.cbInicio.Size = new System.Drawing.Size(111, 21);
+            this.cbInicio.TabIndex = 4;
+            this.cbInicio.SelectedIndexChanged += new System.EventHandler(this.cbInicio_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.cbFinal, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblMax, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(878, 69);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(141, 38);
+            this.tableLayoutPanel2.TabIndex = 30;
+            // 
+            // cbFinal
+            // 
+            this.cbFinal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tableLayoutPanel2.SetColumnSpan(this.cbFinal, 2);
+            this.cbFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFinal.FormattingEnabled = true;
+            this.cbFinal.Items.AddRange(new object[] {
+            "0 Año(s), 1 Mes(es)",
+            "0 Año(s), 3 Mes(es)",
+            "0 Año(s), 6 Mes(es)",
+            "0 Año(s), 8 Mes(es)",
+            "1 Año(s), 0 Mes(es)",
+            "2 Año(s), 0 Mes(es)",
+            "3 Año(s), 0 Mes(es)",
+            "4 Año(s), 0 Mes(es)",
+            "5 Año(s), 0 Mes(es)",
+            "99 Año(s), 0 Mes(es)"});
+            this.cbFinal.Location = new System.Drawing.Point(27, 16);
+            this.cbFinal.Name = "cbFinal";
+            this.cbFinal.Size = new System.Drawing.Size(111, 21);
+            this.cbFinal.TabIndex = 32;
+            this.cbFinal.SelectedIndexChanged += new System.EventHandler(this.cbFinal_SelectedIndexChanged);
+            // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.lblMax, 2);
+            this.lblMax.Location = new System.Drawing.Point(3, 0);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(99, 13);
+            this.lblMax.TabIndex = 2;
+            this.lblMax.Text = "Antiguedad maxima";
+            // 
+            // rowCounting
+            // 
+            this.rowCounting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.rowCounting.AutoSize = true;
+            this.rowCounting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rowCounting.Location = new System.Drawing.Point(878, 658);
+            this.rowCounting.Name = "rowCounting";
+            this.rowCounting.Size = new System.Drawing.Size(141, 15);
+            this.rowCounting.TabIndex = 31;
+            this.rowCounting.Text = "Registros : 0";
+            this.rowCounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // vConsulta
             // 

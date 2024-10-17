@@ -1,4 +1,5 @@
 ﻿
+using NPOI.SS.Formula.Functions;
 using SOFTMART_RRHH.Controlador;
 using SOFTMART_RRHH.Modelo;
 using System;
@@ -57,8 +58,9 @@ namespace SOFTMART_RRHH.Vista
                         keyValuePairs.Add(col.Name, col.HeaderText);
                     }
                 }
-
             }
+            keyValuePairs.Add("Temp", "Empleados de Temporada");
+
             cbFiltro.DataSource = keyValuePairs.ToList();
             cbFiltro.DisplayMember = "Value";
             cbFiltro.ValueMember = "Key";
@@ -231,6 +233,8 @@ namespace SOFTMART_RRHH.Vista
         }
         private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
+            tbFiltro.Enabled = true;
+
             if (cbFiltro.Text == "Antiguedad")
             {
                 esVisibleFiltroAntiguedad(true);
@@ -239,6 +243,15 @@ namespace SOFTMART_RRHH.Vista
             {
                 esVisibleFiltroAntiguedad(false);
             }
+
+            if (cbFiltro.Text == "Empleados de Temporada")
+            {
+                tbFiltro.Enabled = false;
+                string CB = "esEmpleadoTemp";
+                string TB = "SI";
+                ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format("CONVERT([{0}], System.String) LIKE '%{1}%'", CB, TB);
+            }
+
         }
         private void ChBFechaFiltro_CheckedChanged(object sender, EventArgs e)
         {
