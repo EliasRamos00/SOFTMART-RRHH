@@ -1,0 +1,63 @@
+----------Detalles del error en:  14/ene./2025 11:28:36 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:28:36 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Connect Timeout expired.
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:33:18 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:33:18 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:33:21 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:33:21 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:33:26 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:33:26 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:33:36 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:33:36 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:34:50 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:34:50 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:35:11 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:35:11 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:35:44 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:35:44 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  14/ene./2025 11:35:55 p. m.----------
+-----------------------------------------------
+Fecha: 14/ene./2025 11:35:55 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Access denied for user 'soporte'@'' to database 'rrhh'
+Usuario: 
+-----------------------------------------------
