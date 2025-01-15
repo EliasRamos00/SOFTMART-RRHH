@@ -37,7 +37,8 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vUsuarios);
             AdjuntarUC_frmPrincipal(vErrorLog);
             AdjuntarUC_frmPrincipal(vAjustes);
-
+            //View inicial a mostrar  
+            MostrarUC(vConsulta);
             //Eventos de los U.C.
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
             vTodos.DobleClickEmpleado += MostrarEmpleado;

@@ -149,6 +149,8 @@
             // 
             this.cbArea.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbArea.AutoSize = true;
+            this.cbArea.Checked = true;
+            this.cbArea.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbArea.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbArea.Location = new System.Drawing.Point(3, 85);
@@ -240,6 +242,8 @@
             // 
             this.cbDepto.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbDepto.AutoSize = true;
+            this.cbDepto.Checked = true;
+            this.cbDepto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbDepto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbDepto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepto.Location = new System.Drawing.Point(182, 85);
@@ -277,7 +281,7 @@
             this.cbFechaNac.Text = "Fecha de Nac.";
             this.cbFechaNac.UseVisualStyleBackColor = true;
             // 
-            // cbTienda
+            // cbTienda--Sucursal
             // 
             this.cbTienda.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbTienda.AutoSize = true;
@@ -628,6 +632,8 @@
             // 
             this.cbNombreCompleto.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbNombreCompleto.AutoSize = true;
+            this.cbNombreCompleto.Checked = true;
+            this.cbNombreCompleto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbNombreCompleto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNombreCompleto.Location = new System.Drawing.Point(3, 126);
