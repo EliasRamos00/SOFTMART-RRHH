@@ -48,6 +48,7 @@
             this.isBeingCalculated = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Tienda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBajasEmpleados_Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Patron = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBajasEmpleados_Termino = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -163,6 +164,7 @@
             this.isBeingCalculated,
             this.dgvBajasEmpleados_Nombre,
             this.dgvBajasEmpleados_Tienda,
+            this.dgvBajasEmpleados_Puesto,
             this.dgvBajasEmpleados_Patron,
             this.dgvBajasEmpleados_Inicio,
             this.dgvBajasEmpleados_Termino,
@@ -314,6 +316,13 @@
             this.dgvBajasEmpleados_Tienda.ReadOnly = true;
             this.dgvBajasEmpleados_Tienda.Width = 5;
             // 
+            // dgvBajasEmpleados_Puesto
+            // 
+            this.dgvBajasEmpleados_Puesto.DataPropertyName = "Puesto";
+            this.dgvBajasEmpleados_Puesto.HeaderText = "Puesto";
+            this.dgvBajasEmpleados_Puesto.Name = "dgvBajasEmpleados_Puesto";
+            this.dgvBajasEmpleados_Puesto.ReadOnly = true;
+            // 
             // dgvBajasEmpleados_Patron
             // 
             this.dgvBajasEmpleados_Patron.DataPropertyName = "UltimoPatron";
@@ -417,6 +426,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn isBeingCalculated;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Tienda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Puesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Patron;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBajasEmpleados_Termino;
