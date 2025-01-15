@@ -1,0 +1,84 @@
+----------Detalles del error en:  15/01/2025 12:52:29 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 12:52:29 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:13:19 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:13:19 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '    ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:13:24 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:13:24 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '    ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:13:32 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:13:32 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: ' ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:13:45 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:13:45 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:15:06 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:15:06 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '   ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:15:10 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:15:10 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '   ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:15:21 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:15:21 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '    ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:15:25 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:15:25 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '    ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:15:30 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:15:30 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Incorrect integer value: '   ' for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:15:38 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:15:38 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Column 'NumContrato' cannot be null
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------
+----------Detalles del error en:  15/01/2025 02:40:57 p. m.----------
+-----------------------------------------------
+Fecha: 15/01/2025 02:40:57 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Data too long for column 'vNumContrato' at row 1
+Usuario: ELIAS JR. RAMOS
+-----------------------------------------------

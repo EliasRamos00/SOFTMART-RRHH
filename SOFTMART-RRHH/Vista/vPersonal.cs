@@ -6,6 +6,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static SOFTMART_RRHH.Modelo.LibAux;
 
@@ -326,33 +327,34 @@ namespace SOFTMART_RRHH.Vista
             //------- SE OBTIENE LA INFORMACIÓN DEL FORMULARIO --------
             //INFORMACION DE CONTACTO
             string telefono;
-            telefono = tbTelefono.Text;
+            telefono = tbTelefono.Text = Regex.Replace(tbTelefono.Text, @"\s", ""); ;
+
 
             //INFORMACION DE DOMICILIO
             object Estado, Ciudad, Colonia, CP, CalleNum;
-            Estado = tbEstado.Text;
-            Ciudad = tbCiudad.Text;
-            Colonia = tbColonia.Text;
-            CP = tbCP.Text;
-            CalleNum = tbCalleNum.Text;
+            Estado = tbEstado.Text = Regex.Replace(tbEstado.Text.Trim(), @"\s+", " ");
+            Ciudad = tbCiudad.Text = Regex.Replace(tbCiudad.Text.Trim(), @"\s+", " ");
+            Colonia = tbColonia.Text = Regex.Replace(tbColonia.Text.Trim(), @"\s+", " ");
+            CP = tbCP.Text = Regex.Replace(tbCP.Text, @"\s", "");
+            CalleNum = tbCalleNum.Text = Regex.Replace(tbCalleNum.Text.Trim(), @"\s+", " ");
 
             //INFORMACION DE PERSONA
             object Nombres, ApePat, ApeMat, RFC, CURP,
                 LugarNac, Genero, fotografiaDestino, fotografiaOrigen, idEscolaridad, Especialidad, EdoCivil, NSS, InfoEmer, INE_Origen, INE_Destino;
 
-            Nombres = tbNombres.Text;
-            ApePat = tbApePat.Text;
-            ApeMat = tbApeMat.Text;
-            RFC = tbRFC.Text;
-            CURP = tbCURP.Text;
-            LugarNac = tbLugarNac.Text;
+            Nombres = tbNombres.Text = Regex.Replace(tbNombres.Text, @"\s+", " ").Trim();
+            ApePat = tbApePat.Text = Regex.Replace(tbApePat.Text, @"\s+", " ").Trim();
+            ApeMat = tbApeMat.Text = Regex.Replace(tbApeMat.Text, @"\s+", " ").Trim();
+            RFC = tbRFC.Text = Regex.Replace(tbRFC.Text, @"\s", "");
+            CURP = tbCURP.Text = Regex.Replace(tbCURP.Text, @"\s", ""); 
+            LugarNac = tbLugarNac.Text.Trim();
             Genero = rBMasc.Checked == true ? "Masculino" : "Femenino";
             DateTime FechaNac = dtpFechaNac.Value;
             try { idEscolaridad = cbEscolaridad.SelectedValue.ToString(); } catch { idEscolaridad = ""; }
-            Especialidad = tbEspecialidad.Text;
-            EdoCivil = cbEdoCivil.Text;
-            NSS = tbNSS.Text;
-            InfoEmer = tb_InfoEmerg.Text;
+            Especialidad = tbEspecialidad.Text.Trim();
+            EdoCivil = cbEdoCivil.Text.Trim();
+            NSS = tbNSS.Text.Trim();
+            InfoEmer = tb_InfoEmerg.Text.Trim();
             if (esFotoNueva)
             {
                 fotografiaDestino = Path.Combine(FotografiaDestino, tbCURP.Text + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss_") + ".jpg");
@@ -375,12 +377,12 @@ namespace SOFTMART_RRHH.Vista
             }
             //INFORMACIÓN DE EMPLEADO
             object NumContrato, idSucursal, idPuesto, esTemporal, sueldo, comentarios;
-            NumContrato = tbNumContrato.Text;
+            NumContrato = tbNumContrato.Text = Regex.Replace(tbNumContrato.Text, @"\s", "");
             try { idSucursal = cbTienda.SelectedValue.ToString(); } catch { idSucursal = ""; }
             try { idPuesto = cbPuesto.SelectedValue.ToString(); } catch { idPuesto = ""; }
             esTemporal = cBEmpleadoTemporada.Checked;
-            sueldo = cbSueldo.Text != "" ? Convert.ToDecimal(cbSueldo.Text).ToString("0.00") : "";
-            comentarios = tbComentarios.Text;
+            sueldo = cbSueldo.Text.Trim() != "" ? Convert.ToDecimal(cbSueldo.Text).ToString("0.00") : "";
+            comentarios = tbComentarios.Text.Trim();
 
             if (estaModificando) //Si no es una modificación... es una inserción.
             {
@@ -435,6 +437,10 @@ namespace SOFTMART_RRHH.Vista
                 return false;
             }
             return true;
+
+            
+            
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -444,7 +450,7 @@ namespace SOFTMART_RRHH.Vista
                 btnSubirFoto.Text = "Subir Fotografia";
                 btnSubirINE.Text = "Subir INE";
                 estaModificando = true;
-                OldCurp = tbCURP.Text;
+                OldCurp = tbCURP.Text.Trim();
                 lblMov.Text = "MODIFICACIÓN";
                 lblMov.ForeColor = LibAux.libColores[eColores.Modificacion];
                 btnActualizar.Text = "Cancelar edición";
@@ -569,6 +575,12 @@ namespace SOFTMART_RRHH.Vista
         {
             ConsultarExistenciaPersona();
         }
+
+        private void tbCURP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             if (lblMov.Text == "ALTA")
