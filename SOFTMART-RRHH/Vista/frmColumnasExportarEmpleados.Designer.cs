@@ -57,23 +57,27 @@
             this.cbAntiguedad = new System.Windows.Forms.CheckBox();
             this.gBLaboral = new System.Windows.Forms.GroupBox();
             this.tlpLaboral = new System.Windows.Forms.TableLayoutPanel();
+            this.cbEmpleadoTemporada = new System.Windows.Forms.CheckBox();
+            this.cbComentarios = new System.Windows.Forms.CheckBox();
             this.gBPersonal = new System.Windows.Forms.GroupBox();
             this.tlpPersonal = new System.Windows.Forms.TableLayoutPanel();
+            this.cbNombreCompleto = new System.Windows.Forms.CheckBox();
+            this.cbFoto = new System.Windows.Forms.CheckBox();
+            this.cbINE = new System.Windows.Forms.CheckBox();
             this.cBDomiciliar = new System.Windows.Forms.GroupBox();
             this.tlpDomiciliar = new System.Windows.Forms.TableLayoutPanel();
             this.lblInstruct = new System.Windows.Forms.Label();
             this.btnExcel = new FontAwesome.Sharp.IconButton();
-            this.cbComentarios = new System.Windows.Forms.CheckBox();
-            this.cbINE = new System.Windows.Forms.CheckBox();
-            this.cbFoto = new System.Windows.Forms.CheckBox();
-            this.cbNombreCompleto = new System.Windows.Forms.CheckBox();
-            this.cbEmpleadoTemporada = new System.Windows.Forms.CheckBox();
+            this.listboxOrden = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gBLaboral.SuspendLayout();
             this.tlpLaboral.SuspendLayout();
             this.gBPersonal.SuspendLayout();
             this.tlpPersonal.SuspendLayout();
             this.cBDomiciliar.SuspendLayout();
             this.tlpDomiciliar.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbApePat
@@ -281,7 +285,7 @@
             this.cbFechaNac.Text = "Fecha de Nac.";
             this.cbFechaNac.UseVisualStyleBackColor = true;
             // 
-            // cbTienda--Sucursal
+            // cbTienda
             // 
             this.cbTienda.Appearance = System.Windows.Forms.Appearance.Button;
             this.cbTienda.AutoSize = true;
@@ -490,6 +494,32 @@
             this.tlpLaboral.Size = new System.Drawing.Size(539, 206);
             this.tlpLaboral.TabIndex = 0;
             // 
+            // cbEmpleadoTemporada
+            // 
+            this.cbEmpleadoTemporada.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbEmpleadoTemporada.AutoSize = true;
+            this.cbEmpleadoTemporada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbEmpleadoTemporada.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmpleadoTemporada.Location = new System.Drawing.Point(361, 167);
+            this.cbEmpleadoTemporada.Name = "cbEmpleadoTemporada";
+            this.cbEmpleadoTemporada.Size = new System.Drawing.Size(175, 36);
+            this.cbEmpleadoTemporada.TabIndex = 14;
+            this.cbEmpleadoTemporada.Text = "Es de temporada";
+            this.cbEmpleadoTemporada.UseVisualStyleBackColor = true;
+            // 
+            // cbComentarios
+            // 
+            this.cbComentarios.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbComentarios.AutoSize = true;
+            this.cbComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbComentarios.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComentarios.Location = new System.Drawing.Point(3, 167);
+            this.cbComentarios.Name = "cbComentarios";
+            this.cbComentarios.Size = new System.Drawing.Size(173, 36);
+            this.cbComentarios.TabIndex = 12;
+            this.cbComentarios.Text = "Comentarios";
+            this.cbComentarios.UseVisualStyleBackColor = true;
+            // 
             // gBPersonal
             // 
             this.gBPersonal.Controls.Add(this.tlpPersonal);
@@ -528,6 +558,47 @@
             this.tlpPersonal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
             this.tlpPersonal.Size = new System.Drawing.Size(542, 165);
             this.tlpPersonal.TabIndex = 0;
+            // 
+            // cbNombreCompleto
+            // 
+            this.cbNombreCompleto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbNombreCompleto.AutoSize = true;
+            this.cbNombreCompleto.Checked = true;
+            this.cbNombreCompleto.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbNombreCompleto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNombreCompleto.Location = new System.Drawing.Point(3, 126);
+            this.cbNombreCompleto.Name = "cbNombreCompleto";
+            this.cbNombreCompleto.Size = new System.Drawing.Size(174, 36);
+            this.cbNombreCompleto.TabIndex = 9;
+            this.cbNombreCompleto.Text = "Nombre Completo";
+            this.cbNombreCompleto.UseVisualStyleBackColor = true;
+            // 
+            // cbFoto
+            // 
+            this.cbFoto.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbFoto.AutoSize = true;
+            this.cbFoto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbFoto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFoto.Location = new System.Drawing.Point(183, 126);
+            this.cbFoto.Name = "cbFoto";
+            this.cbFoto.Size = new System.Drawing.Size(174, 36);
+            this.cbFoto.TabIndex = 10;
+            this.cbFoto.Text = "tiene Foto";
+            this.cbFoto.UseVisualStyleBackColor = true;
+            // 
+            // cbINE
+            // 
+            this.cbINE.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbINE.AutoSize = true;
+            this.cbINE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbINE.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbINE.Location = new System.Drawing.Point(363, 126);
+            this.cbINE.Name = "cbINE";
+            this.cbINE.Size = new System.Drawing.Size(176, 36);
+            this.cbINE.TabIndex = 11;
+            this.cbINE.Text = "tiene INE";
+            this.cbINE.UseVisualStyleBackColor = true;
             // 
             // cBDomiciliar
             // 
@@ -589,78 +660,44 @@
             this.btnExcel.UseVisualStyleBackColor = false;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
-            // cbComentarios
+            // listboxOrden
             // 
-            this.cbComentarios.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbComentarios.AutoSize = true;
-            this.cbComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbComentarios.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComentarios.Location = new System.Drawing.Point(3, 167);
-            this.cbComentarios.Name = "cbComentarios";
-            this.cbComentarios.Size = new System.Drawing.Size(173, 36);
-            this.cbComentarios.TabIndex = 12;
-            this.cbComentarios.Text = "Comentarios";
-            this.cbComentarios.UseVisualStyleBackColor = true;
+            this.listboxOrden.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listboxOrden.FormattingEnabled = true;
+            this.listboxOrden.ItemHeight = 21;
+            this.listboxOrden.Location = new System.Drawing.Point(6, 19);
+            this.listboxOrden.Name = "listboxOrden";
+            this.listboxOrden.Size = new System.Drawing.Size(301, 508);
+            this.listboxOrden.TabIndex = 5;
+            this.listboxOrden.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListBoxColumnas_KeyDown);
             // 
-            // cbINE
+            // groupBox1
             // 
-            this.cbINE.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbINE.AutoSize = true;
-            this.cbINE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbINE.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbINE.Location = new System.Drawing.Point(363, 126);
-            this.cbINE.Name = "cbINE";
-            this.cbINE.Size = new System.Drawing.Size(176, 36);
-            this.cbINE.TabIndex = 11;
-            this.cbINE.Text = "tiene INE";
-            this.cbINE.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.listboxOrden);
+            this.groupBox1.Location = new System.Drawing.Point(615, 46);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(315, 530);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Orden de las columnas";
             // 
-            // cbFoto
+            // label1
             // 
-            this.cbFoto.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbFoto.AutoSize = true;
-            this.cbFoto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbFoto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFoto.Location = new System.Drawing.Point(183, 126);
-            this.cbFoto.Name = "cbFoto";
-            this.cbFoto.Size = new System.Drawing.Size(174, 36);
-            this.cbFoto.TabIndex = 10;
-            this.cbFoto.Text = "tiene Foto";
-            this.cbFoto.UseVisualStyleBackColor = true;
-            // 
-            // cbNombreCompleto
-            // 
-            this.cbNombreCompleto.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbNombreCompleto.AutoSize = true;
-            this.cbNombreCompleto.Checked = true;
-            this.cbNombreCompleto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbNombreCompleto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNombreCompleto.Location = new System.Drawing.Point(3, 126);
-            this.cbNombreCompleto.Name = "cbNombreCompleto";
-            this.cbNombreCompleto.Size = new System.Drawing.Size(174, 36);
-            this.cbNombreCompleto.TabIndex = 9;
-            this.cbNombreCompleto.Text = "Nombre Completo";
-            this.cbNombreCompleto.UseVisualStyleBackColor = true;
-            // 
-            // cbEmpleadoTemporada
-            // 
-            this.cbEmpleadoTemporada.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbEmpleadoTemporada.AutoSize = true;
-            this.cbEmpleadoTemporada.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbEmpleadoTemporada.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmpleadoTemporada.Location = new System.Drawing.Point(361, 167);
-            this.cbEmpleadoTemporada.Name = "cbEmpleadoTemporada";
-            this.cbEmpleadoTemporada.Size = new System.Drawing.Size(175, 36);
-            this.cbEmpleadoTemporada.TabIndex = 14;
-            this.cbEmpleadoTemporada.Text = "Es de temporada";
-            this.cbEmpleadoTemporada.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(618, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = " Ajusta el orden de las columnas con las flechas";
             // 
             // frmColumnasExportarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 672);
+            this.ClientSize = new System.Drawing.Size(953, 672);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.lblInstruct);
             this.Controls.Add(this.cBDomiciliar);
@@ -678,6 +715,7 @@
             this.cBDomiciliar.ResumeLayout(false);
             this.tlpDomiciliar.ResumeLayout(false);
             this.tlpDomiciliar.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,5 +762,8 @@
         private System.Windows.Forms.CheckBox cbNombreCompleto;
         private System.Windows.Forms.CheckBox cbFoto;
         private System.Windows.Forms.CheckBox cbINE;
+        private System.Windows.Forms.ListBox listboxOrden;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
