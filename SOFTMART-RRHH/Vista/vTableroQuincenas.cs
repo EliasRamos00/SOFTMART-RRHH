@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
 {
-    public partial class vSueldos : Form
+    public partial class vTableroQuincenas : UserControl
     {
-        public vSueldos()
+        public vTableroQuincenas()
         {
             InitializeComponent();
         }
