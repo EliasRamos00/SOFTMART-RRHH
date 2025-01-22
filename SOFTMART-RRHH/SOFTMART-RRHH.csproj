@@ -281,6 +281,12 @@
     <Compile Include="Vista\vConsulta.Designer.cs">
       <DependentUpon>vConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\vSueldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\vSueldos.Designer.cs">
+      <DependentUpon>vSueldos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\vTodos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\vConsulta.resx">
       <DependentUpon>vConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\vSueldos.resx">
+      <DependentUpon>vSueldos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\vTodos.resx">
       <DependentUpon>vTodos.cs</DependentUpon>
