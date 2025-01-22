@@ -1,0 +1,14 @@
+----------Detalles del error en:  22/01/2025 02:08:19 p. m.----------
+-----------------------------------------------
+Fecha: 22/01/2025 02:08:19 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Connect Timeout expired.
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  22/01/2025 02:08:34 p. m.----------
+-----------------------------------------------
+Fecha: 22/01/2025 02:08:34 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Connect Timeout expired.
+Usuario: 
+-----------------------------------------------
