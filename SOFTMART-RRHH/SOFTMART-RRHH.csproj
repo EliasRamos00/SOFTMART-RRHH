@@ -284,6 +284,12 @@
     <Compile Include="Vista\vConsulta.Designer.cs">
       <DependentUpon>vConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\vTableroQuincenas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\vTableroQuincenas.Designer.cs">
+      <DependentUpon>vTableroQuincenas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\vTodos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\vConsulta.resx">
       <DependentUpon>vConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\vTableroQuincenas.resx">
+      <DependentUpon>vTableroQuincenas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\vTodos.resx">
       <DependentUpon>vTodos.cs</DependentUpon>

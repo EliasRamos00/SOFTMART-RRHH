@@ -54,6 +54,7 @@ namespace SOFTMART_RRHH
             this.btnConsulta = new FontAwesome.Sharp.IconButton();
             this.btnAltasEmpleados = new FontAwesome.Sharp.IconButton();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.btnSueldos = new FontAwesome.Sharp.IconButton();
             this.pTitleBar.SuspendLayout();
             this.tlpBotones.SuspendLayout();
             this.pSideBar.SuspendLayout();
@@ -184,6 +185,7 @@ namespace SOFTMART_RRHH
             // pSideBar
             // 
             this.pSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.pSideBar.Controls.Add(this.btnSueldos);
             this.pSideBar.Controls.Add(this.pictureBox1);
             this.pSideBar.Controls.Add(this.lblBD);
             this.pSideBar.Controls.Add(this.btnAjustes);
@@ -444,6 +446,24 @@ namespace SOFTMART_RRHH
             this.pPrincipal.Size = new System.Drawing.Size(1191, 751);
             this.pPrincipal.TabIndex = 0;
             // 
+            // btnSueldos
+            // 
+            this.btnSueldos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnSueldos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSueldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSueldos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSueldos.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            this.btnSueldos.IconColor = System.Drawing.Color.White;
+            this.btnSueldos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSueldos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSueldos.Location = new System.Drawing.Point(0, 286);
+            this.btnSueldos.Name = "btnSueldos";
+            this.btnSueldos.Size = new System.Drawing.Size(235, 39);
+            this.btnSueldos.TabIndex = 14;
+            this.btnSueldos.Text = "Sueldos";
+            this.btnSueldos.UseVisualStyleBackColor = false;
+            this.btnSueldos.Click += new System.EventHandler(this.btnSueldos_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -491,5 +511,6 @@ namespace SOFTMART_RRHH
         private FontAwesome.Sharp.IconButton btnAjustes;
         private Label lblBD;
         private PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnSueldos;
     }
 }

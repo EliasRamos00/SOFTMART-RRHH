@@ -21,6 +21,7 @@ namespace SOFTMART_RRHH
         vHistorialCambios vCambios = new vHistorialCambios();
         vUsuarios vUsuarios = new vUsuarios();
         vErrorLog vErrorLog = new vErrorLog();
+        vTableroQuincenas vTableroQuincenas = new vTableroQuincenas();
 
         #endregion
         #region CONSTRUCTORES
@@ -37,6 +38,7 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vUsuarios);
             AdjuntarUC_frmPrincipal(vErrorLog);
             AdjuntarUC_frmPrincipal(vAjustes);
+            AdjuntarUC_frmPrincipal(vTableroQuincenas);
             //View inicial a mostrar  
             MostrarUC(vConsulta);
             //Eventos de los U.C.
@@ -241,6 +243,11 @@ namespace SOFTMART_RRHH
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnSueldos_Click(object sender, EventArgs e)
+        {
+            MostrarUC(vTableroQuincenas);
         }
         #endregion
 
