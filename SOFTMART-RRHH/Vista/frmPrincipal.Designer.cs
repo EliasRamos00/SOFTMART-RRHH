@@ -453,7 +453,6 @@ namespace SOFTMART_RRHH
             this.Controls.Add(this.pPrincipal);
             this.Controls.Add(this.pTitleBar);
             this.Controls.Add(this.pSideBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -230,17 +230,45 @@ namespace SOFTMART_RRHH.Modelo
             {
                 var sheet = workbook.CreateSheet("Hoja 1");
 
+                // Crear un estilo para celdas de encabezado
+                var headerStyle = workbook.CreateCellStyle();
+                headerStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
+
+                // Configurar color de fondo
+                headerStyle.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Lime.Index; 
+                headerStyle.FillPattern = NPOI.SS.UserModel.FillPattern.SolidForeground;
+
+                // Configurar bordes
+                headerStyle.BorderTop = NPOI.SS.UserModel.BorderStyle.Thin;
+                headerStyle.BorderBottom = NPOI.SS.UserModel.BorderStyle.Thin;
+                headerStyle.BorderLeft = NPOI.SS.UserModel.BorderStyle.Thin;
+                headerStyle.BorderRight = NPOI.SS.UserModel.BorderStyle.Thin;
+
+                // Opcional: Configurar color de los bordes
+                headerStyle.TopBorderColor = NPOI.HSSF.Util.HSSFColor.Black.Index;
+                headerStyle.BottomBorderColor = NPOI.HSSF.Util.HSSFColor.Black.Index;
+                headerStyle.LeftBorderColor = NPOI.HSSF.Util.HSSFColor.Black.Index;
+                headerStyle.RightBorderColor = NPOI.HSSF.Util.HSSFColor.Black.Index;
+
+                // Configurar fuente para el encabezado
+                var headerFont = workbook.CreateFont();
+                headerFont.IsBold = true;
+                headerStyle.SetFont(headerFont);
+
                 // Crear un estilo para celdas de fecha
                 var dateCellStyle = workbook.CreateCellStyle();
                 var createHelper = workbook.GetCreationHelper();
-                dateCellStyle.DataFormat = createHelper.CreateDataFormat().GetFormat("yyyy-MM-dd");
+                dateCellStyle.DataFormat = createHelper.CreateDataFormat().GetFormat("dd-MMM-yyyy");
 
                 // Agregar encabezados
                 var headerRow = sheet.CreateRow(0);
                 for (int i = 0; i < dt.Columns.Count; i++)
                 {
-                    headerRow.CreateCell(i).SetCellValue(dt.Columns[i].ColumnName);
+                    var cell = headerRow.CreateCell(i);
+                    cell.SetCellValue(dt.Columns[i].ColumnName);
+                    cell.CellStyle = headerStyle;
                 }
+
 
                 // Agregar datos
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -261,6 +289,14 @@ namespace SOFTMART_RRHH.Modelo
                             cell.SetCellValue(cellValue?.ToString() ?? "");
                         }
                     }
+                }
+
+                // Ajustar el ancho de las columnas manualmente
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    sheet.AutoSizeColumn(i);
+                    // Corrección para un pequeño margen adicional
+                    sheet.SetColumnWidth(i, sheet.GetColumnWidth(i) + 256); // Añade un pequeño espacio
                 }
 
                 // Guardar el archivo

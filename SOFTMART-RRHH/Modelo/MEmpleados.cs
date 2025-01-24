@@ -34,6 +34,16 @@ namespace SOFTMART_RRHH.Controlador
         {
             return LibAux.EjecutarProcedimiento("SP_CONSULTAR_EmpleadosActivosReporte");
         }
+        internal static DataTable ObtenerEmpleadosActivosReporteSinBajas(DateTime Inicio, DateTime Fin)
+        {
+            List<Param> @params = new List<Param>{
+                new Param("vInicio", Inicio),
+                new Param("vFinal", Fin)
+
+            };
+            return LibAux.EjecutarProcedimiento("SP_CONSULTAR_EmpleadosActivosSinBajas",@params);
+        }
+
         /// <summary>
         /// Obtiene toda la información relacionada al empleado, como la informacion personal, de contacto, domiciliar, escolaridad sucursal etc...
         /// </summary>
