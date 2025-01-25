@@ -197,6 +197,7 @@
     <Compile Include="Modelo\MRoles.cs" />
     <Compile Include="Modelo\MSucursales.cs" />
     <Compile Include="Modelo\LibAux.cs" />
+    <Compile Include="Modelo\MSueldos.cs" />
     <Compile Include="Modelo\MUsuarios.cs" />
     <Compile Include="Modelo\Param.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
