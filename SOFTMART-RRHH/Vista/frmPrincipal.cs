@@ -40,7 +40,9 @@ namespace SOFTMART_RRHH
             AdjuntarUC_frmPrincipal(vAjustes);
             AdjuntarUC_frmPrincipal(vTableroQuincenas);
             //View inicial a mostrar  
-            MostrarUC(vConsulta);
+           // MostrarUC(vConsulta); // REGRESAR, SE CAMBIO PARA PRUEBAS
+            MostrarUC(vTableroQuincenas); // REGRESAR, SE CAMBIO PARA PRUEBAS
+
             //Eventos de los U.C.
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
             vTodos.DobleClickEmpleado += MostrarEmpleado;

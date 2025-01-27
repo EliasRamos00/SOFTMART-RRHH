@@ -28,37 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltroSueldos = new System.Windows.Forms.TextBox();
             this.lblBuscarSueldos = new System.Windows.Forms.Label();
             this.lblColumnSueldos = new System.Windows.Forms.Label();
             this.cbFiltroSueldos = new System.Windows.Forms.ComboBox();
             this.dgvSueldos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fiscal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bonificacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnCloseSueldos = new System.Windows.Forms.PictureBox();
             this.lblTituloSueldos = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbQuincenaAnterior = new System.Windows.Forms.ComboBox();
             this.dtpQuincenaAnterior = new System.Windows.Forms.DateTimePicker();
-            this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
-            this.lblExpExc = new System.Windows.Forms.Label();
             this.lblImpExc = new System.Windows.Forms.Label();
             this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
-            this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dtpQuincenaActual = new System.Windows.Forms.DateTimePicker();
             this.cbQuincenaActual = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblExpExc = new System.Windows.Forms.Label();
+            this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
+            this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Fiscal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Bonificacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSueldos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseSueldos)).BeginInit();
@@ -68,17 +81,13 @@
             // 
             // tlpPrincipal
             // 
-            this.tlpPrincipal.ColumnCount = 10;
+            this.tlpPrincipal.ColumnCount = 6;
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.82132F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.87148F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9060023F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.614213F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 239F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tlpPrincipal.Controls.Add(this.tbFiltroSueldos, 1, 3);
             this.tlpPrincipal.Controls.Add(this.lblBuscarSueldos, 1, 2);
             this.tlpPrincipal.Controls.Add(this.lblColumnSueldos, 2, 2);
@@ -87,21 +96,25 @@
             this.tlpPrincipal.Controls.Add(this.btnCloseSueldos, 0, 0);
             this.tlpPrincipal.Controls.Add(this.lblTituloSueldos, 1, 0);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 2, 5);
-            this.tlpPrincipal.Controls.Add(this.btnExportarExcel, 7, 3);
-            this.tlpPrincipal.Controls.Add(this.lblExpExc, 7, 2);
-            this.tlpPrincipal.Controls.Add(this.lblImpExc, 5, 2);
-            this.tlpPrincipal.Controls.Add(this.btnImportarExcel, 5, 3);
-            this.tlpPrincipal.Controls.Add(this.btnCerrarQuincena, 8, 3);
-            this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 4, 5);
+            this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 3, 5);
+            this.tlpPrincipal.Controls.Add(this.label2, 2, 6);
+            this.tlpPrincipal.Controls.Add(this.label1, 3, 6);
+            this.tlpPrincipal.Controls.Add(this.btnBuscar, 4, 5);
+            this.tlpPrincipal.Controls.Add(this.lblExpExc, 3, 1);
+            this.tlpPrincipal.Controls.Add(this.lblImpExc, 4, 1);
+            this.tlpPrincipal.Controls.Add(this.btnExportarExcel, 3, 2);
+            this.tlpPrincipal.Controls.Add(this.btnImportarExcel, 4, 2);
+            this.tlpPrincipal.Controls.Add(this.btnGuardarCambios, 4, 6);
+            this.tlpPrincipal.Controls.Add(this.btnCerrarQuincena, 4, 3);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 7;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.850746F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.959032F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.517691F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.30093F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.868839F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.981259F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.542002F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.6079F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tlpPrincipal.Size = new System.Drawing.Size(1037, 650);
@@ -114,8 +127,9 @@
             this.tbFiltroSueldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFiltroSueldos.Location = new System.Drawing.Point(45, 99);
             this.tbFiltroSueldos.Name = "tbFiltroSueldos";
-            this.tbFiltroSueldos.Size = new System.Drawing.Size(328, 26);
+            this.tbFiltroSueldos.Size = new System.Drawing.Size(317, 26);
             this.tbFiltroSueldos.TabIndex = 2;
+            this.tbFiltroSueldos.TextChanged += new System.EventHandler(this.tbFiltroSueldos_TextChanged);
             // 
             // lblBuscarSueldos
             // 
@@ -135,11 +149,12 @@
             this.lblColumnSueldos.AutoSize = true;
             this.lblColumnSueldos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumnSueldos.ForeColor = System.Drawing.Color.Black;
-            this.lblColumnSueldos.Location = new System.Drawing.Point(379, 75);
+            this.lblColumnSueldos.Location = new System.Drawing.Point(368, 75);
             this.lblColumnSueldos.Name = "lblColumnSueldos";
             this.lblColumnSueldos.Size = new System.Drawing.Size(79, 21);
             this.lblColumnSueldos.TabIndex = 3;
             this.lblColumnSueldos.Text = "Columna";
+            this.lblColumnSueldos.Visible = false;
             // 
             // cbFiltroSueldos
             // 
@@ -148,126 +163,68 @@
             this.cbFiltroSueldos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiltroSueldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltroSueldos.FormattingEnabled = true;
-            this.cbFiltroSueldos.Location = new System.Drawing.Point(379, 99);
+            this.cbFiltroSueldos.Location = new System.Drawing.Point(368, 99);
             this.cbFiltroSueldos.Name = "cbFiltroSueldos";
-            this.cbFiltroSueldos.Size = new System.Drawing.Size(239, 28);
+            this.cbFiltroSueldos.Size = new System.Drawing.Size(233, 28);
             this.cbFiltroSueldos.TabIndex = 4;
+            this.cbFiltroSueldos.Visible = false;
             // 
             // dgvSueldos
             // 
             this.dgvSueldos.AllowUserToAddRows = false;
             this.dgvSueldos.AllowUserToDeleteRows = false;
-            this.dgvSueldos.AllowUserToOrderColumns = true;
             this.dgvSueldos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dgvSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSueldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Fiscal1,
-            this.Bonificacion1,
-            this.Total1,
-            this.Fiscal2,
-            this.Bonificacion2,
-            this.Total2,
-            this.Diferencia,
+            this.dgvSueldos_idEmpleado,
+            this.dgvSueldos_tieneCambios,
+            this.dgvSueldos_Nombre,
+            this.dgvSueldos_Fiscal1,
+            this.dgvSueldos_Bonificacion1,
+            this.dgvSueldos_Total1,
+            this.dgvSueldos_Fiscal2,
+            this.dgvSueldos_Bonificacion2,
+            this.dgvSueldos_Total2,
+            this.dgvSueldos_Diferencia,
             this.QuincenaFutura});
-            this.tlpPrincipal.SetColumnSpan(this.dgvSueldos, 8);
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tlpPrincipal.SetColumnSpan(this.dgvSueldos, 4);
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgvSueldos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSueldos.GridColor = System.Drawing.Color.Black;
             this.dgvSueldos.Location = new System.Drawing.Point(45, 134);
             this.dgvSueldos.MultiSelect = false;
             this.dgvSueldos.Name = "dgvSueldos";
-            this.dgvSueldos.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.dgvSueldos.RowHeadersVisible = false;
             this.dgvSueldos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSueldos.Size = new System.Drawing.Size(951, 436);
+            this.dgvSueldos.Size = new System.Drawing.Size(960, 436);
             this.dgvSueldos.TabIndex = 6;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Fiscal1
-            // 
-            this.Fiscal1.HeaderText = "Fiscal";
-            this.Fiscal1.Name = "Fiscal1";
-            this.Fiscal1.ReadOnly = true;
-            this.Fiscal1.Width = 80;
-            // 
-            // Bonificacion1
-            // 
-            this.Bonificacion1.HeaderText = "Bonificación";
-            this.Bonificacion1.Name = "Bonificacion1";
-            this.Bonificacion1.ReadOnly = true;
-            this.Bonificacion1.Width = 80;
-            // 
-            // Total1
-            // 
-            this.Total1.HeaderText = "Total";
-            this.Total1.Name = "Total1";
-            this.Total1.ReadOnly = true;
-            this.Total1.Width = 80;
-            // 
-            // Fiscal2
-            // 
-            this.Fiscal2.HeaderText = "Fiscal";
-            this.Fiscal2.Name = "Fiscal2";
-            this.Fiscal2.ReadOnly = true;
-            this.Fiscal2.Width = 80;
-            // 
-            // Bonificacion2
-            // 
-            this.Bonificacion2.HeaderText = "Bonificación";
-            this.Bonificacion2.Name = "Bonificacion2";
-            this.Bonificacion2.ReadOnly = true;
-            this.Bonificacion2.Width = 80;
-            // 
-            // Total2
-            // 
-            this.Total2.HeaderText = "Total";
-            this.Total2.Name = "Total2";
-            this.Total2.ReadOnly = true;
-            this.Total2.Width = 80;
-            // 
-            // Diferencia
-            // 
-            this.Diferencia.HeaderText = "Diferencia";
-            this.Diferencia.Name = "Diferencia";
-            this.Diferencia.ReadOnly = true;
-            this.Diferencia.Width = 80;
-            // 
-            // QuincenaFutura
-            // 
-            this.QuincenaFutura.HeaderText = "QuincenaFutura";
-            this.QuincenaFutura.Name = "QuincenaFutura";
-            this.QuincenaFutura.ReadOnly = true;
-            this.QuincenaFutura.Width = 60;
+            this.dgvSueldos.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvSueldos_CellBeginEdit);
+            this.dgvSueldos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellDoubleClick);
+            this.dgvSueldos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellEndEdit);
+            this.dgvSueldos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvSueldos_CellPainting);
             // 
             // btnCloseSueldos
             // 
@@ -292,7 +249,7 @@
             this.lblTituloSueldos.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
             this.lblTituloSueldos.Name = "lblTituloSueldos";
             this.tlpPrincipal.SetRowSpan(this.lblTituloSueldos, 2);
-            this.lblTituloSueldos.Size = new System.Drawing.Size(574, 39);
+            this.lblTituloSueldos.Size = new System.Drawing.Size(557, 39);
             this.lblTituloSueldos.TabIndex = 0;
             this.lblTituloSueldos.Text = "Sueldos Quincenales";
             this.lblTituloSueldos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,64 +261,41 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.cbQuincenaAnterior, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpQuincenaAnterior, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(379, 576);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(368, 576);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(230, 25);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(233, 35);
             this.tableLayoutPanel1.TabIndex = 32;
             // 
             // cbQuincenaAnterior
             // 
+            this.cbQuincenaAnterior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbQuincenaAnterior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuincenaAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbQuincenaAnterior.FormattingEnabled = true;
-            this.cbQuincenaAnterior.Location = new System.Drawing.Point(118, 3);
+            this.cbQuincenaAnterior.Items.AddRange(new object[] {
+            "1ER QUINCENA",
+            "2DA QUINCENA"});
+            this.cbQuincenaAnterior.Location = new System.Drawing.Point(119, 3);
             this.cbQuincenaAnterior.Name = "cbQuincenaAnterior";
-            this.cbQuincenaAnterior.Size = new System.Drawing.Size(109, 21);
+            this.cbQuincenaAnterior.Size = new System.Drawing.Size(111, 24);
             this.cbQuincenaAnterior.TabIndex = 31;
             // 
             // dtpQuincenaAnterior
             // 
-            this.dtpQuincenaAnterior.CustomFormat = "MMM-yyyy";
-            this.dtpQuincenaAnterior.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpQuincenaAnterior.CustomFormat = "MMM- yyyy";
+            this.dtpQuincenaAnterior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpQuincenaAnterior.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpQuincenaAnterior.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpQuincenaAnterior.Location = new System.Drawing.Point(3, 3);
             this.dtpQuincenaAnterior.Name = "dtpQuincenaAnterior";
-            this.dtpQuincenaAnterior.Size = new System.Drawing.Size(109, 22);
+            this.dtpQuincenaAnterior.ShowUpDown = true;
+            this.dtpQuincenaAnterior.Size = new System.Drawing.Size(110, 27);
             this.dtpQuincenaAnterior.TabIndex = 30;
             this.dtpQuincenaAnterior.Value = new System.DateTime(2025, 1, 7, 0, 0, 0, 0);
-            // 
-            // btnExportarExcel
-            // 
-            this.btnExportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExportarExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExportarExcel.IconColor = System.Drawing.Color.White;
-            this.btnExportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExportarExcel.IconSize = 28;
-            this.btnExportarExcel.Location = new System.Drawing.Point(792, 96);
-            this.btnExportarExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExportarExcel.Name = "btnExportarExcel";
-            this.btnExportarExcel.Size = new System.Drawing.Size(63, 35);
-            this.btnExportarExcel.TabIndex = 5;
-            this.btnExportarExcel.UseVisualStyleBackColor = false;
-            // 
-            // lblExpExc
-            // 
-            this.lblExpExc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblExpExc.AutoSize = true;
-            this.lblExpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpExc.ForeColor = System.Drawing.Color.Black;
-            this.lblExpExc.Location = new System.Drawing.Point(793, 70);
-            this.lblExpExc.Name = "lblExpExc";
-            this.lblExpExc.Size = new System.Drawing.Size(59, 26);
-            this.lblExpExc.TabIndex = 29;
-            this.lblExpExc.Text = "Exportar Excel";
             // 
             // lblImpExc
             // 
@@ -370,12 +304,12 @@
             this.lblImpExc.AutoSize = true;
             this.lblImpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImpExc.ForeColor = System.Drawing.Color.Black;
-            this.lblImpExc.Location = new System.Drawing.Point(677, 70);
+            this.lblImpExc.Location = new System.Drawing.Point(852, 51);
             this.lblImpExc.Name = "lblImpExc";
-            this.lblImpExc.Size = new System.Drawing.Size(62, 26);
+            this.lblImpExc.Size = new System.Drawing.Size(153, 13);
             this.lblImpExc.TabIndex = 28;
             this.lblImpExc.Text = "Importar Excel";
-            this.lblImpExc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblImpExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnImportarExcel
             // 
@@ -390,58 +324,270 @@
             this.btnImportarExcel.IconColor = System.Drawing.Color.White;
             this.btnImportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportarExcel.IconSize = 28;
-            this.btnImportarExcel.Location = new System.Drawing.Point(675, 96);
+            this.btnImportarExcel.Location = new System.Drawing.Point(950, 64);
             this.btnImportarExcel.Margin = new System.Windows.Forms.Padding(0);
             this.btnImportarExcel.Name = "btnImportarExcel";
-            this.btnImportarExcel.Size = new System.Drawing.Size(67, 35);
+            this.btnImportarExcel.Size = new System.Drawing.Size(58, 32);
             this.btnImportarExcel.TabIndex = 27;
             this.btnImportarExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarQuincena
-            // 
-            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCerrarQuincena.IconColor = System.Drawing.Color.Black;
-            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarQuincena.Location = new System.Drawing.Point(858, 99);
-            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
-            this.btnCerrarQuincena.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrarQuincena.TabIndex = 34;
-            this.btnCerrarQuincena.Text = "iconButton2";
-            this.btnCerrarQuincena.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tlpPrincipal.SetColumnSpan(this.tableLayoutPanel2, 4);
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.dtpQuincenaActual, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbQuincenaActual, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(629, 576);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(607, 576);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(223, 35);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(239, 35);
             this.tableLayoutPanel2.TabIndex = 33;
             // 
             // dtpQuincenaActual
             // 
-            this.dtpQuincenaActual.CustomFormat = "MMM-yyyy";
-            this.dtpQuincenaActual.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpQuincenaActual.CustomFormat = "MMM- yyyy";
+            this.dtpQuincenaActual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpQuincenaActual.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpQuincenaActual.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpQuincenaActual.Location = new System.Drawing.Point(3, 3);
             this.dtpQuincenaActual.Name = "dtpQuincenaActual";
-            this.dtpQuincenaActual.Size = new System.Drawing.Size(104, 22);
+            this.dtpQuincenaActual.ShowUpDown = true;
+            this.dtpQuincenaActual.Size = new System.Drawing.Size(113, 27);
             this.dtpQuincenaActual.TabIndex = 30;
             this.dtpQuincenaActual.Value = new System.DateTime(2025, 1, 7, 0, 0, 0, 0);
             // 
             // cbQuincenaActual
             // 
+            this.cbQuincenaActual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbQuincenaActual.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuincenaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbQuincenaActual.FormattingEnabled = true;
-            this.cbQuincenaActual.Location = new System.Drawing.Point(114, 3);
+            this.cbQuincenaActual.Items.AddRange(new object[] {
+            "1ER QUINCENA",
+            "2DA QUINCENA"});
+            this.cbQuincenaActual.Location = new System.Drawing.Point(122, 3);
             this.cbQuincenaActual.Name = "cbQuincenaActual";
-            this.cbQuincenaActual.Size = new System.Drawing.Size(102, 21);
+            this.cbQuincenaActual.Size = new System.Drawing.Size(114, 24);
             this.cbQuincenaActual.TabIndex = 31;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(368, 614);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 36);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "ANTERIOR";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(607, 614);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 36);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "ACTUAL";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblExpExc
+            // 
+            this.lblExpExc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExpExc.AutoSize = true;
+            this.lblExpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpExc.ForeColor = System.Drawing.Color.Black;
+            this.lblExpExc.Location = new System.Drawing.Point(607, 51);
+            this.lblExpExc.Name = "lblExpExc";
+            this.lblExpExc.Size = new System.Drawing.Size(239, 13);
+            this.lblExpExc.TabIndex = 29;
+            this.lblExpExc.Text = "Exportar Excel";
+            this.lblExpExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnExportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExportarExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExportarExcel.IconColor = System.Drawing.Color.White;
+            this.btnExportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportarExcel.IconSize = 28;
+            this.btnExportarExcel.Location = new System.Drawing.Point(791, 64);
+            this.btnExportarExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(58, 32);
+            this.btnExportarExcel.TabIndex = 5;
+            this.btnExportarExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrarQuincena
+            // 
+            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarQuincena.IconSize = 28;
+            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
+            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
+            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
+            this.btnCerrarQuincena.TabIndex = 35;
+            this.btnCerrarQuincena.Text = "Cerrar Quincena";
+            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 28;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(849, 573);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(159, 41);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnGuardarCambios
+            // 
+            this.btnGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnGuardarCambios.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCambios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGuardarCambios.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnGuardarCambios.IconColor = System.Drawing.Color.White;
+            this.btnGuardarCambios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardarCambios.IconSize = 28;
+            this.btnGuardarCambios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarCambios.Location = new System.Drawing.Point(849, 614);
+            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(159, 36);
+            this.btnGuardarCambios.TabIndex = 40;
+            this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
+            // 
+            // dgvSueldos_idEmpleado
+            // 
+            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
+            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
+            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
+            this.dgvSueldos_idEmpleado.Visible = false;
+            // 
+            // dgvSueldos_tieneCambios
+            // 
+            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
+            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
+            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
+            // 
+            // dgvSueldos_Nombre
+            // 
+            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
+            this.dgvSueldos_Nombre.HeaderText = "Nombre";
+            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
+            this.dgvSueldos_Nombre.ReadOnly = true;
+            // 
+            // dgvSueldos_Fiscal1
+            // 
+            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
+            this.dgvSueldos_Fiscal1.ReadOnly = true;
+            this.dgvSueldos_Fiscal1.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion1
+            // 
+            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle33;
+            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
+            this.dgvSueldos_Bonificacion1.ReadOnly = true;
+            this.dgvSueldos_Bonificacion1.Width = 80;
+            // 
+            // dgvSueldos_Total1
+            // 
+            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle34;
+            this.dgvSueldos_Total1.HeaderText = "Total";
+            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
+            this.dgvSueldos_Total1.ReadOnly = true;
+            this.dgvSueldos_Total1.Width = 80;
+            // 
+            // dgvSueldos_Fiscal2
+            // 
+            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle35;
+            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
+            this.dgvSueldos_Fiscal2.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion2
+            // 
+            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle36;
+            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
+            this.dgvSueldos_Bonificacion2.Width = 80;
+            // 
+            // dgvSueldos_Total2
+            // 
+            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle37;
+            this.dgvSueldos_Total2.HeaderText = "Total";
+            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
+            this.dgvSueldos_Total2.ReadOnly = true;
+            this.dgvSueldos_Total2.Width = 83;
+            // 
+            // dgvSueldos_Diferencia
+            // 
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle38;
+            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
+            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
+            this.dgvSueldos_Diferencia.ReadOnly = true;
+            this.dgvSueldos_Diferencia.Width = 83;
+            // 
+            // QuincenaFutura
+            // 
+            this.QuincenaFutura.HeaderText = "QuincenaFutura";
+            this.QuincenaFutura.Name = "QuincenaFutura";
+            this.QuincenaFutura.ReadOnly = true;
+            this.QuincenaFutura.Width = 60;
             // 
             // vTableroQuincenas
             // 
@@ -477,19 +623,25 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox cbQuincenaActual;
         private System.Windows.Forms.DateTimePicker dtpQuincenaActual;
-        private FontAwesome.Sharp.IconButton btnExportarExcel;
         private System.Windows.Forms.Label lblExpExc;
+        private FontAwesome.Sharp.IconButton btnExportarExcel;
+        private FontAwesome.Sharp.IconButton btnCerrarQuincena;
         private System.Windows.Forms.Label lblImpExc;
         private FontAwesome.Sharp.IconButton btnImportarExcel;
-        private FontAwesome.Sharp.IconButton btnCerrarQuincena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fiscal1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bonificacion1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fiscal2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bonificacion2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diferencia;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnBuscar;
+        private FontAwesome.Sharp.IconButton btnGuardarCambios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_idEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_tieneCambios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Fiscal1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Bonificacion1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Total1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Fiscal2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Bonificacion2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Total2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Diferencia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn QuincenaFutura;
     }
 }

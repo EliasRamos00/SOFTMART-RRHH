@@ -8,6 +8,21 @@ namespace SOFTMART_RRHH.Controlador
 {
     internal class MEmpleados
     {
+
+        internal static DataTable CObtenerSalarioEmpleadoByFechaQuincena(string quincena, int anio, int mes, string idEmpleado)
+        {
+            List<Param> parametros = new List<Param>
+            {
+                new Param("vQuincena",quincena),
+                new Param("vAnio",anio),
+                new Param("vMes",mes),
+                new Param("vIdEmpleado",idEmpleado),
+              
+            };
+            return LibAux.EjecutarProcedimiento("SP_CONSULTA_SueldoEmpleadoByQuincenaAnioMes", parametros);
+        }
+
+
         internal static void CInsertarEmpleado(object idPersona, object numContrato, object idSucursal, object idPuesto, DateTime FechaInicio, object esTemp, object sueldo, object comentarios, MySqlCommand cmd)
         {
             List<Param> parametros = new List<Param>
@@ -73,5 +88,41 @@ namespace SOFTMART_RRHH.Controlador
             };
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Empleado", cmd, parametros);
         }
+
+        internal static void CInsertarSalarioEmpleado(string quincena, int anio, int mes, string idEmpleado, decimal sueldoFiscal, decimal sueldoBonificacion)
+        {
+            DateTime fecha = new DateTime(anio, mes, 1);
+
+
+            List<Param> parametros = new List<Param>
+            {
+                new Param("vQuincena", quincena),
+                new Param("vIdEmpleado", idEmpleado),
+                new Param("vSFiscal", sueldoFiscal),
+                new Param("vSBonificacion", sueldoBonificacion),
+                new Param("vFecha", fecha)
+            };
+
+            // Ejecuta el procedimiento almacenado SP_INSERTA_Sueldo
+            LibAux.EjecutarProcedimiento("SP_INSERTA_Sueldo", parametros);
+        }
+
+        internal static void CModificarSalarioEmpleado(string quincena, int anio, int mes, string idEmpleado, decimal sueldoFiscal, decimal sueldoBonificacion)
+        {
+            DateTime fecha = new DateTime(anio, mes, 1);
+
+            List<Param> parametros = new List<Param>
+            {
+                new Param("vQuincena", quincena),
+                new Param("vIdEmpleado", idEmpleado),
+                new Param("vSFiscal", sueldoFiscal),
+                new Param("vSBonificacion", sueldoBonificacion),
+                new Param("vFecha", fecha)
+            };
+
+            // Ejecuta el procedimiento almacenado SP_ACTUALIZA_Sueldo
+            LibAux.EjecutarProcedimiento("SP_ACTUALIZA_Sueldo", parametros);
+        }
+
     }
 }
