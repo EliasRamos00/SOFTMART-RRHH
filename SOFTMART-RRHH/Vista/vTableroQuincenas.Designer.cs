@@ -28,39 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltroSueldos = new System.Windows.Forms.TextBox();
             this.lblBuscarSueldos = new System.Windows.Forms.Label();
             this.lblColumnSueldos = new System.Windows.Forms.Label();
             this.cbFiltroSueldos = new System.Windows.Forms.ComboBox();
             this.dgvSueldos = new System.Windows.Forms.DataGridView();
-            this.btnCloseSueldos = new System.Windows.Forms.PictureBox();
-            this.lblTituloSueldos = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbQuincenaAnterior = new System.Windows.Forms.ComboBox();
-            this.dtpQuincenaAnterior = new System.Windows.Forms.DateTimePicker();
-            this.lblImpExc = new System.Windows.Forms.Label();
-            this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtpQuincenaActual = new System.Windows.Forms.DateTimePicker();
-            this.cbQuincenaActual = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblExpExc = new System.Windows.Forms.Label();
-            this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
-            this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
-            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +55,23 @@
             this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnCloseSueldos = new System.Windows.Forms.PictureBox();
+            this.lblTituloSueldos = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbQuincenaAnterior = new System.Windows.Forms.ComboBox();
+            this.dtpQuincenaAnterior = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dtpQuincenaActual = new System.Windows.Forms.DateTimePicker();
+            this.cbQuincenaActual = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.lblExpExc = new System.Windows.Forms.Label();
+            this.lblImpExc = new System.Windows.Forms.Label();
+            this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
+            this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSueldos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseSueldos)).BeginInit();
@@ -174,14 +174,14 @@
             this.dgvSueldos.AllowUserToAddRows = false;
             this.dgvSueldos.AllowUserToDeleteRows = false;
             this.dgvSueldos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSueldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSueldos_idEmpleado,
@@ -196,27 +196,27 @@
             this.dgvSueldos_Diferencia,
             this.QuincenaFutura});
             this.tlpPrincipal.SetColumnSpan(this.dgvSueldos, 4);
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvSueldos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSueldos.GridColor = System.Drawing.Color.Black;
             this.dgvSueldos.Location = new System.Drawing.Point(45, 134);
             this.dgvSueldos.MultiSelect = false;
             this.dgvSueldos.Name = "dgvSueldos";
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvSueldos.RowHeadersVisible = false;
             this.dgvSueldos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSueldos.Size = new System.Drawing.Size(960, 436);
@@ -225,6 +225,101 @@
             this.dgvSueldos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellDoubleClick);
             this.dgvSueldos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellEndEdit);
             this.dgvSueldos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvSueldos_CellPainting);
+            // 
+            // dgvSueldos_idEmpleado
+            // 
+            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
+            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
+            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
+            this.dgvSueldos_idEmpleado.Visible = false;
+            // 
+            // dgvSueldos_tieneCambios
+            // 
+            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
+            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
+            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
+            // 
+            // dgvSueldos_Nombre
+            // 
+            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
+            this.dgvSueldos_Nombre.HeaderText = "Nombre";
+            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
+            this.dgvSueldos_Nombre.ReadOnly = true;
+            // 
+            // dgvSueldos_Fiscal1
+            // 
+            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
+            this.dgvSueldos_Fiscal1.ReadOnly = true;
+            this.dgvSueldos_Fiscal1.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion1
+            // 
+            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
+            this.dgvSueldos_Bonificacion1.ReadOnly = true;
+            this.dgvSueldos_Bonificacion1.Width = 80;
+            // 
+            // dgvSueldos_Total1
+            // 
+            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvSueldos_Total1.HeaderText = "Total";
+            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
+            this.dgvSueldos_Total1.ReadOnly = true;
+            this.dgvSueldos_Total1.Width = 80;
+            // 
+            // dgvSueldos_Fiscal2
+            // 
+            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle25;
+            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
+            this.dgvSueldos_Fiscal2.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion2
+            // 
+            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle26;
+            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
+            this.dgvSueldos_Bonificacion2.Width = 80;
+            // 
+            // dgvSueldos_Total2
+            // 
+            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle27;
+            this.dgvSueldos_Total2.HeaderText = "Total";
+            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
+            this.dgvSueldos_Total2.ReadOnly = true;
+            this.dgvSueldos_Total2.Width = 83;
+            // 
+            // dgvSueldos_Diferencia
+            // 
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle28;
+            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
+            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
+            this.dgvSueldos_Diferencia.ReadOnly = true;
+            this.dgvSueldos_Diferencia.Width = 83;
+            // 
+            // QuincenaFutura
+            // 
+            this.QuincenaFutura.HeaderText = "QuincenaFutura";
+            this.QuincenaFutura.Name = "QuincenaFutura";
+            this.QuincenaFutura.ReadOnly = true;
+            this.QuincenaFutura.Width = 60;
             // 
             // btnCloseSueldos
             // 
@@ -297,40 +392,6 @@
             this.dtpQuincenaAnterior.TabIndex = 30;
             this.dtpQuincenaAnterior.Value = new System.DateTime(2025, 1, 7, 0, 0, 0, 0);
             // 
-            // lblImpExc
-            // 
-            this.lblImpExc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblImpExc.AutoSize = true;
-            this.lblImpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImpExc.ForeColor = System.Drawing.Color.Black;
-            this.lblImpExc.Location = new System.Drawing.Point(852, 51);
-            this.lblImpExc.Name = "lblImpExc";
-            this.lblImpExc.Size = new System.Drawing.Size(153, 13);
-            this.lblImpExc.TabIndex = 28;
-            this.lblImpExc.Text = "Importar Excel";
-            this.lblImpExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnImportarExcel
-            // 
-            this.btnImportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnImportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnImportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportarExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImportarExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnImportarExcel.IconColor = System.Drawing.Color.White;
-            this.btnImportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImportarExcel.IconSize = 28;
-            this.btnImportarExcel.Location = new System.Drawing.Point(950, 64);
-            this.btnImportarExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnImportarExcel.Name = "btnImportarExcel";
-            this.btnImportarExcel.Size = new System.Drawing.Size(58, 32);
-            this.btnImportarExcel.TabIndex = 27;
-            this.btnImportarExcel.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -397,60 +458,6 @@
             this.label1.Text = "ACTUAL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblExpExc
-            // 
-            this.lblExpExc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblExpExc.AutoSize = true;
-            this.lblExpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpExc.ForeColor = System.Drawing.Color.Black;
-            this.lblExpExc.Location = new System.Drawing.Point(607, 51);
-            this.lblExpExc.Name = "lblExpExc";
-            this.lblExpExc.Size = new System.Drawing.Size(239, 13);
-            this.lblExpExc.TabIndex = 29;
-            this.lblExpExc.Text = "Exportar Excel";
-            this.lblExpExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnExportarExcel
-            // 
-            this.btnExportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExportarExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExportarExcel.IconColor = System.Drawing.Color.White;
-            this.btnExportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExportarExcel.IconSize = 28;
-            this.btnExportarExcel.Location = new System.Drawing.Point(791, 64);
-            this.btnExportarExcel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExportarExcel.Name = "btnExportarExcel";
-            this.btnExportarExcel.Size = new System.Drawing.Size(58, 32);
-            this.btnExportarExcel.TabIndex = 5;
-            this.btnExportarExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarQuincena
-            // 
-            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
-            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarQuincena.IconSize = 28;
-            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
-            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
-            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
-            this.btnCerrarQuincena.TabIndex = 35;
-            this.btnCerrarQuincena.Text = "Cerrar Quincena";
-            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
@@ -473,6 +480,76 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // lblExpExc
+            // 
+            this.lblExpExc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExpExc.AutoSize = true;
+            this.lblExpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpExc.ForeColor = System.Drawing.Color.Black;
+            this.lblExpExc.Location = new System.Drawing.Point(607, 51);
+            this.lblExpExc.Name = "lblExpExc";
+            this.lblExpExc.Size = new System.Drawing.Size(239, 13);
+            this.lblExpExc.TabIndex = 29;
+            this.lblExpExc.Text = "Exportar Excel";
+            this.lblExpExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblImpExc
+            // 
+            this.lblImpExc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblImpExc.AutoSize = true;
+            this.lblImpExc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImpExc.ForeColor = System.Drawing.Color.Black;
+            this.lblImpExc.Location = new System.Drawing.Point(852, 51);
+            this.lblImpExc.Name = "lblImpExc";
+            this.lblImpExc.Size = new System.Drawing.Size(153, 13);
+            this.lblImpExc.TabIndex = 28;
+            this.lblImpExc.Text = "Importar Excel";
+            this.lblImpExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnExportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExportarExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExportarExcel.IconColor = System.Drawing.Color.White;
+            this.btnExportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportarExcel.IconSize = 28;
+            this.btnExportarExcel.Location = new System.Drawing.Point(791, 64);
+            this.btnExportarExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(58, 32);
+            this.btnExportarExcel.TabIndex = 5;
+            this.btnExportarExcel.UseVisualStyleBackColor = false;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
+            // 
+            // btnImportarExcel
+            // 
+            this.btnImportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnImportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnImportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarExcel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImportarExcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnImportarExcel.IconColor = System.Drawing.Color.White;
+            this.btnImportarExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportarExcel.IconSize = 28;
+            this.btnImportarExcel.Location = new System.Drawing.Point(950, 64);
+            this.btnImportarExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnImportarExcel.Name = "btnImportarExcel";
+            this.btnImportarExcel.Size = new System.Drawing.Size(58, 32);
+            this.btnImportarExcel.TabIndex = 27;
+            this.btnImportarExcel.UseVisualStyleBackColor = false;
+            this.btnImportarExcel.Click += new System.EventHandler(this.btnImportarExcel_Click);
+            // 
             // btnGuardarCambios
             // 
             this.btnGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
@@ -494,100 +571,25 @@
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
-            // dgvSueldos_idEmpleado
+            // btnCerrarQuincena
             // 
-            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
-            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
-            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
-            this.dgvSueldos_idEmpleado.Visible = false;
-            // 
-            // dgvSueldos_tieneCambios
-            // 
-            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
-            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
-            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
-            // 
-            // dgvSueldos_Nombre
-            // 
-            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
-            this.dgvSueldos_Nombre.HeaderText = "Nombre";
-            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
-            this.dgvSueldos_Nombre.ReadOnly = true;
-            // 
-            // dgvSueldos_Fiscal1
-            // 
-            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
-            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
-            this.dgvSueldos_Fiscal1.ReadOnly = true;
-            this.dgvSueldos_Fiscal1.Width = 80;
-            // 
-            // dgvSueldos_Bonificacion1
-            // 
-            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle33;
-            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
-            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
-            this.dgvSueldos_Bonificacion1.ReadOnly = true;
-            this.dgvSueldos_Bonificacion1.Width = 80;
-            // 
-            // dgvSueldos_Total1
-            // 
-            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle34;
-            this.dgvSueldos_Total1.HeaderText = "Total";
-            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
-            this.dgvSueldos_Total1.ReadOnly = true;
-            this.dgvSueldos_Total1.Width = 80;
-            // 
-            // dgvSueldos_Fiscal2
-            // 
-            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle35;
-            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
-            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
-            this.dgvSueldos_Fiscal2.Width = 80;
-            // 
-            // dgvSueldos_Bonificacion2
-            // 
-            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle36;
-            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
-            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
-            this.dgvSueldos_Bonificacion2.Width = 80;
-            // 
-            // dgvSueldos_Total2
-            // 
-            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle37;
-            this.dgvSueldos_Total2.HeaderText = "Total";
-            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
-            this.dgvSueldos_Total2.ReadOnly = true;
-            this.dgvSueldos_Total2.Width = 83;
-            // 
-            // dgvSueldos_Diferencia
-            // 
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle38;
-            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
-            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
-            this.dgvSueldos_Diferencia.ReadOnly = true;
-            this.dgvSueldos_Diferencia.Width = 83;
-            // 
-            // QuincenaFutura
-            // 
-            this.QuincenaFutura.HeaderText = "QuincenaFutura";
-            this.QuincenaFutura.Name = "QuincenaFutura";
-            this.QuincenaFutura.ReadOnly = true;
-            this.QuincenaFutura.Width = 60;
+            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarQuincena.IconSize = 28;
+            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
+            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
+            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
+            this.btnCerrarQuincena.TabIndex = 35;
+            this.btnCerrarQuincena.Text = "Cerrar Quincena";
+            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
             // 
             // vTableroQuincenas
             // 
