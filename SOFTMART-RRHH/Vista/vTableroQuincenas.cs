@@ -270,12 +270,14 @@ namespace SOFTMART_RRHH.Vista
 
                     catch (Exception ex)
                     {
+
                     }
 
 
 
                 }
             }
+            // AGREGAR POPUP DE EXITO
         }
 
         private void tbFiltroSueldos_TextChanged(object sender, EventArgs e)
