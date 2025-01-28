@@ -12,6 +12,7 @@ using NPOI.XSSF.UserModel;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using NPOI.SS.UserModel;
 
 
 namespace SOFTMART_RRHH.Modelo
@@ -318,6 +319,84 @@ namespace SOFTMART_RRHH.Modelo
             }
 
         }
+
+        internal static DataTable ImportarExcel(string archivoRuta)
+        {
+            DataTable dt = new DataTable();
+
+            // Usar la ruta proporcionada directamente
+            using (var fileStream = new FileStream(archivoRuta, FileMode.Open, FileAccess.Read))
+            {
+                // Crear un libro de trabajo a partir del archivo
+                var workbook = new XSSFWorkbook(fileStream);
+                var sheet = workbook.GetSheetAt(0); // Obtener la primera hoja
+
+                // Leer la primera fila para obtener los nombres de las columnas
+                var headerRow = sheet.GetRow(0);
+                for (int i = 0; i < headerRow.LastCellNum; i++)
+                {
+                    var cell = headerRow.GetCell(i);
+                    dt.Columns.Add(cell?.ToString() ?? $"Columna{i + 1}");
+                }
+
+                // Leer las filas de datos
+                for (int i = 1; i <= sheet.LastRowNum; i++)
+                {
+                    var dataRow = sheet.GetRow(i);
+                    if (dataRow != null)
+                    {
+                        var newRow = dt.NewRow();
+                        for (int j = 0; j < dt.Columns.Count; j++)
+                        {
+                            var cell = dataRow.GetCell(j);
+                            if (cell != null)
+                            {
+                                switch (cell.CellType)
+                                {
+                                    case NPOI.SS.UserModel.CellType.Numeric:
+                                        if (DateUtil.IsCellDateFormatted(cell))
+                                        {
+                                            newRow[j] = cell.DateCellValue;
+                                        }
+                                        else
+                                        {
+                                            newRow[j] = cell.NumericCellValue;
+                                        }
+                                        break;
+                                    case NPOI.SS.UserModel.CellType.Boolean:
+                                        newRow[j] = cell.BooleanCellValue;
+                                        break;
+                                    case NPOI.SS.UserModel.CellType.String:
+                                        newRow[j] = cell.StringCellValue;
+                                        break;
+                                    case NPOI.SS.UserModel.CellType.Formula:
+                                        switch (cell.CachedFormulaResultType)
+                                        {
+                                            case NPOI.SS.UserModel.CellType.Numeric:
+                                                newRow[j] = cell.NumericCellValue;
+                                                break;
+                                            case NPOI.SS.UserModel.CellType.Boolean:
+                                                newRow[j] = cell.BooleanCellValue;
+                                                break;
+                                            case NPOI.SS.UserModel.CellType.String:
+                                                newRow[j] = cell.StringCellValue;
+                                                break;
+                                        }
+                                        break;
+                                    default:
+                                        newRow[j] = cell.ToString();
+                                        break;
+                                }
+                            }
+                        }
+                        dt.Rows.Add(newRow);
+                    }
+                }
+            }
+
+            return dt;
+        }
+
         public static DataTable DgvToDataTable(DataGridView dgv, List<string> columns)
         {
             DataTable dt = new DataTable();

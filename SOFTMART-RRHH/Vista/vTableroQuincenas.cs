@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -99,6 +100,7 @@ namespace SOFTMART_RRHH.Vista
 
         #endregion
 
+        #region Eventos
         private void btnCerrarQuincena_Click(object sender, EventArgs e)
         {
 
@@ -178,17 +180,17 @@ namespace SOFTMART_RRHH.Vista
                 DateTime quincenaSeleccionada = dtpQuincenaActual.Value;
                 string quincenaSeleccionadaText = cbQuincenaActual.Text.ToLower();
 
-                if (e.ColumnIndex == dgvSueldos_Fiscal1.Index  || e.ColumnIndex == dgvSueldos_Bonificacion1.Index)
+                if (e.ColumnIndex == dgvSueldos_Fiscal1.Index || e.ColumnIndex == dgvSueldos_Bonificacion1.Index)
                 {
-                     quincenaSeleccionada = dtpQuincenaAnterior.Value;
-                     quincenaSeleccionadaText = cbQuincenaAnterior.Text.ToLower();
+                    quincenaSeleccionada = dtpQuincenaAnterior.Value;
+                    quincenaSeleccionadaText = cbQuincenaAnterior.Text.ToLower();
                 }
-               
+
 
                 // Verificar si la fecha seleccionada corresponde a la quincena actual o posterior
                 if (quincenaSeleccionada.Month >= DateTime.Now.Month && quincenaSeleccionada.Year >= DateTime.Now.Year)
                 {
-                    if(quincenaSeleccionada.Year > DateTime.Now.Year)
+                    if (quincenaSeleccionada.Year > DateTime.Now.Year)
                     {
                         return;
                     }
@@ -210,11 +212,12 @@ namespace SOFTMART_RRHH.Vista
                                             "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-                    else {
+                    else
+                    {
                         return;
-                    
+
                     }
-                   
+
                 }
                 else
                 {
@@ -264,12 +267,13 @@ namespace SOFTMART_RRHH.Vista
                         }
 
                     }
-                    
-                    catch (Exception ex) { 
-                    
+
+                    catch (Exception ex)
+                    {
+
                     }
 
-                 
+
 
                 }
             }
@@ -292,9 +296,105 @@ namespace SOFTMART_RRHH.Vista
 
         }
 
-        private void btnCerrarQuincena_Click_1(object sender, EventArgs e)
+        private void btnExportarExcel_Click(object sender, EventArgs e)
         {
+            DataTable dtExport = new DataTable();
+
+            // Añadir las columnas específicas
+            dtExport.Columns.Add("idEmpleado", typeof(int)); // Columna con contenido
+            dtExport.Columns.Add("Nombre", typeof(string));  // Columna con contenido
+            dtExport.Columns.Add("SueldoFiscal", typeof(decimal)); // Columna vacía
+            dtExport.Columns.Add("Bonificacion", typeof(decimal)); // Columna vacía
+
+            // Iterar por las filas del DataGridView y añadir los datos
+            foreach (DataGridViewRow row in dgvSueldos.Rows)
+            {
+                // Asegurarse de no incluir filas vacías
+                if (!row.IsNewRow)
+                {
+                    // Obtener los valores de las columnas "idEmpleado" y "Nombre"
+                    int idEmpleado = row.Cells["dgvSueldos_idEmpleado"]?.Value != null ? Convert.ToInt32(row.Cells["dgvSueldos_idEmpleado"].Value) : 0;
+                    string nombre = row.Cells["dgvSueldos_Nombre"]?.Value?.ToString() ?? "";
+
+                    // Crear una nueva fila con los datos de idEmpleado, Nombre y columnas vacías para SueldoFiscal y Bonificacion
+                    DataRow newRow = dtExport.NewRow();
+                    newRow["idEmpleado"] = idEmpleado;
+                    newRow["Nombre"] = nombre;
+                    newRow["SueldoFiscal"] = DBNull.Value; // Columna vacía
+                    newRow["Bonificacion"] = DBNull.Value; // Columna vacía
+
+                    // Añadir la fila al DataTable
+                    dtExport.Rows.Add(newRow);
+                }
+            }
+            LibAux.ExportarAExcel(dtExport);
 
         }
+
+        private void btnImportarExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog
+                {
+                    Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+                    Title = "Importar desde Excel"
+                };
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    DataTable dtImport = LibAux.ImportarExcel(openFileDialog.FileName);
+
+                    if (dtImport != null && dtImport.Rows.Count > 0)
+                    {
+                        foreach (DataRow importRow in dtImport.Rows)
+                        {
+                            int idEmpleado = importRow["idEmpleado"] != DBNull.Value ? Convert.ToInt32(importRow["idEmpleado"]) : 0;
+
+                            foreach (DataGridViewRow dgvRow in dgvSueldos.Rows)
+                            {
+                                if (!dgvRow.IsNewRow && Convert.ToInt32(dgvRow.Cells["dgvSueldos_idEmpleado"].Value) == idEmpleado)
+                                {
+                                    decimal sueldoFiscal = 0, bonificacion = 0;
+
+                                    bool sueldoValido = decimal.TryParse(importRow["SueldoFiscal"]?.ToString(), out sueldoFiscal);
+                                    bool bonificacionValida = decimal.TryParse(importRow["Bonificacion"]?.ToString(), out bonificacion);
+
+                                    bool sueldoCambio = sueldoValido && sueldoFiscal != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Fiscal1"].Value);
+                                    bool bonificacionCambio = bonificacionValida && bonificacion != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Bonificacion1"].Value);
+
+                                    if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal1"].Value = sueldoFiscal;
+                                    if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion1"].Value = bonificacion;
+
+                                    if (sueldoCambio || bonificacionCambio)
+                                    {
+                                        int tieneCambios = dgvRow.Cells["dgvSueldos_tieneCambios"].Value != null ? Convert.ToInt32(dgvRow.Cells["dgvSueldos_tieneCambios"].Value) : 0;
+                                        dgvRow.Cells["dgvSueldos_tieneCambios"].Value = tieneCambios + 1;
+                                    }
+
+                                    break;
+                                }
+                            }
+                        }
+
+                        MessageBox.Show("Datos importados y actualizados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El archivo de Excel no contiene datos válidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("El archivo está abierto. Por favor, cierre el archivo y vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+        #endregion
+
     }
 }
