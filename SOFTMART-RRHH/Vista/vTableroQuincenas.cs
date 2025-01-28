@@ -266,12 +266,14 @@ namespace SOFTMART_RRHH.Vista
                     }
                     
                     catch (Exception ex) { 
+                    
                     }
 
                  
 
                 }
             }
+            // AGREGAR POPUP DE EXITO
         }
 
         private void tbFiltroSueldos_TextChanged(object sender, EventArgs e)
@@ -287,6 +289,11 @@ namespace SOFTMART_RRHH.Vista
                 ((DataTable)dgvSueldos.DataSource).DefaultView.RowFilter = string.Format("");
 
             }
+
+        }
+
+        private void btnCerrarQuincena_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
