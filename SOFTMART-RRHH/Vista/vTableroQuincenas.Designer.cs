@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltroSueldos = new System.Windows.Forms.TextBox();
             this.lblBuscarSueldos = new System.Windows.Forms.Label();
@@ -66,13 +66,13 @@
             this.cbQuincenaActual = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.lblExpExc = new System.Windows.Forms.Label();
             this.lblImpExc = new System.Windows.Forms.Label();
             this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
             this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
-            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSueldos)).BeginInit();
@@ -176,14 +176,14 @@
             this.dgvSueldos.AllowUserToAddRows = false;
             this.dgvSueldos.AllowUserToDeleteRows = false;
             this.dgvSueldos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSueldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSueldos_idEmpleado,
@@ -198,27 +198,27 @@
             this.dgvSueldos_Diferencia,
             this.dgvSueldos_QuincenaFutura});
             this.tlpPrincipal.SetColumnSpan(this.dgvSueldos, 4);
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSueldos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSueldos.GridColor = System.Drawing.Color.Black;
             this.dgvSueldos.Location = new System.Drawing.Point(45, 134);
             this.dgvSueldos.MultiSelect = false;
             this.dgvSueldos.Name = "dgvSueldos";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSueldos.RowHeadersVisible = false;
             this.dgvSueldos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSueldos.Size = new System.Drawing.Size(960, 436);
@@ -255,9 +255,9 @@
             // dgvSueldos_Fiscal1
             // 
             this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle22.Format = "C2";
-            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
             this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
             this.dgvSueldos_Fiscal1.ReadOnly = true;
@@ -266,9 +266,9 @@
             // dgvSueldos_Bonificacion1
             // 
             this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle23.Format = "C2";
-            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
             this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
             this.dgvSueldos_Bonificacion1.ReadOnly = true;
@@ -277,9 +277,9 @@
             // dgvSueldos_Total1
             // 
             this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle24.Format = "C2";
-            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSueldos_Total1.HeaderText = "Total";
             this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
             this.dgvSueldos_Total1.ReadOnly = true;
@@ -288,9 +288,9 @@
             // dgvSueldos_Fiscal2
             // 
             this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle25.Format = "C2";
-            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "C2";
+            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
             this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
             this.dgvSueldos_Fiscal2.Width = 80;
@@ -298,9 +298,9 @@
             // dgvSueldos_Bonificacion2
             // 
             this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle26.Format = "C2";
-            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
             this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
             this.dgvSueldos_Bonificacion2.Width = 80;
@@ -308,9 +308,9 @@
             // dgvSueldos_Total2
             // 
             this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle27.Format = "C2";
-            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "C2";
+            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSueldos_Total2.HeaderText = "Total";
             this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
             this.dgvSueldos_Total2.ReadOnly = true;
@@ -319,9 +319,9 @@
             // dgvSueldos_Diferencia
             // 
             this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle28.Format = "C2";
-            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "C2";
+            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSueldos_Diferencia.HeaderText = "Diff.";
             this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
             this.dgvSueldos_Diferencia.ReadOnly = true;
@@ -437,6 +437,7 @@
             this.dtpQuincenaActual.TabIndex = 30;
             this.dtpQuincenaActual.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpQuincenaActual.ValueChanged += new System.EventHandler(this.dtpQuincenaActual_ValueChanged);
+            this.dtpQuincenaActual.Enter += new System.EventHandler(this.dtpQuincenaActual_Enter);
             // 
             // cbQuincenaActual
             // 
@@ -475,28 +476,6 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "ACTUAL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 28;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(849, 573);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(159, 41);
-            this.btnBuscar.TabIndex = 39;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Visible = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblExpExc
             // 
@@ -568,6 +547,27 @@
             this.btnImportarExcel.UseVisualStyleBackColor = false;
             this.btnImportarExcel.Click += new System.EventHandler(this.btnImportarExcel_Click);
             // 
+            // btnCerrarQuincena
+            // 
+            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarQuincena.IconSize = 28;
+            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
+            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
+            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
+            this.btnCerrarQuincena.TabIndex = 35;
+            this.btnCerrarQuincena.Text = "Cerrar Quincena";
+            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
+            this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click);
+            // 
             // btnGuardarCambios
             // 
             this.btnGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
@@ -589,26 +589,27 @@
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
-            // btnCerrarQuincena
+            // btnBuscar
             // 
-            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
-            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarQuincena.IconSize = 28;
-            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
-            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
-            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
-            this.btnCerrarQuincena.TabIndex = 35;
-            this.btnCerrarQuincena.Text = "Cerrar Quincena";
-            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
-            this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click);
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 28;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(849, 573);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(159, 41);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // vTableroQuincenas
             // 

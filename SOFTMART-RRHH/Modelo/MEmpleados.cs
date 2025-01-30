@@ -143,17 +143,21 @@ namespace SOFTMART_RRHH.Controlador
             SELECT CONCAT(fecha, ' - ', SFiscal + SBonificacion) AS resultado
             FROM sueldoHistorial 
             WHERE fecha > NOW() 
-            ORDER BY fecha ASC 
-            LIMIT 1";
+            ORDER BY fecha ASC";
 
             DataTable dt = LibAux.EjecutarSentencia(query);
 
-            if (dt.Rows.Count > 0)
+            if (dt.Rows.Count == 0)
+                return string.Empty; // Si no hay registros futuros, retorna una cadena vacía
+
+            List<string> resultados = new List<string>();
+
+            foreach (DataRow row in dt.Rows)
             {
-                return dt.Rows[0]["resultado"].ToString();
+                resultados.Add(row["resultado"].ToString());
             }
 
-            return string.Empty; // Retorna una cadena vacía si no hay registros futuros        }
+            return string.Join(Environment.NewLine, resultados);
         }
     }
 }
