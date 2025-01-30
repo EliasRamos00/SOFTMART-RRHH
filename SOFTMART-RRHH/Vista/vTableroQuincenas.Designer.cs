@@ -55,13 +55,13 @@
             this.cbQuincenaActual = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.lblExpExc = new System.Windows.Forms.Label();
             this.lblImpExc = new System.Windows.Forms.Label();
             this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
             this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
-            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -231,6 +231,110 @@
             this.dgvSueldos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvSueldos_CellPainting);
             this.dgvSueldos.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvSueldos_CellToolTipTextNeeded);
             // 
+            // dgvSueldos_idEmpleado
+            // 
+            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
+            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
+            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
+            this.dgvSueldos_idEmpleado.Visible = false;
+            // 
+            // dgvSueldos_tieneCambios
+            // 
+            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
+            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
+            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
+            // 
+            // dgvSueldos_Nombre
+            // 
+            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
+            this.dgvSueldos_Nombre.HeaderText = "Nombre";
+            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
+            this.dgvSueldos_Nombre.ReadOnly = true;
+            // 
+            // dgvSueldos_Fiscal1
+            // 
+            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
+            this.dgvSueldos_Fiscal1.ReadOnly = true;
+            this.dgvSueldos_Fiscal1.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion1
+            // 
+            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
+            this.dgvSueldos_Bonificacion1.ReadOnly = true;
+            this.dgvSueldos_Bonificacion1.Width = 80;
+            // 
+            // dgvSueldos_Total1
+            // 
+            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSueldos_Total1.HeaderText = "Total";
+            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
+            this.dgvSueldos_Total1.ReadOnly = true;
+            this.dgvSueldos_Total1.Width = 80;
+            // 
+            // dgvSueldos_Fiscal2
+            // 
+            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "C2";
+            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
+            this.dgvSueldos_Fiscal2.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion2
+            // 
+            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
+            this.dgvSueldos_Bonificacion2.Width = 80;
+            // 
+            // dgvSueldos_Total2
+            // 
+            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "C2";
+            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvSueldos_Total2.HeaderText = "Total";
+            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
+            this.dgvSueldos_Total2.ReadOnly = true;
+            this.dgvSueldos_Total2.Width = 83;
+            // 
+            // dgvSueldos_Diferencia
+            // 
+            this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "C2";
+            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
+            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
+            this.dgvSueldos_Diferencia.ReadOnly = true;
+            this.dgvSueldos_Diferencia.Width = 83;
+            // 
+            // dgvSueldos_QuincenaFutura
+            // 
+            this.dgvSueldos_QuincenaFutura.DataPropertyName = "TieneRegistrosPosteriores";
+            this.dgvSueldos_QuincenaFutura.HeaderText = "QuincenaFutura";
+            this.dgvSueldos_QuincenaFutura.Name = "dgvSueldos_QuincenaFutura";
+            this.dgvSueldos_QuincenaFutura.ReadOnly = true;
+            this.dgvSueldos_QuincenaFutura.Width = 60;
+            // 
             // btnCloseSueldos
             // 
             this.btnCloseSueldos.BackgroundImage = global::SOFTMART_RRHH.Properties.Resources.icoClose;
@@ -333,6 +437,7 @@
             this.dtpQuincenaActual.TabIndex = 30;
             this.dtpQuincenaActual.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpQuincenaActual.ValueChanged += new System.EventHandler(this.dtpQuincenaActual_ValueChanged);
+            this.dtpQuincenaActual.Enter += new System.EventHandler(this.dtpQuincenaActual_Enter);
             // 
             // cbQuincenaActual
             // 
@@ -371,28 +476,6 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "ACTUAL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 28;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(849, 573);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(159, 41);
-            this.btnBuscar.TabIndex = 39;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Visible = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblExpExc
             // 
@@ -464,6 +547,27 @@
             this.btnImportarExcel.UseVisualStyleBackColor = false;
             this.btnImportarExcel.Click += new System.EventHandler(this.btnImportarExcel_Click);
             // 
+            // btnCerrarQuincena
+            // 
+            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
+            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarQuincena.IconSize = 28;
+            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
+            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
+            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
+            this.btnCerrarQuincena.TabIndex = 35;
+            this.btnCerrarQuincena.Text = "Cerrar Quincena";
+            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
+            this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click);
+            // 
             // btnGuardarCambios
             // 
             this.btnGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
@@ -485,26 +589,27 @@
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
-            // btnCerrarQuincena
+            // btnBuscar
             // 
-            this.btnCerrarQuincena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnCerrarQuincena.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCerrarQuincena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarQuincena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarQuincena.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarQuincena.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnCerrarQuincena.IconColor = System.Drawing.Color.White;
-            this.btnCerrarQuincena.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarQuincena.IconSize = 28;
-            this.btnCerrarQuincena.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarQuincena.Location = new System.Drawing.Point(849, 96);
-            this.btnCerrarQuincena.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrarQuincena.Name = "btnCerrarQuincena";
-            this.btnCerrarQuincena.Size = new System.Drawing.Size(159, 35);
-            this.btnCerrarQuincena.TabIndex = 35;
-            this.btnCerrarQuincena.Text = "Cerrar Quincena";
-            this.btnCerrarQuincena.UseVisualStyleBackColor = false;
-            this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click);
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 28;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(849, 573);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(159, 41);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvSueldos_idEmpleado
             // 

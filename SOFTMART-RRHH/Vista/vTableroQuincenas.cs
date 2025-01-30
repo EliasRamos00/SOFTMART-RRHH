@@ -19,6 +19,7 @@ namespace SOFTMART_RRHH.Vista
     {
         #region VARIABLES GLOBALES
         public DataTable sueldos = new DataTable();
+        public DateTime quincena2 = new DateTime();
         #endregion
 
         #region CONSTRUCTORES
@@ -74,6 +75,22 @@ namespace SOFTMART_RRHH.Vista
         #region MÉTODOS
         private void CargarSueldos()
         {
+            
+            foreach (DataGridViewRow fila in dgvSueldos.Rows)
+            {
+                if (Convert.ToInt32(fila.Cells["dgvSueldos_tieneCambios"].Value) != 0)
+                {
+                    DialogResult resultado = MessageBox.Show("Tienes datos sin guardar. ¿Deseas continuar?",
+                                                             "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resultado == DialogResult.No)
+                    {
+                        dtpQuincenaActual.Value =quincena2 ;
+                        return; 
+                        
+                    }
+                    break; 
+                }
+            }
             try
             {                
                 int currentScrollPosition = GetVerticalScrollPosition(dgvSueldos);
@@ -197,67 +214,50 @@ namespace SOFTMART_RRHH.Vista
 
         private void dgvSueldos_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            // Comprobar que la celda que estamos editando es una de las columnas correctas
-            if (e.ColumnIndex == dgvSueldos_Fiscal2.Index || e.ColumnIndex == dgvSueldos_Bonificacion2.Index || e.ColumnIndex == dgvSueldos_Fiscal1.Index || e.ColumnIndex == dgvSueldos_Bonificacion1.Index)
+            
+
+            // Verificar si la celda pertenece a una de las columnas editables
+            if (!(e.ColumnIndex == dgvSueldos_Fiscal2.Index || e.ColumnIndex == dgvSueldos_Bonificacion2.Index ||
+                  e.ColumnIndex == dgvSueldos_Fiscal1.Index || e.ColumnIndex == dgvSueldos_Bonificacion1.Index))
             {
-                // Obtener la fecha seleccionada del DateTimePicker y el valor de la quincena seleccionada en el ComboBox
-
-                DateTime quincenaSeleccionada = dtpQuincenaActual.Value;
-                string quincenaSeleccionadaText = cbQuincenaActual.Text.ToLower();
-
-                if (e.ColumnIndex == dgvSueldos_Fiscal1.Index || e.ColumnIndex == dgvSueldos_Bonificacion1.Index)
-                {
-                    quincenaSeleccionada = dtpQuincenaAnterior.Value;
-                    quincenaSeleccionadaText = cbQuincenaAnterior.Text.ToLower();
-                }
-
-
-                // Verificar si la fecha seleccionada corresponde a la quincena actual o posterior
-                if (quincenaSeleccionada.Month >= DateTime.Now.Month && quincenaSeleccionada.Year >= DateTime.Now.Year)
-                {
-                    if (quincenaSeleccionada.Year > DateTime.Now.Year)
-                    {
-                        return;
-                    }
-
-                    if (quincenaSeleccionada.Month == DateTime.Now.Month)
-                    {
-                        // Verificar que la quincena sea la correcta
-                        if ((DateTime.Now.Day <= 15 && quincenaSeleccionadaText.Contains("1er")) ||
-                            (DateTime.Now.Day > 15 && quincenaSeleccionadaText.Contains("2da")))
-                        {
-                            // Si todo es correcto, permitir la edición
-                            return; // Deja que la edición continúe normalmente
-                        }
-                        else
-                        {
-                            // Si la quincena no es válida, cancelar la edición
-                            e.Cancel = true;
-                            MessageBox.Show("Solo puedes editar la quincena correspondiente a la fecha actual o posterior.", // CAMBIAR A POPUPS
-                                            "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    else
-                    {
-                        return;
-
-                    }
-
-                }
-                else
-                {
-                    // Si la quincena seleccionada es anterior a la actual, no permitir la edición
-                    e.Cancel = true;
-                    MessageBox.Show("No se puede editar un salario de una quincena pasada.",
-                                    "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning); // CAMBIAR A POPUPS
-                }
-            }
-            else
-            {
-                // Si la celda no es una de las que queremos editar, cancelar la edición
                 e.Cancel = true;
+                return;
+            }
+
+            // Obtener la fecha seleccionada y la quincena del ComboBox
+            DateTime quincenaSeleccionada = dtpQuincenaActual.Value;
+            string quincenaSeleccionadaText = cbQuincenaActual.Text.ToLower();
+
+            if (e.ColumnIndex == dgvSueldos_Fiscal1.Index || e.ColumnIndex == dgvSueldos_Bonificacion1.Index)
+            {
+                quincenaSeleccionada = dtpQuincenaAnterior.Value;
+                quincenaSeleccionadaText = cbQuincenaAnterior.Text.ToLower();
+            }
+
+            // Validar si la quincena seleccionada es actual o futura
+            if (quincenaSeleccionada.Year < DateTime.Now.Year ||
+                (quincenaSeleccionada.Year == DateTime.Now.Year && quincenaSeleccionada.Month < DateTime.Now.Month))
+            {
+                e.Cancel = true;
+                MessageBox.Show("No se puede editar un salario de una quincena pasada.", "Acción no permitida",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Si la quincena es del mes actual, verificar que corresponda a la primera o segunda quincena correctamente
+            if (quincenaSeleccionada.Month == DateTime.Now.Month)
+            {
+                bool esPrimeraQuincena = DateTime.Now.Day <= 15;
+                if ((esPrimeraQuincena && !quincenaSeleccionadaText.Contains("1er")) ||
+                    (!esPrimeraQuincena && !quincenaSeleccionadaText.Contains("2da")))
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Solo puedes editar la quincena correspondiente a la fecha actual o posterior.",
+                                    "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
+
 
         private void dgvSueldos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -519,6 +519,11 @@ namespace SOFTMART_RRHH.Vista
                 string mensaje = MEmpleados.ObtenerSiguienteSueldoProgramado();
                 e.ToolTipText = $"Quincena futura: {mensaje}";
             }
+        }
+
+        private void dtpQuincenaActual_Enter(object sender, EventArgs e)
+        {
+            quincena2 = dtpQuincenaActual.Value;
         }
     }
 }
