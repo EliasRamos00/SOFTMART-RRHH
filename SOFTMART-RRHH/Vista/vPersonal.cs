@@ -132,7 +132,10 @@ namespace SOFTMART_RRHH.Vista
         }
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
         {
-            cbSueldo.Text = infoEmpleado.Rows[0]["Sueldo"].ToString();
+
+            tbSueldoBonificacion.Text = infoEmpleado.Rows[0]["Sueldo"].ToString();
+
+
             try
             {
                 dtpFechaIngreso.Value = Convert.ToDateTime(infoEmpleado.Rows[0]["FechaInicio"]);
@@ -237,7 +240,9 @@ namespace SOFTMART_RRHH.Vista
             tbComentarios.ReadOnly = @bool;
             tbNumContrato.ReadOnly = @bool;
             cBEmpleadoTemporada.Enabled = !@bool;
-            cbSueldo.Enabled = !@bool;
+
+            tbSueldoBonificacion.Enabled = !@bool;
+            
             cbTienda.Enabled = !@bool;
             cbArea.Enabled = !@bool;
             cbPuesto.Enabled = !@bool;
@@ -286,7 +291,9 @@ namespace SOFTMART_RRHH.Vista
             cbArea.SelectedIndex = -1;
             cbSubarea.SelectedIndex = -1;
             cbPuesto.SelectedIndex = -1;
-            cbSueldo.Text = "";
+
+            tbSueldoBonificacion.Text = "";
+        
         }
         public virtual void MostrarVentanaEliminacion(EventArgs e)
         {
@@ -381,7 +388,9 @@ namespace SOFTMART_RRHH.Vista
             try { idSucursal = cbTienda.SelectedValue.ToString(); } catch { idSucursal = ""; }
             try { idPuesto = cbPuesto.SelectedValue.ToString(); } catch { idPuesto = ""; }
             esTemporal = cBEmpleadoTemporada.Checked;
-            sueldo = cbSueldo.Text.Trim() != "" ? Convert.ToDecimal(cbSueldo.Text).ToString("0.00") : "";
+
+            sueldo = tbSueldoBonificacion.Text.Trim() != "" ? Convert.ToDecimal(tbSueldoBonificacion.Text).ToString("0.00") : "";
+
             comentarios = tbComentarios.Text.Trim();
 
             if (estaModificando) //Si no es una modificación... es una inserción.
@@ -391,6 +400,7 @@ namespace SOFTMART_RRHH.Vista
                 if (CAltaPersonal.CModificarPersonal("TELEFONO", telefono, Estado, Ciudad, Colonia, CP, CalleNum, Nombres, ApePat, ApeMat, RFC,
                  CURP, LugarNac, Genero, FechaNac, fotografiaDestino, idEscolaridad, Especialidad, NumContrato, idSucursal, idPuesto, dtpFechaIngreso.Value, EdoCivil, esTemporal, sueldo, idEmpleado, idPersona, NSS, InfoEmer, fotografiaOrigen, INE_Origen, INE_Destino, comentarios))
                 {
+                    
                     INEOrigen_Ruta = "";
                     fotografiaOrigen_Ruta = "";
                     esFotoNueva = false;
@@ -405,6 +415,30 @@ namespace SOFTMART_RRHH.Vista
                     btnGuardar.Enabled = false;
                     CamposSoloLecturaPersona(true);
                     CamposSoloLecturaEmpleado(true);
+
+                    // Determinar la quincena actual según la fecha de hoy
+                    string quincena = (DateTime.Now.Day <= 15) ? "1ER QUINCENA" : "2DA QUINCENA";
+                    int anio = DateTime.Now.Year;
+                    int mes = DateTime.Now.Month;
+                    int dia = (quincena == "1ER QUINCENA") ? 1 : 17; // Día de inicio de la quincena
+
+                    decimal sueldoFiscal = Convert.ToDecimal(tbSueldoFiscal);
+                    decimal sueldoBonificacion = Convert.ToDecimal(tbSueldoBonificacion);
+
+                    try
+                    {
+                        if (MEmpleados.CObtenerSalarioEmpleadoByFechaQuincena(quincena, anio, mes, idEmpleado.ToString()).Rows.Count > 0) // Ya tiene sueldo de esa quincena, modifica
+                        {
+                            MEmpleados.CModificarSalarioEmpleado(quincena, anio, mes, dia, idEmpleado.ToString(), sueldoFiscal, sueldoBonificacion);
+                        }
+                        else // No tiene, se inserta. 
+                        {
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
                 }
             }
             else
@@ -412,6 +446,24 @@ namespace SOFTMART_RRHH.Vista
                 if (CAltaPersonal.CInsertarPersonal("TELEFONO", telefono, Estado, Ciudad, Colonia, CP, CalleNum, Nombres, ApePat, ApeMat, RFC,
                 CURP, LugarNac, Genero, FechaNac, fotografiaDestino, idEscolaridad, Especialidad, NumContrato, idSucursal, idPuesto, dtpFechaIngreso.Value, EdoCivil, esTemporal, sueldo, existióPersona, NSS, InfoEmer, fotografiaOrigen, INE_Origen, INE_Destino, comentarios))
                 {
+                    
+                    // Determinar la quincena actual según la fecha de hoy
+                    string quincena = (DateTime.Now.Day <= 15) ? "1ER QUINCENA" : "2DA QUINCENA";
+                    int anio = DateTime.Now.Year;
+                    int mes = DateTime.Now.Month;
+                    int dia = (quincena == "1ER QUINCENA") ? 1 : 17; // Día de inicio de la quincena
+
+                    string idEmpleado = MEmpleados.ObtenerUltimoEmpleadoInsertado();
+                    decimal sueldoFiscal = Convert.ToDecimal(tbSueldoFiscal);
+                    decimal sueldoBonificacion = Convert.ToDecimal(tbSueldoBonificacion);
+
+                    try
+                    {
+                        MEmpleados.CInsertarSalarioEmpleado(quincena, anio, mes, dia, idEmpleado, sueldoFiscal, sueldoBonificacion);
+
+                    }
+                    catch (Exception ex){}      
+                    
                     LimpiarCamposPersona();
                     LimpiarCamposEmpleado();
                     tbCURP.Text = "";
@@ -434,6 +486,16 @@ namespace SOFTMART_RRHH.Vista
             if (cbTienda.Text == "")
             {
                 LibAux.PopUp("¡ATENCIÓN!", "Selecciona Tienda", TipoNotif.Info);
+                return false;
+            }
+            if (tbSueldoFiscal.Text == "")
+            {
+                LibAux.PopUp("¡ATENCIÓN!", "Sueldo fiscal obligatorio", TipoNotif.Info);
+                return false;
+            }
+            if (tbSueldoBonificacion.Text == "")
+            {
+                LibAux.PopUp("¡ATENCIÓN!", "Suelda bonificación obligatorio", TipoNotif.Info);
                 return false;
             }
             return true;

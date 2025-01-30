@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-          
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltroSueldos = new System.Windows.Forms.TextBox();
             this.lblBuscarSueldos = new System.Windows.Forms.Label();
@@ -56,7 +55,7 @@
             this.dgvSueldos_Bonificacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvSueldos_QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnCloseSueldos = new System.Windows.Forms.PictureBox();
             this.lblTituloSueldos = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,19 +73,7 @@
             this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
             this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
-
-            this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Fiscal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Bonificacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSueldos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseSueldos)).BeginInit();
@@ -114,13 +101,13 @@
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 3, 5);
             this.tlpPrincipal.Controls.Add(this.label2, 2, 6);
             this.tlpPrincipal.Controls.Add(this.label1, 3, 6);
-            this.tlpPrincipal.Controls.Add(this.btnBuscar, 4, 5);
             this.tlpPrincipal.Controls.Add(this.lblExpExc, 3, 1);
             this.tlpPrincipal.Controls.Add(this.lblImpExc, 4, 1);
             this.tlpPrincipal.Controls.Add(this.btnExportarExcel, 3, 2);
             this.tlpPrincipal.Controls.Add(this.btnImportarExcel, 4, 2);
-            this.tlpPrincipal.Controls.Add(this.btnGuardarCambios, 4, 6);
             this.tlpPrincipal.Controls.Add(this.btnCerrarQuincena, 4, 3);
+            this.tlpPrincipal.Controls.Add(this.btnGuardarCambios, 4, 6);
+            this.tlpPrincipal.Controls.Add(this.btnBuscar, 4, 5);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
@@ -189,15 +176,14 @@
             this.dgvSueldos.AllowUserToAddRows = false;
             this.dgvSueldos.AllowUserToDeleteRows = false;
             this.dgvSueldos.AllowUserToResizeRows = false;
-
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSueldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSueldos_idEmpleado,
@@ -212,29 +198,27 @@
             this.dgvSueldos_Diferencia,
             this.dgvSueldos_QuincenaFutura});
             this.tlpPrincipal.SetColumnSpan(this.dgvSueldos, 4);
-
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvSueldos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSueldos.GridColor = System.Drawing.Color.Black;
             this.dgvSueldos.Location = new System.Drawing.Point(45, 134);
             this.dgvSueldos.MultiSelect = false;
             this.dgvSueldos.Name = "dgvSueldos";
-
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvSueldos.RowHeadersVisible = false;
             this.dgvSueldos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSueldos.Size = new System.Drawing.Size(960, 436);
@@ -242,7 +226,10 @@
             this.dgvSueldos.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvSueldos_CellBeginEdit);
             this.dgvSueldos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellDoubleClick);
             this.dgvSueldos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellEndEdit);
+            this.dgvSueldos.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellMouseEnter);
+            this.dgvSueldos.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellMouseLeave);
             this.dgvSueldos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvSueldos_CellPainting);
+            this.dgvSueldos.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvSueldos_CellToolTipTextNeeded);
             // 
             // dgvSueldos_idEmpleado
             // 
@@ -269,6 +256,7 @@
             // 
             this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.Format = "C2";
             this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
             this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
@@ -279,6 +267,7 @@
             // 
             this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle23.Format = "C2";
             this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
             this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
@@ -289,6 +278,7 @@
             // 
             this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
             dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.Format = "C2";
             this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgvSueldos_Total1.HeaderText = "Total";
             this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
@@ -299,6 +289,7 @@
             // 
             this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
             dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle25.Format = "C2";
             this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle25;
             this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
             this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
@@ -308,6 +299,7 @@
             // 
             this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
             dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Format = "C2";
             this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
             this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
@@ -317,6 +309,7 @@
             // 
             this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
             dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle27.Format = "C2";
             this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgvSueldos_Total2.HeaderText = "Total";
             this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
@@ -325,19 +318,22 @@
             // 
             // dgvSueldos_Diferencia
             // 
+            this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
             dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle28.Format = "C2";
             this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvSueldos_Diferencia.HeaderText = "Diff.";
             this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
             this.dgvSueldos_Diferencia.ReadOnly = true;
             this.dgvSueldos_Diferencia.Width = 83;
             // 
-            // QuincenaFutura
+            // dgvSueldos_QuincenaFutura
             // 
-            this.QuincenaFutura.HeaderText = "QuincenaFutura";
-            this.QuincenaFutura.Name = "QuincenaFutura";
-            this.QuincenaFutura.ReadOnly = true;
-            this.QuincenaFutura.Width = 60;
+            this.dgvSueldos_QuincenaFutura.DataPropertyName = "TieneRegistrosPosteriores";
+            this.dgvSueldos_QuincenaFutura.HeaderText = "QuincenaFutura";
+            this.dgvSueldos_QuincenaFutura.Name = "dgvSueldos_QuincenaFutura";
+            this.dgvSueldos_QuincenaFutura.ReadOnly = true;
+            this.dgvSueldos_QuincenaFutura.Width = 60;
             // 
             // btnCloseSueldos
             // 
@@ -396,6 +392,7 @@
             this.cbQuincenaAnterior.Name = "cbQuincenaAnterior";
             this.cbQuincenaAnterior.Size = new System.Drawing.Size(111, 24);
             this.cbQuincenaAnterior.TabIndex = 31;
+            this.cbQuincenaAnterior.SelectedIndexChanged += new System.EventHandler(this.cbQuincenaAnterior_SelectedIndexChanged);
             // 
             // dtpQuincenaAnterior
             // 
@@ -408,7 +405,8 @@
             this.dtpQuincenaAnterior.ShowUpDown = true;
             this.dtpQuincenaAnterior.Size = new System.Drawing.Size(110, 27);
             this.dtpQuincenaAnterior.TabIndex = 30;
-            this.dtpQuincenaAnterior.Value = new System.DateTime(2025, 1, 7, 0, 0, 0, 0);
+            this.dtpQuincenaAnterior.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
+            this.dtpQuincenaAnterior.ValueChanged += new System.EventHandler(this.dtpQuincenaAnterior_ValueChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -437,7 +435,8 @@
             this.dtpQuincenaActual.ShowUpDown = true;
             this.dtpQuincenaActual.Size = new System.Drawing.Size(113, 27);
             this.dtpQuincenaActual.TabIndex = 30;
-            this.dtpQuincenaActual.Value = new System.DateTime(2025, 1, 7, 0, 0, 0, 0);
+            this.dtpQuincenaActual.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
+            this.dtpQuincenaActual.ValueChanged += new System.EventHandler(this.dtpQuincenaActual_ValueChanged);
             // 
             // cbQuincenaActual
             // 
@@ -452,6 +451,7 @@
             this.cbQuincenaActual.Name = "cbQuincenaActual";
             this.cbQuincenaActual.Size = new System.Drawing.Size(114, 24);
             this.cbQuincenaActual.TabIndex = 31;
+            this.cbQuincenaActual.SelectedIndexChanged += new System.EventHandler(this.cbQuincenaActual_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -479,7 +479,6 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -496,6 +495,7 @@
             this.btnBuscar.TabIndex = 39;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblExpExc
@@ -608,104 +608,7 @@
             this.btnCerrarQuincena.TabIndex = 35;
             this.btnCerrarQuincena.Text = "Cerrar Quincena";
             this.btnCerrarQuincena.UseVisualStyleBackColor = false;
-            this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click_1);
-            // 
-            // dgvSueldos_idEmpleado
-            // 
-            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
-            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
-            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
-            this.dgvSueldos_idEmpleado.Visible = false;
-            // 
-            // dgvSueldos_tieneCambios
-            // 
-            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
-            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
-            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
-            // 
-            // dgvSueldos_Nombre
-            // 
-            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
-            this.dgvSueldos_Nombre.HeaderText = "Nombre";
-            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
-            this.dgvSueldos_Nombre.ReadOnly = true;
-            // 
-            // dgvSueldos_Fiscal1
-            // 
-            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
-            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
-            this.dgvSueldos_Fiscal1.ReadOnly = true;
-            this.dgvSueldos_Fiscal1.Width = 80;
-            // 
-            // dgvSueldos_Bonificacion1
-            // 
-            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
-            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
-            this.dgvSueldos_Bonificacion1.ReadOnly = true;
-            this.dgvSueldos_Bonificacion1.Width = 80;
-            // 
-            // dgvSueldos_Total1
-            // 
-            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvSueldos_Total1.HeaderText = "Total";
-            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
-            this.dgvSueldos_Total1.ReadOnly = true;
-            this.dgvSueldos_Total1.Width = 80;
-            // 
-            // dgvSueldos_Fiscal2
-            // 
-            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
-            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
-            this.dgvSueldos_Fiscal2.Width = 80;
-            // 
-            // dgvSueldos_Bonificacion2
-            // 
-            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
-            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
-            this.dgvSueldos_Bonificacion2.Width = 80;
-            // 
-            // dgvSueldos_Total2
-            // 
-            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvSueldos_Total2.HeaderText = "Total";
-            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
-            this.dgvSueldos_Total2.ReadOnly = true;
-            this.dgvSueldos_Total2.Width = 83;
-            // 
-            // dgvSueldos_Diferencia
-            // 
-            this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
-            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
-            this.dgvSueldos_Diferencia.ReadOnly = true;
-            this.dgvSueldos_Diferencia.Width = 83;
-            // 
-            // dgvSueldos_QuincenaFutura
-            // 
-            this.dgvSueldos_QuincenaFutura.DataPropertyName = "TieneRegistrosPosteriores";
-            this.dgvSueldos_QuincenaFutura.HeaderText = "QuincenaFutura";
-            this.dgvSueldos_QuincenaFutura.Name = "dgvSueldos_QuincenaFutura";
-            this.dgvSueldos_QuincenaFutura.ReadOnly = true;
-            this.dgvSueldos_QuincenaFutura.Width = 60;
+            this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click);
             // 
             // vTableroQuincenas
             // 
@@ -761,5 +664,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Total2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Diferencia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvSueldos_QuincenaFutura;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

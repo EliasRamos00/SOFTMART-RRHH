@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SOFTMART_RRHH.Modelo.LibAux;
 
 namespace SOFTMART_RRHH.Vista
 {
@@ -42,25 +43,34 @@ namespace SOFTMART_RRHH.Vista
         {
             // SE OBTIENE LA FECHA DE HOY
             DateTime hoy = DateTime.Now;
-            dtpQuincenaActual.Value = hoy;
 
-            // Si el dia de hoy es 16+ entonces es segunda quincena del mes.
+            // Si el día es mayor a 26, se establece en 26
+            if (hoy.Day > 26)
+            {
+                hoy = new DateTime(hoy.Year, hoy.Month, 26);
+            }
+
+            dtpQuincenaActual.Value = hoy;
 
             if (hoy.Day >= 16) // SEGUNDA QUINCENA
             {
                 cbQuincenaActual.SelectedIndex = 1;
                 cbQuincenaAnterior.SelectedIndex = 0;
 
-                dtpQuincenaAnterior.Value = hoy; // SI ESTAMOS EN SEGUNDA QUINCENA, ENTONCES LA QUINCENA ANTERIOR ES LA PRIMERA DEL MISMO MES Y ANIO
+                // Si estamos en segunda quincena, la anterior es la primera del mismo mes
+                dtpQuincenaAnterior.Value = new DateTime(hoy.Year, hoy.Month, 1);
             }
-            else // ES PRIMERA QUINCENA
+            else // PRIMERA QUINCENA
             {
                 cbQuincenaActual.SelectedIndex = 0;
                 cbQuincenaAnterior.SelectedIndex = 1;
-                dtpQuincenaAnterior.Value = hoy.AddMonths(-1); // SI ESTAMOS EN PRIMERA QUINCENA, ENTONCES LA QUINCENA ANTERIOR ES LA *SEGUNDA* DEL MES ANTERIOR
 
-
+                // Si estamos en primera quincena, la anterior es la segunda quincena del mes anterior
+                DateTime mesAnterior = hoy.AddMonths(-1);
+                int diaSeguro = Math.Min(17, DateTime.DaysInMonth(mesAnterior.Year, mesAnterior.Month));
+                dtpQuincenaAnterior.Value = new DateTime(mesAnterior.Year, mesAnterior.Month, diaSeguro);
             }
+
         }
         #endregion
 
@@ -103,13 +113,33 @@ namespace SOFTMART_RRHH.Vista
         #region Eventos
         private void btnCerrarQuincena_Click(object sender, EventArgs e)
         {
+            //SE DEBE PROGRAMAR CERRAR LA QUINCENA, LITERAL SOLO ES ITERAR ENTRE LOS QUE TENGAN 0 EN SUELDO BONIFICACION Y FISCAL Y PONER LO QUE YA LES EXISTE EN LA QUINCENA ANTERIOR.
+
+            foreach (DataGridViewRow row in dgvSueldos.Rows)
+            {
+                if (row.IsNewRow) continue; // Evita la fila vacía al final del DGV
+
+                // Obtener valores actuales de Fiscal2 y Bonificación2
+                decimal fiscal2 = Convert.ToDecimal(row.Cells[dgvSueldos_Fiscal2.Index].Value ?? 0);
+                decimal bonificacion2 = Convert.ToDecimal(row.Cells[dgvSueldos_Bonificacion2.Index].Value ?? 0);
+
+                // Si ambos son 0, asignar los valores de Fiscal1 y Bonificación1
+                if (fiscal2 == 0 && bonificacion2 == 0)
+                {
+                    row.Cells[dgvSueldos_Fiscal2.Index].Value = row.Cells[dgvSueldos_Fiscal1.Index].Value;
+                    row.Cells[dgvSueldos_Bonificacion2.Index].Value = row.Cells[dgvSueldos_Bonificacion1.Index].Value;
+                    row.Cells[dgvSueldos_tieneCambios.Index].Value = 1;
+
+
+                }
+            }
 
         }
 
         private void dgvSueldos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             // Verificar si estamos en una celda de la columna deseada.
-            if (e.ColumnIndex == 2 && e.RowIndex >= 0) // Cambia el índice de columna según tu necesidad.
+            if (e.ColumnIndex == 2 && e.RowIndex >= 0) 
             {
                 e.Handled = true; // Evitar el dibujo predeterminado de la celda.
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
@@ -124,7 +154,7 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
 
-            if (e.ColumnIndex == 5 && e.RowIndex >= 0) // Cambia el índice de columna según tu necesidad.
+            if (e.ColumnIndex == 5 && e.RowIndex >= 0) 
             {
                 e.Handled = true; // Evitar el dibujo predeterminado de la celda.
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
@@ -139,7 +169,7 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
 
-            if (e.ColumnIndex == 8 && e.RowIndex >= 0) // Cambia el índice de columna según tu necesidad.
+            if (e.ColumnIndex == 8 && e.RowIndex >= 0) 
             {
                 e.Handled = true; // Evitar el dibujo predeterminado de la celda.
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
@@ -252,17 +282,22 @@ namespace SOFTMART_RRHH.Vista
 
                     decimal sueldoFiscal = Convert.ToDecimal(row.Cells[dgvSueldos_Fiscal2.Index].Value);
                     decimal sueldoBonificacion = Convert.ToDecimal(row.Cells[dgvSueldos_Bonificacion2.Index].Value);
+                    int dia = 1;
+                    if (quincena.Contains("2"))
+                    {
+                        dia = 17;
+                    }
 
                     try
                     {
                         if (MEmpleados.CObtenerSalarioEmpleadoByFechaQuincena(quincena, anio, mes, idEmpleado).Rows.Count > 0) // Ya tiene sueldo de esa quincena, modifica
                         {
-                            MEmpleados.CModificarSalarioEmpleado(quincena, anio, mes, idEmpleado, sueldoFiscal, sueldoBonificacion);
+                            MEmpleados.CModificarSalarioEmpleado(quincena, anio, mes,dia, idEmpleado, sueldoFiscal, sueldoBonificacion);
                         }
                         else // No tiene, se inserta. 
                         {
 
-                            MEmpleados.CInsertarSalarioEmpleado(quincena, anio, mes, idEmpleado, sueldoFiscal, sueldoBonificacion);
+                            MEmpleados.CInsertarSalarioEmpleado(quincena, anio, mes,dia, idEmpleado, sueldoFiscal, sueldoBonificacion);
 
                         }
 
@@ -278,6 +313,8 @@ namespace SOFTMART_RRHH.Vista
                 }
             }
             // AGREGAR POPUP DE EXITO
+            LibAux.PopUp("¡Éxito!", "Información guardada con éxito.", TipoNotif.Success);
+            CargarSueldos();
         }
 
         private void tbFiltroSueldos_TextChanged(object sender, EventArgs e)
@@ -360,11 +397,14 @@ namespace SOFTMART_RRHH.Vista
                                     bool sueldoValido = decimal.TryParse(importRow["SueldoFiscal"]?.ToString(), out sueldoFiscal);
                                     bool bonificacionValida = decimal.TryParse(importRow["Bonificacion"]?.ToString(), out bonificacion);
 
-                                    bool sueldoCambio = sueldoValido && sueldoFiscal != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Fiscal1"].Value);
-                                    bool bonificacionCambio = bonificacionValida && bonificacion != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Bonificacion1"].Value);
+                                    bool sueldoCambio = sueldoValido && sueldoFiscal != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Fiscal2"].Value);
+                                    bool bonificacionCambio = bonificacionValida && bonificacion != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Bonificacion2"].Value);
 
-                                    if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal1"].Value = sueldoFiscal;
-                                    if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion1"].Value = bonificacion;
+                                    if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal2"].Value = sueldoFiscal;
+                                    if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion2"].Value = bonificacion;
+
+                                    dgvRow.Cells["dgvSueldos_Total2"].Value = bonificacion+sueldoFiscal;
+
 
                                     if (sueldoCambio || bonificacionCambio)
                                     {
@@ -378,10 +418,13 @@ namespace SOFTMART_RRHH.Vista
                         }
 
                         MessageBox.Show("Datos importados y actualizados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // POPUP
                     }
                     else
                     {
                         MessageBox.Show("El archivo de Excel no contiene datos válidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        // POPUP
+
                     }
                 }
             }
@@ -392,9 +435,54 @@ namespace SOFTMART_RRHH.Vista
         }
 
 
-
-
         #endregion
 
+        private void dtpQuincenaAnterior_ValueChanged(object sender, EventArgs e)
+        {
+            CargarSueldos();
+        }
+
+        private void cbQuincenaAnterior_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarSueldos();
+        }
+
+        private void dtpQuincenaActual_ValueChanged(object sender, EventArgs e)
+        {
+            CargarSueldos();
+        }
+
+        private void cbQuincenaActual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarSueldos();
+        }
+
+        private void dgvSueldos_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //// Verificar que no sea una fila de encabezado y que esté en la columna deseada
+            //if (e.RowIndex >= 0 && e.ColumnIndex == dgvSueldos_QuincenaFutura.Index)
+            //{
+            //    string mensaje = MEmpleados.ObtenerSiguienteSueldoProgramado();
+            //    // Obtener el valor de la celda
+
+            //    // Mostrar el tooltip
+            //    toolTip1.SetToolTip(dgvSueldos, $"Quincena futura: {mensaje}");
+            //}
+        }
+
+        private void dgvSueldos_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            //toolTip1.SetToolTip(dgvSueldos, ""); // Limpia el tooltip
+        }
+
+        private void dgvSueldos_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
+            // Verificar que no sea una fila de encabezado y que esté en la columna deseada
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvSueldos_QuincenaFutura.Index)
+            {
+                string mensaje = MEmpleados.ObtenerSiguienteSueldoProgramado();
+                e.ToolTipText = $"Quincena futura: {mensaje}";
+            }
+        }
     }
 }

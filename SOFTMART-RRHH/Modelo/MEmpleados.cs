@@ -89,9 +89,9 @@ namespace SOFTMART_RRHH.Controlador
             LibAux.EjecutarProcedimiento("SP_ACTUALIZAR_Empleado", cmd, parametros);
         }
 
-        internal static void CInsertarSalarioEmpleado(string quincena, int anio, int mes, string idEmpleado, decimal sueldoFiscal, decimal sueldoBonificacion)
+        internal static void CInsertarSalarioEmpleado(string quincena, int anio, int mes, int dia, string idEmpleado, decimal sueldoFiscal, decimal sueldoBonificacion)
         {
-            DateTime fecha = new DateTime(anio, mes, 1);
+            DateTime fecha = new DateTime(anio, mes, dia);
 
 
             List<Param> parametros = new List<Param>
@@ -107,9 +107,9 @@ namespace SOFTMART_RRHH.Controlador
             LibAux.EjecutarProcedimiento("SP_INSERTA_Sueldo", parametros);
         }
 
-        internal static void CModificarSalarioEmpleado(string quincena, int anio, int mes, string idEmpleado, decimal sueldoFiscal, decimal sueldoBonificacion)
+        internal static void CModificarSalarioEmpleado(string quincena, int anio, int mes,int dia, string idEmpleado, decimal sueldoFiscal, decimal sueldoBonificacion)
         {
-            DateTime fecha = new DateTime(anio, mes, 1);
+            DateTime fecha = new DateTime(anio, mes, dia);
 
             List<Param> parametros = new List<Param>
             {
@@ -124,5 +124,36 @@ namespace SOFTMART_RRHH.Controlador
             LibAux.EjecutarProcedimiento("SP_ACTUALIZA_Sueldo", parametros);
         }
 
+       
+            internal static string ObtenerUltimoEmpleadoInsertado()
+            {
+                string query = "SELECT idEmpleado FROM empleados ORDER BY idEmpleado DESC LIMIT 1;";
+                DataTable resultado = LibAux.EjecutarSentencia(query);
+
+                if (resultado.Rows.Count > 0)
+                {
+                    return resultado.Rows[0]["idEmpleado"].ToString();
+                }
+                return string.Empty; // Retorna cadena vacía si no hay registros
+            }
+
+        internal static string ObtenerSiguienteSueldoProgramado()
+        {
+            string query = @"
+            SELECT CONCAT(fecha, ' - ', SFiscal + SBonificacion) AS resultado
+            FROM sueldoHistorial 
+            WHERE fecha > NOW() 
+            ORDER BY fecha ASC 
+            LIMIT 1";
+
+            DataTable dt = LibAux.EjecutarSentencia(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                return dt.Rows[0]["resultado"].ToString();
+            }
+
+            return string.Empty; // Retorna una cadena vacía si no hay registros futuros        }
+        }
     }
 }
