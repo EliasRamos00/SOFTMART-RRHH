@@ -144,7 +144,7 @@ namespace SOFTMART_RRHH.Controlador
             FROM sueldoHistorial 
             WHERE fecha > NOW() 
             ORDER BY fecha ASC 
-            LIMIT 1";
+            ";
 
             DataTable dt = LibAux.EjecutarSentencia(query);
 

@@ -133,7 +133,8 @@ namespace SOFTMART_RRHH.Vista
         private void CargarInformacionEmpleado(DataTable infoEmpleado)
         {
 
-            tbSueldoBonificacion.Text = infoEmpleado.Rows[0]["Sueldo"].ToString();
+            tbSueldoBonificacion.Text = infoEmpleado.Rows[0]["SBonificacion"].ToString();
+            tbSueldoFiscal.Text = infoEmpleado.Rows[0]["SFiscal"].ToString();
 
 
             try
@@ -293,7 +294,9 @@ namespace SOFTMART_RRHH.Vista
             cbPuesto.SelectedIndex = -1;
 
             tbSueldoBonificacion.Text = "";
-        
+            tbSueldoFiscal.Text = "";
+
+
         }
         public virtual void MostrarVentanaEliminacion(EventArgs e)
         {
@@ -454,8 +457,8 @@ namespace SOFTMART_RRHH.Vista
                     int dia = (quincena == "1ER QUINCENA") ? 1 : 17; // Día de inicio de la quincena
 
                     string idEmpleado = MEmpleados.ObtenerUltimoEmpleadoInsertado();
-                    decimal sueldoFiscal = Convert.ToDecimal(tbSueldoFiscal);
-                    decimal sueldoBonificacion = Convert.ToDecimal(tbSueldoBonificacion);
+                    decimal sueldoFiscal = Convert.ToDecimal(tbSueldoFiscal.Text);
+                    decimal sueldoBonificacion = Convert.ToDecimal(tbSueldoBonificacion.Text);
 
                     try
                     {
