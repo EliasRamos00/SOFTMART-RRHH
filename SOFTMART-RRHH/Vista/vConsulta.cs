@@ -30,6 +30,7 @@ namespace SOFTMART_RRHH.Vista
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dgvConsultaEmpleados, new object[] { true });
             CargarColumnas();
+            esVisibleFiltroFechas(true);
         }
         #endregion
         #region MÉTODOS       
@@ -38,7 +39,8 @@ namespace SOFTMART_RRHH.Vista
             frmCarga carga = new frmCarga();
             carga.Show();
 
-            dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();  // OBTIENE LA LISTA DE EMPLEADOS ACTIVOS
+            dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporteSinBajas(dtpInicio.Value, dtpFin.Value);
+            //dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();  // OBTIENE LA LISTA DE EMPLEADOS ACTIVOS
             await Task.Run(() => CalcularAntiguedad()); // CALCULA LA ANTIGUEDAD EN UN HILO APARTE
             dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
 
@@ -276,25 +278,25 @@ namespace SOFTMART_RRHH.Vista
                 esVisibleFiltroAntiguedad(false);
             }
 
-            // -- FILTRO NUEVO, EMPLADOS ACTIVOS POR FECHAS -- 20 ENERO
+            //// -- FILTRO NUEVO, EMPLADOS ACTIVOS POR FECHAS -- 20 ENERO
 
-            if (cbFiltro.Text == "Empleados activos por fechas")
-            {
-                dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporteSinBajas(dtpInicio.Value,dtpFin.Value);
-                CalcularAntiguedad();
-                dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
-                esVisibleFiltroFechas(true);
-            }
-            else
-            {
-                dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();
-                CalcularAntiguedad();
-                dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
+            //if (cbFiltro.Text == "Empleados activos por fechas")
+            //{
+            //    dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporteSinBajas(dtpInicio.Value,dtpFin.Value);
+            //    CalcularAntiguedad();
+            //    dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
+            //    esVisibleFiltroFechas(true);
+            //}
+            //else
+            //{
+            //    dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();
+            //    CalcularAntiguedad();
+            //    dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
 
-                esVisibleFiltroFechas(false);
+            //    esVisibleFiltroFechas(false);
 
-                // esVisibleFiltroAntiguedad(false);
-            }
+            //    // esVisibleFiltroAntiguedad(false);
+            //}
 
 
 

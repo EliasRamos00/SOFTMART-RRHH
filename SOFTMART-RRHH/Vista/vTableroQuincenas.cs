@@ -525,5 +525,10 @@ namespace SOFTMART_RRHH.Vista
         {
             quincena2 = dtpQuincenaActual.Value;
         }
+
+        private void lblExpExc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

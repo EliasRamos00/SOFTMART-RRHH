@@ -243,7 +243,8 @@ namespace SOFTMART_RRHH.Vista
             cBEmpleadoTemporada.Enabled = !@bool;
 
             tbSueldoBonificacion.Enabled = !@bool;
-            
+            tbSueldoFiscal.Enabled = !@bool;
+
             cbTienda.Enabled = !@bool;
             cbArea.Enabled = !@bool;
             cbPuesto.Enabled = !@bool;
