@@ -523,6 +523,7 @@
             this.dgvSueldos_tieneCambios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
             this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
+            this.dgvSueldos_tieneCambios.Visible = false;
             // 
             // dgvSueldos_Nombre
             // 

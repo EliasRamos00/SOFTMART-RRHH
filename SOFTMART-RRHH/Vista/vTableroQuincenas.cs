@@ -37,7 +37,6 @@ namespace SOFTMART_RRHH.Vista
             dgvSueldos.AutoGenerateColumns = false;
             // Metodo para decifrar la quincena actual y anterior
             SetQuincenaActualyAnterior();
-
             CargarSueldos();
             dgvSueldos.CellFormatting += dgvSueldos_CellFormatting;
 
@@ -405,69 +404,110 @@ namespace SOFTMART_RRHH.Vista
         }
 
         private void btnImportarExcel_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog
-                {
-                    Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
-                    Title = "Importar desde Excel"
-                };
+        {     
+                // Obtener la fecha seleccionada del DateTimePicker y el valor de la quincena seleccionada en el ComboBox
 
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    DataTable dtImport = LibAux.ImportarExcel(openFileDialog.FileName);
+                DateTime quincenaSeleccionada = dtpQuincenaActual.Value;
+                string quincenaSeleccionadaText = cbQuincenaActual.Text.ToLower();
 
-                    if (dtImport != null && dtImport.Rows.Count > 0)
+                // Verificar si la fecha seleccionada corresponde a la quincena actual o posterior
+                if (quincenaSeleccionada.Month >= DateTime.Now.Month && quincenaSeleccionada.Year >= DateTime.Now.Year)
+                {
+                    //if (quincenaSeleccionada.Year > DateTime.Now.Year)
+                    //{
+                    //    return;
+                    //}
+
+                    if (quincenaSeleccionada.Month >= DateTime.Now.Month)
                     {
-                        foreach (DataRow importRow in dtImport.Rows)
+                        // Verificar que la quincena sea la correcta
+                        if ((DateTime.Now.Day <= 15 && quincenaSeleccionadaText.Contains("1er")) ||
+                            (DateTime.Now.Day > 15 && quincenaSeleccionadaText.Contains("2da")))
                         {
-                            int idEmpleado = importRow["idEmpleado"] != DBNull.Value ? Convert.ToInt32(importRow["idEmpleado"]) : 0;
 
-                            foreach (DataGridViewRow dgvRow in dgvSueldos.Rows)
+                        try
+                        {
+                            OpenFileDialog openFileDialog = new OpenFileDialog
                             {
-                                if (!dgvRow.IsNewRow && Convert.ToInt32(dgvRow.Cells["dgvSueldos_idEmpleado"].Value) == idEmpleado)
+                                Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+                                Title = "Importar desde Excel"
+                            };
+
+                            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                            {
+                                DataTable dtImport = LibAux.ImportarExcel(openFileDialog.FileName);
+
+                                if (dtImport != null && dtImport.Rows.Count > 0)
                                 {
-                                    decimal sueldoFiscal = 0, bonificacion = 0;
-
-                                    bool sueldoValido = decimal.TryParse(importRow["SueldoFiscal"]?.ToString(), out sueldoFiscal);
-                                    bool bonificacionValida = decimal.TryParse(importRow["Bonificacion"]?.ToString(), out bonificacion);
-
-                                    bool sueldoCambio = sueldoValido && sueldoFiscal != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Fiscal2"].Value);
-                                    bool bonificacionCambio = bonificacionValida && bonificacion != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Bonificacion2"].Value);
-
-                                    if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal2"].Value = sueldoFiscal;
-                                    if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion2"].Value = bonificacion;
-
-                                    dgvRow.Cells["dgvSueldos_Total2"].Value = bonificacion+sueldoFiscal;
-
-
-                                    if (sueldoCambio || bonificacionCambio)
+                                    foreach (DataRow importRow in dtImport.Rows)
                                     {
-                                        int tieneCambios = dgvRow.Cells["dgvSueldos_tieneCambios"].Value != null ? Convert.ToInt32(dgvRow.Cells["dgvSueldos_tieneCambios"].Value) : 0;
-                                        dgvRow.Cells["dgvSueldos_tieneCambios"].Value = tieneCambios + 1;
+                                        int idEmpleado = importRow["idEmpleado"] != DBNull.Value ? Convert.ToInt32(importRow["idEmpleado"]) : 0;
+
+                                        foreach (DataGridViewRow dgvRow in dgvSueldos.Rows)
+                                        {
+                                            if (!dgvRow.IsNewRow && Convert.ToInt32(dgvRow.Cells["dgvSueldos_idEmpleado"].Value) == idEmpleado)
+                                            {
+                                                decimal sueldoFiscal = 0, bonificacion = 0;
+
+                                                bool sueldoValido = decimal.TryParse(importRow["SueldoFiscal"]?.ToString(), out sueldoFiscal);
+                                                bool bonificacionValida = decimal.TryParse(importRow["Bonificacion"]?.ToString(), out bonificacion);
+
+                                                bool sueldoCambio = sueldoValido && sueldoFiscal != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Fiscal2"].Value);
+                                                bool bonificacionCambio = bonificacionValida && bonificacion != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Bonificacion2"].Value);
+
+                                                if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal2"].Value = sueldoFiscal;
+                                                if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion2"].Value = bonificacion;
+
+                                                dgvRow.Cells["dgvSueldos_Total2"].Value = bonificacion + sueldoFiscal;
+
+
+                                                if (sueldoCambio || bonificacionCambio)
+                                                {
+                                                    int tieneCambios = dgvRow.Cells["dgvSueldos_tieneCambios"].Value != null ? Convert.ToInt32(dgvRow.Cells["dgvSueldos_tieneCambios"].Value) : 0;
+                                                    dgvRow.Cells["dgvSueldos_tieneCambios"].Value = tieneCambios + 1;
+                                                }
+
+                                                break;
+                                            }
+                                        }
                                     }
 
-                                    break;
+                                    MessageBox.Show("Datos importados y actualizados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    // POPUP
+                                }
+                                else
+                                {
+                                    MessageBox.Show("El archivo de Excel no contiene datos válidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    // POPUP
+
                                 }
                             }
                         }
-
-                        MessageBox.Show("Datos importados y actualizados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // POPUP
+                        catch (IOException ex)
+                        {
+                            MessageBox.Show("El archivo está abierto. Por favor, cierre el archivo y vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("El archivo de Excel no contiene datos válidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        // POPUP
+                        else
+                        {
+                            // Si la quincena no es válida, cancelar la edición
+                            MessageBox.Show("Solo puedes editar la quincena correspondiente a la fecha actual o posterior.", // CAMBIAR A POPUPS
+                                            "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                        }
 
                     }
+
                 }
-            }
-            catch (IOException ex)
-            {
-                MessageBox.Show("El archivo está abierto. Por favor, cierre el archivo y vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                else
+                {
+                    // Si la quincena seleccionada es anterior a la actual, no permitir la edición
+                    MessageBox.Show("No se puede editar un salario de una quincena pasada.",
+                                    "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning); // CAMBIAR A POPUPS
+                return;
+                }
+            
+
         }
 
         private void dtpQuincenaAnterior_ValueChanged(object sender, EventArgs e)

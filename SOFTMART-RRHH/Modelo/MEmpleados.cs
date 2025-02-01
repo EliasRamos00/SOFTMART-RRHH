@@ -143,7 +143,8 @@ namespace SOFTMART_RRHH.Controlador
             SELECT CONCAT(fecha, ' - ', SFiscal + SBonificacion) AS resultado
             FROM sueldoHistorial 
             WHERE fecha > NOW() 
-            ORDER BY fecha ASC";
+            ORDER BY fecha ASC 
+            ";
 
             DataTable dt = LibAux.EjecutarSentencia(query);
 
