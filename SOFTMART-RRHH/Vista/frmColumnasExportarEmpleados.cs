@@ -164,5 +164,33 @@ namespace SOFTMART_RRHH.Vista
             listboxOrden.Items[index1] = listboxOrden.Items[index2];
             listboxOrden.Items[index2] = item;
         }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            if (listboxOrden.SelectedItem == null) return;
+
+            int index = listboxOrden.SelectedIndex;
+
+            if (index > 0) // Mover hacia arriba
+            {
+                SwapItems(index, index - 1);
+                listboxOrden.SelectedIndex = index - 1; // Mueve el selector junto con el ítem
+            }
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            if (listboxOrden.SelectedItem == null) return;
+
+            int index = listboxOrden.SelectedIndex;
+
+            if (index < listboxOrden.Items.Count - 1) // Mover hacia abajo
+            {
+                SwapItems(index, index + 1);
+                listboxOrden.SelectedIndex = index + 1; // Mueve el selector junto con el ítem
+            }
+        }
+
+
     }
 }

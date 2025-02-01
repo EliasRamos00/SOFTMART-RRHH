@@ -19,7 +19,10 @@ namespace SOFTMART_RRHH.Vista
     {
         #region VARIABLES GLOBALES
         public DataTable sueldos = new DataTable();
+        public DateTime quincena1 = new DateTime();
         public DateTime quincena2 = new DateTime();
+        private int indiceAnteriorQuincena1 = -1;
+        private int indiceAnteriorQuincena2 = -1;
         #endregion
 
         #region CONSTRUCTORES
@@ -35,6 +38,10 @@ namespace SOFTMART_RRHH.Vista
             // Metodo para decifrar la quincena actual y anterior
             SetQuincenaActualyAnterior();
             CargarSueldos();
+            dgvSueldos.CellFormatting += dgvSueldos_CellFormatting;
+
+
+
         }
 
         private void SetQuincenaActualyAnterior()
@@ -75,24 +82,10 @@ namespace SOFTMART_RRHH.Vista
         #region MÉTODOS
         private void CargarSueldos()
         {
-            
-            foreach (DataGridViewRow fila in dgvSueldos.Rows)
-            {
-                if (Convert.ToInt32(fila.Cells["dgvSueldos_tieneCambios"].Value) != 0)
-                {
-                    DialogResult resultado = MessageBox.Show("Tienes datos sin guardar. ¿Deseas continuar?",
-                                                             "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (resultado == DialogResult.No)
-                    {
-                        dtpQuincenaActual.Value =quincena2 ;
-                        return; 
-                        
-                    }
-                    break; 
-                }
-            }
+           
             try
-            {                
+            {
+              
                 int currentScrollPosition = GetVerticalScrollPosition(dgvSueldos);
 
                 sueldos = MSueldos.ObtenerSueldosEmpleados(dtpQuincenaActual.Value, dtpQuincenaAnterior.Value, cbQuincenaActual.Text, cbQuincenaAnterior.Text);
@@ -104,6 +97,9 @@ namespace SOFTMART_RRHH.Vista
             {
 
             }
+
+
+
         }
 
 
@@ -119,12 +115,52 @@ namespace SOFTMART_RRHH.Vista
             dgv.FirstDisplayedScrollingRowIndex = scrollPosition;
         }
 
+        private bool VerificarCambiosSinGuardar(DataGridView dgvSueldos, DateTime quincena2, DateTimePicker dtpQuincenaActual)
+        {
+            foreach (DataGridViewRow fila in dgvSueldos.Rows)
+            {
+                if (Convert.ToInt32(fila.Cells["dgvSueldos_tieneCambios"].Value) != 0)
+                {
+                    DialogResult resultado = MessageBox.Show("Tienes datos sin guardar. ¿Deseas continuar?",
+                                                             "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resultado == DialogResult.No)
+                    {
+                        return false;
+                    }
+                    break;
+                }
+            }
+            return true;
+        }
 
+        private void dgvSueldos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verificar si la celda pertenece a la columna "dgvSueldos_Diferencia"
+            if (dgvSueldos.Columns[e.ColumnIndex].Name == "dgvSueldos_Diferencia")
+            {
+                // Obtener el valor de la celda
+                if (e.Value != null && decimal.TryParse(e.Value.ToString(), out decimal diferencia))
+                {
+                    // Asignar color según el valor
+                    if (diferencia > 0)
+                        e.CellStyle.BackColor = Color.LightGreen;
+                    else if (diferencia < 0)
+                        e.CellStyle.BackColor = Color.LightCoral;
+                    else
+                        e.CellStyle.BackColor = Color.White;
+                }
+            }
+        }
         #endregion
 
         #region Eventos
         private void btnCerrarQuincena_Click(object sender, EventArgs e)
         {
+
+            if (!VerificarCambiosSinGuardar(dgvSueldos, quincena2, dtpQuincenaActual))
+            {
+                return; // Sale del método si hay cambios sin guardar
+            }      
             //SE DEBE PROGRAMAR CERRAR LA QUINCENA, LITERAL SOLO ES ITERAR ENTRE LOS QUE TENGAN 0 EN SUELDO BONIFICACION Y FISCAL Y PONER LO QUE YA LES EXISTE EN LA QUINCENA ANTERIOR.
 
             foreach (DataGridViewRow row in dgvSueldos.Rows)
@@ -266,6 +302,7 @@ namespace SOFTMART_RRHH.Vista
 
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
+            
             foreach (DataGridViewRow row in dgvSueldos.Rows)
             {
                 if (row.Cells[dgvSueldos_tieneCambios.Index].Value.ToString() == "1") // SI TIENE CAMBIOS SE BUSCA EL REGISTRO, SI EXISTE SE ACTUALIZA, SI NO , SE INSERTA.
@@ -335,8 +372,8 @@ namespace SOFTMART_RRHH.Vista
             // Añadir las columnas específicas
             dtExport.Columns.Add("idEmpleado", typeof(int)); // Columna con contenido
             dtExport.Columns.Add("Nombre", typeof(string));  // Columna con contenido
-            dtExport.Columns.Add("SueldoFiscal", typeof(decimal)); // Columna vacía
-            dtExport.Columns.Add("Bonificacion", typeof(decimal)); // Columna vacía
+            dtExport.Columns.Add("SueldoFiscal", typeof(decimal)); // Columna con contenido
+            dtExport.Columns.Add("Bonificacion", typeof(decimal)); // Columna con contenido
 
             // Iterar por las filas del DataGridView y añadir los datos
             foreach (DataGridViewRow row in dgvSueldos.Rows)
@@ -348,19 +385,22 @@ namespace SOFTMART_RRHH.Vista
                     int idEmpleado = row.Cells["dgvSueldos_idEmpleado"]?.Value != null ? Convert.ToInt32(row.Cells["dgvSueldos_idEmpleado"].Value) : 0;
                     string nombre = row.Cells["dgvSueldos_Nombre"]?.Value?.ToString() ?? "";
 
-                    // Crear una nueva fila con los datos de idEmpleado, Nombre y columnas vacías para SueldoFiscal y Bonificacion
+                    // Obtener los valores de las columnas "SueldoFiscal" y "Bonificacion"
+                    decimal sueldoFiscal = row.Cells["dgvSueldos_Fiscal2"]?.Value != null ? Convert.ToDecimal(row.Cells["dgvSueldos_Fiscal2"].Value) : 0;
+                    decimal bonificacion = row.Cells["dgvSueldos_Bonificacion2"]?.Value != null ? Convert.ToDecimal(row.Cells["dgvSueldos_Bonificacion2"].Value) : 0;
+
+                    // Crear una nueva fila con los datos de idEmpleado, Nombre, SueldoFiscal y Bonificacion
                     DataRow newRow = dtExport.NewRow();
                     newRow["idEmpleado"] = idEmpleado;
                     newRow["Nombre"] = nombre;
-                    newRow["SueldoFiscal"] = DBNull.Value; // Columna vacía
-                    newRow["Bonificacion"] = DBNull.Value; // Columna vacía
+                    newRow["SueldoFiscal"] = sueldoFiscal; // Columna con el valor
+                    newRow["Bonificacion"] = bonificacion; // Columna con el valor
 
                     // Añadir la fila al DataTable
                     dtExport.Rows.Add(newRow);
                 }
             }
             LibAux.ExportarAExcel(dtExport);
-
         }
 
         private void btnImportarExcel_Click(object sender, EventArgs e)
@@ -470,28 +510,91 @@ namespace SOFTMART_RRHH.Vista
 
         }
 
-
-        #endregion
-
         private void dtpQuincenaAnterior_ValueChanged(object sender, EventArgs e)
         {
-            CargarSueldos();
+
+            dtpQuincenaAnterior.ValueChanged -= dtpQuincenaAnterior_ValueChanged;
+
+            if (!VerificarCambiosSinGuardar(dgvSueldos, quincena1, dtpQuincenaAnterior))
+            {
+                dtpQuincenaAnterior.Value = quincena1; // Restaurar la fecha anterior
+            }
+            else
+            {
+                quincena1 = dtpQuincenaAnterior.Value;
+                CargarSueldos();
+            }
+
+            // Volver a habilitar el evento después de realizar los cambios
+            dtpQuincenaAnterior.ValueChanged += dtpQuincenaAnterior_ValueChanged;
         }
 
         private void cbQuincenaAnterior_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarSueldos();
+
+            // Si la variable aún no tiene un valor válido, asignar el índice actual
+            if (indiceAnteriorQuincena1 == -1)
+                indiceAnteriorQuincena1 = cbQuincenaAnterior.SelectedIndex;
+
+            // Deshabilitar temporalmente el evento
+            cbQuincenaAnterior.SelectedIndexChanged -= cbQuincenaAnterior_SelectedIndexChanged;
+
+            if (!VerificarCambiosSinGuardar(dgvSueldos, quincena1, dtpQuincenaAnterior))
+            {
+                cbQuincenaAnterior.SelectedIndex = indiceAnteriorQuincena1;
+            }
+            else
+            {
+                CargarSueldos();
+                indiceAnteriorQuincena1 = cbQuincenaAnterior.SelectedIndex;
+            }
+
+            // Rehabilitar el evento
+            cbQuincenaAnterior.SelectedIndexChanged += cbQuincenaAnterior_SelectedIndexChanged;
         }
 
         private void dtpQuincenaActual_ValueChanged(object sender, EventArgs e)
         {
-            CargarSueldos();
+            dtpQuincenaActual.ValueChanged -= dtpQuincenaActual_ValueChanged;
+
+            if (!VerificarCambiosSinGuardar(dgvSueldos, quincena2, dtpQuincenaActual))
+            {
+                dtpQuincenaActual.Value = quincena2; // Restaurar la fecha anterior
+            }
+            else
+            {
+                quincena2 = dtpQuincenaActual.Value;
+                CargarSueldos();
+            }
+
+            // Volver a habilitar el evento después de realizar los cambios
+            dtpQuincenaActual.ValueChanged += dtpQuincenaActual_ValueChanged;
         }
 
         private void cbQuincenaActual_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarSueldos();
+            // Si la variable aún no tiene un valor válido, asignar el índice actual
+            if (indiceAnteriorQuincena2 == -1)
+                indiceAnteriorQuincena2 = cbQuincenaActual.SelectedIndex;
+
+            // Deshabilitar temporalmente el evento
+            cbQuincenaActual.SelectedIndexChanged -= cbQuincenaActual_SelectedIndexChanged;
+
+            if (!VerificarCambiosSinGuardar(dgvSueldos, quincena2, dtpQuincenaActual))
+            {
+                cbQuincenaActual.SelectedIndex = indiceAnteriorQuincena2;
+            }
+            else
+            {
+                quincena2 = dtpQuincenaActual.Value;
+                CargarSueldos();
+                indiceAnteriorQuincena2 = cbQuincenaActual.SelectedIndex;
+            }
+
+            // Rehabilitar el evento
+            cbQuincenaActual.SelectedIndexChanged += cbQuincenaActual_SelectedIndexChanged;
         }
+
 
         private void dgvSueldos_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {

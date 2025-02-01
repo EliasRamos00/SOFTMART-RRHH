@@ -71,6 +71,9 @@
             this.listboxOrden = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnUp = new System.Windows.Forms.Button();
             this.gBLaboral.SuspendLayout();
             this.tlpLaboral.SuspendLayout();
             this.gBPersonal.SuspendLayout();
@@ -667,7 +670,7 @@
             this.listboxOrden.ItemHeight = 21;
             this.listboxOrden.Location = new System.Drawing.Point(6, 19);
             this.listboxOrden.Name = "listboxOrden";
-            this.listboxOrden.Size = new System.Drawing.Size(301, 508);
+            this.listboxOrden.Size = new System.Drawing.Size(253, 487);
             this.listboxOrden.TabIndex = 5;
             this.listboxOrden.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListBoxColumnas_KeyDown);
             // 
@@ -676,7 +679,7 @@
             this.groupBox1.Controls.Add(this.listboxOrden);
             this.groupBox1.Location = new System.Drawing.Point(615, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 530);
+            this.groupBox1.Size = new System.Drawing.Size(263, 530);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Orden de las columnas";
@@ -685,17 +688,48 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(618, 19);
+            this.label1.Location = new System.Drawing.Point(612, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 15);
+            this.label1.Size = new System.Drawing.Size(329, 15);
             this.label1.TabIndex = 7;
-            this.label1.Text = " Ajusta el orden de las columnas con las flechas";
+            this.label1.Text = "Selecciona y mueve con las flechas el orden de las columnas.";
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CommandTimeout = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.Transaction = null;
+            this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // btnDown
+            // 
+            this.btnDown.Location = new System.Drawing.Point(877, 103);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(53, 34);
+            this.btnDown.TabIndex = 8;
+            this.btnDown.Text = "▼";
+            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            // 
+            // btnUp
+            // 
+            this.btnUp.Location = new System.Drawing.Point(877, 65);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(53, 34);
+            this.btnUp.TabIndex = 9;
+            this.btnUp.Text = "▲";
+            this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // frmColumnasExportarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 672);
+            this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.btnDown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExcel);
@@ -765,5 +799,8 @@
         private System.Windows.Forms.ListBox listboxOrden;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private MySqlConnector.MySqlCommand mySqlCommand1;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnUp;
     }
 }
