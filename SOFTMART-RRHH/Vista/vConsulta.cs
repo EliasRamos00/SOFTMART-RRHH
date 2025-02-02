@@ -25,7 +25,7 @@ namespace SOFTMART_RRHH.Vista
         public vConsulta()
         {
 
-       
+
 
             InitializeComponent();
             dtpInicio.ValueChanged -= dtpInicio_ValueChanged;
@@ -48,7 +48,16 @@ namespace SOFTMART_RRHH.Vista
             dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporteSinBajas(dtpInicio.Value, dtpFin.Value);
             //dtEmpledosActivos = MEmpleados.ObtenerEmpleadosActivosReporte();  // OBTIENE LA LISTA DE EMPLEADOS ACTIVOS
             await Task.Run(() => CalcularAntiguedad()); // CALCULA LA ANTIGUEDAD EN UN HILO APARTE
-            dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
+            try
+            {
+                dgvConsultaEmpleados.DataSource = dtEmpledosActivos;
+
+            }
+            catch (Exception ex)
+            {
+                dgvConsultaEmpleados.DataSource = MEmpleados.ObtenerEmpleadosActivosReporteSinBajas(dtpInicio.Value, dtpFin.Value); ;
+
+            }
 
             carga.Hide();
             rowCounting.Text = "Registros : " + dgvConsultaEmpleados.Rows.Count.ToString();
@@ -127,7 +136,7 @@ namespace SOFTMART_RRHH.Vista
         private void CalcularAntiguedad()
         {
             DateTime fechaInicio;
-            if(dtEmpledosActivos != null)
+            if (dtEmpledosActivos != null)
             {
                 foreach (DataRow row in dtEmpledosActivos.Rows)
                 {
@@ -146,7 +155,7 @@ namespace SOFTMART_RRHH.Vista
                     }
                 }
             }
-            
+
         }
         private void FiltrarInformacion()
         {
@@ -154,13 +163,14 @@ namespace SOFTMART_RRHH.Vista
             try
             {
                 if (cbFiltro.Text == "Antiguedad")
-                {                   
+                {
                     int diasInicio = TomarDiasComboBox(cbInicio) - 13;
                     int diasFinal = TomarDiasComboBox(cbFinal) + 13;
                     ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format("AntiguedadDias >= " + diasInicio + " AND AntiguedadDias <= " + diasFinal + "AND antiguedad NOT LIKE 'N/A'");
 
 
-                }else if (cbFiltro.Text == "Empleados activos por fechas")
+                }
+                else if (cbFiltro.Text == "Empleados activos por fechas")
                 {
                     //Antes de hacer este filtro se tienen que obtener los empleados dados de baja
                     ((DataTable)dgvConsultaEmpleados.DataSource).DefaultView.RowFilter = string.Format(
@@ -212,7 +222,7 @@ namespace SOFTMART_RRHH.Vista
             }
         }
         public void esVisibleFiltroAntiguedad(bool @bool)
-        {   
+        {
             ChBFechaFiltro.Visible = @bool;
             dtpFechaFiltro.Visible = @bool;
             lblMax.Visible = @bool;
@@ -226,7 +236,7 @@ namespace SOFTMART_RRHH.Vista
         {
             lblFechaLabel.Visible = @bool;
             dtpInicio.Visible = @bool;
-            dtpFin.Visible = @bool;         
+            dtpFin.Visible = @bool;
         }
         #endregion
         #region EVENTOS        

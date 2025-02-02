@@ -114,7 +114,7 @@
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5285F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.16062F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.1797F));
-            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tlpPrincipal.Controls.Add(this.lblTitulo, 3, 0);
             this.tlpPrincipal.Controls.Add(this.btnClose, 0, 0);
             this.tlpPrincipal.Controls.Add(this.lblMov, 1, 1);
@@ -220,7 +220,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(317, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(622, 45);
+            this.lblTitulo.Size = new System.Drawing.Size(621, 45);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "PERFIL DEL EMPLEADO";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -314,7 +314,7 @@
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 34;
-            this.btnLimpiar.Location = new System.Drawing.Point(945, 48);
+            this.btnLimpiar.Location = new System.Drawing.Point(944, 48);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(52, 32);
             this.btnLimpiar.TabIndex = 0;
@@ -468,7 +468,7 @@
             this.dtpFechaNac.Location = new System.Drawing.Point(686, 50);
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(252, 27);
+            this.dtpFechaNac.Size = new System.Drawing.Size(251, 27);
             this.dtpFechaNac.TabIndex = 5;
             this.dtpFechaNac.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -493,7 +493,7 @@
             this.tbApeMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApeMat.Location = new System.Drawing.Point(685, 88);
             this.tbApeMat.Name = "tbApeMat";
-            this.tbApeMat.Size = new System.Drawing.Size(254, 27);
+            this.tbApeMat.Size = new System.Drawing.Size(253, 27);
             this.tbApeMat.TabIndex = 9;
             // 
             // tbCURP
@@ -568,7 +568,7 @@
             this.tbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombres.Location = new System.Drawing.Point(320, 126);
             this.tbNombres.Name = "tbNombres";
-            this.tbNombres.Size = new System.Drawing.Size(619, 27);
+            this.tbNombres.Size = new System.Drawing.Size(618, 27);
             this.tbNombres.TabIndex = 11;
             // 
             // lblTelefono
@@ -621,7 +621,7 @@
             this.gBGenre.Margin = new System.Windows.Forms.Padding(0);
             this.gBGenre.Name = "gBGenre";
             this.gBGenre.Padding = new System.Windows.Forms.Padding(0);
-            this.gBGenre.Size = new System.Drawing.Size(260, 38);
+            this.gBGenre.Size = new System.Drawing.Size(259, 38);
             this.gBGenre.TabIndex = 15;
             this.gBGenre.TabStop = false;
             // 
@@ -632,7 +632,7 @@
             this.rBFem.AutoSize = true;
             this.rBFem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBFem.ForeColor = System.Drawing.Color.Black;
-            this.rBFem.Location = new System.Drawing.Point(128, 9);
+            this.rBFem.Location = new System.Drawing.Point(127, 9);
             this.rBFem.Name = "rBFem";
             this.rBFem.Size = new System.Drawing.Size(100, 24);
             this.rBFem.TabIndex = 1;
@@ -702,7 +702,7 @@
             this.tbLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLugarNac.Location = new System.Drawing.Point(685, 202);
             this.tbLugarNac.Name = "tbLugarNac";
-            this.tbLugarNac.Size = new System.Drawing.Size(254, 27);
+            this.tbLugarNac.Size = new System.Drawing.Size(253, 27);
             this.tbLugarNac.TabIndex = 19;
             // 
             // lblEstado
@@ -750,7 +750,7 @@
             this.tbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCiudad.Location = new System.Drawing.Point(685, 240);
             this.tbCiudad.Name = "tbCiudad";
-            this.tbCiudad.Size = new System.Drawing.Size(254, 27);
+            this.tbCiudad.Size = new System.Drawing.Size(253, 27);
             this.tbCiudad.TabIndex = 23;
             // 
             // lblColonia
@@ -798,7 +798,7 @@
             this.tbCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCP.Location = new System.Drawing.Point(685, 278);
             this.tbCP.Name = "tbCP";
-            this.tbCP.Size = new System.Drawing.Size(254, 27);
+            this.tbCP.Size = new System.Drawing.Size(253, 27);
             this.tbCP.TabIndex = 28;
             // 
             // lblCalleNum
@@ -823,7 +823,7 @@
             this.tbCalleNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCalleNum.Location = new System.Drawing.Point(320, 316);
             this.tbCalleNum.Name = "tbCalleNum";
-            this.tbCalleNum.Size = new System.Drawing.Size(619, 27);
+            this.tbCalleNum.Size = new System.Drawing.Size(618, 27);
             this.tbCalleNum.TabIndex = 30;
             // 
             // lbEsco
@@ -873,7 +873,7 @@
             this.tbEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEspecialidad.Location = new System.Drawing.Point(685, 354);
             this.tbEspecialidad.Name = "tbEspecialidad";
-            this.tbEspecialidad.Size = new System.Drawing.Size(254, 27);
+            this.tbEspecialidad.Size = new System.Drawing.Size(253, 27);
             this.tbEspecialidad.TabIndex = 34;
             // 
             // lblNumContrato
@@ -921,7 +921,7 @@
             this.tbNSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNSS.Location = new System.Drawing.Point(685, 392);
             this.tbNSS.Name = "tbNSS";
-            this.tbNSS.Size = new System.Drawing.Size(254, 27);
+            this.tbNSS.Size = new System.Drawing.Size(253, 27);
             this.tbNSS.TabIndex = 38;
             // 
             // lblTienda
@@ -974,7 +974,7 @@
             this.dtpFechaIngreso.Location = new System.Drawing.Point(686, 430);
             this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(252, 27);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(251, 27);
             this.dtpFechaIngreso.TabIndex = 42;
             // 
             // lblArea
@@ -1028,7 +1028,7 @@
             this.cbSubarea.FormattingEnabled = true;
             this.cbSubarea.Location = new System.Drawing.Point(685, 468);
             this.cbSubarea.Name = "cbSubarea";
-            this.cbSubarea.Size = new System.Drawing.Size(254, 28);
+            this.cbSubarea.Size = new System.Drawing.Size(253, 28);
             this.cbSubarea.TabIndex = 46;
             this.cbSubarea.DropDown += new System.EventHandler(this.cbSubarea_DropDown);
             this.cbSubarea.SelectedIndexChanged += new System.EventHandler(this.cbSubarea_SelectedIndexChanged);
@@ -1081,7 +1081,7 @@
             this.tbRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRFC.Location = new System.Drawing.Point(685, 506);
             this.tbRFC.Name = "tbRFC";
-            this.tbRFC.Size = new System.Drawing.Size(254, 27);
+            this.tbRFC.Size = new System.Drawing.Size(253, 27);
             this.tbRFC.TabIndex = 50;
             // 
             // lblComent
@@ -1111,7 +1111,7 @@
             this.tbComentarios.Name = "tbComentarios";
             this.tlpPrincipal.SetRowSpan(this.tbComentarios, 3);
             this.tbComentarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbComentarios.Size = new System.Drawing.Size(254, 86);
+            this.tbComentarios.Size = new System.Drawing.Size(253, 86);
             this.tbComentarios.TabIndex = 56;
             // 
             // lblSueldo
@@ -1119,14 +1119,14 @@
             this.lblSueldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSueldo.AutoSize = true;
             this.lblSueldo.BackColor = System.Drawing.Color.GhostWhite;
-            this.lblSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSueldo.ForeColor = System.Drawing.Color.Black;
-            this.lblSueldo.Location = new System.Drawing.Point(566, 542);
+            this.lblSueldo.Location = new System.Drawing.Point(566, 545);
             this.lblSueldo.Margin = new System.Windows.Forms.Padding(5, 0, 2, 0);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(114, 32);
+            this.lblSueldo.Size = new System.Drawing.Size(114, 26);
             this.lblSueldo.TabIndex = 53;
-            this.lblSueldo.Text = "Sueldo Bonificación*";
+            this.lblSueldo.Text = "Sueldo Bonificación Diario*";
             this.lblSueldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbSueldoFiscal
@@ -1143,14 +1143,14 @@
             this.lblSueldoFiscal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSueldoFiscal.AutoSize = true;
             this.lblSueldoFiscal.BackColor = System.Drawing.Color.GhostWhite;
-            this.lblSueldoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSueldoFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSueldoFiscal.ForeColor = System.Drawing.Color.Black;
-            this.lblSueldoFiscal.Location = new System.Drawing.Point(185, 548);
+            this.lblSueldoFiscal.Location = new System.Drawing.Point(185, 542);
             this.lblSueldoFiscal.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblSueldoFiscal.Name = "lblSueldoFiscal";
-            this.lblSueldoFiscal.Size = new System.Drawing.Size(129, 20);
+            this.lblSueldoFiscal.Size = new System.Drawing.Size(129, 32);
             this.lblSueldoFiscal.TabIndex = 68;
-            this.lblSueldoFiscal.Text = "Sueldo Fiscal*";
+            this.lblSueldoFiscal.Text = "Sueldo Fiscal Diario*";
             this.lblSueldoFiscal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbSueldoBonificacion
@@ -1159,7 +1159,7 @@
             this.tbSueldoBonificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSueldoBonificacion.Location = new System.Drawing.Point(685, 544);
             this.tbSueldoBonificacion.Name = "tbSueldoBonificacion";
-            this.tbSueldoBonificacion.Size = new System.Drawing.Size(254, 27);
+            this.tbSueldoBonificacion.Size = new System.Drawing.Size(253, 27);
             this.tbSueldoBonificacion.TabIndex = 69;
             // 
             // vPersonal

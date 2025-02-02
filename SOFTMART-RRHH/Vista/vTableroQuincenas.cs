@@ -400,8 +400,9 @@ namespace SOFTMART_RRHH.Vista
                     string nombre = row.Cells["dgvSueldos_Nombre"]?.Value?.ToString() ?? "";
 
                     // Obtener los valores de las columnas "SueldoFiscal" y "Bonificacion"
-                    decimal sueldoFiscal = row.Cells["dgvSueldos_Fiscal2"]?.Value != null ? Convert.ToDecimal(row.Cells["dgvSueldos_Fiscal2"].Value) : 0;
-                    decimal bonificacion = row.Cells["dgvSueldos_Bonificacion2"]?.Value != null ? Convert.ToDecimal(row.Cells["dgvSueldos_Bonificacion2"].Value) : 0;
+                    decimal sueldoFiscal = row.Cells[dgvSueldos_Fiscal2.Index].Value is DBNull ? 0 : Convert.ToDecimal(row.Cells[dgvSueldos_Fiscal2.Index].Value ?? 0);
+                    decimal bonificacion = row.Cells[dgvSueldos_Bonificacion2.Index].Value is DBNull ? 0 : Convert.ToDecimal(row.Cells[dgvSueldos_Bonificacion2.Index].Value ?? 0);
+
 
                     // Crear una nueva fila con los datos de idEmpleado, Nombre, SueldoFiscal y Bonificacion
                     DataRow newRow = dtExport.NewRow();
@@ -466,23 +467,31 @@ namespace SOFTMART_RRHH.Vista
                                                 bool sueldoValido = decimal.TryParse(importRow["SueldoFiscal"]?.ToString(), out sueldoFiscal);
                                                 bool bonificacionValida = decimal.TryParse(importRow["Bonificacion"]?.ToString(), out bonificacion);
 
-                                                bool sueldoCambio = sueldoValido && sueldoFiscal != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Fiscal2"].Value);
-                                                bool bonificacionCambio = bonificacionValida && bonificacion != Convert.ToDecimal(dgvRow.Cells["dgvSueldos_Bonificacion2"].Value);
+                                                // Obtener valores actuales de las celdas, asegurando que sean válidos
+                                                object sueldoCellValue = dgvRow.Cells["dgvSueldos_Fiscal2"].Value;
+                                                object bonificacionCellValue = dgvRow.Cells["dgvSueldos_Bonificacion2"].Value;
+
+                                                decimal sueldoActual = (sueldoCellValue != null && sueldoCellValue != DBNull.Value && decimal.TryParse(sueldoCellValue.ToString(), out decimal sVal)) ? sVal : 0;
+                                                decimal bonificacionActual = (bonificacionCellValue != null && bonificacionCellValue != DBNull.Value && decimal.TryParse(bonificacionCellValue.ToString(), out decimal bVal)) ? bVal : 0;
+
+                                                bool sueldoCambio = sueldoValido && sueldoFiscal != sueldoActual;
+                                                bool bonificacionCambio = bonificacionValida && bonificacion != bonificacionActual;
 
                                                 if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal2"].Value = sueldoFiscal;
                                                 if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion2"].Value = bonificacion;
 
                                                 dgvRow.Cells["dgvSueldos_Total2"].Value = bonificacion + sueldoFiscal;
 
-
                                                 if (sueldoCambio || bonificacionCambio)
                                                 {
-                                                    int tieneCambios = dgvRow.Cells["dgvSueldos_tieneCambios"].Value != null ? Convert.ToInt32(dgvRow.Cells["dgvSueldos_tieneCambios"].Value) : 0;
+                                                    object cambiosCellValue = dgvRow.Cells["dgvSueldos_tieneCambios"].Value;
+                                                    int tieneCambios = (cambiosCellValue != null && cambiosCellValue != DBNull.Value && int.TryParse(cambiosCellValue.ToString(), out int cambiosVal)) ? cambiosVal : 0;
                                                     dgvRow.Cells["dgvSueldos_tieneCambios"].Value = tieneCambios + 1;
                                                 }
 
                                                 break;
                                             }
+
                                         }
                                     }
 
