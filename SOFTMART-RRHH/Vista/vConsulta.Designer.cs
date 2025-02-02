@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltro = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -94,13 +94,16 @@
             this.lblMax = new System.Windows.Forms.Label();
             this.rowCounting = new System.Windows.Forms.Label();
             this.lblFechaLabel = new System.Windows.Forms.Label();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpPrincipal
@@ -112,10 +115,6 @@
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tlpPrincipal.Controls.Add(this.tbFiltro, 1, 3);
-            this.tlpPrincipal.Controls.Add(this.lblBuscar, 1, 2);
-            this.tlpPrincipal.Controls.Add(this.lblColumn, 2, 2);
-            this.tlpPrincipal.Controls.Add(this.cbFiltro, 2, 3);
             this.tlpPrincipal.Controls.Add(this.dgvConsultaEmpleados, 1, 5);
             this.tlpPrincipal.Controls.Add(this.btnClose, 0, 0);
             this.tlpPrincipal.Controls.Add(this.lblTitulo, 1, 0);
@@ -126,9 +125,11 @@
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 3, 2);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 4, 2);
             this.tlpPrincipal.Controls.Add(this.rowCounting, 4, 6);
-            this.tlpPrincipal.Controls.Add(this.lblFechaLabel, 2, 4);
-            this.tlpPrincipal.Controls.Add(this.dtpInicio, 3, 4);
-            this.tlpPrincipal.Controls.Add(this.dtpFin, 4, 4);
+            this.tlpPrincipal.Controls.Add(this.tbFiltro, 1, 4);
+            this.tlpPrincipal.Controls.Add(this.cbFiltro, 2, 4);
+            this.tlpPrincipal.Controls.Add(this.lblColumn, 2, 3);
+            this.tlpPrincipal.Controls.Add(this.lblBuscar, 1, 3);
+            this.tlpPrincipal.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
@@ -148,7 +149,7 @@
             this.tbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFiltro.Location = new System.Drawing.Point(45, 108);
+            this.tbFiltro.Location = new System.Drawing.Point(45, 142);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(386, 26);
             this.tbFiltro.TabIndex = 2;
@@ -160,7 +161,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.Black;
-            this.lblBuscar.Location = new System.Drawing.Point(45, 84);
+            this.lblBuscar.Location = new System.Drawing.Point(45, 118);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(67, 21);
             this.lblBuscar.TabIndex = 1;
@@ -172,7 +173,7 @@
             this.lblColumn.AutoSize = true;
             this.lblColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumn.ForeColor = System.Drawing.Color.Black;
-            this.lblColumn.Location = new System.Drawing.Point(437, 85);
+            this.lblColumn.Location = new System.Drawing.Point(437, 119);
             this.lblColumn.Name = "lblColumn";
             this.lblColumn.Size = new System.Drawing.Size(79, 20);
             this.lblColumn.TabIndex = 3;
@@ -185,7 +186,7 @@
             this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Location = new System.Drawing.Point(437, 108);
+            this.cbFiltro.Location = new System.Drawing.Point(437, 142);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(288, 28);
             this.cbFiltro.TabIndex = 4;
@@ -197,14 +198,14 @@
             this.dgvConsultaEmpleados.AllowUserToDeleteRows = false;
             this.dgvConsultaEmpleados.AllowUserToOrderColumns = true;
             this.dgvConsultaEmpleados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvConsultaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultaEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvConsultaEmpleados_Nombre,
@@ -247,28 +248,28 @@
             this.dgvConsultaEmpleados_tieneINE,
             this.dgvConsultaEmpleados_esEmpleadoTemp});
             this.tlpPrincipal.SetColumnSpan(this.dgvConsultaEmpleados, 4);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultaEmpleados.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultaEmpleados.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgvConsultaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvConsultaEmpleados.GridColor = System.Drawing.Color.Black;
             this.dgvConsultaEmpleados.Location = new System.Drawing.Point(45, 172);
             this.dgvConsultaEmpleados.MultiSelect = false;
             this.dgvConsultaEmpleados.Name = "dgvConsultaEmpleados";
             this.dgvConsultaEmpleados.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultaEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultaEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dgvConsultaEmpleados.RowHeadersVisible = false;
             this.dgvConsultaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultaEmpleados.Size = new System.Drawing.Size(974, 477);
@@ -386,9 +387,9 @@
             // 
             this.dgvConsultaEmpleados_FechaNacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_FechaNacimiento.DataPropertyName = "FechaNac";
-            dataGridViewCellStyle2.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgvConsultaEmpleados_FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle30.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle30.NullValue = null;
+            this.dgvConsultaEmpleados_FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle30;
             this.dgvConsultaEmpleados_FechaNacimiento.HeaderText = "Fecha Nacimiento.";
             this.dgvConsultaEmpleados_FechaNacimiento.Name = "dgvConsultaEmpleados_FechaNacimiento";
             this.dgvConsultaEmpleados_FechaNacimiento.ReadOnly = true;
@@ -541,8 +542,8 @@
             // 
             this.dgvConsultaEmpleados_Edad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_Edad.DataPropertyName = "Edad";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Edad.DefaultCellStyle = dataGridViewCellStyle31;
             this.dgvConsultaEmpleados_Edad.HeaderText = "Edad";
             this.dgvConsultaEmpleados_Edad.Name = "dgvConsultaEmpleados_Edad";
             this.dgvConsultaEmpleados_Edad.ReadOnly = true;
@@ -552,9 +553,9 @@
             // 
             this.dgvConsultaEmpleados_FechaInicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvConsultaEmpleados_FechaInicio.DataPropertyName = "FechaInicio";
-            dataGridViewCellStyle4.Format = "dd-MMM-yyyy";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle32.Format = "dd-MMM-yyyy";
+            dataGridViewCellStyle32.NullValue = null;
+            this.dgvConsultaEmpleados_FechaInicio.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgvConsultaEmpleados_FechaInicio.HeaderText = "Fecha Inicio";
             this.dgvConsultaEmpleados_FechaInicio.Name = "dgvConsultaEmpleados_FechaInicio";
             this.dgvConsultaEmpleados_FechaInicio.ReadOnly = true;
@@ -563,8 +564,8 @@
             // 
             this.dgvConsultaEmpleados_Antiguedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvConsultaEmpleados_Antiguedad.DataPropertyName = "Antiguedad";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvConsultaEmpleados_Antiguedad.DefaultCellStyle = dataGridViewCellStyle33;
             this.dgvConsultaEmpleados_Antiguedad.HeaderText = "Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.Name = "dgvConsultaEmpleados_Antiguedad";
             this.dgvConsultaEmpleados_Antiguedad.ReadOnly = true;
@@ -823,36 +824,70 @@
             // 
             this.lblFechaLabel.AutoSize = true;
             this.lblFechaLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaLabel.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaLabel.Location = new System.Drawing.Point(437, 139);
+            this.lblFechaLabel.Location = new System.Drawing.Point(3, 0);
             this.lblFechaLabel.Name = "lblFechaLabel";
-            this.lblFechaLabel.Size = new System.Drawing.Size(288, 30);
+            this.lblFechaLabel.Size = new System.Drawing.Size(164, 35);
             this.lblFechaLabel.TabIndex = 32;
-            this.lblFechaLabel.Text = "Fechas";
-            this.lblFechaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicio.Location = new System.Drawing.Point(731, 144);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(141, 20);
-            this.dtpInicio.TabIndex = 33;
-            this.dtpInicio.Visible = false;
-            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
+            this.lblFechaLabel.Text = "Empleados activos desde:";
+            this.lblFechaLabel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // dtpFin
             // 
-            this.dtpFin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFin.Location = new System.Drawing.Point(878, 144);
+            this.dtpFin.Location = new System.Drawing.Point(513, 12);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(141, 20);
+            this.dtpFin.Size = new System.Drawing.Size(164, 20);
             this.dtpFin.TabIndex = 34;
             this.dtpFin.Visible = false;
             this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tlpPrincipal.SetColumnSpan(this.tableLayoutPanel3, 2);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Controls.Add(this.dtpFin, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lblFechaLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dtpInicio, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(45, 67);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(680, 35);
+            this.tableLayoutPanel3.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(343, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 16);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Hasta el:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(173, 12);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(164, 20);
+            this.dtpInicio.TabIndex = 33;
+            this.dtpInicio.Visible = false;
+            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
             // 
             // vConsulta
             // 
@@ -872,6 +907,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -897,7 +934,6 @@
         private System.Windows.Forms.ComboBox cbFinal;
         private System.Windows.Forms.Label rowCounting;
         private System.Windows.Forms.Label lblFechaLabel;
-        private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_idEmpleado;
@@ -938,5 +974,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_tieneFotografia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_tieneINE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvConsultaEmpleados_esEmpleadoTemp;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
     }
 }

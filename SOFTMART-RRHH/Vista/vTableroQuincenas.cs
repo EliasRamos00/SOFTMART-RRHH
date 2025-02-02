@@ -143,11 +143,24 @@ namespace SOFTMART_RRHH.Vista
                 {
                     // Asignar color según el valor
                     if (diferencia > 0)
-                        e.CellStyle.BackColor = Color.LightGreen;
+                    {
+                        //e.CellStyle.BackColor = Color.LightGreen;
+                        e.CellStyle.ForeColor = Color.Green;
+                    }
                     else if (diferencia < 0)
-                        e.CellStyle.BackColor = Color.LightCoral;
+                    {
+                        //e.CellStyle.BackColor = Color.LightCoral;
+                        e.CellStyle.ForeColor = Color.Red;
+                    }
                     else
+                    {
                         e.CellStyle.BackColor = Color.White;
+
+                    }
+
+
+
+                    
                 }
             }
         }
@@ -168,8 +181,9 @@ namespace SOFTMART_RRHH.Vista
                 if (row.IsNewRow) continue; // Evita la fila vacía al final del DGV
 
                 // Obtener valores actuales de Fiscal2 y Bonificación2
-                decimal fiscal2 = Convert.ToDecimal(row.Cells[dgvSueldos_Fiscal2.Index].Value ?? 0);
-                decimal bonificacion2 = Convert.ToDecimal(row.Cells[dgvSueldos_Bonificacion2.Index].Value ?? 0);
+                // Obtener valores actuales de Fiscal2 y Bonificación2
+                decimal fiscal2 = row.Cells[dgvSueldos_Fiscal2.Index].Value is DBNull ? 0 : Convert.ToDecimal(row.Cells[dgvSueldos_Fiscal2.Index].Value ?? 0);
+                decimal bonificacion2 = row.Cells[dgvSueldos_Bonificacion2.Index].Value is DBNull ? 0 : Convert.ToDecimal(row.Cells[dgvSueldos_Bonificacion2.Index].Value ?? 0);
 
                 // Si ambos son 0, asignar los valores de Fiscal1 y Bonificación1
                 if (fiscal2 == 0 && bonificacion2 == 0)
@@ -633,5 +647,12 @@ namespace SOFTMART_RRHH.Vista
         {
 
         }
+
+        private void btnCloseSueldos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+        }
     }
+    #endregion
 }

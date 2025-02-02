@@ -24,7 +24,13 @@ namespace SOFTMART_RRHH.Vista
         #region CONSTRUCTORES
         public vConsulta()
         {
+
+       
+
             InitializeComponent();
+            dtpInicio.ValueChanged -= dtpInicio_ValueChanged;
+            dtpFin.ValueChanged -= dtpFin_ValueChanged;
+
             //Set Double buffering on the Grid using reflection and the bindingflags enum.
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
@@ -228,6 +234,9 @@ namespace SOFTMART_RRHH.Vista
         {
             CargarEmpleadosActivos();
             CargarColumnas();
+
+            dtpInicio.ValueChanged += dtpInicio_ValueChanged;
+            dtpFin.ValueChanged += dtpFin_ValueChanged;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
