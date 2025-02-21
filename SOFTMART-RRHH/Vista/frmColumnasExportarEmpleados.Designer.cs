@@ -39,7 +39,6 @@
             this.cbEscolaridad = new System.Windows.Forms.CheckBox();
             this.cbEspecialidad = new System.Windows.Forms.CheckBox();
             this.cbCiudad = new System.Windows.Forms.CheckBox();
-            this.cbSueldo = new System.Windows.Forms.CheckBox();
             this.cbDepto = new System.Windows.Forms.CheckBox();
             this.cbEdoCivil = new System.Windows.Forms.CheckBox();
             this.cbFechaNac = new System.Windows.Forms.CheckBox();
@@ -232,19 +231,6 @@
             this.cbCiudad.Text = "Ciudad";
             this.cbCiudad.UseVisualStyleBackColor = true;
             // 
-            // cbSueldo
-            // 
-            this.cbSueldo.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbSueldo.AutoSize = true;
-            this.cbSueldo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbSueldo.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSueldo.Location = new System.Drawing.Point(182, 126);
-            this.cbSueldo.Name = "cbSueldo";
-            this.cbSueldo.Size = new System.Drawing.Size(173, 35);
-            this.cbSueldo.TabIndex = 10;
-            this.cbSueldo.Text = "Sueldo";
-            this.cbSueldo.UseVisualStyleBackColor = true;
-            // 
             // cbDepto
             // 
             this.cbDepto.Appearance = System.Windows.Forms.Appearance.Button;
@@ -363,9 +349,9 @@
             this.cbInfoEmerg.AutoSize = true;
             this.cbInfoEmerg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbInfoEmerg.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbInfoEmerg.Location = new System.Drawing.Point(361, 126);
+            this.cbInfoEmerg.Location = new System.Drawing.Point(182, 126);
             this.cbInfoEmerg.Name = "cbInfoEmerg";
-            this.cbInfoEmerg.Size = new System.Drawing.Size(175, 35);
+            this.cbInfoEmerg.Size = new System.Drawing.Size(173, 35);
             this.cbInfoEmerg.TabIndex = 11;
             this.cbInfoEmerg.Text = "Info. Emerg.";
             this.cbInfoEmerg.UseVisualStyleBackColor = true;
@@ -447,7 +433,7 @@
             this.cbAntiguedad.AutoSize = true;
             this.cbAntiguedad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbAntiguedad.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAntiguedad.Location = new System.Drawing.Point(182, 167);
+            this.cbAntiguedad.Location = new System.Drawing.Point(3, 167);
             this.cbAntiguedad.Name = "cbAntiguedad";
             this.cbAntiguedad.Size = new System.Drawing.Size(173, 36);
             this.cbAntiguedad.TabIndex = 13;
@@ -470,16 +456,15 @@
             this.tlpLaboral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpLaboral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tlpLaboral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tlpLaboral.Controls.Add(this.cbEmpleadoTemporada, 3, 4);
+            this.tlpLaboral.Controls.Add(this.cbEmpleadoTemporada, 3, 3);
             this.tlpLaboral.Controls.Add(this.cbComentarios, 0, 4);
             this.tlpLaboral.Controls.Add(this.cbEscolaridad, 0, 0);
             this.tlpLaboral.Controls.Add(this.cbEspecialidad, 1, 0);
             this.tlpLaboral.Controls.Add(this.cbNumSegSocial, 2, 0);
             this.tlpLaboral.Controls.Add(this.cbAntiguedad, 0, 4);
             this.tlpLaboral.Controls.Add(this.cbNumContrato, 0, 1);
-            this.tlpLaboral.Controls.Add(this.cbInfoEmerg, 2, 3);
+            this.tlpLaboral.Controls.Add(this.cbInfoEmerg, 1, 3);
             this.tlpLaboral.Controls.Add(this.cbTienda, 1, 1);
-            this.tlpLaboral.Controls.Add(this.cbSueldo, 1, 3);
             this.tlpLaboral.Controls.Add(this.cbPuesto, 2, 2);
             this.tlpLaboral.Controls.Add(this.cbRFC, 0, 3);
             this.tlpLaboral.Controls.Add(this.cbFechaIngreso, 2, 1);
@@ -503,9 +488,9 @@
             this.cbEmpleadoTemporada.AutoSize = true;
             this.cbEmpleadoTemporada.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbEmpleadoTemporada.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmpleadoTemporada.Location = new System.Drawing.Point(361, 167);
+            this.cbEmpleadoTemporada.Location = new System.Drawing.Point(361, 126);
             this.cbEmpleadoTemporada.Name = "cbEmpleadoTemporada";
-            this.cbEmpleadoTemporada.Size = new System.Drawing.Size(175, 36);
+            this.cbEmpleadoTemporada.Size = new System.Drawing.Size(175, 35);
             this.cbEmpleadoTemporada.TabIndex = 14;
             this.cbEmpleadoTemporada.Text = "Es de temporada";
             this.cbEmpleadoTemporada.UseVisualStyleBackColor = true;
@@ -516,7 +501,7 @@
             this.cbComentarios.AutoSize = true;
             this.cbComentarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbComentarios.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComentarios.Location = new System.Drawing.Point(3, 167);
+            this.cbComentarios.Location = new System.Drawing.Point(182, 167);
             this.cbComentarios.Name = "cbComentarios";
             this.cbComentarios.Size = new System.Drawing.Size(173, 36);
             this.cbComentarios.TabIndex = 12;
@@ -704,7 +689,7 @@
             // btnDown
             // 
             this.btnDown.Location = new System.Drawing.Point(877, 103);
-            this.btnDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(2);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(53, 34);
             this.btnDown.TabIndex = 8;
@@ -715,7 +700,7 @@
             // btnUp
             // 
             this.btnUp.Location = new System.Drawing.Point(877, 65);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(53, 34);
             this.btnUp.TabIndex = 9;
@@ -767,7 +752,6 @@
         private System.Windows.Forms.CheckBox cbEscolaridad;
         private System.Windows.Forms.CheckBox cbEspecialidad;
         private System.Windows.Forms.CheckBox cbCiudad;
-        private System.Windows.Forms.CheckBox cbSueldo;
         private System.Windows.Forms.CheckBox cbDepto;
         private System.Windows.Forms.CheckBox cbEdoCivil;
         private System.Windows.Forms.CheckBox cbFechaNac;
