@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tbFiltroSueldos = new System.Windows.Forms.TextBox();
             this.lblBuscarSueldos = new System.Windows.Forms.Label();
@@ -53,8 +53,12 @@
             this.cbQuincenaActual = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnImpo = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnExpo = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarQuincena = new FontAwesome.Sharp.IconButton();
             this.btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             this.lblExpExc = new System.Windows.Forms.Label();
             this.lblImpExc = new System.Windows.Forms.Label();
@@ -64,6 +68,7 @@
             this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,10 +77,6 @@
             this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnExpo = new FontAwesome.Sharp.IconButton();
-            this.btnImpo = new FontAwesome.Sharp.IconButton();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSueldos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseSueldos)).BeginInit();
@@ -152,19 +153,20 @@
             this.dgvSueldos.AllowUserToAddRows = false;
             this.dgvSueldos.AllowUserToDeleteRows = false;
             this.dgvSueldos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSueldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSueldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSueldos_idEmpleado,
             this.dgvSueldos_tieneCambios,
             this.dgvSueldos_Nombre,
+            this.dgvSueldos_NumContrato,
             this.dgvSueldos_Fiscal1,
             this.dgvSueldos_Bonificacion1,
             this.dgvSueldos_Total1,
@@ -174,20 +176,20 @@
             this.dgvSueldos_Diferencia,
             this.dgvSueldos_QuincenaFutura});
             this.tlpPrincipal.SetColumnSpan(this.dgvSueldos, 5);
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSueldos.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSueldos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSueldos.GridColor = System.Drawing.Color.Black;
             this.dgvSueldos.Location = new System.Drawing.Point(45, 143);
             this.dgvSueldos.MultiSelect = false;
             this.dgvSueldos.Name = "dgvSueldos";
-            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvSueldos.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSueldos.RowHeadersVisible = false;
             this.dgvSueldos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSueldos.Size = new System.Drawing.Size(969, 419);
@@ -241,7 +243,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(233, 30);
             this.tableLayoutPanel1.TabIndex = 32;
             // 
@@ -288,7 +290,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(229, 30);
             this.tableLayoutPanel2.TabIndex = 33;
             // 
@@ -347,6 +349,94 @@
             this.label1.Text = "ACTUAL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscar.IconSize = 28;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(42, 565);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(159, 36);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(934, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 32);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Importar Excel";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // btnImpo
+            // 
+            this.btnImpo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnImpo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnImpo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImpo.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnImpo.IconColor = System.Drawing.Color.White;
+            this.btnImpo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImpo.IconSize = 28;
+            this.btnImpo.Location = new System.Drawing.Point(934, 104);
+            this.btnImpo.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnImpo.Name = "btnImpo";
+            this.btnImpo.Size = new System.Drawing.Size(83, 36);
+            this.btnImpo.TabIndex = 45;
+            this.btnImpo.UseVisualStyleBackColor = false;
+            this.btnImpo.Click += new System.EventHandler(this.btnImportarExcel_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(934, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 32);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Exportar Excel";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // btnExpo
+            // 
+            this.btnExpo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
+            this.btnExpo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExpo.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExpo.IconColor = System.Drawing.Color.White;
+            this.btnExpo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpo.IconSize = 28;
+            this.btnExpo.Location = new System.Drawing.Point(931, 38);
+            this.btnExpo.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnExpo.Name = "btnExpo";
+            this.btnExpo.Size = new System.Drawing.Size(83, 31);
+            this.btnExpo.TabIndex = 44;
+            this.btnExpo.UseVisualStyleBackColor = false;
+            this.btnExpo.Click += new System.EventHandler(this.btnExportarExcel_Click);
+            // 
             // btnCerrarQuincena
             // 
             this.btnCerrarQuincena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -371,28 +461,6 @@
             this.btnCerrarQuincena.Text = "Cerrar Quincena";
             this.btnCerrarQuincena.UseVisualStyleBackColor = false;
             this.btnCerrarQuincena.Click += new System.EventHandler(this.btnCerrarQuincena_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 28;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(42, 565);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(159, 36);
-            this.btnBuscar.TabIndex = 39;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Visible = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnGuardarCambios
             // 
@@ -499,9 +567,9 @@
             // dgvSueldos_tieneCambios
             // 
             this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.dgvSueldos_tieneCambios.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.dgvSueldos_tieneCambios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
             this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
             this.dgvSueldos_tieneCambios.Visible = false;
@@ -514,14 +582,20 @@
             this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
             this.dgvSueldos_Nombre.ReadOnly = true;
             // 
+            // dgvSueldos_NumContrato
+            // 
+            this.dgvSueldos_NumContrato.DataPropertyName = "NumContrato";
+            this.dgvSueldos_NumContrato.HeaderText = "NumContrato";
+            this.dgvSueldos_NumContrato.Name = "dgvSueldos_NumContrato";
+            // 
             // dgvSueldos_Fiscal1
             // 
             this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.Format = "C2";
-            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Format = "C2";
+            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
             this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
             this.dgvSueldos_Fiscal1.ReadOnly = true;
@@ -530,11 +604,11 @@
             // dgvSueldos_Bonificacion1
             // 
             this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.Format = "C2";
-            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Format = "C2";
+            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
             this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
             this.dgvSueldos_Bonificacion1.ReadOnly = true;
@@ -543,12 +617,12 @@
             // dgvSueldos_Total1
             // 
             this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Format = "C2";
-            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Format = "C2";
+            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSueldos_Total1.HeaderText = "Total";
             this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
             this.dgvSueldos_Total1.ReadOnly = true;
@@ -557,11 +631,11 @@
             // dgvSueldos_Fiscal2
             // 
             this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle16.Format = "C2";
-            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle6.Format = "C2";
+            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
             this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
             this.dgvSueldos_Fiscal2.Width = 80;
@@ -569,11 +643,11 @@
             // dgvSueldos_Bonificacion2
             // 
             this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle17.Format = "C2";
-            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle7.Format = "C2";
+            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
             this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
             this.dgvSueldos_Bonificacion2.Width = 80;
@@ -581,12 +655,12 @@
             // dgvSueldos_Total2
             // 
             this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.Format = "C2";
-            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.Format = "C2";
+            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSueldos_Total2.HeaderText = "Total";
             this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
             this.dgvSueldos_Total2.ReadOnly = true;
@@ -595,12 +669,12 @@
             // dgvSueldos_Diferencia
             // 
             this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.Format = "C2";
-            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Format = "C2";
+            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSueldos_Diferencia.HeaderText = "Diff.";
             this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
             this.dgvSueldos_Diferencia.ReadOnly = true;
@@ -614,72 +688,6 @@
             this.dgvSueldos_QuincenaFutura.ReadOnly = true;
             this.dgvSueldos_QuincenaFutura.Visible = false;
             this.dgvSueldos_QuincenaFutura.Width = 60;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(934, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 32);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Exportar Excel";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(934, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 32);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Importar Excel";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // btnExpo
-            // 
-            this.btnExpo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnExpo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExpo.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnExpo.IconColor = System.Drawing.Color.White;
-            this.btnExpo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExpo.IconSize = 28;
-            this.btnExpo.Location = new System.Drawing.Point(931, 38);
-            this.btnExpo.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnExpo.Name = "btnExpo";
-            this.btnExpo.Size = new System.Drawing.Size(83, 31);
-            this.btnExpo.TabIndex = 44;
-            this.btnExpo.UseVisualStyleBackColor = false;
-            this.btnExpo.Click += new System.EventHandler(this.btnExportarExcel_Click);
-            // 
-            // btnImpo
-            // 
-            this.btnImpo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(116)))), ((int)(((byte)(71)))));
-            this.btnImpo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnImpo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImpo.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.btnImpo.IconColor = System.Drawing.Color.White;
-            this.btnImpo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnImpo.IconSize = 28;
-            this.btnImpo.Location = new System.Drawing.Point(934, 104);
-            this.btnImpo.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnImpo.Name = "btnImpo";
-            this.btnImpo.Size = new System.Drawing.Size(83, 36);
-            this.btnImpo.TabIndex = 45;
-            this.btnImpo.UseVisualStyleBackColor = false;
-            this.btnImpo.Click += new System.EventHandler(this.btnImportarExcel_Click);
             // 
             // vTableroQuincenas
             // 
@@ -724,9 +732,14 @@
         private FontAwesome.Sharp.IconButton btnBuscar;
         private FontAwesome.Sharp.IconButton btnGuardarCambios;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton btnExpo;
+        private FontAwesome.Sharp.IconButton btnImpo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_idEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_tieneCambios;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_NumContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Fiscal1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Bonificacion1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Total1;
@@ -735,9 +748,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Total2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Diferencia;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvSueldos_QuincenaFutura;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconButton btnExpo;
-        private FontAwesome.Sharp.IconButton btnImpo;
     }
 }

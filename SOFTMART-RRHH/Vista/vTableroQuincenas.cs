@@ -384,8 +384,9 @@ namespace SOFTMART_RRHH.Vista
             DataTable dtExport = new DataTable();
 
             // Añadir las columnas específicas
-            dtExport.Columns.Add("idEmpleado", typeof(int)); // Columna con contenido
-            dtExport.Columns.Add("Nombre", typeof(string));  // Columna con contenido
+            dtExport.Columns.Add("idEmpleado", typeof(int));       // Columna con contenido
+            dtExport.Columns.Add("Nombre", typeof(string));       // Columna con contenido
+            dtExport.Columns.Add("NumContrato", typeof(string));  // Nueva columna para el número de contrato
             dtExport.Columns.Add("SueldoFiscal", typeof(decimal)); // Columna con contenido
             dtExport.Columns.Add("Bonificacion", typeof(decimal)); // Columna con contenido
 
@@ -399,15 +400,18 @@ namespace SOFTMART_RRHH.Vista
                     int idEmpleado = row.Cells["dgvSueldos_idEmpleado"]?.Value != null ? Convert.ToInt32(row.Cells["dgvSueldos_idEmpleado"].Value) : 0;
                     string nombre = row.Cells["dgvSueldos_Nombre"]?.Value?.ToString() ?? "";
 
+                    // Obtener el valor de la columna "NumContrato"
+                    string numContrato = row.Cells["dgvSueldos_NumContrato"]?.Value?.ToString() ?? "";
+
                     // Obtener los valores de las columnas "SueldoFiscal" y "Bonificacion"
                     decimal sueldoFiscal = row.Cells[dgvSueldos_Fiscal2.Index].Value is DBNull ? 0 : Convert.ToDecimal(row.Cells[dgvSueldos_Fiscal2.Index].Value ?? 0);
                     decimal bonificacion = row.Cells[dgvSueldos_Bonificacion2.Index].Value is DBNull ? 0 : Convert.ToDecimal(row.Cells[dgvSueldos_Bonificacion2.Index].Value ?? 0);
 
-
-                    // Crear una nueva fila con los datos de idEmpleado, Nombre, SueldoFiscal y Bonificacion
+                    // Crear una nueva fila con los datos de idEmpleado, Nombre, NumContrato, SueldoFiscal y Bonificacion
                     DataRow newRow = dtExport.NewRow();
                     newRow["idEmpleado"] = idEmpleado;
                     newRow["Nombre"] = nombre;
+                    newRow["NumContrato"] = numContrato; // Agregar el número de contrato
                     newRow["SueldoFiscal"] = sueldoFiscal; // Columna con el valor
                     newRow["Bonificacion"] = bonificacion; // Columna con el valor
 
@@ -415,31 +419,26 @@ namespace SOFTMART_RRHH.Vista
                     dtExport.Rows.Add(newRow);
                 }
             }
+
+            // Exportar el DataTable a Excel
             LibAux.ExportarAExcel(dtExport);
         }
 
         private void btnImportarExcel_Click(object sender, EventArgs e)
-        {     
-                // Obtener la fecha seleccionada del DateTimePicker y el valor de la quincena seleccionada en el ComboBox
+        {
+            // Obtener la fecha seleccionada del DateTimePicker y el valor de la quincena seleccionada en el ComboBox
+            DateTime quincenaSeleccionada = dtpQuincenaActual.Value;
+            string quincenaSeleccionadaText = cbQuincenaActual.Text.ToLower();
 
-                DateTime quincenaSeleccionada = dtpQuincenaActual.Value;
-                string quincenaSeleccionadaText = cbQuincenaActual.Text.ToLower();
-
-                // Verificar si la fecha seleccionada corresponde a la quincena actual o posterior
-                if (quincenaSeleccionada.Month >= DateTime.Now.Month && quincenaSeleccionada.Year >= DateTime.Now.Year)
+            // Verificar si la fecha seleccionada corresponde a la quincena actual o posterior
+            if (quincenaSeleccionada.Month >= DateTime.Now.Month && quincenaSeleccionada.Year >= DateTime.Now.Year)
+            {
+                if (quincenaSeleccionada.Month >= DateTime.Now.Month)
                 {
-                    //if (quincenaSeleccionada.Year > DateTime.Now.Year)
-                    //{
-                    //    return;
-                    //}
-
-                    if (quincenaSeleccionada.Month >= DateTime.Now.Month)
+                    // Verificar que la quincena sea la correcta
+                    if ((DateTime.Now.Day <= 15 && quincenaSeleccionadaText.Contains("1er")) ||
+                        (DateTime.Now.Day > 15 && quincenaSeleccionadaText.Contains("2da")))
                     {
-                        // Verificar que la quincena sea la correcta
-                        if ((DateTime.Now.Day <= 15 && quincenaSeleccionadaText.Contains("1er")) ||
-                            (DateTime.Now.Day > 15 && quincenaSeleccionadaText.Contains("2da")))
-                        {
-
                         try
                         {
                             OpenFileDialog openFileDialog = new OpenFileDialog
@@ -464,8 +463,13 @@ namespace SOFTMART_RRHH.Vista
                                             {
                                                 decimal sueldoFiscal = 0, bonificacion = 0;
 
+                                                // Leer SueldoFiscal
                                                 bool sueldoValido = decimal.TryParse(importRow["SueldoFiscal"]?.ToString(), out sueldoFiscal);
+
+                                                // Leer Bonificacion
                                                 bool bonificacionValida = decimal.TryParse(importRow["Bonificacion"]?.ToString(), out bonificacion);
+
+
 
                                                 // Obtener valores actuales de las celdas, asegurando que sean válidos
                                                 object sueldoCellValue = dgvRow.Cells["dgvSueldos_Fiscal2"].Value;
@@ -474,15 +478,22 @@ namespace SOFTMART_RRHH.Vista
                                                 decimal sueldoActual = (sueldoCellValue != null && sueldoCellValue != DBNull.Value && decimal.TryParse(sueldoCellValue.ToString(), out decimal sVal)) ? sVal : 0;
                                                 decimal bonificacionActual = (bonificacionCellValue != null && bonificacionCellValue != DBNull.Value && decimal.TryParse(bonificacionCellValue.ToString(), out decimal bVal)) ? bVal : 0;
 
+
+                                                // Verificar cambios en SueldoFiscal, Bonificacion y NumContrato
                                                 bool sueldoCambio = sueldoValido && sueldoFiscal != sueldoActual;
                                                 bool bonificacionCambio = bonificacionValida && bonificacion != bonificacionActual;
+                                                
 
+                                                // Aplicar cambios si es necesario
                                                 if (sueldoCambio) dgvRow.Cells["dgvSueldos_Fiscal2"].Value = sueldoFiscal;
                                                 if (bonificacionCambio) dgvRow.Cells["dgvSueldos_Bonificacion2"].Value = bonificacion;
 
+
+                                                // Calcular el total
                                                 dgvRow.Cells["dgvSueldos_Total2"].Value = bonificacion + sueldoFiscal;
 
-                                                if (sueldoCambio || bonificacionCambio)
+                                                // Marcar cambios si hubo modificaciones
+                                                if (sueldoCambio || bonificacionCambio )
                                                 {
                                                     object cambiosCellValue = dgvRow.Cells["dgvSueldos_tieneCambios"].Value;
                                                     int tieneCambios = (cambiosCellValue != null && cambiosCellValue != DBNull.Value && int.TryParse(cambiosCellValue.ToString(), out int cambiosVal)) ? cambiosVal : 0;
@@ -491,18 +502,14 @@ namespace SOFTMART_RRHH.Vista
 
                                                 break;
                                             }
-
                                         }
                                     }
 
                                     MessageBox.Show("Datos importados y actualizados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    // POPUP
                                 }
                                 else
                                 {
                                     MessageBox.Show("El archivo de Excel no contiene datos válidos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    // POPUP
-
                                 }
                             }
                         }
@@ -511,26 +518,22 @@ namespace SOFTMART_RRHH.Vista
                             MessageBox.Show("El archivo está abierto. Por favor, cierre el archivo y vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                        else
-                        {
-                            // Si la quincena no es válida, cancelar la edición
-                            MessageBox.Show("Solo puedes editar la quincena correspondiente a la fecha actual o posterior.", // CAMBIAR A POPUPS
-                                            "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else
+                    {
+                        // Si la quincena no es válida, cancelar la edición
+                        MessageBox.Show("Solo puedes editar la quincena correspondiente a la fecha actual o posterior.",
+                                        "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
-                        }
-
                     }
-
                 }
-                else
-                {
-                    // Si la quincena seleccionada es anterior a la actual, no permitir la edición
-                    MessageBox.Show("No se puede editar un salario de una quincena pasada.",
-                                    "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning); // CAMBIAR A POPUPS
+            }
+            else
+            {
+                // Si la quincena seleccionada es anterior a la actual, no permitir la edición
+                MessageBox.Show("No se puede editar un salario de una quincena pasada.",
+                                "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-                }
-            
-
+            }
         }
 
         private void dtpQuincenaAnterior_ValueChanged(object sender, EventArgs e)

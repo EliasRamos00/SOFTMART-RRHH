@@ -127,7 +127,7 @@ namespace SOFTMART_RRHH.Vista
             cbLugarNac.Text = "Lugar de Nacimiento";
             cbEdoCivil.Text = "Estado civil";
             cbNumSegSocial.Text = "Numero de seguro social";
-            cbInfoEmerg.Text = "Informacion de emergencia";
+            cbInfoEmerg.Text = "Info. de emergencia";
             cbCalleNum.Text = "Calle y Numero";
             cbCodigoPostal.Text = "Codigo Postal";
 
