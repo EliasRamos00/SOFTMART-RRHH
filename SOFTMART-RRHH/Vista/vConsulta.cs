@@ -24,9 +24,6 @@ namespace SOFTMART_RRHH.Vista
         #region CONSTRUCTORES
         public vConsulta()
         {
-
-
-
             InitializeComponent();
             dtpInicio.ValueChanged -= dtpInicio_ValueChanged;
             dtpFin.ValueChanged -= dtpFin_ValueChanged;

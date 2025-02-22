@@ -47,6 +47,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnDarBaja = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -338,6 +339,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnPerfil, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnDarBaja, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnGuardar, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnActualizar, 1, 0);
@@ -350,6 +352,23 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(378, 106);
             this.tableLayoutPanel2.TabIndex = 64;
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(33, 74);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(153, 29);
+            this.btnPerfil.TabIndex = 64;
+            this.btnPerfil.Text = "Ver Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnDarBaja
             // 
@@ -446,5 +465,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnPerfil;
     }
 }

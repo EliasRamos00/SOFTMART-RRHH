@@ -66,9 +66,9 @@
             this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSueldos_Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,9 +164,9 @@
             this.dgvSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSueldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSueldos_idEmpleado,
+            this.dgvSueldos_NumContrato,
             this.dgvSueldos_tieneCambios,
             this.dgvSueldos_Nombre,
-            this.dgvSueldos_NumContrato,
             this.dgvSueldos_Fiscal1,
             this.dgvSueldos_Bonificacion1,
             this.dgvSueldos_Total1,
@@ -564,6 +564,12 @@
             this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
             this.dgvSueldos_idEmpleado.Visible = false;
             // 
+            // dgvSueldos_NumContrato
+            // 
+            this.dgvSueldos_NumContrato.DataPropertyName = "NumContrato";
+            this.dgvSueldos_NumContrato.HeaderText = "NumContrato";
+            this.dgvSueldos_NumContrato.Name = "dgvSueldos_NumContrato";
+            // 
             // dgvSueldos_tieneCambios
             // 
             this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
@@ -581,12 +587,6 @@
             this.dgvSueldos_Nombre.HeaderText = "Nombre";
             this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
             this.dgvSueldos_Nombre.ReadOnly = true;
-            // 
-            // dgvSueldos_NumContrato
-            // 
-            this.dgvSueldos_NumContrato.DataPropertyName = "NumContrato";
-            this.dgvSueldos_NumContrato.HeaderText = "NumContrato";
-            this.dgvSueldos_NumContrato.Name = "dgvSueldos_NumContrato";
             // 
             // dgvSueldos_Fiscal1
             // 
@@ -737,9 +737,9 @@
         private FontAwesome.Sharp.IconButton btnExpo;
         private FontAwesome.Sharp.IconButton btnImpo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_idEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_NumContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_tieneCambios;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_NumContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Fiscal1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Bonificacion1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSueldos_Total1;

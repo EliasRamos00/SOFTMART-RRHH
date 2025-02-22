@@ -1,0 +1,14 @@
+----------Detalles del error en:  21/feb./2025 07:29:01 p. m.----------
+-----------------------------------------------
+Fecha: 21/feb./2025 07:29:01 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Connect Timeout expired.
+Usuario: 
+-----------------------------------------------
+----------Detalles del error en:  21/feb./2025 07:30:44 p. m.----------
+-----------------------------------------------
+Fecha: 21/feb./2025 07:30:44 p. m.
+Exception Type: MySqlConnector.MySqlException
+Mensaje de Error : Unable to connect to any of the specified MySQL hosts.
+Usuario: 
+-----------------------------------------------

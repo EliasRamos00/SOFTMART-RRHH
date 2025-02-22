@@ -47,6 +47,7 @@ namespace SOFTMART_RRHH
             vConsulta.DobleClickEmpleado += MostrarEmpleado;
             vTodos.DobleClickEmpleado += MostrarEmpleado;
             vBajas.DobleClickBaja += MostrarBaja;
+            
 
         }
         private void EsAdmin(bool @bool)
@@ -106,6 +107,8 @@ namespace SOFTMART_RRHH
                 idEmpleado = ((vConsulta)sender).idEmpleado;
                 idPersona = ((vConsulta)sender).idPersona;
             }
+
+
             vPersonal perfil = new vPersonal(LibAux.CRUD.SELECT, idEmpleado, idPersona, vTodos);
             perfil.BtnEliminar += MostrarVentanaElim;
             perfil.BtnHistorial += MostarVentanaHistorial;
@@ -123,6 +126,7 @@ namespace SOFTMART_RRHH
         {
             int idEmpleado = ((vPersonal)sender).idEmpleado;
             vBajasEmpleadoPerfil vBajasEmpleadoPerfil = new vBajasEmpleadoPerfil(idEmpleado);
+            //vBajasEmpleadoPerfil.MostrarPerfilBaja += MostrarEmpleado;
             pPrincipal.Controls.Add(vBajasEmpleadoPerfil);
             vBajasEmpleadoPerfil.Dock = DockStyle.Fill;
             vBajasEmpleadoPerfil.BringToFront();

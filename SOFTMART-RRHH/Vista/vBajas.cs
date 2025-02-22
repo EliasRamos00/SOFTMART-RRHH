@@ -267,5 +267,7 @@ namespace SOFTMART_RRHH.Vista
             idBaja = Convert.ToInt16(dgvBajasEmpleados.CurrentRow.Cells["dgvBajasEmpleados_idBaja"].Value);
             DobleClickBaja?.Invoke(this, e);
         }
+
+
     }
 }

@@ -3,6 +3,7 @@ using SOFTMART_RRHH.Modelo;
 using System;
 using System.Configuration;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SOFTMART_RRHH.Vista
@@ -12,8 +13,10 @@ namespace SOFTMART_RRHH.Vista
         #region VARIABLES GLOBALES
         string patronAnterior, finiquitoAnterior, comentariosAnterior;
         DateTime fechaAnterior;
+        public EventHandler MostrarPerfilBaja;
 
-        int idEmpleado = 0;
+        public int idEmpleado = 0;
+        public int idPersona = 0;
         int idBaja = 0;
         bool estaModificando = false;
         bool esConsulta = false;
@@ -26,12 +29,15 @@ namespace SOFTMART_RRHH.Vista
             this.idEmpleado = idEmpleado;
             btnGuardar.Hide();
             btnActualizar.Hide();
+            btnPerfil.Hide();
+
         }
         public vBajasEmpleadoPerfil(int idBaja, LibAux.CRUD CRUD)
         {
             InitializeComponent();
             this.idBaja = idBaja;
             this.idEmpleado = MBajas.ObtenerIdEmpleadoByIdBaja(idBaja);
+            this.idPersona = MEmpleados.ObtenerEmpleadoInformacionById(idEmpleado).Rows[0].Field<int>("idPersona") ;
             CargarInformacionBaja();
             CamposSoloLectura(true);
             btnDarBaja.Text = "Revocar baja.";
@@ -122,6 +128,22 @@ namespace SOFTMART_RRHH.Vista
             this.Hide();
         }
         #endregion
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            vPersonal perfil = new vPersonal(LibAux.CRUD.SELECT, idEmpleado, idPersona, 0);
+            Form popup = new Form
+            {
+                Text = "Vista previa",
+                Size = new Size(1200, 788),
+                StartPosition = FormStartPosition.CenterScreen
+            };
+
+            popup.Controls.Add(perfil);
+            perfil.Dock = DockStyle.Fill;
+            perfil.BringToFront();
+            popup.ShowDialog(); // Bloquea la ventana principal hasta cerrar
+        }
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (estaModificando)
