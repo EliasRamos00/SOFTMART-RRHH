@@ -43,6 +43,18 @@
             this.tbFiltroSueldos = new System.Windows.Forms.TextBox();
             this.lblBuscarSueldos = new System.Windows.Forms.Label();
             this.dgvSueldos = new System.Windows.Forms.DataGridView();
+            this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Fiscal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Bonificacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSueldos_QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnCloseSueldos = new System.Windows.Forms.PictureBox();
             this.lblTituloSueldos = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,18 +77,6 @@
             this.btnExportarExcel = new FontAwesome.Sharp.IconButton();
             this.btnImportarExcel = new FontAwesome.Sharp.IconButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dgvSueldos_idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_NumContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_tieneCambios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Fiscal1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Bonificacion1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Fiscal2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Bonificacion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_Diferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSueldos_QuincenaFutura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tlpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSueldos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseSueldos)).BeginInit();
@@ -201,6 +201,138 @@
             this.dgvSueldos.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSueldos_CellMouseLeave);
             this.dgvSueldos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvSueldos_CellPainting);
             this.dgvSueldos.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvSueldos_CellToolTipTextNeeded);
+            // 
+            // dgvSueldos_idEmpleado
+            // 
+            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
+            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
+            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
+            this.dgvSueldos_idEmpleado.Visible = false;
+            // 
+            // dgvSueldos_NumContrato
+            // 
+            this.dgvSueldos_NumContrato.DataPropertyName = "NumContrato";
+            this.dgvSueldos_NumContrato.HeaderText = "NumContrato";
+            this.dgvSueldos_NumContrato.Name = "dgvSueldos_NumContrato";
+            // 
+            // dgvSueldos_tieneCambios
+            // 
+            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.dgvSueldos_tieneCambios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
+            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
+            this.dgvSueldos_tieneCambios.Visible = false;
+            // 
+            // dgvSueldos_Nombre
+            // 
+            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
+            this.dgvSueldos_Nombre.HeaderText = "Nombre";
+            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
+            this.dgvSueldos_Nombre.ReadOnly = true;
+            // 
+            // dgvSueldos_Fiscal1
+            // 
+            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Format = "C2";
+            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
+            this.dgvSueldos_Fiscal1.ReadOnly = true;
+            this.dgvSueldos_Fiscal1.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion1
+            // 
+            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Format = "C2";
+            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
+            this.dgvSueldos_Bonificacion1.ReadOnly = true;
+            this.dgvSueldos_Bonificacion1.Width = 80;
+            // 
+            // dgvSueldos_Total1
+            // 
+            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Format = "C2";
+            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSueldos_Total1.HeaderText = "Total";
+            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
+            this.dgvSueldos_Total1.ReadOnly = true;
+            this.dgvSueldos_Total1.Width = 80;
+            // 
+            // dgvSueldos_Fiscal2
+            // 
+            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle6.Format = "C2";
+            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
+            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
+            this.dgvSueldos_Fiscal2.Width = 80;
+            // 
+            // dgvSueldos_Bonificacion2
+            // 
+            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle7.Format = "C2";
+            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
+            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
+            this.dgvSueldos_Bonificacion2.Width = 80;
+            // 
+            // dgvSueldos_Total2
+            // 
+            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.Format = "C2";
+            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvSueldos_Total2.HeaderText = "Total";
+            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
+            this.dgvSueldos_Total2.ReadOnly = true;
+            this.dgvSueldos_Total2.Width = 83;
+            // 
+            // dgvSueldos_Diferencia
+            // 
+            this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Format = "C2";
+            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
+            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
+            this.dgvSueldos_Diferencia.ReadOnly = true;
+            this.dgvSueldos_Diferencia.Width = 83;
+            // 
+            // dgvSueldos_QuincenaFutura
+            // 
+            this.dgvSueldos_QuincenaFutura.DataPropertyName = "TieneRegistrosPosteriores";
+            this.dgvSueldos_QuincenaFutura.HeaderText = "QuincenaFutura";
+            this.dgvSueldos_QuincenaFutura.Name = "dgvSueldos_QuincenaFutura";
+            this.dgvSueldos_QuincenaFutura.ReadOnly = true;
+            this.dgvSueldos_QuincenaFutura.Visible = false;
+            this.dgvSueldos_QuincenaFutura.Width = 60;
             // 
             // btnCloseSueldos
             // 
@@ -556,138 +688,6 @@
             this.btnImportarExcel.TabIndex = 27;
             this.btnImportarExcel.UseVisualStyleBackColor = false;
             this.btnImportarExcel.Click += new System.EventHandler(this.btnImportarExcel_Click);
-            // 
-            // dgvSueldos_idEmpleado
-            // 
-            this.dgvSueldos_idEmpleado.DataPropertyName = "idEmpleado";
-            this.dgvSueldos_idEmpleado.HeaderText = "idEmpleado";
-            this.dgvSueldos_idEmpleado.Name = "dgvSueldos_idEmpleado";
-            this.dgvSueldos_idEmpleado.Visible = false;
-            // 
-            // dgvSueldos_NumContrato
-            // 
-            this.dgvSueldos_NumContrato.DataPropertyName = "NumContrato";
-            this.dgvSueldos_NumContrato.HeaderText = "NumContrato";
-            this.dgvSueldos_NumContrato.Name = "dgvSueldos_NumContrato";
-            // 
-            // dgvSueldos_tieneCambios
-            // 
-            this.dgvSueldos_tieneCambios.DataPropertyName = "tieneCambios";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.dgvSueldos_tieneCambios.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSueldos_tieneCambios.HeaderText = "tieneCambios";
-            this.dgvSueldos_tieneCambios.Name = "dgvSueldos_tieneCambios";
-            this.dgvSueldos_tieneCambios.Visible = false;
-            // 
-            // dgvSueldos_Nombre
-            // 
-            this.dgvSueldos_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvSueldos_Nombre.DataPropertyName = "Nombre";
-            this.dgvSueldos_Nombre.HeaderText = "Nombre";
-            this.dgvSueldos_Nombre.Name = "dgvSueldos_Nombre";
-            this.dgvSueldos_Nombre.ReadOnly = true;
-            // 
-            // dgvSueldos_Fiscal1
-            // 
-            this.dgvSueldos_Fiscal1.DataPropertyName = "SueldoFiscal";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Format = "C2";
-            this.dgvSueldos_Fiscal1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSueldos_Fiscal1.HeaderText = "Fiscal";
-            this.dgvSueldos_Fiscal1.Name = "dgvSueldos_Fiscal1";
-            this.dgvSueldos_Fiscal1.ReadOnly = true;
-            this.dgvSueldos_Fiscal1.Width = 80;
-            // 
-            // dgvSueldos_Bonificacion1
-            // 
-            this.dgvSueldos_Bonificacion1.DataPropertyName = "Bonificacion";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Format = "C2";
-            this.dgvSueldos_Bonificacion1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvSueldos_Bonificacion1.HeaderText = "Bonif.";
-            this.dgvSueldos_Bonificacion1.Name = "dgvSueldos_Bonificacion1";
-            this.dgvSueldos_Bonificacion1.ReadOnly = true;
-            this.dgvSueldos_Bonificacion1.Width = 80;
-            // 
-            // dgvSueldos_Total1
-            // 
-            this.dgvSueldos_Total1.DataPropertyName = "SueldoTotal";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Format = "C2";
-            this.dgvSueldos_Total1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvSueldos_Total1.HeaderText = "Total";
-            this.dgvSueldos_Total1.Name = "dgvSueldos_Total1";
-            this.dgvSueldos_Total1.ReadOnly = true;
-            this.dgvSueldos_Total1.Width = 80;
-            // 
-            // dgvSueldos_Fiscal2
-            // 
-            this.dgvSueldos_Fiscal2.DataPropertyName = "SueldoFiscalAux";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle6.Format = "C2";
-            this.dgvSueldos_Fiscal2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvSueldos_Fiscal2.HeaderText = "Fiscal";
-            this.dgvSueldos_Fiscal2.Name = "dgvSueldos_Fiscal2";
-            this.dgvSueldos_Fiscal2.Width = 80;
-            // 
-            // dgvSueldos_Bonificacion2
-            // 
-            this.dgvSueldos_Bonificacion2.DataPropertyName = "BonificacionAux";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle7.Format = "C2";
-            this.dgvSueldos_Bonificacion2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvSueldos_Bonificacion2.HeaderText = "Bonif.";
-            this.dgvSueldos_Bonificacion2.Name = "dgvSueldos_Bonificacion2";
-            this.dgvSueldos_Bonificacion2.Width = 80;
-            // 
-            // dgvSueldos_Total2
-            // 
-            this.dgvSueldos_Total2.DataPropertyName = "SueldoTotalAux";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.Format = "C2";
-            this.dgvSueldos_Total2.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvSueldos_Total2.HeaderText = "Total";
-            this.dgvSueldos_Total2.Name = "dgvSueldos_Total2";
-            this.dgvSueldos_Total2.ReadOnly = true;
-            this.dgvSueldos_Total2.Width = 83;
-            // 
-            // dgvSueldos_Diferencia
-            // 
-            this.dgvSueldos_Diferencia.DataPropertyName = "Diferencia";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Format = "C2";
-            this.dgvSueldos_Diferencia.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvSueldos_Diferencia.HeaderText = "Diff.";
-            this.dgvSueldos_Diferencia.Name = "dgvSueldos_Diferencia";
-            this.dgvSueldos_Diferencia.ReadOnly = true;
-            this.dgvSueldos_Diferencia.Width = 83;
-            // 
-            // dgvSueldos_QuincenaFutura
-            // 
-            this.dgvSueldos_QuincenaFutura.DataPropertyName = "TieneRegistrosPosteriores";
-            this.dgvSueldos_QuincenaFutura.HeaderText = "QuincenaFutura";
-            this.dgvSueldos_QuincenaFutura.Name = "dgvSueldos_QuincenaFutura";
-            this.dgvSueldos_QuincenaFutura.ReadOnly = true;
-            this.dgvSueldos_QuincenaFutura.Visible = false;
-            this.dgvSueldos_QuincenaFutura.Width = 60;
             // 
             // vTableroQuincenas
             // 

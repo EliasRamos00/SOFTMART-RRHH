@@ -404,7 +404,7 @@ namespace SOFTMART_RRHH.Vista
                 if (CAltaPersonal.CModificarPersonal("TELEFONO", telefono, Estado, Ciudad, Colonia, CP, CalleNum, Nombres, ApePat, ApeMat, RFC,
                  CURP, LugarNac, Genero, FechaNac, fotografiaDestino, idEscolaridad, Especialidad, NumContrato, idSucursal, idPuesto, dtpFechaIngreso.Value, EdoCivil, esTemporal, sueldo, idEmpleado, idPersona, NSS, InfoEmer, fotografiaOrigen, INE_Origen, INE_Destino, comentarios))
                 {
-                    
+
                     INEOrigen_Ruta = "";
                     fotografiaOrigen_Ruta = "";
                     esFotoNueva = false;
@@ -426,8 +426,29 @@ namespace SOFTMART_RRHH.Vista
                     int mes = DateTime.Now.Month;
                     int dia = (quincena == "1ER QUINCENA") ? 1 : 17; // Día de inicio de la quincena
 
-                    decimal sueldoFiscal = Convert.ToDecimal(tbSueldoFiscal);
-                    decimal sueldoBonificacion = Convert.ToDecimal(tbSueldoBonificacion);
+                    decimal sueldoFiscal = 0;
+                    decimal sueldoBonificacion = 0;
+
+                    try
+                    {
+                         sueldoFiscal = Convert.ToDecimal(tbSueldoFiscal);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                         sueldoBonificacion = Convert.ToDecimal(tbSueldoBonificacion);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
 
                     try
                     {
@@ -437,6 +458,7 @@ namespace SOFTMART_RRHH.Vista
                         }
                         else // No tiene, se inserta. 
                         {
+
                         }
                     }
                     catch (Exception ex)
